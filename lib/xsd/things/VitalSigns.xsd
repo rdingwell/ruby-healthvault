@@ -1,0 +1,31 @@
+<schema xmlns:vit="urn:com.microsoft.wc.thing.vital-signs" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.vital-signs"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>73822612-C15F-4B49-9E65-6AF369E55C65</type-id><type-name>Vital Signs</type-name><wrapper-class-name>VitalSigns</wrapper-class-name><wrapper-class-fwlink>136239</wrapper-class-fwlink><sample-xml-fwlink>136240</sample-xml-fwlink><data-type-guide-fwlink>136238</data-type-guide-fwlink><summary>
+                Information related to vital signs.
+            </summary><remarks>
+                This thing type describes the vital signs of a person.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><complexType name="vital-sign-result-type"><sequence><element name="title" type="t:codable-value"><annotation><documentation><summary>
+                            Clinical name for vital sign.
+                        </summary><preferred-vocabulary>vital-statistics</preferred-vocabulary></documentation></annotation></element><element name="value" type="double" minOccurs="0"><annotation><documentation><summary>
+                            Result value.
+                        </summary></documentation></annotation></element><element name="unit" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            Result value unit.
+                        </summary><preferred-vocabulary>lab-results-units</preferred-vocabulary></documentation></annotation></element><element name="reference-minimum" type="double" minOccurs="0"><annotation><documentation><summary>
+                            Reference minimum value.
+                        </summary></documentation></annotation></element><element name="reference-maximum" type="double" minOccurs="0"><annotation><documentation><summary>
+                            Reference maximum value.
+                        </summary></documentation></annotation></element><element name="text-value" type="string" minOccurs="0"><annotation><documentation><summary>
+                            Free form textual content of result.
+                        </summary></documentation></annotation></element><element name="flag" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            Flag for result.
+                        </summary><preferred-vocabulary>lab-results-flag</preferred-vocabulary></documentation></annotation></element></sequence></complexType><element name="vital-signs"><complexType><annotation><documentation><summary>
+                        Information related to vital signs.
+                    </summary><remarks>
+                        This thing type describes the vital signs of a person.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                    The date and time for the vital signs.
+                                </summary></documentation></annotation></element><element name="vital-signs-results" type="vit:vital-sign-result-type" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Vital sign results.
+                            </summary></documentation></annotation></element><element name="site" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Site for vital sign.
+                            </summary></documentation></annotation></element><element name="position" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Position of vital sign.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

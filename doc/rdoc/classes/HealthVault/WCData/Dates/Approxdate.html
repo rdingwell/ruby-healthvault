@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Dates::Approxdate</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Dates::Approxdate</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../files/lib/wc_data/generated/dates/approx_date_rb.html">
+                lib/wc_data/generated/dates/approx_date.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M003884">d</a>&nbsp;&nbsp;
+      <a href="#M003883">d=</a>&nbsp;&nbsp;
+      <a href="#M003882">m</a>&nbsp;&nbsp;
+      <a href="#M003881">m=</a>&nbsp;&nbsp;
+      <a href="#M003885">new</a>&nbsp;&nbsp;
+      <a href="#M003880">y</a>&nbsp;&nbsp;
+      <a href="#M003879">y=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M003885" class="method-detail">
+        <a name="M003885"></a>
+
+        <div class="method-heading">
+          <a href="#M003885" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003885-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003885-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/dates/approx_date.rb, line 59</span>
+59:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+60:           <span class="ruby-keyword kw">super</span>
+61:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'approx-date'</span>
+62:         
+63:           
+64:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'y'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'y'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Year</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+65:             
+66:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'y'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Year</span>.<span class="ruby-identifier">new</span>
+67:             
+68:           
+69:         
+70:           
+71:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'m'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'m'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Month</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+72:             
+73:           
+74:         
+75:           
+76:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'d'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'d'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Day</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+77:             
+78:           
+79:         
+80:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M003884" class="method-detail">
+        <a name="M003884"></a>
+
+        <div class="method-heading">
+          <a href="#M003884" class="method-signature">
+          <span class="method-name">d</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a href="Day.html">HealthVault::WCData::Dates::Day</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003884-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003884-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/dates/approx_date.rb, line 53</span>
+53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">d</span>
+54:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'d'</span>][<span class="ruby-identifier">:value</span>]
+55:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003883" class="method-detail">
+        <a name="M003883"></a>
+
+        <div class="method-heading">
+          <a href="#M003883" class="method-signature">
+          <span class="method-name">d=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a href="Day.html">HealthVault::WCData::Dates::Day</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003883-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003883-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/dates/approx_date.rb, line 48</span>
+48:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">d=</span>(<span class="ruby-identifier">value</span>)
+49:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'d'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+50:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003882" class="method-detail">
+        <a name="M003882"></a>
+
+        <div class="method-heading">
+          <a href="#M003882" class="method-signature">
+          <span class="method-name">m</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="Month.html">HealthVault::WCData::Dates::Month</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003882-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003882-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/dates/approx_date.rb, line 39</span>
+39:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">m</span>
+40:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'m'</span>][<span class="ruby-identifier">:value</span>]
+41:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003881" class="method-detail">
+        <a name="M003881"></a>
+
+        <div class="method-heading">
+          <a href="#M003881" class="method-signature">
+          <span class="method-name">m=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="Month.html">HealthVault::WCData::Dates::Month</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003881-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003881-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/dates/approx_date.rb, line 34</span>
+34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">m=</span>(<span class="ruby-identifier">value</span>)
+35:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'m'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+36:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003880" class="method-detail">
+        <a name="M003880"></a>
+
+        <div class="method-heading">
+          <a href="#M003880" class="method-signature">
+          <span class="method-name">y</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a href="Year.html">HealthVault::WCData::Dates::Year</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003880-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003880-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/dates/approx_date.rb, line 25</span>
+25:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">y</span>
+26:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'y'</span>][<span class="ruby-identifier">:value</span>]
+27:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003879" class="method-detail">
+        <a name="M003879"></a>
+
+        <div class="method-heading">
+          <a href="#M003879" class="method-signature">
+          <span class="method-name">y=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <em>value</em> is a <a
+href="Year.html">HealthVault::WCData::Dates::Year</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003879-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003879-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/dates/approx_date.rb, line 20</span>
+20:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">y=</span>(<span class="ruby-identifier">value</span>)
+21:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'y'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+22:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

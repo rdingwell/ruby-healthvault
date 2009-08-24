@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: HealthVault::WCData::Types</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Types</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/lib/wc_data/generated/types/address_rb.html">
+                lib/wc_data/generated/types/address.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/app_info_rb.html">
+                lib/wc_data/generated/types/app_info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/app_record_auth_action_rb.html">
+                lib/wc_data/generated/types/app_record_auth_action.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/app_server_cred_rb.html">
+                lib/wc_data/generated/types/app_server_cred.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/app_server_cred_info_rb.html">
+                lib/wc_data/generated/types/app_server_cred_info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/app_settings_rb.html">
+                lib/wc_data/generated/types/app_settings.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/base64_rb.html">
+                lib/wc_data/generated/types/base64.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/base64_sha1_rb.html">
+                lib/wc_data/generated/types/base64_sha1.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/card_space_cred_rb.html">
+                lib/wc_data/generated/types/card_space_cred.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/char2_rb.html">
+                lib/wc_data/generated/types/char2.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/codable_value_rb.html">
+                lib/wc_data/generated/types/codable_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/coded_value_rb.html">
+                lib/wc_data/generated/types/coded_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/culture_rb.html">
+                lib/wc_data/generated/types/culture.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/culture_specific_string_rb.html">
+                lib/wc_data/generated/types/culture_specific_string.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/culture_specific_string1024_rb.html">
+                lib/wc_data/generated/types/culture_specific_string1024.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/culture_specific_string255_rb.html">
+                lib/wc_data/generated/types/culture_specific_string255.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/culture_specific_stringnz_rb.html">
+                lib/wc_data/generated/types/culture_specific_stringnz.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/date_range_rb.html">
+                lib/wc_data/generated/types/date_range.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/email_rb.html">
+                lib/wc_data/generated/types/email.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/email_address_rb.html">
+                lib/wc_data/generated/types/email_address.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/gender_rb.html">
+                lib/wc_data/generated/types/gender.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/group_rb.html">
+                lib/wc_data/generated/types/group.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/groups_rb.html">
+                lib/wc_data/generated/types/groups.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/guid_rb.html">
+                lib/wc_data/generated/types/guid.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/hash_finalized_rb.html">
+                lib/wc_data/generated/types/hash_finalized.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/hash_finalized_data_rb.html">
+                lib/wc_data/generated/types/hash_finalized_data.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/hmac_algorithm_rb.html">
+                lib/wc_data/generated/types/hmac_algorithm.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/hmac_algorithm_data_rb.html">
+                lib/wc_data/generated/types/hmac_algorithm_data.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/hmac_finalized_rb.html">
+                lib/wc_data/generated/types/hmac_finalized.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/hmac_finalized_data_rb.html">
+                lib/wc_data/generated/types/hmac_finalized_data.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/iso3166_rb.html">
+                lib/wc_data/generated/types/iso3166.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/iso4217_rb.html">
+                lib/wc_data/generated/types/iso4217.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/iso639_1_rb.html">
+                lib/wc_data/generated/types/iso639_1.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/language_competency_rb.html">
+                lib/wc_data/generated/types/language_competency.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/localized_string_rb.html">
+                lib/wc_data/generated/types/localized_string.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/login_name_rb.html">
+                lib/wc_data/generated/types/login_name.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/name_match_type_rb.html">
+                lib/wc_data/generated/types/name_match_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/omb_ethnicity_rb.html">
+                lib/wc_data/generated/types/omb_ethnicity.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/open_query_info_rb.html">
+                lib/wc_data/generated/types/open_query_info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/permission_rb.html">
+                lib/wc_data/generated/types/permission.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/person_info_rb.html">
+                lib/wc_data/generated/types/person_info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/phone_rb.html">
+                lib/wc_data/generated/types/phone.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/positive_long_rb.html">
+                lib/wc_data/generated/types/positive_long.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/puid_rb.html">
+                lib/wc_data/generated/types/puid.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/rcpt_address_rb.html">
+                lib/wc_data/generated/types/rcpt_address.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/rcpt_person_rb.html">
+                lib/wc_data/generated/types/rcpt_person.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/rcpt_record_rb.html">
+                lib/wc_data/generated/types/rcpt_record.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/record_rb.html">
+                lib/wc_data/generated/types/record.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/record_state_rb.html">
+                lib/wc_data/generated/types/record_state.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/sig_rb.html">
+                lib/wc_data/generated/types/sig.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string1024_rb.html">
+                lib/wc_data/generated/types/string1024.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string1024nw_rb.html">
+                lib/wc_data/generated/types/string1024nw.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string10nw_rb.html">
+                lib/wc_data/generated/types/string10nw.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string128_rb.html">
+                lib/wc_data/generated/types/string128.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string128nw_rb.html">
+                lib/wc_data/generated/types/string128nw.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string16_rb.html">
+                lib/wc_data/generated/types/string16.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string255_rb.html">
+                lib/wc_data/generated/types/string255.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string25nw_rb.html">
+                lib/wc_data/generated/types/string25nw.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string32_rb.html">
+                lib/wc_data/generated/types/string32.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string50nw_rb.html">
+                lib/wc_data/generated/types/string50nw.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string512_rb.html">
+                lib/wc_data/generated/types/string512.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/string64_rb.html">
+                lib/wc_data/generated/types/string64.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/stringnz_rb.html">
+                lib/wc_data/generated/types/stringnz.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/stringnznw_rb.html">
+                lib/wc_data/generated/types/stringnznw.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/stringz1024_rb.html">
+                lib/wc_data/generated/types/stringz1024.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/stringz128_rb.html">
+                lib/wc_data/generated/types/stringz128.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/stringz16_rb.html">
+                lib/wc_data/generated/types/stringz16.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/stringz255_rb.html">
+                lib/wc_data/generated/types/stringz255.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/stringz32_rb.html">
+                lib/wc_data/generated/types/stringz32.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/stringz512_rb.html">
+                lib/wc_data/generated/types/stringz512.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/stringz64_rb.html">
+                lib/wc_data/generated/types/stringz64.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/url_rb.html">
+                lib/wc_data/generated/types/url.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/types/version_rb.html">
+                lib/wc_data/generated/types/version.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="Types/Address.html" class="link">HealthVault::WCData::Types::Address</a><br />
+Class <a href="Types/AppInfo.html" class="link">HealthVault::WCData::Types::AppInfo</a><br />
+Class <a href="Types/AppRecordAuthAction.html" class="link">HealthVault::WCData::Types::AppRecordAuthAction</a><br />
+Class <a href="Types/AppServerCred.html" class="link">HealthVault::WCData::Types::AppServerCred</a><br />
+Class <a href="Types/AppServerCredInfo.html" class="link">HealthVault::WCData::Types::AppServerCredInfo</a><br />
+Class <a href="Types/AppSettings.html" class="link">HealthVault::WCData::Types::AppSettings</a><br />
+Class <a href="Types/Base64.html" class="link">HealthVault::WCData::Types::Base64</a><br />
+Class <a href="Types/Base64Sha1.html" class="link">HealthVault::WCData::Types::Base64Sha1</a><br />
+Class <a href="Types/CardSpaceCred.html" class="link">HealthVault::WCData::Types::CardSpaceCred</a><br />
+Class <a href="Types/Char2.html" class="link">HealthVault::WCData::Types::Char2</a><br />
+Class <a href="Types/Codablevalue.html" class="link">HealthVault::WCData::Types::Codablevalue</a><br />
+Class <a href="Types/Codedvalue.html" class="link">HealthVault::WCData::Types::Codedvalue</a><br />
+Class <a href="Types/Culture.html" class="link">HealthVault::WCData::Types::Culture</a><br />
+Class <a href="Types/CultureSpecificString.html" class="link">HealthVault::WCData::Types::CultureSpecificString</a><br />
+Class <a href="Types/CultureSpecificString1024.html" class="link">HealthVault::WCData::Types::CultureSpecificString1024</a><br />
+Class <a href="Types/CultureSpecificString255.html" class="link">HealthVault::WCData::Types::CultureSpecificString255</a><br />
+Class <a href="Types/CultureSpecificStringnz.html" class="link">HealthVault::WCData::Types::CultureSpecificStringnz</a><br />
+Class <a href="Types/DateRange.html" class="link">HealthVault::WCData::Types::DateRange</a><br />
+Class <a href="Types/Email.html" class="link">HealthVault::WCData::Types::Email</a><br />
+Class <a href="Types/EmailAddress.html" class="link">HealthVault::WCData::Types::EmailAddress</a><br />
+Class <a href="Types/Gender.html" class="link">HealthVault::WCData::Types::Gender</a><br />
+Class <a href="Types/Group.html" class="link">HealthVault::WCData::Types::Group</a><br />
+Class <a href="Types/Groups.html" class="link">HealthVault::WCData::Types::Groups</a><br />
+Class <a href="Types/Guid.html" class="link">HealthVault::WCData::Types::Guid</a><br />
+Class <a href="Types/HMACAlgorithm.html" class="link">HealthVault::WCData::Types::HMACAlgorithm</a><br />
+Class <a href="Types/HMACAlgorithmData.html" class="link">HealthVault::WCData::Types::HMACAlgorithmData</a><br />
+Class <a href="Types/HMACFinalized.html" class="link">HealthVault::WCData::Types::HMACFinalized</a><br />
+Class <a href="Types/HMACFinalizedData.html" class="link">HealthVault::WCData::Types::HMACFinalizedData</a><br />
+Class <a href="Types/HashFinalized.html" class="link">HealthVault::WCData::Types::HashFinalized</a><br />
+Class <a href="Types/HashFinalizedData.html" class="link">HealthVault::WCData::Types::HashFinalizedData</a><br />
+Class <a href="Types/Iso3166.html" class="link">HealthVault::WCData::Types::Iso3166</a><br />
+Class <a href="Types/Iso4217.html" class="link">HealthVault::WCData::Types::Iso4217</a><br />
+Class <a href="Types/Iso6391.html" class="link">HealthVault::WCData::Types::Iso6391</a><br />
+Class <a href="Types/LanguageCompetency.html" class="link">HealthVault::WCData::Types::LanguageCompetency</a><br />
+Class <a href="Types/LocalizedString.html" class="link">HealthVault::WCData::Types::LocalizedString</a><br />
+Class <a href="Types/LoginName.html" class="link">HealthVault::WCData::Types::LoginName</a><br />
+Class <a href="Types/NameMatchType.html" class="link">HealthVault::WCData::Types::NameMatchType</a><br />
+Class <a href="Types/OmbEthnicity.html" class="link">HealthVault::WCData::Types::OmbEthnicity</a><br />
+Class <a href="Types/OpenQueryInfo.html" class="link">HealthVault::WCData::Types::OpenQueryInfo</a><br />
+Class <a href="Types/Permission.html" class="link">HealthVault::WCData::Types::Permission</a><br />
+Class <a href="Types/PersonInfo.html" class="link">HealthVault::WCData::Types::PersonInfo</a><br />
+Class <a href="Types/Phone.html" class="link">HealthVault::WCData::Types::Phone</a><br />
+Class <a href="Types/PositiveLong.html" class="link">HealthVault::WCData::Types::PositiveLong</a><br />
+Class <a href="Types/Puid.html" class="link">HealthVault::WCData::Types::Puid</a><br />
+Class <a href="Types/RcptAddress.html" class="link">HealthVault::WCData::Types::RcptAddress</a><br />
+Class <a href="Types/RcptPerson.html" class="link">HealthVault::WCData::Types::RcptPerson</a><br />
+Class <a href="Types/RcptRecord.html" class="link">HealthVault::WCData::Types::RcptRecord</a><br />
+Class <a href="Types/Record.html" class="link">HealthVault::WCData::Types::Record</a><br />
+Class <a href="Types/RecordState.html" class="link">HealthVault::WCData::Types::RecordState</a><br />
+Class <a href="Types/Sig.html" class="link">HealthVault::WCData::Types::Sig</a><br />
+Class <a href="Types/String1024.html" class="link">HealthVault::WCData::Types::String1024</a><br />
+Class <a href="Types/String1024nw.html" class="link">HealthVault::WCData::Types::String1024nw</a><br />
+Class <a href="Types/String10nw.html" class="link">HealthVault::WCData::Types::String10nw</a><br />
+Class <a href="Types/String128.html" class="link">HealthVault::WCData::Types::String128</a><br />
+Class <a href="Types/String128nw.html" class="link">HealthVault::WCData::Types::String128nw</a><br />
+Class <a href="Types/String16.html" class="link">HealthVault::WCData::Types::String16</a><br />
+Class <a href="Types/String255.html" class="link">HealthVault::WCData::Types::String255</a><br />
+Class <a href="Types/String25nw.html" class="link">HealthVault::WCData::Types::String25nw</a><br />
+Class <a href="Types/String32.html" class="link">HealthVault::WCData::Types::String32</a><br />
+Class <a href="Types/String50nw.html" class="link">HealthVault::WCData::Types::String50nw</a><br />
+Class <a href="Types/String512.html" class="link">HealthVault::WCData::Types::String512</a><br />
+Class <a href="Types/String64.html" class="link">HealthVault::WCData::Types::String64</a><br />
+Class <a href="Types/Stringnz.html" class="link">HealthVault::WCData::Types::Stringnz</a><br />
+Class <a href="Types/Stringnznw.html" class="link">HealthVault::WCData::Types::Stringnznw</a><br />
+Class <a href="Types/Stringz1024.html" class="link">HealthVault::WCData::Types::Stringz1024</a><br />
+Class <a href="Types/Stringz128.html" class="link">HealthVault::WCData::Types::Stringz128</a><br />
+Class <a href="Types/Stringz16.html" class="link">HealthVault::WCData::Types::Stringz16</a><br />
+Class <a href="Types/Stringz255.html" class="link">HealthVault::WCData::Types::Stringz255</a><br />
+Class <a href="Types/Stringz32.html" class="link">HealthVault::WCData::Types::Stringz32</a><br />
+Class <a href="Types/Stringz512.html" class="link">HealthVault::WCData::Types::Stringz512</a><br />
+Class <a href="Types/Stringz64.html" class="link">HealthVault::WCData::Types::Stringz64</a><br />
+Class <a href="Types/Url.html" class="link">HealthVault::WCData::Types::Url</a><br />
+Class <a href="Types/Version.html" class="link">HealthVault::WCData::Types::Version</a><br />
+
+    </div>
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

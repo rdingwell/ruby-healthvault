@@ -1,0 +1,123 @@
+﻿<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetAuthorizedPeople"
+    xmlns:this="urn:com.microsoft.wc.methods.response.GetAuthorizedPeople"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+  <!--
+
+        RESPONSE-GETAUTHORIZEDPEOPLE.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetAuthorizedPeople method response
+
+    -->
+
+  <import
+      namespace="urn:com.microsoft.wc.types"
+      schemaLocation="types.xsd" />
+
+  <annotation>
+    <documentation>
+      <summary>
+        A list of authorized people for the application.
+      </summary>
+
+      <remarks>
+      </remarks>
+      <method-visibility>Public</method-visibility>
+    </documentation>
+  </annotation>
+
+  <!-- GetAuthorizedPeople - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <complexType name="GetAuthorizedPeopleResponse">
+    <sequence>
+      <annotation>
+        <documentation>
+          <summary>
+            Type containing the response data for GetAuthorizedPeople.
+          </summary>
+          <remarks>
+          </remarks>
+        </documentation>
+      </annotation>
+      <element name="person-info" type="wc-types:PersonInfo" minOccurs="0" maxOccurs="unbounded">
+        <annotation>
+          <documentation>
+            <summary>
+              The person info results for this page of data.
+            </summary>
+
+            <remarks>
+              The person id of the last PersonInfo element in this list should be used
+              as the person id cursor parameter for the next call to this method.
+              If this list is empty and the request included a person id cursor,
+              then there are no more authorized people to page through.
+              If the list is empty and the request did not include a person id cursor, there are
+              no people authorized for the application.
+            </remarks>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="more-results" type="boolean">
+        <annotation>
+          <documentation>
+            <summary>
+              Determines if there are more authorized people whose info can be requested
+              by making a subsequent call to this method.
+            </summary>
+
+            <remarks>
+              True if there are additional authorized people whose info can be queried, otherwise
+              False.
+              <br /><br />
+              To retrieve additional authorized people, make another call to this method.
+              The subsequent call should use the person id of the last PersonInfo in the current
+              page as the person id cursor.
+            </remarks>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+
+  <element name="info">
+    <complexType>
+      <annotation>
+        <documentation>
+          <summary>
+            The element of the response that contains the method
+            specific return value(s).
+          </summary>
+
+          <remarks>
+            All response schemas contain the info element which
+            contain the return value of the method. If the method
+            does not define an info element, the method has no
+            return value.
+          </remarks>
+        </documentation>
+      </annotation>
+      <sequence>
+
+        <element name="response-results" type="this:GetAuthorizedPeopleResponse">
+          <annotation>
+            <documentation>
+              <summary>
+                The response information for the authorized people.
+              </summary>
+
+              <remarks>
+              </remarks>
+            </documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+
+</schema>
+

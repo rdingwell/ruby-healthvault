@@ -1,0 +1,132 @@
+﻿<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.GetAuthorizedPeople"
+    xmlns:this="urn:com.microsoft.wc.methods.GetAuthorizedPeople"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+  <!--
+
+        METHOD-GETAUTHORIZEDPEOPLE.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetAuthorizedPeople method
+
+    -->
+
+  <import
+      namespace="urn:com.microsoft.wc.types"
+      schemaLocation="types.xsd" />
+
+  <annotation>
+    <documentation>
+      <summary>
+        Gets information about the people that are authorized
+        for an application.
+      </summary>
+
+      <remarks>
+      </remarks>
+      <method-visibility>Public</method-visibility>
+    </documentation>
+  </annotation>
+
+  <!-- GetAuthorizedPeople - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <complexType name="GetAuthorizedPeopleParameters">
+    <sequence>
+      <annotation>
+        <documentation>
+          <summary>
+            The request parameters for paging the request results.
+          </summary>
+          <remarks>
+          </remarks>
+        </documentation>
+      </annotation>
+      <element name="person-id-cursor" type="wc-types:guid" minOccurs="0" maxOccurs="1">
+        <annotation>
+          <documentation>
+            <summary>
+              The person id cursor used to page through the results of this method.
+            </summary>
+
+            <remarks>
+              To get the next page of results, pass in the person id
+              of the last PersonInfo returned in the response. To get the first
+              page of results, omit this element.
+            </remarks>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="authorizations-created-since" type="dateTime" minOccurs="0" maxOccurs="1">
+        <annotation>
+          <documentation>
+            <summary>
+              The date that is used to filter authorized people from the returned list according 
+              to the date that the person was authorized for the application.
+            </summary>
+            <remarks>
+              If this element is present and not empty, the method will return those authorized people whose
+              authorization for the application was created after the specified date.
+              If this element is omitted or empty, the method does not filter the results by the
+              date the authorization was created.
+            </remarks>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="num-results" type="positiveInteger" minOccurs="0" maxOccurs="1">
+        <annotation>
+          <documentation>
+            <summary>
+              The number of results to return in the response.
+            </summary>
+
+            <remarks>
+              Optional element for specifying the number of results to
+              return in the response. If this element isn't included, a
+              system defined default number of results are returned. The
+              maximum number of returned results is limited to a system
+              defined value.
+            </remarks>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+
+  <element name="info">
+    <complexType>
+      <annotation>
+        <documentation>
+          <summary>
+            The element of the request that contains the method
+            specific parameters.
+          </summary>
+
+          <remarks>
+            All requests contain the info element to pass parameters
+            that are specific to each method. If the method does not
+            define an info element, the method does not take any
+            parameters.
+          </remarks>
+        </documentation>
+      </annotation>
+      <sequence>
+        <element name="parameters" type="this:GetAuthorizedPeopleParameters">
+          <annotation>
+            <documentation>
+              <summary>
+                The request parameters for retrieving the list of authorized
+                people for an application using person id as a page cursor.
+              </summary>
+              <remarks>
+              </remarks>
+            </documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

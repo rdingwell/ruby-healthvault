@@ -1,0 +1,39 @@
+<schema xmlns:allergy="urn:com.microsoft.wc.thing.allergy" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.allergy"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>52bf9104-2c5e-4f1f-a66d-552ebcc53df7</type-id><type-name>Allergy</type-name><wrapper-class-name>Allergy</wrapper-class-name><wrapper-class-fwlink>136035</wrapper-class-fwlink><sample-xml-fwlink>136036</sample-xml-fwlink><data-type-guide-fwlink>136034</data-type-guide-fwlink><summary>
+                Information related to an allergy.
+            </summary><remarks>
+                This thing type describes an allergy a person has. The
+                allergic-episode type defines an occurrence of that
+                episode resulting in symptoms.
+            </remarks><effective-date-element>first-observed</effective-date-element></documentation></annotation><element name="allergy"><complexType><annotation><documentation><summary>
+                        Information related to an allergy.
+                    </summary><remarks>
+                        This thing type describes an allergy a person has. The
+                        allergic-episode type defines an occurrence of that 
+                        episode resulting in symptoms.
+                    </remarks></documentation></annotation><sequence><element name="name" type="t:codable-value"><annotation><documentation><summary>
+                                The name of the allergy.
+                            </summary></documentation></annotation></element><element name="reaction" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                A description of a typical reaction to the
+                                allergen.
+                            </summary><preferred-vocabulary>icd9cm</preferred-vocabulary></documentation></annotation></element><element name="first-observed" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                The approximate date and time when the allergy
+                                was first observed.
+                            </summary></documentation></annotation></element><element name="allergen-type" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The allergen type provides a general category of 
+                                the source of the allergic reaction.
+                            </summary><remarks>
+                                Examples include medication (penicillin, 
+                                sulfonamides, etc.), food (peanuts, shell fish,
+                                wheat, etc.), animal (bee stings, canine, 
+                                feline, etc.), plants (ragweed, birch, etc.), 
+                                environmental (smoke, smog, dust, etc.).
+                            </remarks><preferred-vocabulary>allergen-type</preferred-vocabulary></documentation></annotation></element><element name="allergen-code" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The clinical allergen code.
+                            </summary><preferred-vocabulary>icd9cm</preferred-vocabulary></documentation></annotation></element><element name="treatment-provider" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                Information about the treatment provider for 
+                                this allergy.
+                            </summary></documentation></annotation></element><element name="treatment" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The possible treatment description for this allergy.
+                            </summary></documentation></annotation></element><element name="is-negated" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                True if the allergic reation is negated with treatment.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

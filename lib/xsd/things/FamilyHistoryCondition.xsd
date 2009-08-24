@@ -1,0 +1,16 @@
+<schema xmlns:fam="urn:com.microsoft.wc.thing.family-history-condition" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.family-history-condition"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>6705549b-0e3d-474e-bfa7-8197ddd6786a</type-id><type-name>Family History Condition</type-name><wrapper-class-name>FamilyHistoryCondition</wrapper-class-name><wrapper-class-fwlink>136128</wrapper-class-fwlink><sample-xml-fwlink>136129</sample-xml-fwlink><data-type-guide-fwlink>136127</data-type-guide-fwlink><summary>
+                A condition of a relative.
+            </summary><remarks>
+                Note: Please use the family history type instead of this type.
+                <br />
+                Stores a condition that a relative of the record-owner has.<br />
+                Relate this item to a Family History Person item describing the relative.
+            </remarks></documentation></annotation><element name="family-history-condition"><complexType><annotation><documentation><summary>
+                        A condition of a relative.
+                    </summary><remarks>
+                        Note: Please use the family history type instead of this type.
+                        <br />
+                        Stores a condition that a relative of the record-owner has.
+                    </remarks></documentation></annotation><sequence><element name="condition" type="t:condition"><annotation><documentation><summary>
+                                The condition for the relative.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

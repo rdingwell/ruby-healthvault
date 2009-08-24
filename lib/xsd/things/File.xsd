@@ -1,0 +1,28 @@
+<schema xmlns:f="urn:com.microsoft.wc.thing.file" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:wct="urn:com.microsoft.wc.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.file"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.types" schemaLocation="../../../platform/web/xsd/types.xsd" /><annotation><documentation><type-id>bd0403c5-4ae2-4b0e-a8db-1888678e4528</type-id><type-name>File</type-name><uses-blob-store>true</uses-blob-store><wrapper-class-name>File</wrapper-class-name><wrapper-class-fwlink>136134</wrapper-class-fwlink><sample-xml-fwlink>136135</sample-xml-fwlink><data-type-guide-fwlink>136133</data-type-guide-fwlink><summary>
+              Defines the schema for a file which can be uploaded to
+              Microsoft HealthVault.
+            </summary><remarks>
+                Files are stored as encoded data in the "other data"
+                section of things. Most files are stored as base64 encoded
+                binary with the appropriate content-type set for the
+                type of the file.
+            </remarks></documentation></annotation><element name="file"><annotation><documentation><summary>
+                  Defines the schema for a file which can be uploaded to
+                  Microsoft HealthVault.
+                </summary><remarks>
+                    Files are stored as encoded data in the "other data" 
+                    section of things. Most files are stored as base64 encoded
+                    binary with the appropriate content-type set for the
+                    type of the file.
+                </remarks></documentation></annotation><complexType><sequence><element name="name" type="wct:string255"><annotation><documentation><summary>
+                                The original name of the file, with extension
+                                if available.
+                            </summary></documentation></annotation></element><element name="size" type="positiveInteger"><annotation><documentation><summary>
+                                The size of the file in bytes.
+                            </summary></documentation></annotation></element><element name="content-type" type="t:codable-value" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The content type of the file.
+                            </summary><remarks>
+                              If empty, Microsoft HealthVault will
+                              assume a content type of
+                              application/octet-stream.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

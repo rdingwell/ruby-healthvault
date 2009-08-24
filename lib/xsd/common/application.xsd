@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.application"
+    xmlns:this="urn:com.microsoft.wc.application"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-auth="urn:com.microsoft.wc.auth"        
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+    <import
+        namespace="urn:com.microsoft.wc.auth"
+        schemaLocation="auth.xsd" />
+    <import
+        namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="xml.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+            </summary>
+
+            <remarks>
+            </remarks>
+        </documentation>
+    </annotation>
+
+    <complexType name="ApplicationAttributes">
+        <sequence>
+            <element name="app-attribute" type="wc-types:stringnz" 
+                minOccurs="1" maxOccurs="20">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application attributes. 
+                        </summary>
+                        <remarks>
+                            Multiple values can be specified by passing multiple instances of this
+                            element.
+                            Currently supported values:
+                                "hippa" Specifies that the application is covered by HIPAA.
+                                "clinicaltrial" Specifies that the application is related to a
+                                    clinical trial and may need a disclosure.
+                            Additional supported values may be added in the future. Application
+                            code must ignore any unrecognized values to avoid breaking when
+                            values are added.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="App">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="id" type="wc-types:guid">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="name" type="wc-types:CultureSpecificString255"
+                     minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="app-auth-required" type="boolean" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="is-published" type="boolean" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>            
+            
+            <element name="action-url" type="string" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="description" type="wc-types:CultureSpecificString" minOccurs="0"
+                maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="auth-reason" type="wc-types:CultureSpecificString" minOccurs="0"
+                maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="domain-name" type="wc-types:string255"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+                         This parameter specifies the application's domain 
+                         name. E-mail sent from the application, will have 
+                         its From address originating from this domain. If
+                         the domain were myapp.com, then the From address 
+                         will be "mailbox@myapp.com", where mailbox is 
+                         specified in the send message request from the app. 
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="client-service-token" type="wc-types:guid"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Access token for client services.
+                        </summary>
+
+                        <remarks>
+                            Token required to access HealthVault client services.
+                            For instance, the vocabulary search service.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="persistent-tokens" 
+                type="this:AppPersistentTokens"
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="privacy-statement" type="this:StatementInfo"
+                 minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application's privacy statement as a base64 encoded string
+                            and its corresponding content type.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="terms-of-use" type="this:StatementInfo"
+                 minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application's terms of use statement as a base64 encoded string
+                            and its corresponding content type.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="dtc-success-message" type="this:StatementInfo"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The message to display to the use when direct to clinial
+                            authorization completes successfully. 
+                        </summary>
+                        <remarks>
+                            Represented as a base64 encoded string and its corresponding 
+                            content type.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="app-attributes" type="this:ApplicationAttributes"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application attributes.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="app-type" type="wc-types:string32">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The type of application.
+                        </summary>
+                        <remarks>
+                            The valid application types are: Web, Soda
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="master-app-id" type="wc-types:guid"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application id of the master app.
+                        </summary>
+                        <remarks>
+                            This element may be included if the application is a child
+                            of a master application.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="master-app-name" type="wc-types:CultureSpecificString255"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application name of the master app.
+                        </summary>
+                        <remarks>
+                            This element may be included if the application is a child
+                            of a master application.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="created-date" type="dateTime"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The date the application was created.
+                        </summary>
+                        <remarks>
+                            The date the application was created within HealthVault.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+    
+            <element name="updated-date" type="dateTime"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The date the application was updated.
+                        </summary>
+                        <remarks>
+                            The date the application was updated within HealthVault.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+                    
+        </sequence>
+    </complexType>
+
+    <complexType name="AppWithLogos">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="id" type="wc-types:guid" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="name" type="wc-types:CultureSpecificString255" 
+                     minOccurs="1" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="app-auth-required" type="boolean" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="is-published" type="boolean" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="action-url" type="string" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="description" type="wc-types:CultureSpecificString" minOccurs="0"
+                maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="auth-reason" type="wc-types:CultureSpecificString" minOccurs="0"
+                maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="domain-name" type="wc-types:string255"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+                        This parameter specifies the application's domain
+                        name. E-mail sent from the application, will have
+                        its From address originating from this domain. If
+                        the domain were myapp.com, then the From address
+                        will be "mailbox@myapp.com", where mailbox is
+                        specified in the send message request from the app.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="client-service-token" type="wc-types:guid"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                        Access token for client services.
+                        </summary>
+
+                        <remarks>
+                        Token required to access HealthVault client services.
+                        For instance, the vocabulary search service.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="large-logo" type="this:AppLargeLogoInfo"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="small-logo" type="this:AppSmallLogoInfo"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="persistent-tokens" 
+                type="this:AppPersistentTokens"
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="person-online-base-auth-xml" 
+                type="wc-auth:AuthXml">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="person-offline-base-auth-xml" 
+                type="wc-auth:AuthXml"
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="privacy-statement" type="this:StatementInfo"
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application's privacy statement as a base64 encoded string
+                            and its corresponding content type.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="terms-of-use" type="this:StatementInfo"
+                 minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application's terms of use statement as a base64 encoded string
+                            and its corresponding content type.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="dtc-success-message" type="this:StatementInfo"
+                 minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The message to display to the use when direct to clinial
+                            authorization completes successfully.
+                        </summary>
+                        <remarks>
+                            Represented as a base64 encoded string and its corresponding 
+                            content type.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="app-attributes" type="this:ApplicationAttributes"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application attributes.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="app-type" type="wc-types:string32">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The type of application.
+                        </summary>
+                        <remarks>
+                            The valid application types are: Web, Soda
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="master-app-id" type="wc-types:guid"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application id of the master app.
+                        </summary>
+                        <remarks>
+                            This element may be included if the application is a child
+                            of a master application.
+                        </remarks>                            
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="master-app-name" type="wc-types:CultureSpecificString255"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application name of the master app.
+                        </summary>
+                        <remarks>
+                            This element may be included if the application is a child
+                            of a master application.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="created-date" type="dateTime"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The date the application was created.
+                        </summary>
+                        <remarks>
+                            The date the application was created within HealthVault.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="updated-date" type="dateTime"
+                    minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The date the application was updated.
+                        </summary>
+                        <remarks>
+                            The date the application was updated within HealthVault.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <!-- max 120 kb image becomes 160kb when base64 encoded -->
+    <simpleType name="AppLargeLogo">
+        <annotation>
+            <documentation>
+                <summary>
+                    
+                </summary>
+
+                <remarks>
+                    
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="base64Binary">
+            <minLength value="3" />
+            <maxLength value="163840" />
+        </restriction>
+    </simpleType>
+    
+    <complexType name="CultureSpecificAppLargeLogo">
+        <annotation>
+            <documentation>
+                <summary>
+                    The CultureSpecific... classes are intended for use with data that can
+                    be localized for one or more languages and cultures.
+                </summary>
+                <remarks>
+                    The CultureSpecific... classes should be upward compatibile with the
+                    base types.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:AppLargeLogo">
+                <attribute ref="xml:lang" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                This represents the language and culture of the data in the
+                                element, such as "en-us" or "fr-ca".
+                            </summary>
+                            <remarks>
+                                In a typical use, an instance of an element with no xml:lang
+                                attribute specified is treated as the default entry. Only one
+                                default entry is typically allowed.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="AppLargeLogoInfo">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="logo" type="this:CultureSpecificAppLargeLogo" 
+                     minOccurs="1" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="content-type" type="wc-types:string255">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <!-- max 30 kb image becomes 40kb when base64 encoded -->
+    <simpleType name="AppSmallLogo">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="base64Binary">
+            <minLength value="3" />
+            <maxLength value="40960" />
+        </restriction>
+    </simpleType>
+    
+    <complexType name="CultureSpecificAppSmallLogo">
+        <annotation>
+            <documentation>
+                <summary>
+                    The CultureSpecific... classes are intended for use with data that can
+                    be localized for one or more languages and cultures.
+                </summary>
+                <remarks>
+                    The CultureSpecific... classes should be upward compatibile with the
+                    base types.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:AppSmallLogo">
+                <attribute ref="xml:lang" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                This represents the language and culture of the data in the
+                                element, such as "en-us" or "fr-ca".
+                            </summary>
+                            <remarks>
+                                In a typical use, an instance of an element with no xml:lang
+                                attribute specified is treated as the default entry. Only one
+                                default entry is typically allowed.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="AppSmallLogoInfo">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="logo" type="this:CultureSpecificAppSmallLogo" 
+                     minOccurs="1" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="content-type" type="wc-types:string255">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+    
+    <complexType name ="AppIdAndIncrAuth">
+        <sequence>
+            <element name="id" type="wc-types:guid">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="incr-online-auth-xml" 
+                     type="wc-auth:AuthXml" 
+                minOccurs="0">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="is-incr-online-auth-replace" type="boolean" minOccurs="0">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="incr-offline-auth-xml" 
+                     type="wc-auth:AuthXml" 
+                minOccurs="0">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="is-incr-offline-auth-replace" type="boolean" minOccurs="0">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="AppPersistentTokens">
+        <sequence>
+            <element name="enabled" type="boolean">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="token-ttl-seconds" type="positiveInteger" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <simpleType name="PublicKey">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <pattern value="[a-fA-F0-9]{512,4096}"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="PublicKeys">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="public-key" type="this:PublicKey" minOccurs="1" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <simpleType name="Statement">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="base64Binary">
+        </restriction>
+    </simpleType>
+    
+    <complexType name="CultureSpecificStatement">
+        <annotation>
+            <documentation>
+                <summary>
+                    The CultureSpecific... classes are intended for use with data that can
+                    be localized for one or more languages and cultures.
+                </summary>
+                <remarks>
+                    The CultureSpecific... classes should be upward compatibile with the
+                    base types.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:Statement">
+                <attribute ref="xml:lang" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                This represents the language and culture of the data in the
+                                element, such as "en-us" or "fr-ca".
+                            </summary>
+                            <remarks>
+                                In a typical use, an instance of an element with no xml:lang
+                                attribute specified is treated as the default entry. Only one
+                                default entry is typically allowed.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="StatementInfo">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="statement" type="this:CultureSpecificStatement"
+                minOccurs="1" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="content-type" type="wc-types:string255">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="SodaAppConfig">
+        <annotation>
+            <documentation>
+                <summary>
+                    SodaAppConfig encapsulates the attributes required to create
+                    a Soda application.
+                </summary>
+                <remarks>
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="id" type="wc-types:guid">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The id to assign the newly created application.
+                        </summary>
+                        <remarks>
+                            When installing a Soda application, the application creates
+                            its own app id to register with platform.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="parent-id" type="wc-types:guid">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The id of the parent application from which to inherit properties.
+                        </summary>
+                        <remarks>
+                            Soda applications typically all share a common configuration.
+                            The Soda application's configuration is inherited from the
+                            parent.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="name" type="wc-types:string255">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The name of this Soda instance.
+                        </summary>
+                        <remarks>
+                            Soda applications all share the parent's name and add a local
+                            instance name to distinguish themselves.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="public-keys" type="this:PublicKeys">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The public keys for this Soda instance.
+                        </summary>
+                        <remarks>
+                            Soda applications typically configure their own keys when
+                            registering.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+</schema>
+

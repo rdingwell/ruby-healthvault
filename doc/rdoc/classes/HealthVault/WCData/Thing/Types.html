@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: HealthVault::WCData::Thing::Types</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Thing::Types</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../files/lib/wc_data/generated/thing/types/address_rb.html">
+                lib/wc_data/generated/thing/types/address.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/aerobic_lap_session_rb.html">
+                lib/wc_data/generated/thing/types/aerobic_lap_session.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/aerobic_session_rb.html">
+                lib/wc_data/generated/thing/types/aerobic_session.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/aerobic_session_samples_rb.html">
+                lib/wc_data/generated/thing/types/aerobic_session_samples.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/altitude_value_rb.html">
+                lib/wc_data/generated/thing/types/altitude_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/blood_glucose_value_rb.html">
+                lib/wc_data/generated/thing/types/blood_glucose_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/codable_value_rb.html">
+                lib/wc_data/generated/thing/types/codable_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/coded_value_rb.html">
+                lib/wc_data/generated/thing/types/coded_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/communication_type_rb.html">
+                lib/wc_data/generated/thing/types/communication_type.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/condition_rb.html">
+                lib/wc_data/generated/thing/types/condition.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/contact_rb.html">
+                lib/wc_data/generated/thing/types/contact.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/display_value_rb.html">
+                lib/wc_data/generated/thing/types/display_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/document_reference_type_rb.html">
+                lib/wc_data/generated/thing/types/document_reference_type.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/double_range_rb.html">
+                lib/wc_data/generated/thing/types/double_range.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/dow_rb.html">
+                lib/wc_data/generated/thing/types/dow.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/duration_value_rb.html">
+                lib/wc_data/generated/thing/types/duration_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/email_rb.html">
+                lib/wc_data/generated/thing/types/email.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/flow_value_rb.html">
+                lib/wc_data/generated/thing/types/flow_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/general_measurement_rb.html">
+                lib/wc_data/generated/thing/types/general_measurement.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/goal_rb.html">
+                lib/wc_data/generated/thing/types/goal.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/goal_status_rb.html">
+                lib/wc_data/generated/thing/types/goal_status.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/group_membership_type_rb.html">
+                lib/wc_data/generated/thing/types/group_membership_type.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/guid_rb.html">
+                lib/wc_data/generated/thing/types/guid.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/insulin_injection_value_rb.html">
+                lib/wc_data/generated/thing/types/insulin_injection_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/lab_result_type_rb.html">
+                lib/wc_data/generated/thing/types/lab_result_type.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/lab_test_type_rb.html">
+                lib/wc_data/generated/thing/types/lab_test_type.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/language_rb.html">
+                lib/wc_data/generated/thing/types/language.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/length_value_rb.html">
+                lib/wc_data/generated/thing/types/length_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/name_rb.html">
+                lib/wc_data/generated/thing/types/name.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/non_negative_double_rb.html">
+                lib/wc_data/generated/thing/types/non_negative_double.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/one_to_five_rb.html">
+                lib/wc_data/generated/thing/types/one_to_five.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/organization_rb.html">
+                lib/wc_data/generated/thing/types/organization.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/pace_value_rb.html">
+                lib/wc_data/generated/thing/types/pace_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/percentage_rb.html">
+                lib/wc_data/generated/thing/types/percentage.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/person_rb.html">
+                lib/wc_data/generated/thing/types/person.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/phone_rb.html">
+                lib/wc_data/generated/thing/types/phone.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/positive_double_rb.html">
+                lib/wc_data/generated/thing/types/positive_double.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/power_value_rb.html">
+                lib/wc_data/generated/thing/types/power_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/sample_rb.html">
+                lib/wc_data/generated/thing/types/sample.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/sample_set_rb.html">
+                lib/wc_data/generated/thing/types/sample_set.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/speed_value_rb.html">
+                lib/wc_data/generated/thing/types/speed_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/stringnz_rb.html">
+                lib/wc_data/generated/thing/types/stringnz.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/structured_measurement_rb.html">
+                lib/wc_data/generated/thing/types/structured_measurement.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/temperature_value_rb.html">
+                lib/wc_data/generated/thing/types/temperature_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/torque_value_rb.html">
+                lib/wc_data/generated/thing/types/torque_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/volume_value_rb.html">
+                lib/wc_data/generated/thing/types/volume_value.rb
+                </a>
+        <br />
+                <a href="../../../../files/lib/wc_data/generated/thing/types/weight_value_rb.html">
+                lib/wc_data/generated/thing/types/weight_value.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="Types/Address.html" class="link">HealthVault::WCData::Thing::Types::Address</a><br />
+Class <a href="Types/Aerobiclapsession.html" class="link">HealthVault::WCData::Thing::Types::Aerobiclapsession</a><br />
+Class <a href="Types/Aerobicsession.html" class="link">HealthVault::WCData::Thing::Types::Aerobicsession</a><br />
+Class <a href="Types/Aerobicsessionsamples.html" class="link">HealthVault::WCData::Thing::Types::Aerobicsessionsamples</a><br />
+Class <a href="Types/Altitudevalue.html" class="link">HealthVault::WCData::Thing::Types::Altitudevalue</a><br />
+Class <a href="Types/Bloodglucosevalue.html" class="link">HealthVault::WCData::Thing::Types::Bloodglucosevalue</a><br />
+Class <a href="Types/Codablevalue.html" class="link">HealthVault::WCData::Thing::Types::Codablevalue</a><br />
+Class <a href="Types/Codedvalue.html" class="link">HealthVault::WCData::Thing::Types::Codedvalue</a><br />
+Class <a href="Types/Communicationtype.html" class="link">HealthVault::WCData::Thing::Types::Communicationtype</a><br />
+Class <a href="Types/Condition.html" class="link">HealthVault::WCData::Thing::Types::Condition</a><br />
+Class <a href="Types/Contact.html" class="link">HealthVault::WCData::Thing::Types::Contact</a><br />
+Class <a href="Types/Displayvalue.html" class="link">HealthVault::WCData::Thing::Types::Displayvalue</a><br />
+Class <a href="Types/Documentreferencetype.html" class="link">HealthVault::WCData::Thing::Types::Documentreferencetype</a><br />
+Class <a href="Types/Doublerange.html" class="link">HealthVault::WCData::Thing::Types::Doublerange</a><br />
+Class <a href="Types/Dow.html" class="link">HealthVault::WCData::Thing::Types::Dow</a><br />
+Class <a href="Types/Durationvalue.html" class="link">HealthVault::WCData::Thing::Types::Durationvalue</a><br />
+Class <a href="Types/Email.html" class="link">HealthVault::WCData::Thing::Types::Email</a><br />
+Class <a href="Types/Flowvalue.html" class="link">HealthVault::WCData::Thing::Types::Flowvalue</a><br />
+Class <a href="Types/Generalmeasurement.html" class="link">HealthVault::WCData::Thing::Types::Generalmeasurement</a><br />
+Class <a href="Types/Goal.html" class="link">HealthVault::WCData::Thing::Types::Goal</a><br />
+Class <a href="Types/Goalstatus.html" class="link">HealthVault::WCData::Thing::Types::Goalstatus</a><br />
+Class <a href="Types/Groupmembershiptype.html" class="link">HealthVault::WCData::Thing::Types::Groupmembershiptype</a><br />
+Class <a href="Types/Guid.html" class="link">HealthVault::WCData::Thing::Types::Guid</a><br />
+Class <a href="Types/Insulininjectionvalue.html" class="link">HealthVault::WCData::Thing::Types::Insulininjectionvalue</a><br />
+Class <a href="Types/Labresulttype.html" class="link">HealthVault::WCData::Thing::Types::Labresulttype</a><br />
+Class <a href="Types/Labtesttype.html" class="link">HealthVault::WCData::Thing::Types::Labtesttype</a><br />
+Class <a href="Types/Language.html" class="link">HealthVault::WCData::Thing::Types::Language</a><br />
+Class <a href="Types/Lengthvalue.html" class="link">HealthVault::WCData::Thing::Types::Lengthvalue</a><br />
+Class <a href="Types/Name.html" class="link">HealthVault::WCData::Thing::Types::Name</a><br />
+Class <a href="Types/NonNegativeDouble.html" class="link">HealthVault::WCData::Thing::Types::NonNegativeDouble</a><br />
+Class <a href="Types/Onetofive.html" class="link">HealthVault::WCData::Thing::Types::Onetofive</a><br />
+Class <a href="Types/Organization.html" class="link">HealthVault::WCData::Thing::Types::Organization</a><br />
+Class <a href="Types/Pacevalue.html" class="link">HealthVault::WCData::Thing::Types::Pacevalue</a><br />
+Class <a href="Types/Percentage.html" class="link">HealthVault::WCData::Thing::Types::Percentage</a><br />
+Class <a href="Types/Person.html" class="link">HealthVault::WCData::Thing::Types::Person</a><br />
+Class <a href="Types/Phone.html" class="link">HealthVault::WCData::Thing::Types::Phone</a><br />
+Class <a href="Types/PositiveDouble.html" class="link">HealthVault::WCData::Thing::Types::PositiveDouble</a><br />
+Class <a href="Types/Powervalue.html" class="link">HealthVault::WCData::Thing::Types::Powervalue</a><br />
+Class <a href="Types/Sample.html" class="link">HealthVault::WCData::Thing::Types::Sample</a><br />
+Class <a href="Types/Sampleset.html" class="link">HealthVault::WCData::Thing::Types::Sampleset</a><br />
+Class <a href="Types/Speedvalue.html" class="link">HealthVault::WCData::Thing::Types::Speedvalue</a><br />
+Class <a href="Types/Stringnz.html" class="link">HealthVault::WCData::Thing::Types::Stringnz</a><br />
+Class <a href="Types/Structuredmeasurement.html" class="link">HealthVault::WCData::Thing::Types::Structuredmeasurement</a><br />
+Class <a href="Types/Temperaturevalue.html" class="link">HealthVault::WCData::Thing::Types::Temperaturevalue</a><br />
+Class <a href="Types/Torquevalue.html" class="link">HealthVault::WCData::Thing::Types::Torquevalue</a><br />
+Class <a href="Types/Volumevalue.html" class="link">HealthVault::WCData::Thing::Types::Volumevalue</a><br />
+Class <a href="Types/Weightvalue.html" class="link">HealthVault::WCData::Thing::Types::Weightvalue</a><br />
+
+    </div>
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

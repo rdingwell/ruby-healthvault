@@ -1,0 +1,23 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.peak-flow" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.peak-flow"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>5d8419af-90f0-4875-a370-0f881c18f6b3</type-id><type-name>Peak Flow Measurement</type-name><version>2</version><wrapper-class-name>PeakFlow</wrapper-class-name><wrapper-class-fwlink>136203</wrapper-class-fwlink><sample-xml-fwlink>136204</sample-xml-fwlink><data-type-guide-fwlink>136202</data-type-guide-fwlink><summary>
+                A peak flow measurement.
+            </summary><remarks>
+                Peak flow measures are typically collected on a daily basis by patients to track their
+                lung function.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="peak-flow"><complexType><annotation><documentation><summary>
+                        A peak flow measurement.
+                    </summary><remarks>
+                        Peak flow measures are typically collected on a daily basis by patients to track their
+                        lung function.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:approx-date-time"><annotation><documentation><summary>
+                                The date and time of the measurement.
+                            </summary></documentation></annotation></element><element name="pef" type="t:flow-value" minOccurs="0"><annotation><documentation><summary>
+                                The peak expiratory flow, measured in liters/second.
+                            </summary></documentation></annotation></element><element name="fev1" type="t:volume-value" minOccurs="0"><annotation><documentation><summary>
+                                The forced expiratory volume in one second, measured in liters.
+                            </summary></documentation></annotation></element><element name="fev6" type="t:volume-value" minOccurs="0"><annotation><documentation><summary>
+                                The forced expiratory volume in six seconds, measured in liters.
+                            </summary></documentation></annotation></element><element name="measurement-flags" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Additional information about the measurement.
+                            </summary><remarks>
+                                Examples: Incomplete measurement.
+                            </remarks><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element></sequence></complexType></element></schema>

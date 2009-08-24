@@ -1,0 +1,1105 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.auth"
+    xmlns:this="urn:com.microsoft.wc.auth"
+    xmlns:wc-thing="urn:com.microsoft.wc.thing"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" > 
+
+    <!--
+
+        AUTH.XSD
+        Microsoft HealthVault
+
+        Platform API: Representation of the authorization rules
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+
+            </summary>
+
+            <remarks>
+
+            </remarks>
+        </documentation>
+    </annotation>
+    
+    <complexType name="Set">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="date-range" type="wc-types:DateRange"
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="type-id" type="wc-types:guid"
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+    
+    <complexType name="Rule">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="reason" type="wc-types:CultureSpecificString1024"
+                    minOccurs="0" maxOccurs="unbounded">
+                 <annotation>
+                    <documentation>
+                        <summary>
+                            The reason the application is requesting this access.
+                        </summary>
+                        <remarks>
+                            This reason string will be presented to the user when
+                            the application asks them to approve this rule. 
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="display-flags" type="unsignedInt"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Flags directing the display of optional rules.
+                        </summary>
+                        <remarks>
+                            <pre>
+                            0x1 DisplayFirstTime 
+                                 Display optional rule during initial App Authorization 
+                            0x2 CheckedFirstTime 
+                                 Display the optional rule as checked during inital App Authorization  
+                            0x4 CheckedDefault
+                                 Display the optional rule as checked (opt-out)
+                             </pre>
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="permission" type="wc-types:Permission" 
+                     minOccurs="1" maxOccurs="5">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="target-set" type="this:Set"
+                minOccurs="0" maxOccurs ="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+             <!-- 0 == all -->
+            <element name="exception-set" type="this:Set"
+                minOccurs="0" maxOccurs ="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+        <attribute name="is-incr" type="boolean" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+        <attribute name="is-optional" type="boolean" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+        <attribute name="name" type="wc-types:string16" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+                        A short name uniquely identifying the rule within the set.
+                    </summary>
+                    <remarks>
+                        The name must be unique within the rule set.
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+        </complexType>
+    
+    <complexType name="Rules">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="rule" type="this:Rule"
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+  
+    <complexType name ="Auth">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="rules" type="this:Rules" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="AuthXml">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="auth" type="this:Auth"
+                 minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+  
+    <element name="auth" type="this:Auth">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+    </element>
+
+
+    <simpleType name="TextualPermissionsType">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="Custom">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ReadAll">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="UpdateAll">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CreateAll">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="DeleteAll">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ReadUpdateAll" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ReadCreateAll">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="UpdateCreateAll">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ReadUpdateCreateAll">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ReadUpdateCreateDeleteAll">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    <complexType name="TextualRule">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="permission" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="target-thing-types" type="string" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="target-sets" type="string" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="target-dates" type="string" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="except-thing-types" type="string" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="except-sets" type="string" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="except-dates" type="string" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="TextualPermissions">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="textual-permissions-type"
+                type="this:TextualPermissionsType">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="textual-rule"
+                type="this:TextualRule">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <!-- private Credentials -->
+
+    <complexType name="UserPassCred">
+        <annotation>
+            <documentation>
+                <summary>
+                    A username and password based credential.
+                </summary>
+
+                <remarks>
+                    This credential type authenticates a user with a username
+                    and password.  
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="username" type="wc-types:LoginName">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The username of the person being authenticated.
+                        </summary>
+
+                        <remarks>
+                            Each user has a unique username and an associated 
+                            password.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="password" type="wc-types:string1024">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The user's password.
+                        </summary>
+
+                        <remarks>
+                            The password used to authenticate the user via
+                            the provided username.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="SimpleUserPassCredential">
+        <annotation>
+            <documentation>
+                <summary>
+                    A simple user credential that authenticates a user in
+                    Microsoft HealthVault.
+                </summary>
+
+                <remarks>
+                    Each user has a unique username and associated password
+                    that identifies and authenticates a Microsoft HealthVault user.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="simple-userpass"
+                type="this:UserPassCred">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A username and password based credential.
+                        </summary>
+
+                        <remarks>
+                            This credential type authenticates a user with a 
+                            username and password.  
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="UserPassAuthSessionCred">
+        <annotation>
+            <documentation>
+                <summary>
+                    A credential which establishes an authenticated session
+                    using a username and password based credential.
+                </summary>
+
+                <remarks>
+                  A username and password based credential in conjunction
+                  with a shared secret so that an authenticated session
+                  can be established with Microsoft HealthVault.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="username" type="wc-types:string128">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The username of the person being authenticated.
+                        </summary>
+
+                        <remarks>
+                            Each user has a unique username and an associated 
+                            password.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="password" type="wc-types:string1024">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The user's password.
+                        </summary>
+
+                        <remarks>
+                            The password used to authenticate the user via
+                            the provided username.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="shared-secret"
+                type="wc-types:HMACAlgorithm">
+                <annotation>
+                    <documentation>
+                        <summary>
+                          The shared secret used to establish the authenticated
+                          session with Microsoft HealthVault.
+                        </summary>
+
+                        <remarks>
+                            The shared secret is used to authenticate all requests
+                            which include the token produced on succesful 
+                            authentication.  In order for a client to establish
+                            an authenticated session with the Microsoft Health 
+                            Service, it must provide a shared secret. The
+                            client uses the secret as the secret key when 
+                            HMAC'ing over the header section of the request. The
+                            resulting HMAC digest forms the content of the 
+                            request auth section.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="FederatingCred">
+        <annotation>
+            <documentation>
+                <summary>
+                    The federating credential that demonstrates a prior
+                    successful authentication.
+                </summary>
+
+                <remarks>
+                    This credential represents a successful authentication
+                    to an application which is allowed to federate a logon
+                    to another application.  The token is used to verify 
+                    a prior successful authentication to the federating 
+                    application.  The application id associated with the token
+                    must match the application id in the federating request.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="federating-auth-token" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A credential token that demonstrates a prior
+                            successful authentication.
+                        </summary>
+
+                        <remarks>
+                            This token is produced for application servers
+                            upon successful authentication of a user.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="SimpleCardSpaceCredential">
+        <annotation>
+            <documentation>
+                <summary>
+                    A simple cardspace credential.
+                </summary>
+
+                <remarks>
+                    A simple credential does not provide the necessary information
+                    to establish an authenticated session.  Rather, it provides
+                    only enough information to authenticate a user.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="simple-cardspace"
+                type="wc-types:CardSpaceCred">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A SAML-based credential provided by the CardSpace 
+                            service.
+                        </summary>
+
+                        <remarks>
+                            CardSpace produces a SAML token that is encrypted 
+                            using the SSL public key used when associating a 
+                            CardSpace credential with a primary credential.  
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="AuthSessionSubCredential">
+        <annotation>
+            <documentation>
+                <summary>
+                    Defines the possible subcredentials that can be used with
+                    an AuthSessionCredential.
+                </summary>
+            </documentation>
+        </annotation>
+        <choice>
+            <element name="simple-passport" 
+                     type="this:SimplePassportCredential">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A credential for verifying identity with
+                            Microsoft Passport.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+        </choice>
+    </complexType>
+
+    <complexType name="AuthSessionCredential">
+        <annotation>
+            <documentation>
+                <summary>
+                    A credential for authenticating a session with a 
+                    sub-credential.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="sub-credential"
+                type="this:AuthSessionSubCredential">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The user's credential that will be used with the
+                            application's credential to create the session.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="shared-secret"
+                type="wc-types:HMACAlgorithm">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The shared secret is used to authenticate all requests
+                            which include the token produced on succesful 
+                            authentication.  In order for a client to establish
+                            an authenticated session with the Microsoft Health 
+                            Service, it must provide a shared secret. The
+                            client uses the secret as the secret key when 
+                            HMAC'ing over the header section of the request. The
+                            resulting HMAC digest forms the content of the 
+                            request auth section.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="SimpleOpenIdCredential">
+        <annotation>
+            <documentation>
+                <summary>
+                    Represents the confirmed claimed id of a user who
+                    has been authenticated to an Open Id Provider.
+                </summary>
+
+                <remarks>
+                    Authentication is performed to an Open Id Provider through
+                    Shell which passes it to platform for verification 
+                    against a HealthVault account.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="claimed-id" type="wc-types:string128">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique claimed identifier for the person.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="SimplePassportCredential">
+        <annotation>
+            <documentation>
+                <summary>
+                    Represents the confirmed identification of a user who
+                    has been authenticated to the Passport service.
+                </summary>
+
+                <remarks>
+                    Authentication to Passport is done through the Shell which
+                    extracts the user's PUID from the ticket and passes it to
+                    the platform for verification against a HealthVault account.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="puid" type="wc-types:puid">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique Passport identifier for the person.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="AssociatedCredInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    Info used to describe the credential to associated with
+                    the account.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <choice>
+                <element name="credential"
+                    type="this:SimpleCardSpaceCredential">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The card space credential.
+                            </summary>
+
+                            <remarks>
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="simple-userpass"
+                    type="this:UserPassCred">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                              A simple user credential that authenticates a user in
+                              Microsoft HealthVault.
+                            </summary>
+
+                            <remarks>
+                                Each user has a unique username and associated password
+                                that identifies and authenticates a Microsoft HealthVault user.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="simple-passport" 
+                         type="this:SimplePassportCredential">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A credential for verifying identity with
+                                Microsoft Passport.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="simple-openid" 
+                         type="this:SimpleOpenIdCredential">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Represents the confirmed claimed id of a user who
+                                has been authenticated to an Open Id Provider.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+            </choice>
+
+            <element name="credential-metadata"
+                minOccurs="0" type="wc-types:stringnz">
+                <annotation>
+                    <documentation>
+                        <summary>
+                          Meta-data associated with the credential that is
+                          used by Microsoft HealthVault.
+                        </summary>
+
+                        <remarks>
+                            An example of a meta datum is the description of
+                            the associated credential.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="credential-name" type="wc-types:string64"
+                minOccurs="0" maxOccurs="1">
+               <annotation>
+                    <documentation>
+                        <summary>
+                            The credential name is used to identify
+                            the credential to the end user.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+
+    <complexType name="Token">
+        <annotation>
+            <documentation>
+                <summary>
+                    The authenticated session token.
+                </summary>
+
+                <remarks>
+                    If the request succeeded, then an authenticated session
+                    token is returned.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="wc-types:stringz1024" >
+                <attribute name="app-id" type="wc-types:guid" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The guid of the application id for which
+                                the authenticated session token was created.
+                            </summary>
+
+                            <remarks>
+                                This application id will be the same as the one
+                                specified in the request.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="app-record-auth-action"
+                    type="wc-types:AppRecordAuthAction"
+                    use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The states of application-record authorization.
+                            </summary>
+
+                            <remarks>
+                                If there are actions required, then the enumeration value
+                                describes the required user action to successfully create
+                                a token.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+</schema>
+
+

@@ -1,0 +1,15 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.blood-oxygen-saturation" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.blood-oxygen-saturation"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>3a54f95f-03d8-4f62-815f-f691fc94a500</type-id><type-name>Blood Oxygen Saturation</type-name><wrapper-class-name>BloodOxygenSaturation</wrapper-class-name><wrapper-class-fwlink>136056</wrapper-class-fwlink><sample-xml-fwlink>136057</sample-xml-fwlink><data-type-guide-fwlink>136055</data-type-guide-fwlink><summary>
+                Percentage of oxygen saturation in the blood.
+            </summary></documentation></annotation><element name="blood-oxygen-saturation"><complexType><annotation><documentation><summary>
+                        Percentage of oxygen saturation in the blood.
+                    </summary></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time of this measurement.
+                            </summary></documentation></annotation></element><element name="value" type="t:percentage"><annotation><documentation><summary>
+                                The measured blood oxygen saturation percentage.
+                            </summary></documentation></annotation></element><element name="measurement-method" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The technique used to obtain the measurement.
+                            </summary><preferred-vocabulary>blood-oxygen-saturation-measurement-method</preferred-vocabulary></documentation></annotation></element><element name="measurement-flags" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Additional information about the measurement.
+                            </summary><remarks>
+                                Examples: Incomplete measurement, irregular heartbeat.
+                            </remarks><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element></sequence></complexType></element></schema>

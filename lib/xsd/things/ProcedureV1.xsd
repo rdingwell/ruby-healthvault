@@ -1,0 +1,23 @@
+<schema xmlns:proc="urn:com.microsoft.wc.thing.procedure" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.procedure"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>0A5F9A43-DC88-4E9F-890F-1F9159B76E7B</type-id><type-name>Procedure</type-name><wrapper-class-name>ProcedureV1</wrapper-class-name><wrapper-class-fwlink>136218</wrapper-class-fwlink><sample-xml-fwlink>136219</sample-xml-fwlink><data-type-guide-fwlink>136217</data-type-guide-fwlink><summary>
+                Information related to a procedure.
+            </summary><remarks>
+                Note: Please use the new version of this data type instead of this version.
+                <br />
+                This thing type describes the procedure results of a person.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="procedure"><complexType><annotation><documentation><summary>
+                        Information related to a procedure.
+                    </summary><remarks>
+                        Note: Please use the new version of this data type instead of this version.
+                        <br />
+                        This thing type describes the procedure results of a person.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the procedure.
+                            </summary></documentation></annotation></element><element name="title" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Title of medical procedure.
+                            </summary></documentation></annotation></element><element name="primary-provider" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                Primary provider for a medical procedure.
+                            </summary></documentation></annotation></element><element name="anatomic-location" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Anatomic location of the medical procedure.
+                            </summary></documentation></annotation></element><element name="secondary-provider" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                Secondary provider for a medical procedure.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

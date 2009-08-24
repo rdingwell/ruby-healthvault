@@ -1,0 +1,46 @@
+<schema xmlns:payer="urn:com.microsoft.wc.thing.payer" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.payer"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>9366440c-ec81-4b89-b231-308a4c4d70ed</type-id><type-name>Insurance Plan</type-name><wrapper-class-name>Payer</wrapper-class-name><wrapper-class-fwlink>136173</wrapper-class-fwlink><sample-xml-fwlink>136174</sample-xml-fwlink><data-type-guide-fwlink>136172</data-type-guide-fwlink><summary>
+                Information about the person or organization that pays
+                for health and medical related bills.
+            </summary></documentation></annotation><element name="payer"><complexType><annotation><documentation><summary>
+                        Information about the person or organization that pays
+                        for health and medical related bills.
+                    </summary></documentation></annotation><sequence><element name="plan-name" type="string" minOccurs="1" maxOccurs="1"><annotation><documentation><summary>
+                                The display name for the plan.
+                            </summary><remarks>
+                                For example, 'Premera Blue Cross'.
+                            </remarks></documentation></annotation></element><element name="coverage-type" type="t:codable-value" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The type of coverage the plan provides.
+                            </summary><remarks>
+                                For example, 'medical', 'dental', etc.
+                            </remarks><preferred-vocabulary>coverage-types</preferred-vocabulary></documentation></annotation></element><element name="carrier-id" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The carrier identifier.
+                            </summary><remarks>
+                                For example, 'BCBS430'.
+                            </remarks></documentation></annotation></element><element name="group-num" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The group number in the plan.
+                            </summary></documentation></annotation></element><element name="plan-code" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The plan code or prefix.
+                            </summary><remarks>
+                                For example, 'MSJ'.
+                            </remarks></documentation></annotation></element><element name="subscriber-id" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The identifier for the insurance subscriber.
+                            </summary></documentation></annotation></element><element name="person-code" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The person's code in the plan or suffix.
+                            </summary><remarks>
+                                For example, 01 = subscriber, etc.
+                            </remarks></documentation></annotation></element><element name="subscriber-name" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The name of the subscriber.
+                            </summary></documentation></annotation></element><element name="subscriber-dob" type="d:date-time" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The subscriber's date of birth.
+                            </summary></documentation></annotation></element><element name="is-primary" type="boolean" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                States whether this is the primary coverage
+                                for the person.
+                            </summary><remarks>
+                                If true, this is the primary coverage for the
+                                person. If false, the person may have other
+                                coverage.
+                            </remarks></documentation></annotation></element><element name="expiration-date" type="d:date-time" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The date the coverage expires.
+                            </summary></documentation></annotation></element><element name="contact" type="t:contact" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                Contact information for the plan.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

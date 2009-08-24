@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.UpdateExternalId"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-UPDATEEXTERNALID.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for UpdateExternalId method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Updates the external id for a connect request.
+            </summary>
+
+            <remarks>
+                This method will replace the connect request's external id with the 
+                new external id.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+            <errors>
+                <error id="ACCESS_DENIED">
+                    If the calling application does not have method-level access rights to
+                    the method.
+                </error>
+            </errors>
+        </documentation>
+    </annotation>
+
+    <!-- UpdateExternalId - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+				<choice>
+					<element name="identity-code" type="wc-types:stringnz">
+						<annotation>
+							<documentation>
+								<summary>
+
+								</summary>
+							</documentation>
+						</annotation>
+					</element>
+					<element name="old-external-id" type="wc-types:stringnz">
+						<annotation>
+							<documentation>
+								<summary>
+									Specifies the external id that will be replaced by the
+									new-external-id.
+								</summary>
+							</documentation>
+						</annotation>
+					</element>
+				</choice>
+                <element name="new-external-id" type="wc-types:stringnz">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies the external id that will replace the
+                                old-external-id.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetUpdatedRecordsForApplication"
+    xmlns:this="urn:com.microsoft.wc.methods.response.GetUpdatedRecordsForApplication"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-GETUPDATEDRECORDSFORAPPLICATION.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetUpdatedRecordsForApplication method response
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                The list of records for an application with things that
+                have been updated since a specified date.
+            </summary>
+
+            <remarks>
+                GetUpdatedRecordsForApplication is used to retrieve a list of records 
+                for an application with things that have been updated since a specified date.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- GetUpdatedRecordsForApplication - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the response that contains the method
+                        specific return value(s).
+                    </summary>
+
+                    <remarks>
+                        All response schemas contain the info element which
+                        contain the return value of the method. If the method
+                        does not define an info element, the method has no
+                        return value.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="record-id" minOccurs="0" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The list of record identifiers for the records authorized for
+                                the application that have been updated.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                    <complexType>
+                        <simpleContent>
+                            <extension base="wc-types:guid">
+                                <attribute name="update-date" type="dateTime">                                
+                                </attribute>
+                             </extension>
+                        </simpleContent>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

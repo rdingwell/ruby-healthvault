@@ -1,0 +1,3454 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.types"
+    xmlns:this="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        TYPES.XSD
+        Microsoft HealthVault
+
+        Platform API: Shared types 
+
+    -->
+    <import
+        namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="xml.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+
+            </summary>
+
+            <remarks>
+
+            </remarks>
+        </documentation>
+    </annotation>
+
+    <complexType name="CultureSpecificString">
+        <annotation>
+            <documentation>
+                <summary>
+                    The CultureSpecific... classes are intended for use with data that can
+                    be localized for one or more languages and cultures.
+                </summary>
+                <remarks>
+                    The CultureSpecific... classes should be upward compatibile with the
+                    base types.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="string">
+                <attribute ref="xml:lang" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                This represents the language and culture of the data in the
+                                element, such as "en-us" or "fr-ca".
+                            </summary>
+                            <remarks>
+                                In a typical use, an instance of an element with no xml:lang
+                                attribute specified is treated as the default entry. Only one
+                                default entry is typically allowed.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    
+    <complexType name="CultureSpecificStringnz">
+        <annotation>
+            <documentation>
+                <summary>
+                    The CultureSpecific... classes are intended for use with data that can
+                    be localized for one or more languages and cultures.
+                </summary>
+                <remarks>
+                    The CultureSpecific... classes should be upward compatibile with the
+                    base types.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:stringnz">
+                <attribute ref="xml:lang" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                This represents the language and culture of the data in the
+                                element, such as "en-us" or "fr-ca".
+                            </summary>
+                            <remarks>
+                                In a typical use, an instance of an element with no xml:lang
+                                attribute specified is treated as the default entry. Only one
+                                default entry is typically allowed.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    
+    <complexType name="CultureSpecificString255">
+        <annotation>
+            <documentation>
+                <summary>
+                    The CultureSpecific... classes are intended for use with data that can
+                    be localized for one or more languages and cultures.
+                </summary>
+                <remarks>
+                    The CultureSpecific... classes should be upward compatibile with the
+                    base types.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:string255">
+                <attribute ref="xml:lang" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                This represents the language and culture of the data in the
+                                element, such as "en-us" or "fr-ca".
+                            </summary>
+                            <remarks>
+                                In a typical use, an instance of an element with no xml:lang
+                                attribute specified is treated as the default entry. Only one
+                                default entry is typically allowed.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    
+    <complexType name="CultureSpecificString1024">
+        <annotation>
+            <documentation>
+                <summary>
+                    The CultureSpecific... classes are intended for use with data that can
+                    be localized for one or more languages and cultures.
+                </summary>
+                <remarks>
+                    The CultureSpecific... classes should be upward compatibile with the
+                    base types.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:string1024">
+                <attribute ref="xml:lang" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                This represents the language and culture of the data in the
+                                element, such as "en-us" or "fr-ca".
+                            </summary>
+                            <remarks>
+                                In a typical use, an instance of an element with no xml:lang
+                                attribute specified is treated as the default entry. Only one
+                                default entry is typically allowed.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <!-- phone -->
+    <complexType name="Phone">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="description" type="string"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="is-primary" type="boolean"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="number" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <!-- Email -->
+    <complexType name="Email">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="description" type="string"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="is-primary" type="boolean"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="address" type="this:EmailAddress" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <!-- Email Address -->
+    <simpleType name="EmailAddress">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="6" />
+            <maxLength value="128" />
+        </restriction>
+    </simpleType>
+    
+    <complexType name="RcptAddress">
+        <annotation>
+            <documentation>
+                <summary>
+                    Identifies an message recipient by email and  name.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="address" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The email address to which the message will be
+                            sent.
+                        </summary>
+
+                        <remarks>
+                            The email address must conform to standard email
+                            address rules.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="name" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The display name to be shown in the To field of
+                            the message being sent.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="RcptPerson">
+        <annotation>
+            <documentation>
+                <summary>
+                    Represents a message recipient who is identified by a 
+                    a unique Microsoft Health account identifier.                    
+                </summary>
+
+                <remarks>
+                    The validated attribute determines whether the email 
+                    address must first be validated by the account owner. If
+                    the validated attribute is true and the email address
+                    hasn't been validated then an error will be returned.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:guid">
+                <attribute name="validated" type="boolean" use="required" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                States whether the email address must have
+                                been validated by the account owner for the
+                                message to be sent.
+                            </summary>
+
+                            <remarks>
+                              If true, Microsoft HealthVault will
+                              ensure that the specified account's email
+                              address has been validated by the account
+                              owner before sending the message. If true,
+                              and the address hasn't been validated, an
+                              error will be returned.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="RcptRecord">
+        <annotation>
+            <documentation>
+                <summary>
+                    Specifies that this message should be sent to custodians
+                    of the health record specified in the request envelope.                    
+                </summary>
+
+                <remarks>
+                    The message will be sent to the email addresses of all
+                    the record custodians. The validated attribute determines
+                    whether the email addresses of the custodians must be
+                    validated. Any custodians not validated will be skipped.
+                    If the validated attribute is true and no custodians 
+                    with validated email address are found, an error will 
+                    be returned.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence />
+        <attribute name="validated" type="boolean" use="required" >
+            <annotation>
+                <documentation>
+                    <summary>
+                        States whether the email addresses of custodians 
+                        must have been validated for the message to be sent.
+                    </summary>
+
+                    <remarks>
+                      If true, Microsoft HealthVault will
+                      ensure that only custodians with validated
+                      email addresses will be sent the message.
+                      Custodians with non-validated email addresses
+                      will be skipped. If no validated custodians are
+                      found, then an error will be returned.
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+
+    </complexType>
+
+    <!-- LoginName -->
+    <simpleType name="LoginName">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="6" />
+            <maxLength value="128" />
+        </restriction>
+    </simpleType>
+
+    <!-- Version -->
+    <simpleType name="Version">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="7" />
+            <maxLength value="19" />
+        </restriction>
+    </simpleType>
+
+    <!-- Address -->
+    <complexType name="Address">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="description" type="string"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="is-primary" type="boolean"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="street" type="string"
+                minOccurs="1" maxOccurs="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="city" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="state" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <!-- or province, etc. -->
+            <element name="postcode" type="string"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="country" type="this:iso3166" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+
+    <!-- Sig -->
+
+    <complexType name="Sig">
+        <annotation>
+            <documentation>
+                <summary>
+                    A digital signature produced by an application to prove
+                    possession of a private key.
+                </summary>
+
+                <remarks>
+                    Each application server has at least one public key 
+                    associated to its application identifier.  Microsoft
+                    HealthVault verifies the signature using the public key
+                    specified via the thumbprint.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:string512">
+                <attribute name="digestMethod"
+                    type="this:string16" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The hash method used to generate the signed 
+                                digest.
+                            </summary>
+
+                            <remarks>
+                                An example hash algorithm name is SHA1.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="sigMethod"
+                    type="this:string16" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                This is the method used to generate the 
+                                signature.
+                            </summary>
+
+                            <remarks>
+                                For example, RSA-SHA1, which implies using
+                                SHA1 to do the hash and RSA for signing.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="thumbprint"
+                    type="string" use="required" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The thumbprint associated with the public key
+                                certifiate that is registered with Microsoft
+                                HealthVault.
+                            </summary>
+
+                            <remarks>
+                                An application may have multiple public keys
+                                associated with its application id.  A thumbprint
+                                is used to identify which certificate to use
+                                when verifying a signature.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+
+    <!-- Hash -->
+
+    <complexType name="HashFinalizedData">
+        <annotation>
+            <documentation>
+                <summary>
+                    The resulting hash digest.
+                </summary>
+
+                <remarks>
+                  Microsoft HealthVault will compute the hash over
+                  the same data that was used to compute this digest and
+                  compare them.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:string512">
+                <attribute name="algName"
+                    type="this:stringnz" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                This is the Base64 encoded hash digest.
+                            </summary>
+
+                            <remarks>
+                              The size of the digest varies by the choice
+                              of algorithm.  Microsoft HealthVault will
+                              compute the hash over the same data that was
+                              used to compute this digest and compare them.
+                              If the digests are not equal, the request will
+                              fail.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="HashFinalized">
+        <annotation>
+            <documentation>
+                <summary>
+                    Digest from a hash operation that is used to provide data 
+                    integrity verification for requests.
+                </summary>
+
+                <remarks>
+                    This is the result of a hash operation, which is used
+                    to ensure the hashed data has not changed.  Microsoft
+                    HealthVault will compute the corresponding hash over 
+                    the same data and compare the resulting digests. If the 
+                    digests are not equal, the request will fail.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="hash-data" type="this:HashFinalizedData">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The resulting hash digest.
+                        </summary>
+
+                        <remarks>
+                          Microsoft HealthVault will compute the hash
+                          over the same data that was used to compute this
+                          digest and compare them.  If the digests are not
+                          equal, the request will fail.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <!-- HMAC -->
+
+    <complexType name="HMACAlgorithmData">
+        <annotation>
+            <documentation>
+                <summary>
+                    The shared secret used in HMAC operations.
+                </summary>
+
+                <remarks>
+                  The shared secret is used in HMAC operations to authenticate
+                  all requests which includes an authenticated session token.
+                  In order for a client to establish an authenticated session
+                  with Microsoft HealthVault, it must provide a shared
+                  secret. The client uses the secret as the secret key when
+                  HMAC'ing over the header section of the request. The
+                  resulting HMAC digest forms the content of the
+                  request auth section.  The same algorithm specified in
+                  the initial token request must be used for all subsequent
+                  HMAC operations applied when using the same authenticated
+                  session token.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <!-- element value is KeyMaterial for HMAC -->
+            <extension base="this:string512">
+                <attribute name="algName"
+                    type="this:stringnz" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The base64 encoded shared secret key material 
+                                used for keying the HMAC operation.
+                            </summary>
+
+                            <remarks>
+                                The shared secret key is recommended to be 256 
+                                bits, or 32 bytes, of random data.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="HMACAlgorithm">
+        <annotation>
+            <documentation>
+                <summary>
+                  A description of an HMAC that is used to establish the
+                  authentication and integrity checks for requests to
+                  Microsoft HealthVault.
+                </summary>
+
+                <remarks>
+                    This describes the shared secret that the is created on
+                    the client side.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="hmac-alg" type="this:HMACAlgorithmData">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The specification of the HMAC algorithm.
+                        </summary>
+
+                        <remarks>
+                            The same algorithm must be used for all subsequent
+                            HMAC operations applied when using the same
+                            authenticated session token.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <complexType name="HMACFinalizedData">
+        <annotation>
+            <documentation>
+                <summary>
+                    The resulting HMAC digest.                            
+                </summary>
+
+                <remarks>
+                    The digest is computed by Microsoft 
+                    HealthVault and is then compared to this result.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:string512">
+                <attribute name="algName"
+                    type="this:stringnz" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Base64 encoded digest and the algorithm used
+                                to compute the digest.  
+                            </summary>
+
+                            <remarks>
+                                The algorithm should match the agreed algorithm 
+                                that was established via HMACAlgorithm when the 
+                                authenticated session was created.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="HMACFinalized">
+        <annotation>
+            <documentation>
+                <summary>
+                    Digest from a HMAC operation that is used to provide both
+                    authentication and integrity verification for requests.
+                </summary>
+
+                <remarks>
+                    This is the result of an HMAC operation, as opposed to 
+                    HMAC algorithm which specifies the properties of the 
+                    operation.  The HMAC key is the shared secret provided in
+                    the original application request to create an authenticated
+                    session token.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="hmac-data" type="this:HMACFinalizedData">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The resulting HMAC digest.                            
+                        </summary>
+
+                        <remarks>
+                            The digest is computed again by Microsoft 
+                            HealthVault and then is compared to this result.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <!-- Credentials -->
+
+    <complexType name="CardSpaceCred">
+        <annotation>
+            <documentation>
+                <summary>
+                    A SAML-based credential provided by the CardSpace service.
+                </summary>
+
+                <remarks>
+                    CardSpace produces a SAML token that is encrypted using
+                    the SSL public key used when associating a CardSpace 
+                    credential with a primary credential.  
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <any minOccurs="1" maxOccurs="unbounded"
+                namespace="##any" processContents="skip">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The SAML token.
+                        </summary>
+
+                        <remarks>
+                            The SAML token consists of raw XML that is embedded
+                            in the request.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </any>
+        </sequence>
+    </complexType>
+
+    <complexType name="AppInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    The applications to create credential tokens for.
+                </summary>
+
+                <remarks>
+                    Each application will be issued a unique token that has a
+                    limited lifetime.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:guid">
+                <attribute name="is-multi-record-app"
+                    type="boolean" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The application to create credential tokens for.
+                            </summary>
+
+                            <remarks>
+                              If the application is a multi-record-application,
+                              then it must specify the attribute here.  Upon
+                              successful authentication, a unique token will
+                              be issued for use with subsequent calls to
+                              Microsoft HealthVault.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="AppServerCredInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    Application server credential information.
+                </summary>
+
+                <remarks>
+                  Information provided by the requesting application that will
+                  be used by Microsoft HealthVault to determine if an
+                  authenticated session token will be issued to the caller.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="app-id"
+                type="this:guid" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The id of the application that is providing the
+                            credential.
+                        </summary>
+
+                        <remarks>
+                            The public key that is used to verify the signature
+                            is associated to this application id.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="shared-secret"
+                type="this:HMACAlgorithm">
+                <annotation>
+                    <documentation>
+                        <summary>
+                          This is the shared secret that is used for subsequent
+                          HMACed request envelopes when the application
+                          makes a request to Microsoft HealthVault.
+                        </summary>
+
+                        <remarks>
+                            This section describes the algorithm that will be
+                            used on the client side during subequenct requests.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="AppServerCred">
+        <annotation>
+            <documentation>
+                <summary>
+                    Application server credential that is used when an application
+                    is identifying itself for subsequent calls to Microsoft
+                    HealthVault.
+                </summary>
+
+                <remarks>
+                    This credential type requires that the content element
+                    be signed using the application's private key.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <!-- signature computed over cred parameters using app key -->
+            <element name="sig" type="this:Sig" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The signature of the content section.
+                        </summary>
+
+                        <remarks>
+                            This signature is generated using the application's
+                            private key.  The corresponding public key is 
+                            associated with the application id by Microsoft 
+                            HealthVault.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <!-- app server cred parameters -->
+            <element name="content"
+                type="this:AppServerCredInfo" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application's credential information.
+                        </summary>
+
+                        <remarks>
+                            This section is signed by the application's private 
+                            key.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <!-- UTILITY TYPES -->
+
+    <simpleType name="Gender">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="m">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="f">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Url">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <!-- could do this better -->
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="1024" />
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="positiveLong">
+        <annotation>
+            <documentation>
+                <summary>
+                    Represents a positive 64 bit integer.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="long">
+            <minInclusive value="0" />
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="guid">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="puid">
+        <restriction base="string">
+            <pattern value="[a-fA-F0-9]{16}"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="DateRange">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="date-min" type="dateTime"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="date-max" type="dateTime"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <simpleType name="Permission">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="All">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Read">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Update">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Create">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Delete">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="NameMatchType">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="exact">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="prefix">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="contains">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    <!-- for base64 encoding of 160-bit SHA1 hash 
+        160 / 6 = 26.6667. Rounded up to higher multiple of 4 is 28. -->
+    <simpleType name="base64Sha1">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="28" />
+            <maxLength value="28" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="string1024">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="1024" />
+        </restriction>
+    </simpleType>
+
+
+    <simpleType name="string1024nw">
+        <annotation>
+            <documentation>
+                <summary>
+                    A string between 1 and 1024 characters and not all whitespace.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="1024" />
+            <pattern value="(\s*[^\s]+\s*)+"/>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="string512">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="512" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="string255">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="255" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="string128">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="128" />
+        </restriction>
+    </simpleType>
+
+
+    <simpleType name="string128nw">
+        <annotation>
+            <documentation>
+                <summary>
+                    A string between 1 and 128 characters and not all whitespace.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="128" />
+            <pattern value="(\s*[^\s]+\s*)+"/>
+        </restriction>
+    </simpleType>
+
+
+    <simpleType name="string64">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="64" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="string32">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="32" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="string16">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="16" />
+        </restriction>
+    </simpleType>
+
+
+    <simpleType name="string10nw">
+        <annotation>
+            <documentation>
+                <summary>
+                    A string between 1 and 10 characters and not all whitespace.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="10" />
+            <pattern value="(\s*[^\s]+\s*)+"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="string25nw">
+        <annotation>
+            <documentation>
+                <summary>
+                    A string between 1 and 25 characters and not all whitespace.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="25" />
+            <pattern value="(\s*[^\s]+\s*)+"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="string50nw">
+        <annotation>
+            <documentation>
+                <summary>
+                    A string between 1 and 50 characters and not all whitespace.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="50" />
+            <pattern value="(\s*[^\s]+\s*)+"/>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="stringz1024">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="1024" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="stringz512">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="512" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="stringz255">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="255" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="stringz128">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="128" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="stringz64">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="64" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="stringz32">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="32" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="stringz16">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="16" />
+        </restriction>
+    </simpleType>
+
+    <!-- non-zero length string -->
+    <simpleType name="stringnz">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="stringnznw">
+        <annotation>
+            <documentation>
+                <summary>
+                    Non-zero length string that must contain non-whitespace characters.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="1" />
+            <pattern value="(\s*[^\s]+\s*)+"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="base64">
+        <annotation>
+            <documentation>
+                <summary>
+                    A base64 string.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <pattern value="^[a-zA-Z0-9/+]*={0,2}$"/>
+        </restriction>
+    </simpleType>
+    
+
+    <simpleType name="char2">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <minLength value="2" />
+            <maxLength value="2" />
+        </restriction>
+    </simpleType>
+
+    <!-- ethnicity (US Office of Management & Budget Directive 15) -->
+
+    <simpleType name="OmbEthnicity">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="American Indian or Alaska Native" />
+            <enumeration value="Asian" />
+            <enumeration value="Black or African American" />
+            <enumeration value="Hispanic or Latino" />
+            <enumeration value="Native Hawaiian or Other Pacific Islander" />
+            <enumeration value="White" />
+        </restriction>
+    </simpleType>
+
+    <complexType name="Culture">
+        <annotation>
+            <documentation>
+                <summary>
+                    Represents a specific culture by combining a language and
+                    country/region.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+
+            <!-- optional culture info -->
+            <element name="language" type="this:iso639-1"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The language of the culture.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="country" type="this:iso3166"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The country or region of the culture.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>            
+        </sequence>
+    </complexType>
+
+    <!-- languages -->
+
+    <simpleType name="iso639-1">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="aa" />
+            <enumeration value="ab" />
+            <enumeration value="af" />
+            <enumeration value="am" />
+            <enumeration value="ar" />
+            <enumeration value="as" />
+            <enumeration value="ay" />
+            <enumeration value="az" />
+            <enumeration value="ba" />
+            <enumeration value="be" />
+            <enumeration value="bg" />
+            <enumeration value="bh" />
+            <enumeration value="bi" />
+            <enumeration value="bn" />
+            <enumeration value="bo" />
+            <enumeration value="br" />
+            <enumeration value="ca" />
+            <enumeration value="co" />
+            <enumeration value="cs" />
+            <enumeration value="cy" />
+            <enumeration value="da" />
+            <enumeration value="de" />
+            <enumeration value="dz" />
+            <enumeration value="el" />
+            <enumeration value="en" />
+            <enumeration value="eo" />
+            <enumeration value="es" />
+            <enumeration value="et" />
+            <enumeration value="eu" />
+            <enumeration value="fa" />
+            <enumeration value="fi" />
+            <enumeration value="fj" />
+            <enumeration value="fo" />
+            <enumeration value="fr" />
+            <enumeration value="fy" />
+            <enumeration value="ga" />
+            <enumeration value="gd" />
+            <enumeration value="gl" />
+            <enumeration value="gn" />
+            <enumeration value="gu" />
+            <enumeration value="ha" />
+            <enumeration value="hi" />
+            <enumeration value="hr" />
+            <enumeration value="hu" />
+            <enumeration value="hy" />
+            <enumeration value="ia" />
+            <enumeration value="ie" />
+            <enumeration value="ik" />
+            <enumeration value="in" />
+            <enumeration value="is" />
+            <enumeration value="it" />
+            <enumeration value="iw" />
+            <enumeration value="ja" />
+            <enumeration value="ji" />
+            <enumeration value="jw" />
+            <enumeration value="ka" />
+            <enumeration value="kk" />
+            <enumeration value="kl" />
+            <enumeration value="km" />
+            <enumeration value="kn" />
+            <enumeration value="ko" />
+            <enumeration value="ks" />
+            <enumeration value="ku" />
+            <enumeration value="ky" />
+            <enumeration value="la" />
+            <enumeration value="ln" />
+            <enumeration value="lo" />
+            <enumeration value="lt" />
+            <enumeration value="lv" />
+            <enumeration value="mg" />
+            <enumeration value="mi" />
+            <enumeration value="mk" />
+            <enumeration value="ml" />
+            <enumeration value="mn" />
+            <enumeration value="mo" />
+            <enumeration value="mr" />
+            <enumeration value="ms" />
+            <enumeration value="mt" />
+            <enumeration value="my" />
+            <enumeration value="na" />
+            <enumeration value="ne" />
+            <enumeration value="nl" />
+            <enumeration value="no" />
+            <enumeration value="oc" />
+            <enumeration value="om" />
+            <enumeration value="or" />
+            <enumeration value="pa" />
+            <enumeration value="pl" />
+            <enumeration value="ps" />
+            <enumeration value="pt" />
+            <enumeration value="qu" />
+            <enumeration value="rm" />
+            <enumeration value="rn" />
+            <enumeration value="ro" />
+            <enumeration value="ru" />
+            <enumeration value="rw" />
+            <enumeration value="sa" />
+            <enumeration value="sd" />
+            <enumeration value="sg" />
+            <enumeration value="sh" />
+            <enumeration value="si" />
+            <enumeration value="sk" />
+            <enumeration value="sl" />
+            <enumeration value="sm" />
+            <enumeration value="sn" />
+            <enumeration value="so" />
+            <enumeration value="sq" />
+            <enumeration value="sr" />
+            <enumeration value="ss" />
+            <enumeration value="st" />
+            <enumeration value="su" />
+            <enumeration value="sv" />
+            <enumeration value="sw" />
+            <enumeration value="ta" />
+            <enumeration value="te" />
+            <enumeration value="tg" />
+            <enumeration value="th" />
+            <enumeration value="ti" />
+            <enumeration value="tk" />
+            <enumeration value="tl" />
+            <enumeration value="tn" />
+            <enumeration value="to" />
+            <enumeration value="tr" />
+            <enumeration value="ts" />
+            <enumeration value="tt" />
+            <enumeration value="tw" />
+            <enumeration value="uk" />
+            <enumeration value="ur" />
+            <enumeration value="uz" />
+            <enumeration value="vi" />
+            <enumeration value="vo" />
+            <enumeration value="wo" />
+            <enumeration value="xh" />
+            <enumeration value="yo" />
+            <enumeration value="zh" />
+            <enumeration value="zu" />
+        </restriction>
+    </simpleType>
+
+    <!-- countries -->
+
+    <simpleType name="iso3166">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="AF" />
+            <enumeration value="AX" />
+            <enumeration value="AL" />
+            <enumeration value="DZ" />
+            <enumeration value="AS" />
+            <enumeration value="AD" />
+            <enumeration value="AO" />
+            <enumeration value="AI" />
+            <enumeration value="AQ" />
+            <enumeration value="AG" />
+            <enumeration value="AR" />
+            <enumeration value="AM" />
+            <enumeration value="AW" />
+            <enumeration value="AU" />
+            <enumeration value="AT" />
+            <enumeration value="AZ" />
+            <enumeration value="BS" />
+            <enumeration value="BH" />
+            <enumeration value="BD" />
+            <enumeration value="BB" />
+            <enumeration value="BY" />
+            <enumeration value="BE" />
+            <enumeration value="BZ" />
+            <enumeration value="BJ" />
+            <enumeration value="BM" />
+            <enumeration value="BT" />
+            <enumeration value="BO" />
+            <enumeration value="BA" />
+            <enumeration value="BW" />
+            <enumeration value="BV" />
+            <enumeration value="BR" />
+            <enumeration value="IO" />
+            <enumeration value="BN" />
+            <enumeration value="BG" />
+            <enumeration value="BF" />
+            <enumeration value="BI" />
+            <enumeration value="KH" />
+            <enumeration value="CM" />
+            <enumeration value="CA" />
+            <enumeration value="CV" />
+            <enumeration value="KY" />
+            <enumeration value="CF" />
+            <enumeration value="TD" />
+            <enumeration value="CL" />
+            <enumeration value="CN" />
+            <enumeration value="CX" />
+            <enumeration value="CC" />
+            <enumeration value="CO" />
+            <enumeration value="KM" />
+            <enumeration value="CG" />
+            <enumeration value="CD" />
+            <enumeration value="CK" />
+            <enumeration value="CR" />
+            <enumeration value="CI" />
+            <enumeration value="HR" />
+            <enumeration value="CU" />
+            <enumeration value="CY" />
+            <enumeration value="CZ" />
+            <enumeration value="DK" />
+            <enumeration value="DJ" />
+            <enumeration value="DM" />
+            <enumeration value="DO" />
+            <enumeration value="EC" />
+            <enumeration value="EG" />
+            <enumeration value="SV" />
+            <enumeration value="GQ" />
+            <enumeration value="ER" />
+            <enumeration value="EE" />
+            <enumeration value="ET" />
+            <enumeration value="FK" />
+            <enumeration value="FO" />
+            <enumeration value="FJ" />
+            <enumeration value="FI" />
+            <enumeration value="FR" />
+            <enumeration value="GF" />
+            <enumeration value="PF" />
+            <enumeration value="TF" />
+            <enumeration value="GA" />
+            <enumeration value="GM" />
+            <enumeration value="GE" />
+            <enumeration value="DE" />
+            <enumeration value="GH" />
+            <enumeration value="GI" />
+            <enumeration value="GR" />
+            <enumeration value="GL" />
+            <enumeration value="GD" />
+            <enumeration value="GP" />
+            <enumeration value="GU" />
+            <enumeration value="GT" />
+            <enumeration value="GN" />
+            <enumeration value="GW" />
+            <enumeration value="GY" />
+            <enumeration value="HT" />
+            <enumeration value="HM" />
+            <enumeration value="VA" />
+            <enumeration value="HN" />
+            <enumeration value="HK" />
+            <enumeration value="HU" />
+            <enumeration value="IS" />
+            <enumeration value="IN" />
+            <enumeration value="ID" />
+            <enumeration value="IR" />
+            <enumeration value="IQ" />
+            <enumeration value="IE" />
+            <enumeration value="IL" />
+            <enumeration value="IT" />
+            <enumeration value="JM" />
+            <enumeration value="JP" />
+            <enumeration value="JO" />
+            <enumeration value="KZ" />
+            <enumeration value="KE" />
+            <enumeration value="KI" />
+            <enumeration value="KP" />
+            <enumeration value="KR" />
+            <enumeration value="KW" />
+            <enumeration value="KG" />
+            <enumeration value="LA" />
+            <enumeration value="LV" />
+            <enumeration value="LB" />
+            <enumeration value="LS" />
+            <enumeration value="LR" />
+            <enumeration value="LY" />
+            <enumeration value="LI" />
+            <enumeration value="LT" />
+            <enumeration value="LU" />
+            <enumeration value="MO" />
+            <enumeration value="MK" />
+            <enumeration value="MG" />
+            <enumeration value="MW" />
+            <enumeration value="MY" />
+            <enumeration value="MV" />
+            <enumeration value="ML" />
+            <enumeration value="MT" />
+            <enumeration value="MH" />
+            <enumeration value="MQ" />
+            <enumeration value="MR" />
+            <enumeration value="MU" />
+            <enumeration value="YT" />
+            <enumeration value="MX" />
+            <enumeration value="FM" />
+            <enumeration value="MD" />
+            <enumeration value="MC" />
+            <enumeration value="MN" />
+            <enumeration value="MS" />
+            <enumeration value="MA" />
+            <enumeration value="MZ" />
+            <enumeration value="MM" />
+            <enumeration value="NA" />
+            <enumeration value="NR" />
+            <enumeration value="NP" />
+            <enumeration value="NL" />
+            <enumeration value="AN" />
+            <enumeration value="NC" />
+            <enumeration value="NZ" />
+            <enumeration value="NI" />
+            <enumeration value="NE" />
+            <enumeration value="NG" />
+            <enumeration value="NU" />
+            <enumeration value="NF" />
+            <enumeration value="MP" />
+            <enumeration value="NO" />
+            <enumeration value="OM" />
+            <enumeration value="PK" />
+            <enumeration value="PW" />
+            <enumeration value="PS" />
+            <enumeration value="PA" />
+            <enumeration value="PG" />
+            <enumeration value="PY" />
+            <enumeration value="PE" />
+            <enumeration value="PH" />
+            <enumeration value="PN" />
+            <enumeration value="PL" />
+            <enumeration value="PT" />
+            <enumeration value="PR" />
+            <enumeration value="QA" />
+            <enumeration value="RE" />
+            <enumeration value="RO" />
+            <enumeration value="RU" />
+            <enumeration value="RW" />
+            <enumeration value="SH" />
+            <enumeration value="KN" />
+            <enumeration value="LC" />
+            <enumeration value="PM" />
+            <enumeration value="VC" />
+            <enumeration value="WS" />
+            <enumeration value="SM" />
+            <enumeration value="ST" />
+            <enumeration value="SA" />
+            <enumeration value="SN" />
+            <enumeration value="CS" />
+            <enumeration value="SC" />
+            <enumeration value="SL" />
+            <enumeration value="SG" />
+            <enumeration value="SK" />
+            <enumeration value="SI" />
+            <enumeration value="SB" />
+            <enumeration value="SO" />
+            <enumeration value="ZA" />
+            <enumeration value="GS" />
+            <enumeration value="ES" />
+            <enumeration value="LK" />
+            <enumeration value="SD" />
+            <enumeration value="SR" />
+            <enumeration value="SJ" />
+            <enumeration value="SZ" />
+            <enumeration value="SE" />
+            <enumeration value="CH" />
+            <enumeration value="SY" />
+            <enumeration value="TW" />
+            <enumeration value="TJ" />
+            <enumeration value="TZ" />
+            <enumeration value="TH" />
+            <enumeration value="TL" />
+            <enumeration value="TG" />
+            <enumeration value="TK" />
+            <enumeration value="TO" />
+            <enumeration value="TT" />
+            <enumeration value="TN" />
+            <enumeration value="TR" />
+            <enumeration value="TM" />
+            <enumeration value="TC" />
+            <enumeration value="TV" />
+            <enumeration value="UG" />
+            <enumeration value="UA" />
+            <enumeration value="AE" />
+            <enumeration value="GB" />
+            <enumeration value="US" />
+            <enumeration value="UM" />
+            <enumeration value="UY" />
+            <enumeration value="UZ" />
+            <enumeration value="VU" />
+            <enumeration value="VE" />
+            <enumeration value="VN" />
+            <enumeration value="VG" />
+            <enumeration value="VI" />
+            <enumeration value="WF" />
+            <enumeration value="EH" />
+            <enumeration value="YE" />
+            <enumeration value="ZM" />
+            <enumeration value="ZW" />
+        </restriction>
+    </simpleType>
+
+    <!-- currencies -->
+
+    <simpleType name="iso4217">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="aed" />
+            <enumeration value="afa" />
+            <enumeration value="all" />
+            <enumeration value="amd" />
+            <enumeration value="ang" />
+            <enumeration value="aoa" />
+            <enumeration value="ars" />
+            <enumeration value="aud" />
+            <enumeration value="awg" />
+            <enumeration value="azm" />
+            <enumeration value="bam" />
+            <enumeration value="bbd" />
+            <enumeration value="bdt" />
+            <enumeration value="bgn" />
+            <enumeration value="bhd" />
+            <enumeration value="bif" />
+            <enumeration value="bmd" />
+            <enumeration value="bnd" />
+            <enumeration value="bob" />
+            <enumeration value="brl" />
+            <enumeration value="bsd" />
+            <enumeration value="btn" />
+            <enumeration value="bwp" />
+            <enumeration value="byr" />
+            <enumeration value="bzd" />
+            <enumeration value="cad" />
+            <enumeration value="cdf" />
+            <enumeration value="chf" />
+            <enumeration value="clp" />
+            <enumeration value="cny" />
+            <enumeration value="cop" />
+            <enumeration value="crc" />
+            <enumeration value="csd" />
+            <enumeration value="cup" />
+            <enumeration value="cve" />
+            <enumeration value="cyp" />
+            <enumeration value="czk" />
+            <enumeration value="djf" />
+            <enumeration value="dkk" />
+            <enumeration value="dop" />
+            <enumeration value="dzd" />
+            <enumeration value="eek" />
+            <enumeration value="egp" />
+            <enumeration value="ern" />
+            <enumeration value="etb" />
+            <enumeration value="eur" />
+            <enumeration value="fjd" />
+            <enumeration value="fkp" />
+            <enumeration value="gbp" />
+            <enumeration value="gel" />
+            <enumeration value="ggp" />
+            <enumeration value="ghc" />
+            <enumeration value="gip" />
+            <enumeration value="gmd" />
+            <enumeration value="gnf" />
+            <enumeration value="gtq" />
+            <enumeration value="gyd" />
+            <enumeration value="hkd" />
+            <enumeration value="hnl" />
+            <enumeration value="hrk" />
+            <enumeration value="htg" />
+            <enumeration value="huf" />
+            <enumeration value="idr" />
+            <enumeration value="ils" />
+            <enumeration value="imp" />
+            <enumeration value="inr" />
+            <enumeration value="iqd" />
+            <enumeration value="irr" />
+            <enumeration value="isk" />
+            <enumeration value="jep" />
+            <enumeration value="jmd" />
+            <enumeration value="jod" />
+            <enumeration value="jpy" />
+            <enumeration value="kes" />
+            <enumeration value="kgs" />
+            <enumeration value="khr" />
+            <enumeration value="kmf" />
+            <enumeration value="kpw" />
+            <enumeration value="krw" />
+            <enumeration value="kwd" />
+            <enumeration value="kyd" />
+            <enumeration value="kzt" />
+            <enumeration value="lak" />
+            <enumeration value="lbp" />
+            <enumeration value="lkr" />
+            <enumeration value="lrd" />
+            <enumeration value="lsl" />
+            <enumeration value="ltl" />
+            <enumeration value="lvl" />
+            <enumeration value="lyd" />
+            <enumeration value="mad" />
+            <enumeration value="mdl" />
+            <enumeration value="mga" />
+            <enumeration value="mkd" />
+            <enumeration value="mmk" />
+            <enumeration value="mnt" />
+            <enumeration value="mop" />
+            <enumeration value="mro" />
+            <enumeration value="mtl" />
+            <enumeration value="mur" />
+            <enumeration value="mvr" />
+            <enumeration value="mwk" />
+            <enumeration value="mxn" />
+            <enumeration value="myr" />
+            <enumeration value="mzm" />
+            <enumeration value="nad" />
+            <enumeration value="ngn" />
+            <enumeration value="nio" />
+            <enumeration value="nok" />
+            <enumeration value="npr" />
+            <enumeration value="nzd" />
+            <enumeration value="omr" />
+            <enumeration value="pab" />
+            <enumeration value="pen" />
+            <enumeration value="pgk" />
+            <enumeration value="php" />
+            <enumeration value="pkr" />
+            <enumeration value="pln" />
+            <enumeration value="pyg" />
+            <enumeration value="qar" />
+            <enumeration value="rol" />
+            <enumeration value="rub" />
+            <enumeration value="rwf" />
+            <enumeration value="sar" />
+            <enumeration value="sbd" />
+            <enumeration value="scr" />
+            <enumeration value="sdd" />
+            <enumeration value="sek" />
+            <enumeration value="sgd" />
+            <enumeration value="shp" />
+            <enumeration value="sit" />
+            <enumeration value="skk" />
+            <enumeration value="sll" />
+            <enumeration value="sos" />
+            <enumeration value="spl" />
+            <enumeration value="srd" />
+            <enumeration value="std" />
+            <enumeration value="svc" />
+            <enumeration value="syp" />
+            <enumeration value="szl" />
+            <enumeration value="thb" />
+            <enumeration value="tjs" />
+            <enumeration value="tmm" />
+            <enumeration value="tnd" />
+            <enumeration value="top" />
+            <enumeration value="trl" />
+            <enumeration value="try" />
+            <enumeration value="ttd" />
+            <enumeration value="tvd" />
+            <enumeration value="twd" />
+            <enumeration value="tzs" />
+            <enumeration value="uah" />
+            <enumeration value="ugx" />
+            <enumeration value="usd" />
+            <enumeration value="uyu" />
+            <enumeration value="uzs" />
+            <enumeration value="veb" />
+            <enumeration value="vnd" />
+            <enumeration value="vuv" />
+            <enumeration value="wst" />
+            <enumeration value="xaf" />
+            <enumeration value="xag" />
+            <enumeration value="xau" />
+            <enumeration value="xcd" />
+            <enumeration value="xdr" />
+            <enumeration value="xof" />
+            <enumeration value="xpd" />
+            <enumeration value="xpf" />
+            <enumeration value="xpt" />
+            <enumeration value="yer" />
+            <enumeration value="zar" />
+            <enumeration value="zmk" />
+            <enumeration value="zwd" />
+        </restriction>
+    </simpleType>
+
+    <!-- internal identifiers -->
+
+    <complexType name="Group">
+        <annotation>
+            <documentation>
+                <summary>
+                    Defines a group to which on or more people may be a member.
+                </summary>
+
+                <remarks>
+                    Groups are used for security purposes. They make
+                    it easier to grant access rights to a Microsoft
+                    HealthVault web service method, authorize people to a
+                    record, or grant access rights to particular data
+                    in a health record. They are not meant to be used
+                    as distribution lists for email or other forms of
+                    communication.<br/>
+                    <br/>
+                    For example, all the doctors at a particular clinic
+                    may belong to a group to which an individual may
+                    grant permission to see medications in their health
+                    record.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="name" type="this:string255">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The name of the group.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="id" type="this:guid">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A unique identifier for the group.
+                        </summary>
+
+                        <remarks>
+                          Each group in Microsoft HealthVault
+                          is assigned a unique identifier which is a
+                          128-bit integer (16 bytes) and is used to
+                          identify the group when calling methods on
+                          the service.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="contact-email" type="this:EmailAddress">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The email address at which to contact the "owner"
+                            of the group.
+                        </summary>
+
+                        <remarks>
+                            The email address for the group should refer to 
+                            a person or set of people that can manage the group
+                            membership. It should not be used to define a
+                            mailing list for the entire group.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <complexType name="Groups">
+        <annotation>
+            <documentation>
+                <summary>
+                    Contains a list of the groups a person is a member of.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="group" type="this:Group"
+                minOccurs="1" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A group that a person is a member of.
+                        </summary>
+
+                        <remarks>
+                            Groups are used for security purposes. They make
+                            it easier to grant access rights to a Microsoft
+                            HealthVault web service method, authorize people to a
+                            record, or grant access rights to particular data
+                            in a health record. They are not meant to be used
+                            as distribution lists for email or other forms of
+                            communication.<br/>
+                            <br/>
+                            For example, all the doctors at a particular clinic
+                            may belong to a group to which an individual may
+                            grant permission to see medications in their health
+                            record.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <complexType name="PersonInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    Basic information about a person.
+                </summary>
+
+                <remarks>
+                    Basic information about a person including their
+                    name, login name, email address, application
+                    specific settings, record selected for use by the
+                    application, and other records that are the person
+                    authorized the application to use.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="person-id" type="this:guid">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique identifier for a person.
+                        </summary>
+
+                        <remarks>
+                          Each account in Microsoft HealthVault
+                          is assigned a unique identifier which is a
+                          128-bit integer (16 bytes) and is used to
+                          identify the account when calling methods on
+                          the service.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="name" type="this:string255">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The name of the person.
+                        </summary>
+
+                        <remarks>
+                            This is the full name of the person. Note, 
+                            it may be different than the name associated with 
+                            the record the person has authorized the 
+                            application to use.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="app-settings" type="this:AppSettings"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application specific settings for the person.
+                        </summary>
+
+                        <remarks>
+                            An application can store person preferences and other
+                            settings for the person in the Microsoft Health 
+                            Service. These settings are automatically returned
+                            when GetPersonInfo is called.<br/>
+                            <br/>
+                            If you are familiar with Windows development, this 
+                            would be analogus to HKEY_CURRENT_USER settings in 
+                            the Windows Registry.<br/>
+                            <br/>
+                          Microsoft HealthVault does not interpret this
+                          data at all and only acts as storage for it on
+                          behalf of the application.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="selected-record-id" type="this:guid"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The health record the person selected to be used
+                            by default for the application.
+                        </summary>
+
+                        <remarks>
+                          The first time a person uses an application, they are
+                          required to select a health record to use with the
+                          application.  The HealthVault platform remembers the
+                          selection and authorizes the application to use that
+                          record.
+
+                          A person may choose to have multiple records
+                          authorized for one application but the application
+                          should use the selected record by default.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="more-records" type="boolean" minOccurs="0">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Tells the caller whether more records exist for
+                            the user that weren't returned.
+                        </summary>
+                        <remarks>
+                            HealthVault will return a maximum number of 
+                            records for a person during a GetPersonInfo call
+                            based on configuration (default is 25 but subject
+                            to change).
+                            This element will be true if more than the maximum
+                            number of records exist for the user and some were
+                            not returned.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="record" type="this:Record"
+                     minOccurs="0" maxOccurs="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            All the records that a person has authorized
+                            an application to use.
+                        </summary>
+
+                        <remarks>
+                            A person may authorize an application to use any
+                            number of health records that the person has rights
+                            to. These are returned as a list of information
+                            about each of the records. Most applications should
+                            use the selected-record-id, but some applications
+                            that can work with many health records at one time
+                            can retrieve them using this element.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="groups" type="this:Groups"
+                     minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The set of groups the person is a member of.
+                        </summary>
+
+                        <remarks>
+                            This element contains group elements containing the
+                            name, unique identifier, and contact email for the
+                            group.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="preferred-culture" type="this:Culture"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The user's preferred culture for use with 
+                            comparisons, collation, currency, dates, etc.
+                        </summary>
+
+                        <remarks>
+                            If not present, the application should use the
+                            operating system or browser settings as appropriate.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="preferred-uiculture" type="this:Culture"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The user's preferred UI culture for use with 
+                            selecting the language that the application should
+                            use when showing text and images to the user.
+                        </summary>
+
+                        <remarks>
+                            If not present, the application should use the
+                            operating system or browser settings as appropriate.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="AppSettings">
+        <annotation>
+            <documentation>
+                <summary>
+                    Application specific settings for a person.
+                </summary>
+
+                <remarks>
+                    An application can store person preferences and other
+                    settings for the person in the Microsoft Health
+                    Service. These settings are automatically returned
+                    when GetPersonInfo is called.<br/>
+                    <br/>
+                    If you are familiar Windows development, this would
+                    be analogus to HKEY_CURRENT_USER settings in the
+                    Windows Registry.<br/>
+                    <br/>
+                  Microsoft HealthVault does not interpret this
+                  data at all and only acts as storage for it on
+                  behalf of the application.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <any namespace="##any"
+                 minOccurs="0"
+                 maxOccurs="unbounded"
+                 processContents="skip">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Application specific XML.
+                        </summary>
+
+                        <remarks>
+                            An application can provide any XML which defines
+                            settings for the application for a particular
+                            person.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </any>
+        </sequence>
+    </complexType>
+
+    <simpleType name="RecordState">
+        <annotation>
+            <documentation>
+                <summary>
+                    The state of a person's authorization to a record.
+                </summary>
+
+                <remarks>
+                    Authorization to a record may be suspended or
+                    revoked if there is suspicion of fraud. In most
+                    cases the state will be Active.
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="Active">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The authorization is active and the authenticated
+                            person can access the record with as much rights
+                            as was granted to the person.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ReadOnly">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The authorization is in question and the
+                            authenticated person can read data in the record
+                            but cannot write to the record even if they 
+                            were previously granted write privileges.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Suspended">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The authorization was used in a fraudulent manor
+                            and can no longer be used.
+                        </summary>
+
+                        <remarks>
+                            In most cases attempts to use a suspended record
+                            will result in INVALID_RECORD_STATE being returned
+                            from the method.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Deleted">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The record authorization has been deleted and can
+                            no longer be used to access the record.
+                        </summary>
+
+                        <remarks>
+                            In most cases attempts to use a deleted record
+                            will result in INVALID_RECORD_STATE being returned
+                            from the method.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Record">
+        <annotation>
+            <documentation>
+                <summary>
+                    Basic information about the authenticated person's view
+                    of a health record.
+                </summary>
+
+                <remarks>
+                    Health records are a place to store health and fitness
+                    related data. Each person may be authorized to zero to
+                    many health records. This type represents the metadata 
+                    about the authenticated person's view of the record, 
+                    including it's unique identifier, the relationship the 
+                    authorized person has with the owner of the record, the 
+                    name of the record, whether the authorized person is a 
+                    custodian of the record, and more.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:string255">
+                <attribute name="id" type="this:guid" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The unique identifier of the health record.
+                            </summary>
+
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="record-custodian" type="boolean"
+                           use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                States whether the authenticated person is
+                                a record custodian.
+                            </summary>
+
+                            <remarks>
+                                If true, the authenticated person has rights
+                                to perform special operations on the record
+                                like sharing it with other people or modifying
+                                the permissions someone has on the record.
+                                Other than the owner of the record, 
+                                custodianship is usually granted to a person
+                                that has the legal right to make medical 
+                                decisions on behalf of the person. For example,
+                                a parent would likely be a custodian of a 
+                                child's record until that child reaches a 
+                                legally mature age, or if someone has power
+                                of attorney over the individual.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="rel-type" type="int" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The relationship the authorized person has to
+                                the owner of the record.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="rel-name" type="this:string255" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A string representation of the relationship.
+                            </summary>
+
+                            <remarks>
+                                This value is localized using the language and
+                                country specified in the request.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="auth-expires" type="dateTime"
+                           use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The date the authenticated person's 
+                                authorization to the record expires.
+                            </summary>
+
+                            <remarks>
+                                Once authorization expires to the record, a
+                                record custodian must extend the expiration
+                                period for the person to be able to access
+                                data in the record.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="auth-expired" type="boolean" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                States whether authorization has already 
+                                expired.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="display-name" type="this:string255"
+                           use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The display name for the record.
+                            </summary>
+
+                            <remarks>
+                                It may be possible for a person to provide 
+                                an alternate name for a record rather than
+                                the person's name. For instance, a child
+                                authorized to a parent's health record may
+                                change the display name to "Mom" rather than
+                                the parent's name.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="state" type="this:RecordState" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The state of the person's authorization to the
+                                record.
+                            </summary>
+
+                            <remarks>
+                                Authorization to a record may be suspended or 
+                                revoked if there is suspicion of fraud. In most
+                                cases the state will be Active.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="date-created" type="dateTime" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The date the health record was created.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </attribute>
+                
+                <attribute name="max-size-bytes" type="this:positiveLong" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The maximum total size in bytes that all the things in the record
+                                can occupy together.
+                            </summary>
+                        </documentation>
+                    </annotation>               
+                </attribute>
+                
+                <attribute name="size-bytes" type="this:positiveLong" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The total size in bytes that all the things in the record
+                                currently occupy together.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </attribute>
+              
+                <attribute name="app-record-auth-action" type="this:AppRecordAuthAction" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                              The state of the authorization in relationship to the application's requested
+                              level of access, the person's level of access to the record, and the 
+                              access already granted by the person to the application.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <!-- localization stuff -->
+
+    <complexType name="LanguageCompetency">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:iso639-1">
+                <attribute name="is-primary" type="boolean" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="LocalizedString">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="string">
+                <attribute name="language"
+                    type="this:iso639-1" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="OpenQueryInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                Information describing a saved OpenQuery.
+                </summary>
+
+                <remarks>
+                This information is used to invoke an OpenQuery
+                after it is saved.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="query-id" type="this:guid" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Identifier of the saved query.
+                        </summary>
+
+                        <remarks>
+                            This identifier may be used to invoke the
+                            corresponding saved query by using the
+                            openquery.ashx HTTP handler. The handler takes
+                            one HTTP query parameter, id, the text
+                            string representation of this identifier.<br/>
+                            <br/>
+                            Example 1:<br/>
+                            https://&lt;server&gt;/wildcat/openquery.ashx?id=9C4C77CF-1DF0-4c41-BD3D-EC9232B5BC8A
+                            will invoke a saved request that corresponds
+                            to the specified identifier.<br/>
+                            <br/>
+                            Example 2:<br/>
+                            https://&lt;server&gt;/wildcat/openquery.ashx?id=9C4C77CF-1DF0-4c41-BD3D-EC9232B5BC8A?pin=91640108-453e-4882-ba4f-d9cda629d81d
+                            will invoke a saved query that corresponds
+                            to the specified identifier that is protected
+                            with the specified pin.
+                            <br/>
+                            Currently the only supported request method
+                            of a saved query is GetThings. Attempting to
+                            save queries for other methods will result
+                            in the INVALID_OPENQUERY error.<br/>
+                            <br/>
+                            Security warning: Invocation of the saved
+                            queries does not require authentication. 
+                            Authorization is applied as the person who saved
+                            the query.  The query may be protected with a pin.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="app-name" type="this:string255" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The name of the application that created the 
+                            open query.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="date-created" type="dateTime" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Date the open query was created.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="expires-date" type="dateTime" 
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Expiration date of the open query.
+                        </summary>
+                        <remarks>                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="pin-required" type="boolean" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies whether a PIN is required.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="note" type="this:string128"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A note attached to the open query during its
+                            creation.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="coded-value">
+        <annotation>
+            <documentation>
+                <summary>
+                    Defines a value which has been coded in a Microsoft Health
+                    Vocabulary.
+                </summary>
+                <remarks>
+                  Microsoft HealthVault provides a set of vocabularies
+                  containing common health and fitness terms and codes.
+                  Vocabularies are identified by their family, type, and
+                  version and contain values which identify an entry in that
+                  vocabulary by code.<br/>
+                    <br/>
+                    For example, a prescription
+                    vocabulary may be identified by the family 'NCPDP', type
+                    'SCRIPT', and version '1.0' and contain a code of 10 which
+                    identifies a 'tablet' form of medication.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="value" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The code value which identifies the item in the
+                            vocabulary.
+                        </summary>
+                        <remarks>
+                            Codes are unique to the vocabulary they reside in.
+                            The codes for a particular vocabulary can be
+                            enumerated using GetVocabulary.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="family" type="string" minOccurs="0">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The family of the vocabulary.
+                        </summary>
+                        <remarks>
+                            The family of a vocabulary partially identifies the
+                            vocabulary instance along with type and version. If
+                            the value is missing the family is assumed to be
+                            'wc' which is the Microsoft Health Lexicon.
+                            <br/>
+                            For example, 'NCPDP' is the vocabulary family for
+                            codes in the National Council for Prescription Drug
+                            Programs.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="type" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The type of the vocabulary.
+                        </summary>
+                        <remarks>
+                            This is the name that identifies the vocabulary in
+                            the family of vocabularies.<br/>
+                            <br/>
+                            For example, 'SCRIPT' is the vocabulary name for
+                            medical prescriptions in the 'NCPDP' family of
+                            vocabularies.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="version" type="string" minOccurs="0">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The version of the vocabulary.
+                        </summary>
+                        <remarks>
+                            The version identifies which version of a vocabulary
+                            identified by the 'type' element the code is in if
+                            more than one version is present.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="codable-value">
+        <annotation>
+            <documentation>
+                <summary>
+                    A value that may have codes from one or more Microsoft
+                    Health vocabularies associated with it.
+                </summary>
+                <remarks>
+                    A codable value represents a value that may reference a
+                    coded value in one or more of the Microsoft Health
+                    vocabularies. Though it does not require the value to
+                    be in a vocabulary.<br/>
+                    <br/>
+                    For example, aerobic session data has a mode element
+                    of type codable-value. Although many common forms of
+                    aerobic session mode can be found in the Microsoft
+                    Health Lexicon using the 'aerobic-activities' vocabulary,
+                    not all possible activities can be found there. If the
+                    activity does exist in the vocabulary it is recommended
+                    that applications add the coded-value for that code as
+                    a 'code' element and set the 'text' element to the
+                    display value for that code. If the activity does not
+                    exist in the vocabulary the 'code' element should not
+                    be specified and the 'text' element should contain the
+                    data the user entered.<br/>
+                    <br/>
+                  By using the coded-value when available the data can
+                  be easily localized by Microsoft HealthVault and
+                  can also be utilized by applications that are mining the
+                  data based on certain code values.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="text" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The textual representation of the value.
+                        </summary>
+                        <remarks>
+                            This may be the display value from one of the
+                            coded-values or it may be the user entered
+                            value.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="code" type="this:coded-value" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The codes representing the value from a
+                            Microsoft Health vocabulary.
+                        </summary>
+                        <remarks>
+                            Some values can be represented by codes in more
+                            that one vocabulary. If appropriate add coded-values
+                            from as many vocabularies as are relevant.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <simpleType name="AppRecordAuthAction">
+      <annotation>
+        <documentation>
+          <summary>
+            The states of application-record authorization.
+          </summary>
+
+          <remarks>
+            If there are actions required, then the enumeration value
+            describes the required user action to successfully create
+            a token.
+          </remarks>
+        </documentation>
+      </annotation>
+      <restriction base="string">
+        <enumeration value="">
+          <annotation>
+            <documentation>
+              <summary>
+              </summary>
+            </documentation>
+          </annotation>
+        </enumeration>
+        <enumeration value="AuthorizationRequired">
+          <annotation>
+            <documentation>
+              <summary>
+                The application has never been authorized.
+                The user must authorize this application.
+              </summary>
+            </documentation>
+          </annotation>
+        </enumeration>
+        <enumeration value="ReauthorizationRequired" >
+          <annotation>
+            <documentation>
+              <summary>
+                The user must authorize this application.
+              </summary>
+            </documentation>
+          </annotation>
+        </enumeration>
+        <enumeration value="ReauthorizationNotPossible">
+          <annotation>
+            <documentation>
+              <summary>
+                It is not possible to reauthorize this application.
+              </summary>
+            </documentation>
+          </annotation>
+        </enumeration>
+        <enumeration value="NoActionRequired" >
+          <annotation>
+            <documentation>
+              <summary>
+                No actions are required.
+              </summary>
+            </documentation>
+          </annotation>
+        </enumeration>
+      </restriction>
+    </simpleType>
+
+</schema>
+

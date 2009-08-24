@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.AddApplication"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-auth="urn:com.microsoft.wc.auth" 
+    xmlns:wc-app="urn:com.microsoft.wc.application"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-ADDAPPLICATION.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for AddApplication method
+
+    -->
+
+    <import namespace="urn:com.microsoft.wc.types" schemaLocation="types.xsd" />
+    <import namespace="urn:com.microsoft.wc.auth" schemaLocation="auth.xsd" />
+    <import namespace="urn:com.microsoft.wc.application" schemaLocation="application.xsd" />
+    
+    <annotation>
+        <documentation>
+            <summary>
+                Adds an application configuration.
+            </summary>
+
+            <remarks>
+                Before an application can call HealthVault, two things must happen:
+                    1. The application configuration must be added to HealthVault.
+                    2. A user must allow the application to access his/her health data.
+
+                The application configuration specifies how the application will interact with
+                HealthVault (i.e. which methods it will call, which data types it needs access
+                to, etc.). It also provides information specificially for the user (i.e. a 
+                description about what the application does, the application logo, etc.). This
+                information will be shown to the user during application authorization.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- AddApplication - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="name" type="wc-types:CultureSpecificString255" 
+                         minOccurs="1" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The application name.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="public-keys" type="wc-app:PublicKeys">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The X509 certificate to be used in conjunction with the 
+                                application id to uniquely identify the application to HealthVault.
+                            </summary>
+
+                            <remarks>
+                                This value should be the hexadecimal representation of the entire
+                                X509 certificate, excluding the private key. The easiest way to
+                                get this value is to take the binary value of a .cer file as a
+                                hexadecimal. 
+                                
+                                It is extremely important that the private key that cooresponds to 
+                                this public key should be secured both physically and 
+                                electronically so that other applications cannot identify 
+                                themselves the application being added.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="person-online-base-auth" type="wc-auth:AuthXml" 
+                         minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The list of data types (with corresponding permissions) that 
+                                the application can access to while the person is logged in 
+                                and using the application.
+                            </summary>
+                            
+                            <remarks>
+                                This set of authorization rules must be a subset of the calling
+                                application's authorization rule set. If not, an INVALID_APPAUTH
+                                error will be returned.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="person-offline-base-auth" type="wc-auth:AuthXml">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The list of data types (with corresponding permissions) that
+                                the application can access at any time.
+                            </summary>
+
+                            <remarks>
+                                This set of authorization rules must be a subset of the calling
+                                application's authorization rule set. If not, an INVALID_APPAUTH
+                                error will be returned.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="methods" type="wc-types:stringnz" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                List of HealthVault methods that the application is allowed to
+                                call.
+                            </summary>
+
+                            <remarks>
+                                Version 1 of the AddApplication ignores this element and configures
+                                the application with x-BaseMethods and x-UserDataExtended method 
+                                groups.
+                                Version 2 of the AddApplication ensures the methods specified are
+                                equal to or a subset of the child-method-mask-ceiling configured
+                                for the master application.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="action-url" type="wc-types:stringnz" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A single url used by HealthVault with different query string 
+                                parameters to make specific requests to an online application.
+                            </summary>
+
+                            <remarks>
+                                Since an application must have both a privacy statement and a
+                                terms of use statement, you must supply one of the following:
+                                1. An action url.
+                                2. Both the privacy statement and terms of use (see the
+                                "privacy-statement" and "terms-of-use" parameters).
+
+                                If the above condition is not met, an INVALID_XML error will be
+                                returned.
+
+                                Exceptions include HIPAA applications specified using the
+                                app-attributes element below.  HIPAA applications do not require
+                                an action url, privacy statement, or terms of use.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="description" type="wc-types:CultureSpecificStringnz" 
+                         minOccurs="1" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A high level description about what the application does.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="auth-reason" type="wc-types:CultureSpecificStringnz" 
+                         minOccurs="1" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The reason why the application requires the requested permissions
+                                to the various data types.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="domain-name" type="wc-types:string255" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The domain name from which emails sent on behalf of the 
+                                application will originate from.
+                            </summary>
+
+                            <remarks>
+                                For example, if the domain name supplied was 'myapp.com', the 
+                                application would call SendInsecureMessageFromApplication with a
+                                mailbox-name 'mailbox', and the recipient would receive an email
+                                from mailbox@myapp.com.
+                                
+                                Currently not supported. The list of methods that the application
+                                is given access to by default does not contain any of the methods
+                                for sending email.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="large-logo" type="wc-app:AppLargeLogoInfo">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The application's logo as a base64 encoded string and its 
+                                corresponding content type.
+                            </summary>
+
+                            <remarks>
+                                The large logo can be up to 120 pixels wide, 60 pixels 
+                                high, and 160kb in size.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="small-logo" type="wc-app:AppSmallLogoInfo" 
+                         minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The application's logo as a base64 encoded string and its
+                                corresponding content type.
+                            </summary>
+
+                            <remarks>
+                                The small logo can be up to 40kb in size.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="persistent-tokens" type="wc-app:AppPersistentTokens" 
+                         minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies whether the application requires using persistent tokens 
+                                and the duration to persist the tokens for (in seconds)
+                            </summary>
+
+                            <remarks>
+                                A persistent token is an encrypted identifier for the user and
+                                application. It can be used to enable the "Keep me signed in on 
+                                this computer" feature in HealthVault.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="app-type" type="wc-types:stringnz" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The category used to classify the application.
+                            </summary>
+
+                            <remarks>
+                                Currently not used by HealthVault.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="privacy-statement" type="wc-app:StatementInfo" 
+                         minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The application's privacy statement as a base64 encoded string 
+                                and its corresponding content type.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="terms-of-use" type="wc-app:StatementInfo" 
+                         minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The application's terms of use statement as a base64 encoded string
+                                and its corresponding content type.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="app-auth-required" type="boolean" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies whether the application needs to authenticate the user.
+                            </summary>
+
+                            <remarks>
+                                For example, if the application charged a subscription fee for its
+                                use, this parameter would need to be true so that the application
+                                can verify that the user has in fact paid for the usage before 
+                                logging him/her in.
+                                
+                                Currently not supported.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="is-published" type="boolean" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Currently not supported.
+                            </summary>
+
+                            <remarks>
+                                Currently not supported.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+                
+                <element name="dtc-success-message" type="wc-app:StatementInfo"
+                         minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The message to display to the use when direct to clinial
+                                authorization completes successfully.
+                            </summary>
+                            <remarks>
+                                Represented as a base64 encoded string and its corresponding 
+                                content type.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="app-attributes" type="wc-app:ApplicationAttributes"
+                         minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The application attributes.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+            </sequence>
+        </complexType>
+    </element>
+</schema>

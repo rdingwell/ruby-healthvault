@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.GetOpenQueryInfo"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-GETOPENQUERYINFO.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetOpenQueryInfo method
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Retrieves information about a saved open query given the 
+                query identifier.
+            </summary>
+
+            <remarks>
+                Retrieves information about a previously created query using the 
+                SaveOpenQuery method.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="query-id" type="wc-types:guid" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The identifier of the saved query whose information
+                            is to be retrieved.
+                        </summary>
+
+                        <remarks>
+                            When a query is saved by the SaveOpenQuery method a
+                            unique identifier is issued by the Microsoft Health
+                            Services. 
+                        </remarks>
+                    </documentation>
+                </annotation>
+                </element>
+
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

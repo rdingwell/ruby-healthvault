@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema 
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetThings"
+    xmlns:this="urn:com.microsoft.wc.methods.response.GetThings" 
+    xmlns:wc-types="urn:com.microsoft.wc.types" 
+    xmlns:wc-thing="urn:com.microsoft.wc.thing" 
+    xmlns="http://www.w3.org/2001/XMLSchema">
+    
+    <!--
+
+        RESPONSE-GETTHINGS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetThings method response
+
+    -->
+    <import 
+        namespace="urn:com.microsoft.wc.types" 
+        schemaLocation="types.xsd"/>
+        
+    <import 
+        namespace="urn:com.microsoft.wc.thing" 
+        schemaLocation="thing.xsd"/>
+        
+    <annotation>
+        <documentation>
+            <summary>
+                Specifies the schema for the GetThings method response.
+            </summary>
+            <remarks>
+                The response from a GetThings method request is sent as a series of response groups
+                that corresponds one to one with the filter groups that were sent with the request. The results
+                returned in each group can be composed of full things as well as partial things. Full things
+                will be returned up to a maximum that is configured on the server. 
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+    <!-- GetThings - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <complexType name="UnprocessedThingKeyInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    Specifies the things returned with partial information.
+                </summary>
+                <remarks>
+                    Things will be returned with partial information if the maximum limit for full things have
+                    been reached.  
+                    To retrieve the things in full form, the thing ids can be specified in the filter group
+                    of additional GetThing methods requests. 
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="thing-id" type="wc-thing:ThingKey">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique identifier for the thing.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="type-id" type="wc-thing:ThingType">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The type of the thing.
+                        </summary>
+                        <remarks>
+                            The list of things types can be queried through the Dictionary.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="eff-date" type="dateTime">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The effective date for the thing.
+                        </summary>
+                        <remarks>
+                            The relevant time for a thing. If this was a weight measurement, 
+                            the effective time refers to the date the weight was taken, not 
+                            when it was stored.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="ThingResponseGroup">
+        <annotation>
+            <documentation>
+                <summary>
+                    Each response group corresponds to a filter request group sent with the GetThings
+                    request. 
+                </summary>
+                <remarks>
+                    Each group is uniquely identified by the group name and contains the represent an group
+                    of clauses that are used as a filter to a GetThings method request.
+                    Each group is independent of the other groups that might be sent with
+                    the same request. 
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="thing" type="wc-thing:Thing" 
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The things that satisfied the criteria in the filter group of the request.
+                        </summary>
+                        <remarks>
+                            The things returned here might be a partial list. The server will return a list of 
+                            things up to a maximum based on server configuration. The unprocessed-thing-key-info 
+                            element will contain additional things in partial form. To retrieve the things in full form, 
+                            the thing ids can be specified in the filter group of additional GetThing methods 
+                            requests. 
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="unprocessed-thing-key-info" 
+                        type="this:UnprocessedThingKeyInfo" 
+                        minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Additional things that satisfied the criteria in the filter group of the 
+                            request but are returned in partial form, including the thing id and thing type.
+                        </summary>
+                        <remarks>
+                            To retrieve the things in full form, the thing ids can be specified in the filter group
+                            of additional GetThing methods requests. 
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element  name="filtered" 
+                type="boolean" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Indicates whether some of the things were filtered.
+                        </summary>
+                        <remarks>
+                            Thing may be filtered because of security settings on the record.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+        <attribute name="name" type="string" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+                        Name of the group. 
+                    </summary>
+                    <remarks>
+                        This name is identical to the name sent in the request for this group.
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        Contains the response of the GetThings method request.
+                    </summary>
+                </documentation>
+            </annotation>
+            <choice minOccurs="1" maxOccurs="unbounded">
+                <element name="group" 
+                        type="this:ThingResponseGroup">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Contains the response to the GetThings method request. 
+                            </summary>
+                            <remarks>
+                                The response are returned as groups of responses that coincide with 
+                                the filter groups in the request. Each group is identified with a group 
+                                name that was specified in the request.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </choice>
+        </complexType>
+    </element>
+</schema>

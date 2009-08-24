@@ -1,0 +1,86 @@
+<schema xmlns:med="urn:com.microsoft.wc.thing.medication" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.medication"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>5C5F1223-F63C-4464-870C-3E36BA471DEF</type-id><type-name>Medication</type-name><wrapper-class-name>MedicationV1</wrapper-class-name><wrapper-class-fwlink>136338</wrapper-class-fwlink><sample-xml-fwlink>136339</sample-xml-fwlink><data-type-guide-fwlink>136337</data-type-guide-fwlink><summary>
+                Information related to a medication.
+            </summary><remarks>
+                Note: Please use the new version of this data type instead of this version.
+                <br />
+                This thing type describes a medication a person has.
+            </remarks></documentation></annotation><complexType name="DoseValue"><annotation><documentation><summary>
+                    Defines a medication dosage.
+                </summary><remarks>
+                    The dose taken may be a fixed amount, like 2 (meaning
+                    2 capsules, 2 tablets, etc.), or it may be a range, like
+                    1/2 - 1, and it may also include free-form text.
+                </remarks></documentation></annotation><sequence><element name="description" type="string" minOccurs="0"><annotation><documentation><summary>
+                            Free form text describing the dose that should be
+                            taken.
+                        </summary></documentation></annotation></element><element name="exact-dose" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The dose value as an exact dose value.
+                        </summary><remarks>
+                            The dosage to be taken is exactly specified.
+                        </remarks></documentation></annotation></element><element name="min-dose" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The minimum dosage that should be taken.
+                        </summary><remarks>
+                            The dosage to be taken is specified as a range
+                            with this value indicating the minimum dosage
+                            that should be taken.
+                        </remarks></documentation></annotation></element><element name="max-dose" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The maximum dosage that should be taken.
+                        </summary><remarks>
+                            The dosage to be taken is specified as a range
+                            with this value indicating the maximum dosage
+                            that should be taken.
+                        </remarks></documentation></annotation></element></sequence></complexType><element name="medication"><complexType><annotation><documentation><summary>
+                        Information related to a medication.
+                    </summary><remarks>
+                        Note: Please use the new version of this data type instead of this version.
+                        <br />
+                        This thing type describes a medication a person has.
+                    </remarks></documentation></annotation><sequence><element name="name" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Name of medication.
+                             </summary></documentation></annotation></element><!-- National Drug Code or Generic Sequence Number --><element name="code" type="nonNegativeInteger" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Clinical code for medication.
+                            </summary></documentation></annotation></element><element name="date-discontinued" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                Date medication was discontinued.
+                            </summary></documentation></annotation></element><element name="date-filled" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                Date medication prescription was filled.
+                            </summary></documentation></annotation></element><element name="date-prescribed" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                Date medication was prescribed.
+                            </summary></documentation></annotation></element><element name="is-prescribed" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                True if medication was prescribed.
+                            </summary></documentation></annotation></element><element name="indication" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form indication for medication.
+                        </summary></documentation></annotation></element><element name="amount-prescribed" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form amount prescribed for medication.
+                            </summary></documentation></annotation></element><element name="dose-value" type="med:DoseValue" minOccurs="0"><annotation><documentation><summary>
+                                Doses of medication.
+                            </summary></documentation></annotation></element><element name="dose-unit" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Dose unit of medication.
+                            </summary><preferred-vocabulary>x12-de-1330</preferred-vocabulary></documentation></annotation></element><element name="strength-value" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                Strength of medication.
+                            </summary></documentation></annotation></element><element name="strength-unit" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Free form strength unit of medication.
+                            </summary><preferred-vocabulary>x12-de-355</preferred-vocabulary></documentation></annotation></element><element name="frequency" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form frequency of medication.
+                            </summary></documentation></annotation></element><element name="route" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Route of medication.
+                            </summary><preferred-vocabulary>medication-routes</preferred-vocabulary></documentation></annotation></element><element name="duration" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form duration of medication.
+                            </summary></documentation></annotation></element><element name="duration-unit" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Free form duration units of medication.
+                            </summary></documentation></annotation></element><element name="refills" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                Number of medication refills.
+                            </summary></documentation></annotation></element><element name="refills-left" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                Number of medication refills left.
+                            </summary></documentation></annotation></element><element name="days-supply" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                Number of days supply of medication.
+                            </summary></documentation></annotation></element><element name="prescription-duration" type="t:duration-value" minOccurs="0"><annotation><documentation><summary>
+                                Duration of prescription.
+                            </summary></documentation></annotation></element><element name="instructions" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form medication instructions.
+                            </summary></documentation></annotation></element><element name="substitution-permitted" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                True of substitution is permitted.
+                            </summary></documentation></annotation></element><element name="pharmacy" type="t:contact" minOccurs="0"><annotation><documentation><summary>
+                                Pharmacy.
+                            </summary></documentation></annotation></element><element name="prescription-number" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form prescription number.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

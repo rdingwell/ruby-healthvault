@@ -1,0 +1,15 @@
+<schema xmlns:height="urn:com.microsoft.wc.thing.height" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.height"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>40750a6a-89b2-455c-bd8d-b420a4cb500b</type-id><type-name>Height Measurement</type-name><wrapper-class-name>Height</wrapper-class-name><wrapper-class-fwlink>136158</wrapper-class-fwlink><sample-xml-fwlink>136159</sample-xml-fwlink><data-type-guide-fwlink>136157</data-type-guide-fwlink><summary>
+                Information about a height measurement.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><element name="height"><complexType><annotation><documentation><summary>
+                        Information about a height measurement.
+                    </summary></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the height measurement was 
+                                taken.
+                            </summary></documentation></annotation></element><element name="value" type="t:length-value"><annotation><documentation><summary>
+                                The value of the height reading.
+                            </summary><remarks>
+                                Length values are measured in meters but data
+                                entered by users using other units should be
+                                stored in the display-value and used when
+                                displaying the data to the user.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

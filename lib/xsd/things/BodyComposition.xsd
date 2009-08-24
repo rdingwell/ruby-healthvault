@@ -1,0 +1,41 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.body-composition" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.body-composition"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>18adc276-5144-4e7e-bf6c-e56d8250adf8</type-id><type-name>Body Composition</type-name><wrapper-class-name>BodyComposition</wrapper-class-name><wrapper-class-fwlink>136062</wrapper-class-fwlink><sample-xml-fwlink>136063</sample-xml-fwlink><data-type-guide-fwlink>136061</data-type-guide-fwlink><summary>
+                Information about the body composition of the record owner. 
+            </summary><remarks>
+                Examples: % body fat, lean muscle mass.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><complexType name="BodyCompositionValue"><annotation><documentation><summary>
+                    A single measurement of body composition. 
+                </summary><remarks>
+                    The mass-value element is used to store mass values, and the percentage-value
+                    is used to store percentages. An application should set one or the other. When both values are 
+                    available, they should be stored in separate instances. 
+                </remarks></documentation></annotation><sequence><element name="mass-value" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                            A body composition measurement stored as a mass.
+                        </summary><remarks>
+                            Examples: 45 Kg, 15 lbs.
+                        </remarks></documentation></annotation></element><element name="percent-value" type="t:percentage" minOccurs="0"><annotation><documentation><summary>
+                            A body composition measurement stored as a percentage.
+                        </summary><remarks>
+                            Examples: 0.37 (37%), 0.075 (7.5%).
+                        </remarks></documentation></annotation></element></sequence></complexType><element name="body-composition"><complexType><annotation><documentation><summary>
+                        Information about the body composition of the record owner.
+                    </summary><remarks>
+                        Examples: % body fat, lean muscle mass.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:approx-date-time"><annotation><documentation><summary>
+                                Date and time of the measurement.
+                            </summary></documentation></annotation></element><element name="measurement-name" type="t:codable-value"><annotation><documentation><summary>
+                                The name of the measurement.
+                            </summary><remarks>
+                                Examples: Body fat, lean muscle.
+                            </remarks><preferred-vocabulary>body-composition-measurement-names</preferred-vocabulary></documentation></annotation></element><element name="value" type="this:BodyCompositionValue"><annotation><documentation><summary>
+                                The value of the measurement.
+                            </summary></documentation></annotation></element><element name="measurement-method" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The technique used to obtain the measurement.
+                            </summary><remarks>
+                                Examples: Bioelectrical impedance, DXA, Skinfold (calipers).
+                            </remarks><preferred-vocabulary>body-composition-measurement-methods</preferred-vocabulary></documentation></annotation></element><element name="site" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The body part that is the subject of the measurement.
+                            </summary><remarks>
+                                Examples: Left arm, head, torso.
+                                <br />
+                                If site is absent the measurement is for the whole body.
+                            </remarks><preferred-vocabulary>body-composition-sites</preferred-vocabulary></documentation></annotation></element></sequence></complexType></element></schema>

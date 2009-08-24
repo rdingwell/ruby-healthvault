@@ -1,0 +1,17 @@
+<schema xmlns:allergic-episode="urn:com.microsoft.wc.thing.allergic-episode" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.allergic-episode"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>d65ad514-c492-4b59-bd05-f3f6cb43ceb3</type-id><type-name>Allergic Episode</type-name><wrapper-class-name>AllergicEpisode</wrapper-class-name><wrapper-class-fwlink>136032</wrapper-class-fwlink><sample-xml-fwlink>136033</sample-xml-fwlink><data-type-guide-fwlink>136031</data-type-guide-fwlink><summary>
+                Information related to a single instance of an allergic
+                reaction.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><element name="allergic-episode"><complexType><annotation><documentation><summary>
+                        Information related to a single instance of an allergic
+                        reaction.
+                    </summary></documentation></annotation><sequence><element name="when" minOccurs="1" maxOccurs="1" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the episode occurred.
+                            </summary></documentation></annotation></element><element name="name" minOccurs="1" maxOccurs="1" type="t:codable-value"><annotation><documentation><summary>
+                                The name of the allergy.
+                            </summary></documentation></annotation></element><element name="reaction" minOccurs="0" maxOccurs="1" type="t:codable-value"><annotation><documentation><summary>
+                                The description of the symptoms of this 
+                                allergic reaction.
+                            </summary></documentation></annotation></element><element name="treatment" type="t:codable-value" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                A description of the treatment taken for this
+                                allergic reaction.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

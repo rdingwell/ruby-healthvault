@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Methods::Response::GetPeopleForRecord::Info</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Methods::Response::GetPeopleForRecord::Info</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../../../files/lib/wc_data/generated/methods/response/get_people_for_record/info_rb.html">
+                lib/wc_data/generated/methods/response/get_people_for_record/info.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M003276">active_person_authorization</a>&nbsp;&nbsp;
+      <a href="#M003274">add_active_person_authorization</a>&nbsp;&nbsp;
+      <a href="#M003277">add_non_active_authorization</a>&nbsp;&nbsp;
+      <a href="#M003280">new</a>&nbsp;&nbsp;
+      <a href="#M003279">non_active_authorization</a>&nbsp;&nbsp;
+      <a href="#M003275">remove_active_person_authorization</a>&nbsp;&nbsp;
+      <a href="#M003278">remove_non_active_authorization</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M003280" class="method-detail">
+        <a name="M003280"></a>
+
+        <div class="method-heading">
+          <a href="#M003280" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003280-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003280-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_people_for_record/info.rb, line 59</span>
+59:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+60:           <span class="ruby-keyword kw">super</span>
+61:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'info'</span>
+62:         
+63:           
+64:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'active-person-authorization'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'active-person-authorization'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Record</span><span class="ruby-operator">::</span><span class="ruby-constant">ActivePersonAuthorizationNoIds</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+65:           
+66:         
+67:           
+68:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'non-active-authorization'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'non-active-authorization'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Record</span><span class="ruby-operator">::</span><span class="ruby-constant">NonActiveAuthorizationNoIds</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+69:           
+70:         
+71:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M003276" class="method-detail">
+        <a name="M003276"></a>
+
+        <div class="method-heading">
+          <a href="#M003276" class="method-signature">
+          <span class="method-name">active_person_authorization</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <b>summary</b>: List of persons that have authorizations to
+the record. <b>returns</b>: a <a
+href="../../../Record/ActivePersonAuthorizationNoIds.html">HealthVault::WCData::Record::ActivePersonAuthorizationNoIds</a>
+Array
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003276-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003276-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_people_for_record/info.rb, line 33</span>
+33:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">active_person_authorization</span>
+34:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'active-person-authorization'</span>][<span class="ruby-identifier">:value</span>]
+35:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003274" class="method-detail">
+        <a name="M003274"></a>
+
+        <div class="method-heading">
+          <a href="#M003274" class="method-signature">
+          <span class="method-name">add_active_person_authorization</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../Record/ActivePersonAuthorizationNoIds.html">HealthVault::WCData::Record::ActivePersonAuthorizationNoIds</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003274-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003274-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_people_for_record/info.rb, line 21</span>
+21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_active_person_authorization</span>(<span class="ruby-identifier">value</span>)
+22:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'active-person-authorization'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+23:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003277" class="method-detail">
+        <a name="M003277"></a>
+
+        <div class="method-heading">
+          <a href="#M003277" class="method-signature">
+          <span class="method-name">add_non_active_authorization</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../Record/NonActiveAuthorizationNoIds.html">HealthVault::WCData::Record::NonActiveAuthorizationNoIds</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003277-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003277-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_people_for_record/info.rb, line 41</span>
+41:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_non_active_authorization</span>(<span class="ruby-identifier">value</span>)
+42:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'non-active-authorization'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+43:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003279" class="method-detail">
+        <a name="M003279"></a>
+
+        <div class="method-heading">
+          <a href="#M003279" class="method-signature">
+          <span class="method-name">non_active_authorization</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: List of persons that have not accepted their sharing
+invites to the record. <b>returns</b>: a <a
+href="../../../Record/NonActiveAuthorizationNoIds.html">HealthVault::WCData::Record::NonActiveAuthorizationNoIds</a>
+Array
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003279-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003279-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_people_for_record/info.rb, line 53</span>
+53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">non_active_authorization</span>
+54:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'non-active-authorization'</span>][<span class="ruby-identifier">:value</span>]
+55:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003275" class="method-detail">
+        <a name="M003275"></a>
+
+        <div class="method-heading">
+          <a href="#M003275" class="method-signature">
+          <span class="method-name">remove_active_person_authorization</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../../../HealthVault.html">HealthVault</a>::<a
+href="../../../Record/ActivePersonAuthorizationNoIds.html">WCData::Record::ActivePersonAuthorizationNoIds</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003275-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003275-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_people_for_record/info.rb, line 26</span>
+26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_active_person_authorization</span>(<span class="ruby-identifier">value</span>)
+27:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'active-person-authorization'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+28:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003278" class="method-detail">
+        <a name="M003278"></a>
+
+        <div class="method-heading">
+          <a href="#M003278" class="method-signature">
+          <span class="method-name">remove_non_active_authorization</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../../../HealthVault.html">HealthVault</a>::<a
+href="../../../Record/NonActiveAuthorizationNoIds.html">WCData::Record::NonActiveAuthorizationNoIds</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003278-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003278-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_people_for_record/info.rb, line 46</span>
+46:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_non_active_authorization</span>(<span class="ruby-identifier">value</span>)
+47:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'non-active-authorization'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+48:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

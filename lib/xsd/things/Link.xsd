@@ -1,0 +1,12 @@
+<schema xmlns:l="urn:com.microsoft.wc.thing.link" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.link"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><annotation><documentation><type-id>d4b48e6b-50fa-4ba8-ac73-7d64a68dc328</type-id><type-name>Link</type-name><wrapper-class-name>Link</wrapper-class-name><wrapper-class-fwlink>136182</wrapper-class-fwlink><sample-xml-fwlink>136183</sample-xml-fwlink><data-type-guide-fwlink>136181</data-type-guide-fwlink><summary>
+              Defines the schema for a web link saved as a favorite in
+              Microsoft HealthVault.
+            </summary></documentation></annotation><element name="link"><annotation><documentation><summary>
+                  Defines the schema for a web link saved as a favorite in
+                  Microsoft HealthVault.
+                </summary></documentation></annotation><complexType><sequence><element name="url" type="string"><annotation><documentation><summary>
+                                The full URL for the link, including the 
+                                scheme and full site name.
+                            </summary></documentation></annotation></element><element name="title" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                Optional friendly name for the link.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

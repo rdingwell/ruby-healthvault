@@ -1,0 +1,39 @@
+<schema xmlns:a="urn:com.microsoft.wc.thing.cholesterol-profile" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.cholesterol-profile"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>796C186F-B874-471c-8468-3EEFF73BF66E</type-id><type-name>Cholesterol Profile (Lipid Profile)</type-name><effective-date-element>when</effective-date-element><wrapper-class-name>CholesterolProfile</wrapper-class-name><wrapper-class-fwlink>136074</wrapper-class-fwlink><sample-xml-fwlink>136075</sample-xml-fwlink><data-type-guide-fwlink>136073</data-type-guide-fwlink><summary>
+                Cholesterol test results. Also referred to as lipid profile. 
+            </summary><remarks>
+                Covers primary cholesterol/lipid profile test readings. 
+            </remarks></documentation></annotation><element name="cholesterol-profile"><complexType><annotation><documentation><summary>
+                        Cholesterol test results. Also referred to as lipid profile. 
+                    </summary><remarks>
+                        Cholesterol profile is typically comprised of LDL (low-density 
+                        lipoprotein) cholesterol, HDL (high density lipoprotein) cholesterol and total cholesterol.
+                        This data type also in corporates currently-requested secondary tests
+                        that may be applicable for cholesterol.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date"><annotation><documentation><summary>
+                                The date when the samples that led to this test result were taken.
+                            </summary></documentation></annotation></element><element name="ldl" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                                Low density lipoprotein cholesterol.
+                            </summary><remarks>
+                                The LDL test measures how much low-density lipoprotein 
+                                (LDL) cholesterol in the blood. Increased levels of
+                                LDL cholesterol is associated with atherosclerosis. 
+                                LDL cholesterol is measured in mg/dL.
+                            </remarks></documentation></annotation></element><element name="hdl" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                                High density lipoprotein cholesterol.
+                            </summary><remarks>
+                                HDL stands for high density lipoprotein cholesterol, 
+                                a form of "good" cholesterol. Proteins in the blood 
+                                that move cholesterol, triglycerides, and other 
+                                lipids to various tissues are lipoproteins. HDL cholesterol is measured in mg/dL.
+                             </remarks></documentation></annotation></element><element name="total-cholesterol" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                                 Total cholesterol.
+                             </summary><remarks>
+                                 A total cholesterol test is a rough measure of all the cholesterol
+                                 and triglycerides in your blood. Total cholesterol is measured in mg/dL.
+                             </remarks></documentation></annotation></element><element name="triglyceride" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                                Triglyceride level.
+                            </summary><remarks>
+                                Triglycerides are a type of fat. Your body makes some
+                                triglycerides. Triglycerides also come from the food you eat.
+                                Triglycerides are measured in mg/dL.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

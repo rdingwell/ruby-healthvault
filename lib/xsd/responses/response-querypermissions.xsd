@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.QueryPermissions"
+    xmlns:this="urn:com.microsoft.wc.methods.response.QueryPermissions"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+    RESPONSE-QUERYPERMISSIONS.XSD
+    Microsoft HealthVault
+
+    Platform API: Response schema for QueryPermissions method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                The permissions for online or offline access that the 
+                authenticated person has for the specified thing type in 
+                the specified record in the context of the current application.
+            </summary>
+
+            <remarks>
+
+            </remarks>
+            <method-visibility>Public</method-visibility>
+
+            <errors>
+                <error id="ACCESS_DENIED">
+                    If the authenticated person or the application does not
+                    have method-level access rights to the method.
+                </error>
+                
+                <error id="INVALID_RECORD_STATE">
+                    If the specified record is in deleted or suspended state.
+                </error>   
+            </errors>
+            
+        </documentation>
+    </annotation>
+
+    <!-- info - - - - - -  - - - - - - - - - - - - - - -->
+    
+    <complexType name="Permissions">
+        <sequence>
+            <element name="permission" type="wc-types:Permission"
+                 minOccurs="1" maxOccurs="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A collection of permission objects. 
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="ThingTypePermission">
+        <annotation>
+            <documentation>
+                <summary>
+                    The permissions for online or offline access that the
+                    authenticated person has for the specified thing type in
+                    the specified record in the context of the current application.
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="thing-type-id" type="wc-types:guid" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A unique identifier identifying the thing type for 
+                            which the permissions are available.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="online-access-permissions" 
+                     type="this:Permissions" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The permissions for online access that the authenticated
+                            person has for this thing type in the specified record
+                            in the context of the current application.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="offline-access-permissions" 
+                     type="this:Permissions" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The permissions for offline access that the authenticated
+                            person has for this thing type in the specified record
+                            in the context of the current application.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+    
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the response that contains the method
+                        specific return value(s).
+                    </summary>
+
+                    <remarks>
+                        All response schemas contain the info element which
+                        contain the return value of the method. If the method
+                        does not define an info element, the method has no
+                        return value.
+                    </remarks>
+                </documentation>
+            </annotation>
+            
+            <sequence>                
+                <element name="thing-type-permission" 
+                         type="this:ThingTypePermission" 
+                    minOccurs="0" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The permissions for online or offline access that the
+                                authenticated person has for the specified thing type in
+                                the specified record in the context of the current application.
+                            </summary>
+
+                            <remarks>
+                                If for a thing type id in the request neither 
+                                online nor offline access permissions are 
+                                available, no result is returned for that
+                                particular thing type id.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

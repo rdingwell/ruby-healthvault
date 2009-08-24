@@ -1,0 +1,26 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.exercise-samples" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.exercise-samples"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>e1f92d7f-9699-4483-8223-8442874ec6d9</type-id><type-name>Exercise Samples</type-name><wrapper-class-name>ExerciseSamples</wrapper-class-name><wrapper-class-fwlink>136122</wrapper-class-fwlink><sample-xml-fwlink>136123</sample-xml-fwlink><data-type-guide-fwlink>136121</data-type-guide-fwlink><summary>
+                Stores a set of samples related to an exercise.
+            </summary><remarks>
+                Examples: Heart rate samples, speed samples, position samples.
+                <br />
+                Exercise samples are related to exercises through related items. 
+                <br />
+                The samples are stored in the other-data section of the object, and must
+                be fetched by specifying HealthItemRecordSections.OtherData.
+                <br />
+                The format of the other-data section is the HealthVault comma-separated format.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="exercise-samples"><complexType><annotation><documentation><summary>
+                        Stores a set of samples related to an exercise.
+                    </summary><remarks>
+                        Examples: Heart rate samples, speed samples, position samples.
+                        <br />
+                        Exercise samples are related to exercises through related items. 
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:approx-date-time"><annotation><documentation><summary>
+                                The starting date and time when the samples were created.
+                            </summary></documentation></annotation></element><element name="name" type="t:codable-value"><annotation><documentation><summary>
+                                The kind of information that is stored in this sample set. 
+                            </summary><preferred-vocabulary>exercise-sample-names</preferred-vocabulary></documentation></annotation></element><element name="unit" type="t:codable-value"><annotation><documentation><summary>
+                                The unit of measure for the samples.
+                            </summary><preferred-vocabulary>exercise-units</preferred-vocabulary></documentation></annotation></element><element name="sampling-interval" type="double"><annotation><documentation><summary>
+                                The time interval between samples, in seconds.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

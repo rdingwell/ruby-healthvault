@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetThingType"
+    xmlns:this="urn:com.microsoft.wc.methods.response.GetThingType"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-GETTHINGTYPE.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetThingType method response
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                This schema defines the response from a getthingtype-request
+            </summary>
+            <remarks>
+
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <complexType name="Column">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence />
+        <attribute name="tag" type="string" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+        <attribute name="label" type="string" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+        <attribute name="type" type="string" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+        <attribute name="width" type="positiveInteger" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+        <attribute name="visible" type="boolean" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+                        The default visibility of the column.
+                    </summary>
+                    <remarks>
+                        If true, the column should be shown by default. If false, the column may be
+                        shown with some user interaction.
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+
+    <complexType name="Columns">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="column" type="this:Column"
+                minOccurs="0" maxOccurs="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <complexType name="Transforms">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="tag" type="string"
+                minOccurs="0" maxOccurs="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="TransformSource">
+        <annotation>
+            <documentation>
+                <summary>
+                    The tag and XSL source for the transform.
+                </summary>
+
+                <remarks>
+                    The transform source is XSL version 1.0 and uses msxml:script extensions in some
+                    cases. The source is XML encoded into the value of the element.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="string">
+                <attribute name="tag" type="string" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The identifying tag for the transform.
+                            </summary>
+                            <remarks>
+                                The tag identifies the transform source for the specific thing type.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="Image">
+        <annotation>
+            <documentation>
+                <summary>
+                    The image for the thing type.
+                </summary>
+
+                <remarks>
+                    Images are base64 encoded into the value and the image type is specified as the
+                    "mime-type" attribute.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="string">
+                <attribute name="mime-type" type="string" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The mime type for the enclosed base64 encoded image.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    
+    <complexType name="VersionInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    The version information for a single version of a thing type.
+                </summary>
+
+                <remarks>
+                </remarks>
+            </documentation>
+        </annotation>
+        <attribute name="version-type-id" type="wc-types:guid" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+                        The version type id for the thing type.
+                    </summary>
+
+                    <remarks>
+                        The version-type-id should be used by applications to reference
+                        the type, not the thing-type-id as it is only used to group the
+                        types together.
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+        <attribute name="version-name" type="string" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+                        The version name for the thing type.
+                    </summary>
+                </documentation>
+            </annotation>
+        </attribute>
+        <attribute name="version-sequence" type="integer" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+                        The version sequence for the thing type.
+                    </summary>
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+
+    <complexType name="Versions">
+        <annotation>
+            <documentation>
+                <summary>
+                    The collection of all versions for a thing type.
+                </summary>
+
+                <remarks>
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="version-info" type="this:VersionInfo" minOccurs="1" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The version information for a single version of a thing type.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+        <attribute name="thing-type-id" type="wc-types:guid" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+                        The token that uniquely identifies a thing type.
+                    </summary>
+
+                    <remarks>
+                        The thing-type-id should not be used by applications to
+                        reference the type as it is used only to group the types together.
+                        Instead, applications should use the version-type-id to reference
+                        the type.
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+    
+    <complexType name="ThingTypeInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    Describes the information related to a thing type
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="id" type="wc-types:guid" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Unique thing type identifier
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="name" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Friendly name
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+            <!-- core section -->
+            <element name="uncreatable" type="boolean"
+                     minOccurs ="0" maxOccurs ="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies whether the thing type can be created or not
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="immutable" type="boolean"
+                     minOccurs ="0" maxOccurs ="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies whether the thing type can be updated or not
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="singleton" type="boolean"
+                     minOccurs ="0" maxOccurs ="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies whether the thing type is a singleton
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <!-- /core section -->
+
+            <!-- xsd section -->
+            <element name="xsd" type="string"
+                     minOccurs ="0" maxOccurs ="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            xsd schema describing a thing type
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <!-- /xsd section -->
+
+            <!-- columns section -->
+            <element name="columns" type="this:Columns"
+                     minOccurs ="0" maxOccurs ="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Display columns defined for the thing type
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <!-- /columns section -->
+
+            <!-- transforms section-->
+            <element name="transforms" type="this:Transforms"
+                     minOccurs ="0" maxOccurs ="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Transforms defined for this thing type
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <!-- /transforms section-->
+
+            <!-- transformsource section-->
+            <element name="transform-source" type="this:TransformSource"
+                     minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The transforms and XSL source defined for this thing type.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <!-- /transformsource section-->
+
+            <!-- images-->
+            <element name="image" minOccurs="0" maxOccurs="unbounded"
+                     type="this:Image">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The requested images that the thing type supports.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <!-- /images-->
+            
+            <!-- versions section -->
+            <element name="versions" type="this:Versions" minOccurs="0"  maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The collection of all versions for a thing type.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <!-- /versions section-->
+            
+            <element name="effective-date-xpath" type="string" minOccurs="0"  maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The XPath query for obtaining the effective date
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <!-- GetThingType - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="thing-type" type="this:ThingTypeInfo"
+                    minOccurs="0" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                List of one or more thing types that satisfies the
+                                request.
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+            </sequence>
+        </complexType>
+    </element>
+</schema>

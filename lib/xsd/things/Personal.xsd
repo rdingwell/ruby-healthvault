@@ -1,0 +1,63 @@
+<schema xmlns:personal="urn:com.microsoft.wc.thing.personal" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.personal"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>92ba621e-66b3-4a01-bd73-74844aed4f5b</type-id><type-name>Personal Demographic Information</type-name><wrapper-class-name>Personal</wrapper-class-name><wrapper-class-fwlink>136209</wrapper-class-fwlink><sample-xml-fwlink>136210</sample-xml-fwlink><data-type-guide-fwlink>136208</data-type-guide-fwlink><summary>
+                Personal demographic information this is more sensitve in
+                nature.
+            </summary><remarks>
+                This data is more sensitive than the "basic" thing type
+                data and may not be disclosed as freely as the "basic"
+                thing type.
+            </remarks><singleton /></documentation></annotation><element name="personal"><complexType><annotation><documentation><summary>
+                        Personal demographic information this is more sensitve in
+                        nature.
+                    </summary><remarks>
+                        This data is more sensitive than the "basic" thing type
+                        data and may not be disclosed as freely as the "basic"
+                        thing type.
+                    </remarks><singleton /></documentation></annotation><sequence><element name="name" type="t:name" minOccurs="0"><annotation><documentation><summary>
+                                A more complete representation of the person's
+                                name.
+                            </summary></documentation></annotation></element><element name="birthdate" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The date and time of the person's birth, or
+                                as close as possible.
+                            </summary></documentation></annotation></element><element name="blood-type" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                ABO and Rhesus +/- blood type.
+                            </summary><remarks>
+                                Or as much as is known about the blood type.
+                            </remarks><preferred-vocabulary>blood-types</preferred-vocabulary></documentation></annotation></element><element name="ethnicity" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The person's ethnicity.
+                            </summary><remarks>
+                                This value should come from the Microsoft 
+                                Health Lexicon vocabulary 'ethnicity-types'.
+                            </remarks><preferred-vocabulary>ethnicity</preferred-vocabulary></documentation></annotation></element><element name="ssn" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The United States Social Security Number if 
+                                available.
+                            </summary></documentation></annotation></element><element name="marital-status" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                A person's marital status.
+                            </summary><remarks>
+                                This value should come from the Microsoft 
+                                Health Lexicon vocabulary 'marital-status'.
+                            </remarks><preferred-vocabulary>marital-status</preferred-vocabulary></documentation></annotation></element><element name="employment-status" type="string" minOccurs="0"><annotation><documentation><summary>
+                                A free-form representation of the person's
+                                employment status.
+                            </summary></documentation></annotation></element><element name="is-deceased" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                True if person is deceased.
+                            </summary></documentation></annotation></element><element name="date-of-death" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                A date and time of death, if deceased.
+                            </summary></documentation></annotation></element><element name="religion" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                A person's religion.
+                            </summary><remarks>
+                                This value should come from the Microsoft 
+                                Health Lexicon vocabulary 'religion'.
+                            </remarks><preferred-vocabulary>religion</preferred-vocabulary></documentation></annotation></element><element name="is-veteran" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                True if person is veteran.
+                            </summary></documentation></annotation></element><element name="highest-education-level" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                A free-form representation of the person's
+                                highest level of education.
+                            </summary><remarks>
+                                This value should come from the Microsoft 
+                                Health Lexicon vocabulary 'education-level'.
+                            </remarks><preferred-vocabulary>education-level</preferred-vocabulary></documentation></annotation></element><element name="is-disabled" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                True if person has a disability.
+                            </summary></documentation></annotation></element><element name="organ-donor" type="string" minOccurs="0"><annotation><documentation><summary>
+                                A free-form representation of the person's
+                                organ donor status.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

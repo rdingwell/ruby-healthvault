@@ -1,0 +1,19 @@
+<schema xmlns:encounter="urn:com.microsoft.wc.thing.encounter" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.encounter"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>464083cc-13de-4f3e-a189-da8e47d5651b</type-id><type-name>Encounter</type-name><version>2</version><wrapper-class-name>Encounter</wrapper-class-name><wrapper-class-fwlink>136113</wrapper-class-fwlink><sample-xml-fwlink>136114</sample-xml-fwlink><data-type-guide-fwlink>136112</data-type-guide-fwlink><summary>
+                Information related to a medical encounter.
+            </summary><remarks>
+                This thing type describes the medical encounter a person has.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="encounter"><complexType><annotation><documentation><summary>
+                        Information related to a medical encounter.
+                    </summary><remarks>
+                        This thing type describes the medical encounter a person has.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The date and time of the medical encounter.
+                            </summary></documentation></annotation></element><element name="type" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The type of medical encounter.
+                            </summary></documentation></annotation></element><element name="reason" type="string" minOccurs="0"><annotation><documentation><summary>The description of the encounter.</summary><remarks>Examples include heart failure, broken leg, or annual physical.</remarks></documentation></annotation></element><element name="duration" type="t:duration-value" minOccurs="0"><annotation><documentation><summary>
+                                The duration of the medical encounter.
+                            </summary></documentation></annotation></element><element name="consent-granted" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                Did the person grant consent for this encounter?
+                            </summary></documentation></annotation></element><element name="facility" type="t:Organization" minOccurs="0"><annotation><documentation><summary>
+                                The facility where the encounter occurred.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

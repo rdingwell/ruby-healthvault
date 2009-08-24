@@ -1,0 +1,9 @@
+<schema xmlns:e="urn:com.microsoft.wc.thing.group-membership" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.group-membership"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>66ac44c7-1d60-4e95-bb5b-d21490e91057</type-id><type-name>Group Membership</type-name><wrapper-class-name>GroupMembership</wrapper-class-name><wrapper-class-fwlink>136140</wrapper-class-fwlink><sample-xml-fwlink>136141</sample-xml-fwlink><data-type-guide-fwlink>136139</data-type-guide-fwlink><summary>
+                Memberships of the record owner.
+            </summary></documentation></annotation><element name="group-membership"><complexType><annotation><documentation><summary>
+                        Memberships of the record owner.
+                    </summary></documentation></annotation><sequence><element name="membership" type="t:group-membership-type" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                A list of memberships held by the record owner.
+                            </summary></documentation></annotation></element><element name="expires" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The expiration date of the memberships.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Methods::SendInsecureMessage::Info</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Methods::SendInsecureMessage::Info</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../../files/lib/wc_data/generated/methods/send_insecure_message/info_rb.html">
+                lib/wc_data/generated/methods/send_insecure_message/info.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M003078">add_rcpt_address</a>&nbsp;&nbsp;
+      <a href="#M003081">add_rcpt_person</a>&nbsp;&nbsp;
+      <a href="#M003091">html_body</a>&nbsp;&nbsp;
+      <a href="#M003090">html_body=</a>&nbsp;&nbsp;
+      <a href="#M003092">new</a>&nbsp;&nbsp;
+      <a href="#M003080">rcpt_address</a>&nbsp;&nbsp;
+      <a href="#M003083">rcpt_person</a>&nbsp;&nbsp;
+      <a href="#M003085">rcpt_record</a>&nbsp;&nbsp;
+      <a href="#M003084">rcpt_record=</a>&nbsp;&nbsp;
+      <a href="#M003079">remove_rcpt_address</a>&nbsp;&nbsp;
+      <a href="#M003082">remove_rcpt_person</a>&nbsp;&nbsp;
+      <a href="#M003087">subject</a>&nbsp;&nbsp;
+      <a href="#M003086">subject=</a>&nbsp;&nbsp;
+      <a href="#M003089">text_body</a>&nbsp;&nbsp;
+      <a href="#M003088">text_body=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M003092" class="method-detail">
+        <a name="M003092"></a>
+
+        <div class="method-heading">
+          <a href="#M003092" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003092-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003092-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 121</span>
+121:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+122:           <span class="ruby-keyword kw">super</span>
+123:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'info'</span>
+124:         
+125:           
+126:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-address'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'rcpt-address'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">RcptAddress</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+127:           
+128:         
+129:           
+130:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-person'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'rcpt-person'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">RcptPerson</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+131:           
+132:         
+133:           
+134:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-record'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'rcpt-record'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">RcptRecord</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+135:             
+136:           
+137:         
+138:           
+139:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'subject'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'subject'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+140:             
+141:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'subject'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+142:             
+143:           
+144:         
+145:           
+146:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'text-body'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'text-body'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+147:             
+148:           
+149:         
+150:           
+151:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'html-body'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'html-body'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+152:             
+153:           
+154:         
+155:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M003078" class="method-detail">
+        <a name="M003078"></a>
+
+        <div class="method-heading">
+          <a href="#M003078" class="method-signature">
+          <span class="method-name">add_rcpt_address</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../Types/RcptAddress.html">HealthVault::WCData::Types::RcptAddress</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003078-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003078-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 20</span>
+20:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_rcpt_address</span>(<span class="ruby-identifier">value</span>)
+21:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-address'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+22:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003081" class="method-detail">
+        <a name="M003081"></a>
+
+        <div class="method-heading">
+          <a href="#M003081" class="method-signature">
+          <span class="method-name">add_rcpt_person</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../Types/RcptPerson.html">HealthVault::WCData::Types::RcptPerson</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003081-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003081-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 40</span>
+40:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_rcpt_person</span>(<span class="ruby-identifier">value</span>)
+41:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-person'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+42:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003091" class="method-detail">
+        <a name="M003091"></a>
+
+        <div class="method-heading">
+          <a href="#M003091" class="method-signature">
+          <span class="method-name">html_body</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003091-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003091-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 115</span>
+115:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">html_body</span>
+116:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'html-body'</span>][<span class="ruby-identifier">:value</span>]
+117:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003090" class="method-detail">
+        <a name="M003090"></a>
+
+        <div class="method-heading">
+          <a href="#M003090" class="method-signature">
+          <span class="method-name">html_body=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: An HTML representation of the message. <b>remarks</b>: The
+message can consist of two parts. One part of the message can consist of
+richly formatted text using HTML and the other must be plain text to
+support email programs that don&#8216;t support the rich views or those
+where rich viewing has been disabled. <em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003090-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003090-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 110</span>
+110:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">html_body=</span>(<span class="ruby-identifier">value</span>)
+111:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'html-body'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+112:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003080" class="method-detail">
+        <a name="M003080"></a>
+
+        <div class="method-heading">
+          <a href="#M003080" class="method-signature">
+          <span class="method-name">rcpt_address</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The email address(es) to send the message to.
+<b>returns</b>: a <a
+href="../../Types/RcptAddress.html">HealthVault::WCData::Types::RcptAddress</a>
+Array
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003080-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003080-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 32</span>
+32:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rcpt_address</span>
+33:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-address'</span>][<span class="ruby-identifier">:value</span>]
+34:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003083" class="method-detail">
+        <a name="M003083"></a>
+
+        <div class="method-heading">
+          <a href="#M003083" class="method-signature">
+          <span class="method-name">rcpt_person</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The Microsoft Health account(s) to send the message to.
+<b>returns</b>: a <a
+href="../../Types/RcptPerson.html">HealthVault::WCData::Types::RcptPerson</a>
+Array
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003083-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003083-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 52</span>
+52:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rcpt_person</span>
+53:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-person'</span>][<span class="ruby-identifier">:value</span>]
+54:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003085" class="method-detail">
+        <a name="M003085"></a>
+
+        <div class="method-heading">
+          <a href="#M003085" class="method-signature">
+          <span class="method-name">rcpt_record</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../../Types/RcptRecord.html">HealthVault::WCData::Types::RcptRecord</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003085-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003085-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 67</span>
+67:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rcpt_record</span>
+68:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-record'</span>][<span class="ruby-identifier">:value</span>]
+69:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003084" class="method-detail">
+        <a name="M003084"></a>
+
+        <div class="method-heading">
+          <a href="#M003084" class="method-signature">
+          <span class="method-name">rcpt_record=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The health record custodians to send the message to.
+<em>value</em> is a <a
+href="../../Types/RcptRecord.html">HealthVault::WCData::Types::RcptRecord</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003084-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003084-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 62</span>
+62:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rcpt_record=</span>(<span class="ruby-identifier">value</span>)
+63:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-record'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+64:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003079" class="method-detail">
+        <a name="M003079"></a>
+
+        <div class="method-heading">
+          <a href="#M003079" class="method-signature">
+          <span class="method-name">remove_rcpt_address</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../../HealthVault.html">HealthVault</a>::<a
+href="../../Types/RcptAddress.html">WCData::Types::RcptAddress</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003079-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003079-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 25</span>
+25:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_rcpt_address</span>(<span class="ruby-identifier">value</span>)
+26:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-address'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+27:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003082" class="method-detail">
+        <a name="M003082"></a>
+
+        <div class="method-heading">
+          <a href="#M003082" class="method-signature">
+          <span class="method-name">remove_rcpt_person</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../../HealthVault.html">HealthVault</a>::<a
+href="../../Types/RcptPerson.html">WCData::Types::RcptPerson</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003082-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003082-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 45</span>
+45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_rcpt_person</span>(<span class="ruby-identifier">value</span>)
+46:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'rcpt-person'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+47:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003087" class="method-detail">
+        <a name="M003087"></a>
+
+        <div class="method-heading">
+          <a href="#M003087" class="method-signature">
+          <span class="method-name">subject</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003087-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003087-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 83</span>
+83:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">subject</span>
+84:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'subject'</span>][<span class="ruby-identifier">:value</span>]
+85:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003086" class="method-detail">
+        <a name="M003086"></a>
+
+        <div class="method-heading">
+          <a href="#M003086" class="method-signature">
+          <span class="method-name">subject=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <b>summary</b>: The <a href="Info.html#M003087">subject</a>
+of the message. <b>remarks</b>: This will show up in the <a
+href="Info.html#M003087">subject</a> field of the email message.
+<em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003086-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003086-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 78</span>
+78:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">subject=</span>(<span class="ruby-identifier">value</span>)
+79:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'subject'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+80:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003089" class="method-detail">
+        <a name="M003089"></a>
+
+        <div class="method-heading">
+          <a href="#M003089" class="method-signature">
+          <span class="method-name">text_body</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003089-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003089-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 99</span>
+ 99:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text_body</span>
+100:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'text-body'</span>][<span class="ruby-identifier">:value</span>]
+101:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003088" class="method-detail">
+        <a name="M003088"></a>
+
+        <div class="method-heading">
+          <a href="#M003088" class="method-signature">
+          <span class="method-name">text_body=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: A textual representation of the message. <b>remarks</b>:
+The message can consist of two parts. One part of the message can consist
+of richly formatted text using HTML and the other must be plain text to
+support email programs that don&#8216;t support the rich views or those
+where rich viewing has been disabled. <em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003088-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003088-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/send_insecure_message/info.rb, line 94</span>
+94:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text_body=</span>(<span class="ruby-identifier">value</span>)
+95:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'text-body'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+96:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

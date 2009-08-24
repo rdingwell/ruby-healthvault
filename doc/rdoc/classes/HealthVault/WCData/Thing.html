@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: HealthVault::WCData::Thing</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Thing</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/lib/wc_data/generated/thing/access_avenue_rb.html">
+                lib/wc_data/generated/thing/access_avenue.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/aerobic/aerobic_session_rb.html">
+                lib/wc_data/generated/thing/aerobic/aerobic_session.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/aerobic_profile/aerobic_profile_rb.html">
+                lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/aerobic_profile/heartrate_zone_rb.html">
+                lib/wc_data/generated/thing/aerobic_profile/heartrate_zone.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/aerobic_profile/heartrate_zone_group_rb.html">
+                lib/wc_data/generated/thing/aerobic_profile/heartrate_zone_group.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/aerobic_profile/max_vo2_rb.html">
+                lib/wc_data/generated/thing/aerobic_profile/max_vo2.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/aerobic_profile/zone_boundary_rb.html">
+                lib/wc_data/generated/thing/aerobic_profile/zone_boundary.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/aerobic_weekly/aerobic_weekly_rb.html">
+                lib/wc_data/generated/thing/aerobic_weekly/aerobic_weekly.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/allergic_episode/allergic_episode_rb.html">
+                lib/wc_data/generated/thing/allergic_episode/allergic_episode.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/allergy/allergy_rb.html">
+                lib/wc_data/generated/thing/allergy/allergy.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/annotation/annotation_rb.html">
+                lib/wc_data/generated/thing/annotation/annotation.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/application/app_specific_rb.html">
+                lib/wc_data/generated/thing/application/app_specific.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/application_data_reference/application_data_reference_rb.html">
+                lib/wc_data/generated/thing/application_data_reference/application_data_reference.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/appointment/appointment_rb.html">
+                lib/wc_data/generated/thing/appointment/appointment.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/audit_rb.html">
+                lib/wc_data/generated/thing/audit.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/audit_action_rb.html">
+                lib/wc_data/generated/thing/audit_action.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/basic/basic_rb.html">
+                lib/wc_data/generated/thing/basic/basic.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/basic/birthyear_rb.html">
+                lib/wc_data/generated/thing/basic/birthyear.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/basic/country_rb.html">
+                lib/wc_data/generated/thing/basic/country.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/basic/firstdow_rb.html">
+                lib/wc_data/generated/thing/basic/firstdow.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/basic/gender_rb.html">
+                lib/wc_data/generated/thing/basic/gender.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/blood_glucose/blood_glucose_rb.html">
+                lib/wc_data/generated/thing/blood_glucose/blood_glucose.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/blood_oxygen_saturation/blood_oxygen_saturation_rb.html">
+                lib/wc_data/generated/thing/blood_oxygen_saturation/blood_oxygen_saturation.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/blood_pressure/blood_pressure_rb.html">
+                lib/wc_data/generated/thing/blood_pressure/blood_pressure.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/body_composition/body_composition_rb.html">
+                lib/wc_data/generated/thing/body_composition/body_composition.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/body_composition/body_composition_value_rb.html">
+                lib/wc_data/generated/thing/body_composition/body_composition_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/body_dimension/body_dimension_rb.html">
+                lib/wc_data/generated/thing/body_dimension/body_dimension.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/calorie_guideline/calorie_guideline_rb.html">
+                lib/wc_data/generated/thing/calorie_guideline/calorie_guideline.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/cardiac_profile/cardiac_profile_rb.html">
+                lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/cholesterol_profile/cholesterol_profile_rb.html">
+                lib/wc_data/generated/thing/cholesterol_profile/cholesterol_profile.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/common_rb.html">
+                lib/wc_data/generated/thing/common.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/concern/concern_rb.html">
+                lib/wc_data/generated/thing/concern/concern.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/condition/condition_rb.html">
+                lib/wc_data/generated/thing/condition/condition.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/contact/contact_rb.html">
+                lib/wc_data/generated/thing/contact/contact.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/contraindication/contraindication_rb.html">
+                lib/wc_data/generated/thing/contraindication/contraindication.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/daily_medication_usage/daily_medication_usage_rb.html">
+                lib/wc_data/generated/thing/daily_medication_usage/daily_medication_usage.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/data_other_rb.html">
+                lib/wc_data/generated/thing/data_other.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/data_xml_rb.html">
+                lib/wc_data/generated/thing/data_xml.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/diabetic_profile/diabetic_profile_rb.html">
+                lib/wc_data/generated/thing/diabetic_profile/diabetic_profile.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/diabetic_profile/target_glucose_zone_rb.html">
+                lib/wc_data/generated/thing/diabetic_profile/target_glucose_zone.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/diabetic_profile/target_glucose_zone_group_rb.html">
+                lib/wc_data/generated/thing/diabetic_profile/target_glucose_zone_group.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/diabetic_profile/zone_boundary_rb.html">
+                lib/wc_data/generated/thing/diabetic_profile/zone_boundary.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/dietary_intake_daily/dietary_intake_daily_rb.html">
+                lib/wc_data/generated/thing/dietary_intake_daily/dietary_intake_daily.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/directive/directive_rb.html">
+                lib/wc_data/generated/thing/directive/directive.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/discharge_summary/discharge_summary_rb.html">
+                lib/wc_data/generated/thing/discharge_summary/discharge_summary.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/effective_permissions_rb.html">
+                lib/wc_data/generated/thing/effective_permissions.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/emotion/emotion_rb.html">
+                lib/wc_data/generated/thing/emotion/emotion.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/encounter/encounter_rb.html">
+                lib/wc_data/generated/thing/encounter/encounter.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/equipment/device_rb.html">
+                lib/wc_data/generated/thing/equipment/device.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/exercise/exercise_rb.html">
+                lib/wc_data/generated/thing/exercise/exercise.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/exercise/exercise_segment_rb.html">
+                lib/wc_data/generated/thing/exercise/exercise_segment.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/exercise/structured_name_value_rb.html">
+                lib/wc_data/generated/thing/exercise/structured_name_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/exercise_samples/exercise_samples_rb.html">
+                lib/wc_data/generated/thing/exercise_samples/exercise_samples.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/extension_rb.html">
+                lib/wc_data/generated/thing/extension.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/family_history/family_history_rb.html">
+                lib/wc_data/generated/thing/family_history/family_history.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/family_history/family_history_relative_rb.html">
+                lib/wc_data/generated/thing/family_history/family_history_relative.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/family_history_condition/family_history_condition_rb.html">
+                lib/wc_data/generated/thing/family_history_condition/family_history_condition.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/family_history_person/family_history_person_rb.html">
+                lib/wc_data/generated/thing/family_history_person/family_history_person.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/file/file_rb.html">
+                lib/wc_data/generated/thing/file/file.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/genetic_snp_result/genetic_snp_results_rb.html">
+                lib/wc_data/generated/thing/genetic_snp_result/genetic_snp_results.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/group_membership/group_membership_rb.html">
+                lib/wc_data/generated/thing/group_membership/group_membership.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/group_membership_activity/group_membership_activity_rb.html">
+                lib/wc_data/generated/thing/group_membership_activity/group_membership_activity.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/guid_and_name_rb.html">
+                lib/wc_data/generated/thing/guid_and_name.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/hb_a1_c/hb_a1_c_rb.html">
+                lib/wc_data/generated/thing/hb_a1_c/hb_a1_c.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/health_assessment/assessment_rb.html">
+                lib/wc_data/generated/thing/health_assessment/assessment.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/health_assessment/health_assessment_rb.html">
+                lib/wc_data/generated/thing/health_assessment/health_assessment.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/healthcare_proxy/healthcare_proxy_rb.html">
+                lib/wc_data/generated/thing/healthcare_proxy/healthcare_proxy.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/heart_rate/heart_rate_rb.html">
+                lib/wc_data/generated/thing/heart_rate/heart_rate.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/height/height_rb.html">
+                lib/wc_data/generated/thing/height/height.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/immunization/immunization_rb.html">
+                lib/wc_data/generated/thing/immunization/immunization.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/inhaler/alert_rb.html">
+                lib/wc_data/generated/thing/inhaler/alert.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/inhaler/asthma_inhaler_rb.html">
+                lib/wc_data/generated/thing/inhaler/asthma_inhaler.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/inhaler/dow_rb.html">
+                lib/wc_data/generated/thing/inhaler/dow.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/inhaler/purpose_rb.html">
+                lib/wc_data/generated/thing/inhaler/purpose.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/inhaler_use/asthma_inhaler_use_rb.html">
+                lib/wc_data/generated/thing/inhaler_use/asthma_inhaler_use.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/insulin/insulin_injection_rb.html">
+                lib/wc_data/generated/thing/insulin/insulin_injection.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/insulin_injection_use/diabetes_insulin_injection_use_rb.html">
+                lib/wc_data/generated/thing/insulin_injection_use/diabetes_insulin_injection_use.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/lab_test_results/lab_test_result_type_rb.html">
+                lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/lab_test_results/lab_test_result_value_type_rb.html">
+                lib/wc_data/generated/thing/lab_test_results/lab_test_result_value_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/lab_test_results/lab_test_results_rb.html">
+                lib/wc_data/generated/thing/lab_test_results/lab_test_results.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/lab_test_results/lab_test_results_group_type_rb.html">
+                lib/wc_data/generated/thing/lab_test_results/lab_test_results_group_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/lab_test_results/test_result_range_rb.html">
+                lib/wc_data/generated/thing/lab_test_results/test_result_range.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/lab_test_results/test_result_range_value_rb.html">
+                lib/wc_data/generated/thing/lab_test_results/test_result_range_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/life_goal/life_goal_rb.html">
+                lib/wc_data/generated/thing/life_goal/life_goal.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/link/link_rb.html">
+                lib/wc_data/generated/thing/link/link.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/medication/dose_value_rb.html">
+                lib/wc_data/generated/thing/medication/dose_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/medication/medication_rb.html">
+                lib/wc_data/generated/thing/medication/medication.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/medication/prescription_rb.html">
+                lib/wc_data/generated/thing/medication/prescription.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/medication_fill/medication_fill_rb.html">
+                lib/wc_data/generated/thing/medication_fill/medication_fill.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/microbiology/microbiology_lab_results_rb.html">
+                lib/wc_data/generated/thing/microbiology/microbiology_lab_results.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/password/protected/package/algorithm_name_rb.html">
+                lib/wc_data/generated/thing/password/protected/package/algorithm_name.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/password/protected/package/package_encryption_type_rb.html">
+                lib/wc_data/generated/thing/password/protected/package/package_encryption_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/password/protected/package/password_protected_package_rb.html">
+                lib/wc_data/generated/thing/password/protected/package/password_protected_package.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/password/protected/package/pbe_parameters_type_rb.html">
+                lib/wc_data/generated/thing/password/protected/package/pbe_parameters_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/payer/payer_rb.html">
+                lib/wc_data/generated/thing/payer/payer.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/peak_flow/peak_flow_rb.html">
+                lib/wc_data/generated/thing/peak_flow/peak_flow.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/personal/personal_rb.html">
+                lib/wc_data/generated/thing/personal/personal.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/personal_image/personal_image_rb.html">
+                lib/wc_data/generated/thing/personal_image/personal_image.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/pregnancy/baby_rb.html">
+                lib/wc_data/generated/thing/pregnancy/baby.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/pregnancy/delivery_rb.html">
+                lib/wc_data/generated/thing/pregnancy/delivery.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/pregnancy/pregnancy_rb.html">
+                lib/wc_data/generated/thing/pregnancy/pregnancy.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/problem/importance_rb.html">
+                lib/wc_data/generated/thing/problem/importance.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/problem/problem_rb.html">
+                lib/wc_data/generated/thing/problem/problem.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/procedure/procedure_rb.html">
+                lib/wc_data/generated/thing/procedure/procedure.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/question_answer/question_answer_rb.html">
+                lib/wc_data/generated/thing/question_answer/question_answer.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/radiology_lab_results/radiology_lab_results_rb.html">
+                lib/wc_data/generated/thing/radiology_lab_results/radiology_lab_results.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/related_thing_rb.html">
+                lib/wc_data/generated/thing/related_thing.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/respiratory_profile/respiratory_profile_rb.html">
+                lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/sjam/awakening_rb.html">
+                lib/wc_data/generated/thing/sjam/awakening.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/sjam/sleep_am_rb.html">
+                lib/wc_data/generated/thing/sjam/sleep_am.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/sjam/wake_state_rb.html">
+                lib/wc_data/generated/thing/sjam/wake_state.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/sjpm/activity_rb.html">
+                lib/wc_data/generated/thing/sjpm/activity.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/sjpm/sleep_pm_rb.html">
+                lib/wc_data/generated/thing/sjpm/sleep_pm.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/sjpm/sleepiness_rb.html">
+                lib/wc_data/generated/thing/sjpm/sleepiness.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/spirometer/spirometer_rb.html">
+                lib/wc_data/generated/thing/spirometer/spirometer.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/spirometer/volume_value_rb.html">
+                lib/wc_data/generated/thing/spirometer/volume_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/thing_rb.html">
+                lib/wc_data/generated/thing/thing.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/thing_key_rb.html">
+                lib/wc_data/generated/thing/thing_key.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/thing_state_rb.html">
+                lib/wc_data/generated/thing/thing_state.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/thing_type_rb.html">
+                lib/wc_data/generated/thing/thing_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/address_rb.html">
+                lib/wc_data/generated/thing/types/address.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/aerobic_lap_session_rb.html">
+                lib/wc_data/generated/thing/types/aerobic_lap_session.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/aerobic_session_rb.html">
+                lib/wc_data/generated/thing/types/aerobic_session.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/aerobic_session_samples_rb.html">
+                lib/wc_data/generated/thing/types/aerobic_session_samples.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/altitude_value_rb.html">
+                lib/wc_data/generated/thing/types/altitude_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/blood_glucose_value_rb.html">
+                lib/wc_data/generated/thing/types/blood_glucose_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/codable_value_rb.html">
+                lib/wc_data/generated/thing/types/codable_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/coded_value_rb.html">
+                lib/wc_data/generated/thing/types/coded_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/communication_type_rb.html">
+                lib/wc_data/generated/thing/types/communication_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/condition_rb.html">
+                lib/wc_data/generated/thing/types/condition.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/contact_rb.html">
+                lib/wc_data/generated/thing/types/contact.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/display_value_rb.html">
+                lib/wc_data/generated/thing/types/display_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/document_reference_type_rb.html">
+                lib/wc_data/generated/thing/types/document_reference_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/double_range_rb.html">
+                lib/wc_data/generated/thing/types/double_range.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/dow_rb.html">
+                lib/wc_data/generated/thing/types/dow.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/duration_value_rb.html">
+                lib/wc_data/generated/thing/types/duration_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/email_rb.html">
+                lib/wc_data/generated/thing/types/email.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/flow_value_rb.html">
+                lib/wc_data/generated/thing/types/flow_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/general_measurement_rb.html">
+                lib/wc_data/generated/thing/types/general_measurement.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/goal_rb.html">
+                lib/wc_data/generated/thing/types/goal.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/goal_status_rb.html">
+                lib/wc_data/generated/thing/types/goal_status.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/group_membership_type_rb.html">
+                lib/wc_data/generated/thing/types/group_membership_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/guid_rb.html">
+                lib/wc_data/generated/thing/types/guid.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/insulin_injection_value_rb.html">
+                lib/wc_data/generated/thing/types/insulin_injection_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/lab_result_type_rb.html">
+                lib/wc_data/generated/thing/types/lab_result_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/lab_test_type_rb.html">
+                lib/wc_data/generated/thing/types/lab_test_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/language_rb.html">
+                lib/wc_data/generated/thing/types/language.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/length_value_rb.html">
+                lib/wc_data/generated/thing/types/length_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/name_rb.html">
+                lib/wc_data/generated/thing/types/name.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/non_negative_double_rb.html">
+                lib/wc_data/generated/thing/types/non_negative_double.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/one_to_five_rb.html">
+                lib/wc_data/generated/thing/types/one_to_five.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/organization_rb.html">
+                lib/wc_data/generated/thing/types/organization.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/pace_value_rb.html">
+                lib/wc_data/generated/thing/types/pace_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/percentage_rb.html">
+                lib/wc_data/generated/thing/types/percentage.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/person_rb.html">
+                lib/wc_data/generated/thing/types/person.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/phone_rb.html">
+                lib/wc_data/generated/thing/types/phone.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/positive_double_rb.html">
+                lib/wc_data/generated/thing/types/positive_double.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/power_value_rb.html">
+                lib/wc_data/generated/thing/types/power_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/sample_rb.html">
+                lib/wc_data/generated/thing/types/sample.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/sample_set_rb.html">
+                lib/wc_data/generated/thing/types/sample_set.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/speed_value_rb.html">
+                lib/wc_data/generated/thing/types/speed_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/stringnz_rb.html">
+                lib/wc_data/generated/thing/types/stringnz.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/structured_measurement_rb.html">
+                lib/wc_data/generated/thing/types/structured_measurement.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/temperature_value_rb.html">
+                lib/wc_data/generated/thing/types/temperature_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/torque_value_rb.html">
+                lib/wc_data/generated/thing/types/torque_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/volume_value_rb.html">
+                lib/wc_data/generated/thing/types/volume_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/types/weight_value_rb.html">
+                lib/wc_data/generated/thing/types/weight_value.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/vital_signs/vital_sign_result_type_rb.html">
+                lib/wc_data/generated/thing/vital_signs/vital_sign_result_type.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/vital_signs/vital_signs_rb.html">
+                lib/wc_data/generated/thing/vital_signs/vital_signs.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/weight/weight_rb.html">
+                lib/wc_data/generated/thing/weight/weight.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/thing/weight_goal/weight_goal_rb.html">
+                lib/wc_data/generated/thing/weight_goal/weight_goal.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/thing_rb.html">
+                lib/wc_data/thing.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="Thing/Aerobic.html" class="link">HealthVault::WCData::Thing::Aerobic</a><br />
+Module <a href="Thing/Aerobicprofile.html" class="link">HealthVault::WCData::Thing::Aerobicprofile</a><br />
+Module <a href="Thing/Aerobicweekly.html" class="link">HealthVault::WCData::Thing::Aerobicweekly</a><br />
+Module <a href="Thing/Allergicepisode.html" class="link">HealthVault::WCData::Thing::Allergicepisode</a><br />
+Module <a href="Thing/Allergy.html" class="link">HealthVault::WCData::Thing::Allergy</a><br />
+Module <a href="Thing/Annotation.html" class="link">HealthVault::WCData::Thing::Annotation</a><br />
+Module <a href="Thing/Application.html" class="link">HealthVault::WCData::Thing::Application</a><br />
+Module <a href="Thing/Applicationdatareference.html" class="link">HealthVault::WCData::Thing::Applicationdatareference</a><br />
+Module <a href="Thing/Appointment.html" class="link">HealthVault::WCData::Thing::Appointment</a><br />
+Module <a href="Thing/Basic.html" class="link">HealthVault::WCData::Thing::Basic</a><br />
+Module <a href="Thing/BloodGlucose.html" class="link">HealthVault::WCData::Thing::BloodGlucose</a><br />
+Module <a href="Thing/BloodPressure.html" class="link">HealthVault::WCData::Thing::BloodPressure</a><br />
+Module <a href="Thing/Bloodoxygensaturation.html" class="link">HealthVault::WCData::Thing::Bloodoxygensaturation</a><br />
+Module <a href="Thing/Bodycomposition.html" class="link">HealthVault::WCData::Thing::Bodycomposition</a><br />
+Module <a href="Thing/Bodydimension.html" class="link">HealthVault::WCData::Thing::Bodydimension</a><br />
+Module <a href="Thing/Calorieguideline.html" class="link">HealthVault::WCData::Thing::Calorieguideline</a><br />
+Module <a href="Thing/Cardiacprofile.html" class="link">HealthVault::WCData::Thing::Cardiacprofile</a><br />
+Module <a href="Thing/Cholesterolprofile.html" class="link">HealthVault::WCData::Thing::Cholesterolprofile</a><br />
+Module <a href="Thing/Concern.html" class="link">HealthVault::WCData::Thing::Concern</a><br />
+Module <a href="Thing/Condition.html" class="link">HealthVault::WCData::Thing::Condition</a><br />
+Module <a href="Thing/Contact.html" class="link">HealthVault::WCData::Thing::Contact</a><br />
+Module <a href="Thing/Contraindication.html" class="link">HealthVault::WCData::Thing::Contraindication</a><br />
+Module <a href="Thing/Dailymedicationusage.html" class="link">HealthVault::WCData::Thing::Dailymedicationusage</a><br />
+Module <a href="Thing/Diabeticprofile.html" class="link">HealthVault::WCData::Thing::Diabeticprofile</a><br />
+Module <a href="Thing/Dietaryintakedaily.html" class="link">HealthVault::WCData::Thing::Dietaryintakedaily</a><br />
+Module <a href="Thing/Directive.html" class="link">HealthVault::WCData::Thing::Directive</a><br />
+Module <a href="Thing/Dischargesummary.html" class="link">HealthVault::WCData::Thing::Dischargesummary</a><br />
+Module <a href="Thing/Emotion.html" class="link">HealthVault::WCData::Thing::Emotion</a><br />
+Module <a href="Thing/Encounter.html" class="link">HealthVault::WCData::Thing::Encounter</a><br />
+Module <a href="Thing/Equipment.html" class="link">HealthVault::WCData::Thing::Equipment</a><br />
+Module <a href="Thing/Exercise.html" class="link">HealthVault::WCData::Thing::Exercise</a><br />
+Module <a href="Thing/Exercisesamples.html" class="link">HealthVault::WCData::Thing::Exercisesamples</a><br />
+Module <a href="Thing/Familyhistory.html" class="link">HealthVault::WCData::Thing::Familyhistory</a><br />
+Module <a href="Thing/Familyhistorycondition.html" class="link">HealthVault::WCData::Thing::Familyhistorycondition</a><br />
+Module <a href="Thing/Familyhistoryperson.html" class="link">HealthVault::WCData::Thing::Familyhistoryperson</a><br />
+Module <a href="Thing/File.html" class="link">HealthVault::WCData::Thing::File</a><br />
+Module <a href="Thing/Geneticsnpresult.html" class="link">HealthVault::WCData::Thing::Geneticsnpresult</a><br />
+Module <a href="Thing/Groupmembership.html" class="link">HealthVault::WCData::Thing::Groupmembership</a><br />
+Module <a href="Thing/Groupmembershipactivity.html" class="link">HealthVault::WCData::Thing::Groupmembershipactivity</a><br />
+Module <a href="Thing/HbA1C.html" class="link">HealthVault::WCData::Thing::HbA1C</a><br />
+Module <a href="Thing/Healthassessment.html" class="link">HealthVault::WCData::Thing::Healthassessment</a><br />
+Module <a href="Thing/Healthcareproxy.html" class="link">HealthVault::WCData::Thing::Healthcareproxy</a><br />
+Module <a href="Thing/Heartrate.html" class="link">HealthVault::WCData::Thing::Heartrate</a><br />
+Module <a href="Thing/Height.html" class="link">HealthVault::WCData::Thing::Height</a><br />
+Module <a href="Thing/Immunization.html" class="link">HealthVault::WCData::Thing::Immunization</a><br />
+Module <a href="Thing/Inhaler.html" class="link">HealthVault::WCData::Thing::Inhaler</a><br />
+Module <a href="Thing/Inhaleruse.html" class="link">HealthVault::WCData::Thing::Inhaleruse</a><br />
+Module <a href="Thing/Insulin.html" class="link">HealthVault::WCData::Thing::Insulin</a><br />
+Module <a href="Thing/Insulininjectionuse.html" class="link">HealthVault::WCData::Thing::Insulininjectionuse</a><br />
+Module <a href="Thing/Labtestresults.html" class="link">HealthVault::WCData::Thing::Labtestresults</a><br />
+Module <a href="Thing/Lifegoal.html" class="link">HealthVault::WCData::Thing::Lifegoal</a><br />
+Module <a href="Thing/Link.html" class="link">HealthVault::WCData::Thing::Link</a><br />
+Module <a href="Thing/Medication.html" class="link">HealthVault::WCData::Thing::Medication</a><br />
+Module <a href="Thing/Medicationfill.html" class="link">HealthVault::WCData::Thing::Medicationfill</a><br />
+Module <a href="Thing/Microbiology.html" class="link">HealthVault::WCData::Thing::Microbiology</a><br />
+Module <a href="Thing/Password.html" class="link">HealthVault::WCData::Thing::Password</a><br />
+Module <a href="Thing/Payer.html" class="link">HealthVault::WCData::Thing::Payer</a><br />
+Module <a href="Thing/Peakflow.html" class="link">HealthVault::WCData::Thing::Peakflow</a><br />
+Module <a href="Thing/Personal.html" class="link">HealthVault::WCData::Thing::Personal</a><br />
+Module <a href="Thing/Personalimage.html" class="link">HealthVault::WCData::Thing::Personalimage</a><br />
+Module <a href="Thing/Pregnancy.html" class="link">HealthVault::WCData::Thing::Pregnancy</a><br />
+Module <a href="Thing/Problem.html" class="link">HealthVault::WCData::Thing::Problem</a><br />
+Module <a href="Thing/Procedure.html" class="link">HealthVault::WCData::Thing::Procedure</a><br />
+Module <a href="Thing/Questionanswer.html" class="link">HealthVault::WCData::Thing::Questionanswer</a><br />
+Module <a href="Thing/Radiologylabresults.html" class="link">HealthVault::WCData::Thing::Radiologylabresults</a><br />
+Module <a href="Thing/Respiratoryprofile.html" class="link">HealthVault::WCData::Thing::Respiratoryprofile</a><br />
+Module <a href="Thing/Sjam.html" class="link">HealthVault::WCData::Thing::Sjam</a><br />
+Module <a href="Thing/Sjpm.html" class="link">HealthVault::WCData::Thing::Sjpm</a><br />
+Module <a href="Thing/Spirometer.html" class="link">HealthVault::WCData::Thing::Spirometer</a><br />
+Module <a href="Thing/Types.html" class="link">HealthVault::WCData::Thing::Types</a><br />
+Module <a href="Thing/Vitalsigns.html" class="link">HealthVault::WCData::Thing::Vitalsigns</a><br />
+Module <a href="Thing/Weight.html" class="link">HealthVault::WCData::Thing::Weight</a><br />
+Module <a href="Thing/Weightgoal.html" class="link">HealthVault::WCData::Thing::Weightgoal</a><br />
+Class <a href="Thing/AccessAvenue.html" class="link">HealthVault::WCData::Thing::AccessAvenue</a><br />
+Class <a href="Thing/Audit.html" class="link">HealthVault::WCData::Thing::Audit</a><br />
+Class <a href="Thing/AuditAction.html" class="link">HealthVault::WCData::Thing::AuditAction</a><br />
+Class <a href="Thing/Common.html" class="link">HealthVault::WCData::Thing::Common</a><br />
+Class <a href="Thing/DataOther.html" class="link">HealthVault::WCData::Thing::DataOther</a><br />
+Class <a href="Thing/DataXml.html" class="link">HealthVault::WCData::Thing::DataXml</a><br />
+Class <a href="Thing/EffectivePermissions.html" class="link">HealthVault::WCData::Thing::EffectivePermissions</a><br />
+Class <a href="Thing/Extension.html" class="link">HealthVault::WCData::Thing::Extension</a><br />
+Class <a href="Thing/GuidAndName.html" class="link">HealthVault::WCData::Thing::GuidAndName</a><br />
+Class <a href="Thing/RelatedThing.html" class="link">HealthVault::WCData::Thing::RelatedThing</a><br />
+Class <a href="Thing/Thing.html" class="link">HealthVault::WCData::Thing::Thing</a><br />
+Class <a href="Thing/ThingKey.html" class="link">HealthVault::WCData::Thing::ThingKey</a><br />
+Class <a href="Thing/ThingState.html" class="link">HealthVault::WCData::Thing::ThingState</a><br />
+Class <a href="Thing/ThingType.html" class="link">HealthVault::WCData::Thing::ThingType</a><br />
+
+    </div>
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

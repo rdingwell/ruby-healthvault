@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: HealthVault::WCData::Methods</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Methods</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/lib/wc_data/generated/methods/add_application/info_rb.html">
+                lib/wc_data/generated/methods/add_application/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info_rb.html">
+                lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/create_authenticated_session_token/credential_rb.html">
+                lib/wc_data/generated/methods/create_authenticated_session_token/credential.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/create_authenticated_session_token/info_rb.html">
+                lib/wc_data/generated/methods/create_authenticated_session_token/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/create_connect_package/info_rb.html">
+                lib/wc_data/generated/methods/create_connect_package/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/create_connect_request/info_rb.html">
+                lib/wc_data/generated/methods/create_connect_request/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/delete_open_query/info_rb.html">
+                lib/wc_data/generated/methods/delete_open_query/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/delete_pending_connect_package/info_rb.html">
+                lib/wc_data/generated/methods/delete_pending_connect_package/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/delete_pending_connect_request/info_rb.html">
+                lib/wc_data/generated/methods/delete_pending_connect_request/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_application_info/info_rb.html">
+                lib/wc_data/generated/methods/get_application_info/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_authorized_connect_requests/info_rb.html">
+                lib/wc_data/generated/methods/get_authorized_connect_requests/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_authorized_people/get_authorized_people_parameters_rb.html">
+                lib/wc_data/generated/methods/get_authorized_people/get_authorized_people_parameters.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_authorized_people/info_rb.html">
+                lib/wc_data/generated/methods/get_authorized_people/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_authorized_records/info_rb.html">
+                lib/wc_data/generated/methods/get_authorized_records/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_open_query_info/info_rb.html">
+                lib/wc_data/generated/methods/get_open_query_info/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_person_info/info_rb.html">
+                lib/wc_data/generated/methods/get_person_info/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_thing_type/info_rb.html">
+                lib/wc_data/generated/methods/get_thing_type/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_thing_type/thing_type_section_spec_rb.html">
+                lib/wc_data/generated/methods/get_thing_type/thing_type_section_spec.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_things/info_rb.html">
+                lib/wc_data/generated/methods/get_things/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_things/thing_filter_spec_rb.html">
+                lib/wc_data/generated/methods/get_things/thing_filter_spec.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_things/thing_format_spec_rb.html">
+                lib/wc_data/generated/methods/get_things/thing_format_spec.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_things/thing_request_group_rb.html">
+                lib/wc_data/generated/methods/get_things/thing_request_group.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_things/thing_section_spec_rb.html">
+                lib/wc_data/generated/methods/get_things/thing_section_spec.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_updated_records_for_application/info_rb.html">
+                lib/wc_data/generated/methods/get_updated_records_for_application/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_valid_group_membership/info_rb.html">
+                lib/wc_data/generated/methods/get_valid_group_membership/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_vocabulary/info_rb.html">
+                lib/wc_data/generated/methods/get_vocabulary/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters_rb.html">
+                lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/overwrite_things/info_rb.html">
+                lib/wc_data/generated/methods/overwrite_things/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/put_things/info_rb.html">
+                lib/wc_data/generated/methods/put_things/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/query_permissions/info_rb.html">
+                lib/wc_data/generated/methods/query_permissions/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/remove_things/info_rb.html">
+                lib/wc_data/generated/methods/remove_things/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/add_application/info_rb.html">
+                lib/wc_data/generated/methods/response/add_application/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/allocate_package_id/info_rb.html">
+                lib/wc_data/generated/methods/response/allocate_package_id/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/any/info_rb.html">
+                lib/wc_data/generated/methods/response/any/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/create_authenticated_session_token/app_auth_token_absence_reason_rb.html">
+                lib/wc_data/generated/methods/response/create_authenticated_session_token/app_auth_token_absence_reason.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/create_authenticated_session_token/auth_token_absence_reason_rb.html">
+                lib/wc_data/generated/methods/response/create_authenticated_session_token/auth_token_absence_reason.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/create_authenticated_session_token/info_rb.html">
+                lib/wc_data/generated/methods/response/create_authenticated_session_token/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/create_connect_package/info_rb.html">
+                lib/wc_data/generated/methods/response/create_connect_package/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/create_connect_request/info_rb.html">
+                lib/wc_data/generated/methods/response/create_connect_request/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/delete_open_query/info_rb.html">
+                lib/wc_data/generated/methods/response/delete_open_query/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_application_info/info_rb.html">
+                lib/wc_data/generated/methods/response/get_application_info/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_application_settings/app_settings_rb.html">
+                lib/wc_data/generated/methods/response/get_application_settings/app_settings.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_application_settings/info_rb.html">
+                lib/wc_data/generated/methods/response/get_application_settings/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_authorized_connect_requests/connect_request_rb.html">
+                lib/wc_data/generated/methods/response/get_authorized_connect_requests/connect_request.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_authorized_connect_requests/info_rb.html">
+                lib/wc_data/generated/methods/response/get_authorized_connect_requests/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response_rb.html">
+                lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_authorized_people/info_rb.html">
+                lib/wc_data/generated/methods/response/get_authorized_people/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_authorized_records/info_rb.html">
+                lib/wc_data/generated/methods/response/get_authorized_records/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_people_for_record/info_rb.html">
+                lib/wc_data/generated/methods/response/get_people_for_record/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_person_info/info_rb.html">
+                lib/wc_data/generated/methods/response/get_person_info/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_service_definition/configuration_entry_rb.html">
+                lib/wc_data/generated/methods/response/get_service_definition/configuration_entry.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_service_definition/info_rb.html">
+                lib/wc_data/generated/methods/response/get_service_definition/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_service_definition/platform_rb.html">
+                lib/wc_data/generated/methods/response/get_service_definition/platform.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_service_definition/sdk_assembly_rb.html">
+                lib/wc_data/generated/methods/response/get_service_definition/sdk_assembly.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_service_definition/shell_rb.html">
+                lib/wc_data/generated/methods/response/get_service_definition/shell.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_service_definition/shell_redirect_token_rb.html">
+                lib/wc_data/generated/methods/response/get_service_definition/shell_redirect_token.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_service_definition/xml_method_rb.html">
+                lib/wc_data/generated/methods/response/get_service_definition/xml_method.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_service_definition/xml_method_version_rb.html">
+                lib/wc_data/generated/methods/response/get_service_definition/xml_method_version.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_thing_type/column_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/column.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_thing_type/columns_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/columns.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_thing_type/image_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/image.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_thing_type/info_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_thing_type/thing_type_info_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/thing_type_info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_thing_type/transform_source_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/transform_source.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_thing_type/transforms_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/transforms.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_thing_type/version_info_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/version_info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_thing_type/versions_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/versions.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_things/info_rb.html">
+                lib/wc_data/generated/methods/response/get_things/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_things/thing_response_group_rb.html">
+                lib/wc_data/generated/methods/response/get_things/thing_response_group.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_things/unprocessed_thing_key_info_rb.html">
+                lib/wc_data/generated/methods/response/get_things/unprocessed_thing_key_info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_updated_records_for_application/info_rb.html">
+                lib/wc_data/generated/methods/response/get_updated_records_for_application/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_updated_records_for_application/record_id_rb.html">
+                lib/wc_data/generated/methods/response/get_updated_records_for_application/record_id.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_valid_group_membership/info_rb.html">
+                lib/wc_data/generated/methods/response/get_valid_group_membership/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/get_vocabulary/info_rb.html">
+                lib/wc_data/generated/methods/response/get_vocabulary/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/overwrite_things/info_rb.html">
+                lib/wc_data/generated/methods/response/overwrite_things/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/put_things/info_rb.html">
+                lib/wc_data/generated/methods/response/put_things/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/query_permissions/info_rb.html">
+                lib/wc_data/generated/methods/response/query_permissions/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/query_permissions/permissions_rb.html">
+                lib/wc_data/generated/methods/response/query_permissions/permissions.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/query_permissions/thing_type_permission_rb.html">
+                lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/response/search_vocabulary/info_rb.html">
+                lib/wc_data/generated/methods/response/search_vocabulary/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/save_open_query/info_rb.html">
+                lib/wc_data/generated/methods/save_open_query/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/search_vocabulary/info_rb.html">
+                lib/wc_data/generated/methods/search_vocabulary/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/search_vocabulary/vocabulary_search_params_rb.html">
+                lib/wc_data/generated/methods/search_vocabulary/vocabulary_search_params.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/search_vocabulary/vocabulary_search_string_rb.html">
+                lib/wc_data/generated/methods/search_vocabulary/vocabulary_search_string.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/send_insecure_message/info_rb.html">
+                lib/wc_data/generated/methods/send_insecure_message/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/send_insecure_message_from_application/from_mailbox_rb.html">
+                lib/wc_data/generated/methods/send_insecure_message_from_application/from_mailbox.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/send_insecure_message_from_application/info_rb.html">
+                lib/wc_data/generated/methods/send_insecure_message_from_application/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/set_application_settings/app_settings_rb.html">
+                lib/wc_data/generated/methods/set_application_settings/app_settings.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/set_application_settings/info_rb.html">
+                lib/wc_data/generated/methods/set_application_settings/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/update_application/info_rb.html">
+                lib/wc_data/generated/methods/update_application/info.rb
+                </a>
+        <br />
+                <a href="../../../files/lib/wc_data/generated/methods/update_external_id/info_rb.html">
+                lib/wc_data/generated/methods/update_external_id/info.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="Methods/AddApplication.html" class="link">HealthVault::WCData::Methods::AddApplication</a><br />
+Module <a href="Methods/CreateAuthenticatedSessionToken.html" class="link">HealthVault::WCData::Methods::CreateAuthenticatedSessionToken</a><br />
+Module <a href="Methods/CreateConnectPackage.html" class="link">HealthVault::WCData::Methods::CreateConnectPackage</a><br />
+Module <a href="Methods/CreateConnectRequest.html" class="link">HealthVault::WCData::Methods::CreateConnectRequest</a><br />
+Module <a href="Methods/DeleteOpenQuery.html" class="link">HealthVault::WCData::Methods::DeleteOpenQuery</a><br />
+Module <a href="Methods/DeletePendingConnectPackage.html" class="link">HealthVault::WCData::Methods::DeletePendingConnectPackage</a><br />
+Module <a href="Methods/DeletePendingConnectRequest.html" class="link">HealthVault::WCData::Methods::DeletePendingConnectRequest</a><br />
+Module <a href="Methods/GetApplicationInfo.html" class="link">HealthVault::WCData::Methods::GetApplicationInfo</a><br />
+Module <a href="Methods/GetAuthorizedConnectRequests.html" class="link">HealthVault::WCData::Methods::GetAuthorizedConnectRequests</a><br />
+Module <a href="Methods/GetAuthorizedPeople.html" class="link">HealthVault::WCData::Methods::GetAuthorizedPeople</a><br />
+Module <a href="Methods/GetAuthorizedRecords.html" class="link">HealthVault::WCData::Methods::GetAuthorizedRecords</a><br />
+Module <a href="Methods/GetOpenQueryInfo.html" class="link">HealthVault::WCData::Methods::GetOpenQueryInfo</a><br />
+Module <a href="Methods/GetPersonInfo.html" class="link">HealthVault::WCData::Methods::GetPersonInfo</a><br />
+Module <a href="Methods/GetThingType.html" class="link">HealthVault::WCData::Methods::GetThingType</a><br />
+Module <a href="Methods/GetThings.html" class="link">HealthVault::WCData::Methods::GetThings</a><br />
+Module <a href="Methods/GetUpdatedRecordsForApplication.html" class="link">HealthVault::WCData::Methods::GetUpdatedRecordsForApplication</a><br />
+Module <a href="Methods/GetValidGroupMembership.html" class="link">HealthVault::WCData::Methods::GetValidGroupMembership</a><br />
+Module <a href="Methods/GetVocabulary.html" class="link">HealthVault::WCData::Methods::GetVocabulary</a><br />
+Module <a href="Methods/OverwriteThings.html" class="link">HealthVault::WCData::Methods::OverwriteThings</a><br />
+Module <a href="Methods/PutThings.html" class="link">HealthVault::WCData::Methods::PutThings</a><br />
+Module <a href="Methods/QueryPermissions.html" class="link">HealthVault::WCData::Methods::QueryPermissions</a><br />
+Module <a href="Methods/RemoveThings.html" class="link">HealthVault::WCData::Methods::RemoveThings</a><br />
+Module <a href="Methods/Response.html" class="link">HealthVault::WCData::Methods::Response</a><br />
+Module <a href="Methods/SaveOpenQuery.html" class="link">HealthVault::WCData::Methods::SaveOpenQuery</a><br />
+Module <a href="Methods/SearchVocabulary.html" class="link">HealthVault::WCData::Methods::SearchVocabulary</a><br />
+Module <a href="Methods/SendInsecureMessage.html" class="link">HealthVault::WCData::Methods::SendInsecureMessage</a><br />
+Module <a href="Methods/SendInsecureMessageFromApplication.html" class="link">HealthVault::WCData::Methods::SendInsecureMessageFromApplication</a><br />
+Module <a href="Methods/SetApplicationSettings.html" class="link">HealthVault::WCData::Methods::SetApplicationSettings</a><br />
+Module <a href="Methods/UpdateApplication.html" class="link">HealthVault::WCData::Methods::UpdateApplication</a><br />
+Module <a href="Methods/UpdateExternalId.html" class="link">HealthVault::WCData::Methods::UpdateExternalId</a><br />
+
+    </div>
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

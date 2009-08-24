@@ -1,0 +1,940 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.thing"
+    xmlns:this="urn:com.microsoft.wc.thing"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-auth="urn:com.microsoft.wc.auth"
+    xmlns:d="urn:com.microsoft.wc.dates"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+    THING.XSD
+    Microsoft HealthVault
+
+    Platform API: Representation of thing data
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+  <import
+      namespace="urn:com.microsoft.wc.dates"
+      schemaLocation="dates.xsd" />
+  
+  <import
+      namespace="http://www.w3.org/2000/09/xmldsig#"
+      schemaLocation="xmldsig-core-schema.xsd" />
+  
+  <annotation>
+        <documentation>
+            <summary>
+
+            </summary>
+
+            <remarks>
+
+            </remarks>
+        </documentation>
+    </annotation>
+
+    <complexType name="ThingKey">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+
+        <simpleContent>
+            <extension base="wc-types:guid">
+                <attribute name="version-stamp"
+                    type="wc-types:guid" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+
+    <complexType name="ThingType">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="wc-types:guid">
+                <attribute name="name" type="string" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="GuidAndName">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="wc-types:guid">
+                <attribute name="name" type="string" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <simpleType name="AuditAction">
+        <annotation>
+            <documentation>
+                <summary>
+                    Representation of the operation performed.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="Created">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A creation took place.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Updated">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            An update took place.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Deleted">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A delete took place.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    
+
+    <simpleType name="AccessAvenue">
+        <annotation>
+            <documentation>
+                <summary>
+                    Indicates the avenue used to create, delete or change 
+                    the thing.
+                </summary>
+            </documentation>
+        </annotation>
+
+        <restriction base="string">
+            <enumeration value="Online">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Indicates that online access avenue was used
+                            to perform the operation on the thing.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+
+            <enumeration value="Offline">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Indicates that offline access avenue was used
+                            to perform the operation on the thing.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Audit">
+        <annotation>
+            <documentation>
+                <summary>
+                    Represents an audit trail of creations or updates 
+                    or deletes to information in the Health service.
+                </summary>
+
+                <remarks>
+                   The audit records when the operation happened, 
+                   by which application, and by which person.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="timestamp" type="dateTime" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The time stamp of the audit.
+                        </summary>
+
+                        <remarks>
+                            It is up to the application to convert the value 
+                            to local time if needed.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="app-id" type="this:GuidAndName" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique identifier and the name of 
+                            the application used to perform the operation.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="person-id" type="this:GuidAndName" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique identifier and the name of
+                            the person who performed the operation.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="impersonator-id" type="this:GuidAndName" 
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique identifier and the name of
+                            the impersonator who performed the operation on 
+                            behalf of the person.
+                        </summary>
+                        <remarks>
+                            The impersonator performs the operation on behalf 
+                            of the person.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="access-avenue" type="this:AccessAvenue" 
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The access avenue used to perform the operation.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="audit-action" type ="this:AuditAction" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The action performed.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <complexType name="DataXml">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <any namespace="##any" processContents="skip">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </any>
+
+            <element name="common" minOccurs="0" maxOccurs="1"
+                type="this:common" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+
+        <!-- transform attribute ignore on put -->
+        <attribute name="transform" type="string" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+    </complexType>
+
+    <complexType name="DataOther">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+
+        <simpleContent>
+            <extension base="string">
+
+                <attribute name="content-type"
+                      type="wc-types:stringz1024" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+                <attribute name="content-encoding"
+                    type="wc-types:stringz1024" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The encoding associated with the data in the other data section.
+                            </summary>
+
+                            <remarks>
+                                The other data is returned as a base64 encoded string. If the data
+                                was posted in to the HealthVault platform with some other encoding
+                                it will be encoded using base64 encoding before it is sent out 
+                                via this field. Base64 will be the final encoding applied on the 
+                                data.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    
+    <complexType name="EffectivePermissions">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+
+        <sequence>
+            <element name="permission" type="wc-types:Permission"
+                minOccurs="1" maxOccurs="5" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+
+        <!-- Absence == false -->
+        <attribute name="immutable" type="boolean" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+    </complexType>
+
+
+    <complexType name="extension">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        
+        <sequence>
+            <any minOccurs="0" maxOccurs="unbounded"
+                namespace="##any" processContents="skip" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </any>
+        </sequence>
+        
+        <attribute name="source" type="string" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+        <attribute name="ver" type="string" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+        <attribute name="logo" type="string" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+        <attribute name="xsl" type="string" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+                        Optional URL to xsl that will transform extension to html
+                        suitable for rendering in a popup or small frame
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+    </complexType>
+
+    <complexType name="common">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+
+        <sequence>
+
+            <element name="source" type="string"
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        free text representation of how data was captured
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="note" type="string"
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        free text notes
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="tags" type="wc-types:string512"
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        user tags, comma separated
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="extension" type="this:extension"
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        open for application extensions
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="related-thing" type="this:RelatedThing" 
+                     minOccurs ="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Defines a loose relationship between instances of things within a record.
+                        </summary>
+                        <remarks>
+                            This relationship is completely application defined and maintained. 
+                            HealthVault does nothing to ensure that related things exist
+                            or have a relationship back to this thing.
+                            An example usage for related-things are to use an annotation thing 
+                            instance to make medical annotations for another thing type or to relate
+                            a file instance (like an MRI) to problem instance.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="client-thing-id" type="wc-types:string255" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A client assigned friendly id for the thing. 
+                        </summary>
+                        <remarks>
+                            This id is completely application defined and maintained.
+                            HealthVault does nothing to ensure that the ids assigned are unique.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+        </sequence>
+    </complexType>
+
+    <complexType name="RelatedThing">
+        <annotation>
+            <documentation>
+                <summary>
+                    Defines a loose relationship between instances of things within a record.
+                </summary>
+                <remarks>
+                    This relationship is completely application defined and maintained.
+                    HealthVault does nothing to ensure that related things exist
+                    or have a relationship back to this thing.
+                    An example usage for related-things are to use an annotation thing
+                    instance to make medical annotations for another thing type or to relate
+                    a file instance (like an MRI) to problem instance.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <choice>
+                <sequence>
+                    <element name="thing-id" type="wc-types:guid">
+                        <annotation>
+                            <documentation>
+                                <summary>
+                                    The unique identifier for the thing instances that this thing has a
+                                    relationship to.
+                                </summary>
+                                <remarks>
+                                    The thing ID must be an identifier for a thing within the same health
+                                    record. It may point to a deleted thing.
+                                </remarks>
+                            </documentation>
+                        </annotation>
+                    </element>
+
+                    <element name="version-stamp" type="wc-types:guid" minOccurs="0" maxOccurs="1">
+                        <annotation>
+                            <documentation>
+                                <summary>
+                                    The unique version stamp of the thing instance that this thing is related
+                                    to.
+                                </summary>
+                                <remarks>
+                                    The version stamp allows the relationship to occur to a specific instance
+                                    of a thing.
+                                </remarks>
+                            </documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+                
+                <element name="client-thing-id" type="wc-types:string255" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A string representing client id of the thing instance that this thing is
+                                related to.
+                            </summary>
+                            <remarks>
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </choice>
+            
+            <element name="relationship-type" type="string" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A string representing the type of relationship between the two thing
+                            instances.
+                        </summary>
+                        <remarks>
+                            A relationship between thing instances may be made for many reasons. For
+                            example, an annotation instance may be a medical annotation for a 
+                            problem instance in which case the "relationship-type" may be set to 
+                            "annotation".
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+
+    <simpleType name="ThingState">
+        <restriction base="string">
+            <enumeration value="Active" />
+            <enumeration value="Deleted" />
+        </restriction>
+    </simpleType>
+
+
+    <complexType name="Thing">
+        <annotation>
+          <documentation>
+            <summary>
+
+            </summary>
+
+            <remarks>
+
+            </remarks>
+          </documentation>
+        </annotation>
+        
+        <sequence>
+            <element name="thing-id" type="this:ThingKey" minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="type-id" type="this:ThingType" minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name ="thing-state" type="this:ThingState" minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="flags" type="unsignedInt" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Thing flags.
+                        </summary>
+
+                        <remarks>
+                            Currently supported flags:
+                            0x1 (Personal) - the thing is accessible only by custodians.
+                            0x2 (Downversioned) - the thing instance was converted from a newer
+                            format to an older format while being written in the response. 
+                            Applications should not attempt to update an instance that has been
+                            down-versioned.
+                            0x4 (Upversioned) - the thing instance was converted from an older
+                            format to a newer format while being written in the response.
+                            Applications should only attempt to update the instance if given 
+                            explicit approval by the user as this will change the stored instance
+                            from the older format to the new format. In some cases this may cause
+                            data loss.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="eff-date" type="dateTime"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="created" type="this:Audit" minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Represents an audit information about the creation of this health 
+                            record item.
+                        </summary>
+
+                        <remarks>
+                            The audit records when the operation happened,
+                            by which application, and by which person. The creation audit 
+                            information node is returned only by versions of the GetThings method
+                            higher than 2.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="updated" type="this:Audit" minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Represents an audit information about the update to this health
+                            record item.
+                        </summary>
+
+                        <remarks>
+                            The audit records when the operation happened,
+                            by which application, and by which person.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="data-xml" type="this:DataXml" minOccurs="0" maxOccurs="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="data-other" type="this:DataOther" minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            
+            <element name="eff-permissions"
+                type="this:EffectivePermissions"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="tags" type="wc-types:string512"
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The comma-separated list of user tag strings.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element ref="ds:Signature" minOccurs="0" maxOccurs="1"/>
+            
+        </sequence>
+
+    </complexType>
+
+    </schema>
+
+    

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Thing::Types::Sample</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Thing::Types::Sample</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../../files/lib/wc_data/generated/thing/types/sample_rb.html">
+                lib/wc_data/generated/thing/types/sample.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M001361">new</a>&nbsp;&nbsp;
+      <a href="#M001358">note</a>&nbsp;&nbsp;
+      <a href="#M001357">note=</a>&nbsp;&nbsp;
+      <a href="#M001356">time_offset</a>&nbsp;&nbsp;
+      <a href="#M001355">time_offset=</a>&nbsp;&nbsp;
+      <a href="#M001360">value</a>&nbsp;&nbsp;
+      <a href="#M001359">value=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M001361" class="method-detail">
+        <a name="M001361"></a>
+
+        <div class="method-heading">
+          <a href="#M001361" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001361-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001361-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/sample.rb, line 64</span>
+64:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+65:           <span class="ruby-keyword kw">super</span>
+66:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'sample'</span>
+67:         
+68:           
+69:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'time-offset'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'time-offset'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">NonNegativeDouble</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+70:             
+71:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'time-offset'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">NonNegativeDouble</span>.<span class="ruby-identifier">new</span>
+72:             
+73:           
+74:         
+75:           
+76:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'note'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+77:             
+78:           
+79:         
+80:           
+81:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'value'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'value'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+82:             
+83:           
+84:         
+85:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M001358" class="method-detail">
+        <a name="M001358"></a>
+
+        <div class="method-heading">
+          <a href="#M001358" class="method-signature">
+          <span class="method-name">note</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001358-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001358-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/sample.rb, line 42</span>
+42:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">note</span>
+43:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>][<span class="ruby-identifier">:value</span>]
+44:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001357" class="method-detail">
+        <a name="M001357"></a>
+
+        <div class="method-heading">
+          <a href="#M001357" class="method-signature">
+          <span class="method-name">note=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: Description of sample. <em><a
+href="Sample.html#M001360">value</a></em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001357-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001357-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/sample.rb, line 37</span>
+37:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">note=</span>(<span class="ruby-identifier">value</span>)
+38:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+39:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001356" class="method-detail">
+        <a name="M001356"></a>
+
+        <div class="method-heading">
+          <a href="#M001356" class="method-signature">
+          <span class="method-name">time_offset</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="NonNegativeDouble.html">HealthVault::WCData::Thing::Types::NonNegativeDouble</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001356-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001356-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/sample.rb, line 27</span>
+27:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">time_offset</span>
+28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'time-offset'</span>][<span class="ruby-identifier">:value</span>]
+29:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001355" class="method-detail">
+        <a name="M001355"></a>
+
+        <div class="method-heading">
+          <a href="#M001355" class="method-signature">
+          <span class="method-name">time_offset=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <b>summary</b>: Offset is seconds from sample set base
+time. <em><a href="Sample.html#M001360">value</a></em> is a <a
+href="NonNegativeDouble.html">HealthVault::WCData::Thing::Types::NonNegativeDouble</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001355-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001355-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/sample.rb, line 22</span>
+22:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">time_offset=</span>(<span class="ruby-identifier">value</span>)
+23:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'time-offset'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+24:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001360" class="method-detail">
+        <a name="M001360"></a>
+
+        <div class="method-heading">
+          <a href="#M001360" class="method-signature">
+          <span class="method-name">value</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001360-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001360-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/sample.rb, line 58</span>
+58:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value</span>
+59:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'value'</span>][<span class="ruby-identifier">:value</span>]
+60:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001359" class="method-detail">
+        <a name="M001359"></a>
+
+        <div class="method-heading">
+          <a href="#M001359" class="method-signature">
+          <span class="method-name">value=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: Value of sample. <b>remarks</b>: The <a
+href="Sample.html#M001360">value</a> of the sample can be any string. The
+<a href="Sample.html#M001360">value</a> depends on the type of sample. Some
+sample types will have a simple int or double as the <a
+href="Sample.html#M001360">value</a>. Others will have a comma separated
+list. For example, a &quot;position&quot; sample may have
+&quot;25E,66N&quot; (longitude,latitude) as the <a
+href="Sample.html#M001360">value</a>. <em><a
+href="Sample.html#M001360">value</a></em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001359-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001359-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/sample.rb, line 53</span>
+53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value=</span>(<span class="ruby-identifier">value</span>)
+54:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'value'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+55:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

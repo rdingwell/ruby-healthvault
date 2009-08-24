@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.request"
+    xmlns:this="urn:com.microsoft.wc.request"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+    REQUEST.XSD
+    Microsoft HealthVault
+
+    Platform API: Incoming request schema
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+
+            </summary>
+
+            <remarks>
+
+            </remarks>
+        </documentation>
+    </annotation>
+
+    <complexType name="Xsl">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="string">
+                <attribute name="content-type"
+                    type="wc-types:string128" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="Info">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <any minOccurs="0" maxOccurs="unbounded"
+                namespace="##any" processContents="skip">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </any>
+        </sequence>
+    </complexType>
+
+    <complexType name="OfflinePersonInfo">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="offline-person-id" type="wc-types:guid" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+
+    <complexType name="AuthenticatedSessionInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                  The tokens required to make an authenticated request
+                  to Microsoft HealthVault.
+                </summary>
+
+                <remarks>
+                  All the tokens provided have been acquired via previous
+                  token requests to Microsoft HealthVault.  All tokens
+                  have a limited lifespan, so if the token is expired the
+                  request will fail.
+                </remarks>
+            </documentation>
+        </annotation>
+
+        <sequence>
+
+            <element name="auth-token" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Primary authentication token.
+                        </summary>
+
+                        <remarks>
+                            This token may specify an application or 
+                            an application and a user.  
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <choice minOccurs="0" maxOccurs="1">
+                <element name="user-auth-token" type="string">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A user authentication token used by an 
+                                application server to specify a user.
+                            </summary>
+
+                            <remarks>
+                                This token must be issued for the same 
+                                application that is specified in the auth-token
+                                section.  
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="offline-person-info"
+                    type="this:OfflinePersonInfo">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Offline-person-info, means person is not logged 
+                                in.
+                            </summary>
+
+                            <remarks>
+                                An application that is making an offline request
+                                must provide an auth-token.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </choice>
+        </sequence>
+    </complexType>
+
+    <complexType name="Header">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <!-- method name -->
+            <element name="method" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+            <!-- method version -->
+            <element name="method-version" type="int" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+            <!-- target person id (if appropriate for method) -->
+            <element name="target-person-id" type="wc-types:guid"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+            <!-- record id (if appropriate for method) -->
+            <element name="record-id" type="wc-types:guid"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+            <choice minOccurs="1" maxOccurs="1">
+                <!-- calling application id - non-person specific request -->
+                <element name="app-id" type="wc-types:guid" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="auth-session" 
+                    type="this:AuthenticatedSessionInfo" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Authenticated session information.
+                            </summary>
+
+                            <remarks>
+                                One or more tokens may be used to authenticate
+                                the request.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </choice>
+
+            <!-- optional culture info -->
+            <element name="language" type="wc-types:iso639-1"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="country" type="wc-types:iso3166"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+            <!-- optional xsl to transform FINAL result (request.xsd) -->
+            <element name="final-xsl" type="this:Xsl"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            An XSL transform fragment or tag name to run on the response XML.
+                        </summary>
+
+                        <remarks>
+                            Any call to HealthVault may specify a transform to be run on the
+                            response XML. The transform can be specified as a XSL fragment or
+                            a well-known transform tag provided by the HealthVault service. If a
+                            XSL fragment is specified, it gets compiled and cached on the server.
+                            <br/>
+                            <br/>
+                            A final-xsl is useful when you want to convert the result from XML to
+                            HTML so that you can display the result directly in a web page.
+                            You may also use it to generate other data formats like CCR, CCD, CSV,
+                            RSS, etc.
+                            <br/>
+                            <br/>
+                            Transform fragments cannot contain embedded script. The following set
+                            of parameters are passed to all final-xsl transforms:<br/>
+                            <ul>
+                                <li>currentDateTimeUtc - the date and time just before the transform 
+                                started executing</li>
+                                <li>requestingApplicationName - the name of the application that
+                                made the request to HealthVault.</li>
+                                <li>countryCode - the ISO 3166 country code from the request.</li>
+                                <li>languageCode - the ISO 639-1 language code from the request.</li>
+                                <li>personName - the name of the person making the request.</li>
+                                <li>recordName - if the request identified a HealthVault record to 
+                                be used, this parameter contains the name of that record.</li>
+                            </ul>
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+            <!-- timestamp elements -->
+            <element name="msg-time" type="dateTime" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="msg-ttl" type="nonNegativeInteger" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+            <!-- version -->
+            <element name="version" type="wc-types:Version"
+                minOccurs="1" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+            <!-- method-specific parameters: only required for auth calls -->
+            <element name="info-hash" type="wc-types:HashFinalized"
+                minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The hash of the info section.
+                        </summary>
+
+                        <remarks>
+                          This hash ensures that the info section is not
+                          tampered with.  If the request is not authenticated,
+                          then this section is not required or expected.
+
+                          That is, in the authenticated request case, the
+                          header is protected via the HMAC operation over the
+                          header element, thereby preventing tampering.  If
+                          the header is not protected then the info-hash can
+                          be modified arbitrarily.
+
+                          Microsoft HealthVault will compute the
+                          corresponding hash and compare the results.  If
+                          they are not the same, the request will fail.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+
+        </sequence>
+    </complexType>
+
+    <element name="request">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+
+            <sequence>
+                <element name="auth" type="wc-types:HMACFinalized"
+                    minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                HMAC computed over header element using
+                                the authenticated session shared secret. 
+                            </summary>
+
+                            <remarks>
+                                This section must be present to make an
+                                authenticated request.  The Microsoft Health
+                                Service will compute the HMAC over the header
+                                section and compare the resulting digest
+                                with the one provided in the request.  If they
+                                are not equal, the request will fail.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+
+                <!-- Header -->
+                <element name="header" type="this:Header" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+
+                <!-- method parameters -->
+                <element name="info" type="this:Info" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>
+

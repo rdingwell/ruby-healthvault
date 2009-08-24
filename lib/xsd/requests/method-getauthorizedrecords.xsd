@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.GetAuthorizedRecords"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-GETAUTHORIZEDRECORDS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetAuthorizedRecords method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Gets information about the specified health records for
+                which the authenticated person is authorized to use with
+                the calling application.
+            </summary>
+
+            <remarks>
+                Only information about health records for which the
+                authenticated person is authorized to view for the
+                calling application are returned.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- GetAuthorizedRecords - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="id" type="wc-types:guid" 
+                         minOccurs="1" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The unique health record identifier of the 
+                                record(s) to get information about.
+                            </summary>
+
+                            <remarks>
+                                Only health records to which the authenticated
+                                person has been granted access for the calling
+                                application will be returned.
+                                No error will be produced if the health record
+                                doesn't exist or the authenticated person 
+                                doesn't have access to the record.                                
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+            </sequence>
+        </complexType>
+    </element>
+</schema>

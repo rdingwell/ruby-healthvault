@@ -1,0 +1,24 @@
+<schema xmlns:device="urn:com.microsoft.wc.thing.equipment" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.equipment"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>EF9CF8D5-6C0B-4292-997F-4047240BC7BE</type-id><type-name>Device</type-name><wrapper-class-name>Device</wrapper-class-name><wrapper-class-fwlink>136095</wrapper-class-fwlink><sample-xml-fwlink>136096</sample-xml-fwlink><data-type-guide-fwlink>136094</data-type-guide-fwlink><summary>
+                Information related to medical equipment.
+            </summary><remarks>
+                This thing type describes medical equipment a person has.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="device"><complexType><annotation><documentation><summary>
+                        Information related to medical equipment.
+                    </summary><remarks>
+                        This thing type describes medical equipment a person has.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the report.
+                            </summary></documentation></annotation></element><element name="device-name" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The name of the medical equipment.
+                            </summary></documentation></annotation></element><element name="vendor" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                The vendor of the medical equipment.
+                            </summary></documentation></annotation></element><element name="model" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form model name of the medical equipment.
+                            </summary></documentation></annotation></element><element name="serial-number" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form serial number of the medical equipment.
+                            </summary></documentation></annotation></element><element name="anatomic-site" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The location on the body where the device 
+                                takes readings.
+                            </summary></documentation></annotation></element><element name="description" type="string" minOccurs="0"><annotation><documentation><summary>
+                                A free form description of the of the medical equipment.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

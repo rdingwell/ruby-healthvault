@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.GetApplicationInfo"
+    xmlns:this="urn:com.microsoft.wc.methods.GetApplicationInfo"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-GETAPPLICATIONINFO.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetApplicationInfo method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Retrieves the settings for the current application.
+            </summary>
+
+            <remarks>
+                This method allows applications to get their own settings.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="all-languages" type="boolean"
+                         minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The all-languages parameter determines how many of instances
+                                of culture specific values are returned.
+                            </summary>
+                            <remarks>
+                                If true, all values are returned.
+                                If false, the value with the best matching language is returned.
+                                For example, the name property of the application info
+                                may be localized into multiple languages.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="child-app-id" type="wc-types:guid" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Gets the application configuration information for the specified
+                                child application ID if the calling application is the master
+                                application for that child.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

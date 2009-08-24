@@ -1,0 +1,117 @@
+<schema xmlns:spirometer="urn:com.microsoft.wc.thing.spirometer" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.spirometer"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>921588d1-27bf-423c-8e55-650d2fedb3e0</type-id><type-name>Spirometer Measurement</type-name><wrapper-class-name>Spirometer</wrapper-class-name><wrapper-class-fwlink>136236</wrapper-class-fwlink><sample-xml-fwlink>136237</sample-xml-fwlink><data-type-guide-fwlink>136235</data-type-guide-fwlink><summary>
+                A single reading from a spirometer.
+            </summary><remarks>
+                Note: Please use the peak flow type instead of this type.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><complexType name="volume-value"><annotation><documentation><summary>
+                    A volume measurement.
+                </summary><remarks>
+                    A volume measurement consists of the value in liters (L), 
+                    which is the base unit of measurement for flow, and an 
+                    optional display value. The display value is used to store 
+                    the flow measurement in the user's preference of volume 
+                    units. This avoids rounding errors when converting to and 
+                    back from L.
+                </remarks></documentation></annotation><sequence><element name="liters" type="t:positiveDouble"><annotation><documentation><summary>
+                            The volume measurement in liters (L).
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the volume measurement.
+                        </summary><remarks>
+                            The display value contains the volume measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><element name="spirometer"><complexType><annotation><documentation><summary>
+                        A single reading from a spirometer.
+                    </summary><remarks>
+                        Note: Please use the peak flow type instead of this type.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time when the spirometer reading
+                                was taken.
+                            </summary></documentation></annotation></element><element name="fev1" type="t:flow-value" minOccurs="0"><annotation><documentation><summary>
+                                The forced expiratory volume in one second.
+                            </summary><remarks>
+                                FEV1 is the forced expiratory volume in one
+                                measured in liters/second.
+                            </remarks></documentation></annotation></element><element name="pef" type="t:flow-value" minOccurs="0"><annotation><documentation><summary>
+                                The peak expirator flow.
+                            </summary><remarks>
+                                PEF is the peak expiratory flow measured
+                                in liters/second.
+                            </remarks></documentation></annotation></element><element name="warning" type="string" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The reading was not normal.
+                            </summary><remarks>
+                                The presence of one or more of these elements
+                                indicates that the reading was not normal.
+                                The element value should contain text 
+                                describing the concern.
+                            </remarks></documentation></annotation></element><element name="problem" type="string" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The reading was not normal and action should
+                                be taken.
+                            </summary><remarks>
+                                The presence of one or more of these elements
+                                indicates that the reading was not normal and
+                                that action should be taken. The element value
+                                should contain text describing the concern.
+                            </remarks></documentation></annotation></element><element name="FEVoverFVC" type="t:percentage" minOccurs="0"><annotation><documentation><summary>
+                                The ratio of FEV 1 to FVC at the time of the
+                                reading.
+                            </summary><remarks>
+                                In healthy adults this should be approximately 
+                                75 - 80%.
+                            </remarks></documentation></annotation></element><element name="FEF25to75" type="t:percentage" minOccurs="0"><annotation><documentation><summary>
+                                The forced expiratory flow 25-75% at the time 
+                                of the reading.
+                            </summary><remarks>
+                                This is the average flow (or speed) of air 
+                                coming out of the lung during the middle 
+                                portion of the expiration.
+                            </remarks></documentation></annotation></element><element name="FEF25to50" type="t:percentage" minOccurs="0"><annotation><documentation><summary>
+                                The forced expiratory flow 25-50% at the 
+                                time of the reading.
+                            </summary><remarks>
+                                This is the average flow (or speed) of air
+                                coming out of the lung during the middle 
+                                portion of the expiration.
+                            </remarks></documentation></annotation></element><element name="FIF25to75" type="t:percentage" minOccurs="0"><annotation><documentation><summary>
+                                The forced inspiratory flow 25-75% at the
+                                time of the reading.
+                            </summary><remarks>
+                                This is the average flow (or speed) of air
+                                coming into the lung during the middle portion 
+                                of the inspiration.
+                            </remarks></documentation></annotation></element><element name="FIF25to50" type="t:percentage" minOccurs="0"><annotation><documentation><summary>
+                                The forced inspiratory flow 25-50% at the time 
+                                of the reading.
+                            </summary><remarks>
+                                This is the average flow (or speed) of air 
+                                coming into the lung during the middle portion 
+                                of the inspiration.
+                            </remarks></documentation></annotation></element><element name="FET" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                                The forced expiratory time at the time of the
+                                reading.
+                            </summary><remarks>
+                                This is the length of the expiration in seconds.
+                            </remarks></documentation></annotation></element><element name="SVC" type="spirometer:volume-value" minOccurs="0"><annotation><documentation><summary>
+                                The slow vital capacity (SVC) at the time of the
+                                reading measured in liters (L).
+                            </summary><remarks>
+                                The patient inspires fully and than slowly 
+                                expires all the air in his lungs or the other 
+                                way around: the patient expires fully and 
+                                inspires slowly to a maximum.
+                            </remarks></documentation></annotation></element><element name="TV" type="spirometer:volume-value" minOccurs="0"><annotation><documentation><summary>
+                                The tidal volume at the time of the
+                                reading, measured in liters (L).
+                            </summary><remarks>
+                                This is the specific volume of air is drawn
+                                into and then expired out of the lungs.
+                                Average flow (or speed) of air coming into 
+                                the lung during the middle portion of the 
+                                inspiration during the respiratory cycle.
+                            </remarks></documentation></annotation></element><element name="MVV" type="t:flow-value" minOccurs="0"><annotation><documentation><summary>
+                                The maximum voluntary ventilation (MVV) 
+                                at the time of the reading, measured in 
+                                liters per second (L/s).
+                            </summary><remarks>
+                                For this test the patient inspires and expires
+                                in the spirometer over and over again as fast 
+                                as he can, during at least 12 seconds.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

@@ -1,0 +1,567 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema 
+    targetNamespace="urn:com.microsoft.wc.methods.GetThings"
+    xmlns:this="urn:com.microsoft.wc.methods.GetThings" 
+    xmlns:wc-types="urn:com.microsoft.wc.types" 
+    xmlns:wc-thing="urn:com.microsoft.wc.thing" 
+    xmlns="http://www.w3.org/2001/XMLSchema">
+    
+    <!--
+
+        METHOD-GETTHINGS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetThings method
+
+    -->
+    <import 
+        namespace="urn:com.microsoft.wc.types" 
+        schemaLocation="types.xsd"/>
+        
+    <import 
+        namespace="urn:com.microsoft.wc.thing" 
+        schemaLocation="thing.xsd"/>
+        
+    <annotation>
+        <documentation>
+            <summary>
+                Schema for the GetThings method request.
+            </summary>
+            <remarks>
+                The GetThings method request is sent as a series of filter groups. Filter groups allow the
+                caller to group otherwise separate GetThings requests into one. The response to this method
+                request will also come in the form of response groups that correspond to each filter group. A
+                filter group is uniquely identified by a name. 
+                The results returned in each group can be composed of full things as well as partial 
+                things. Full things will be returned up to a maximum that is configured on the server. 
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+    <!-- GetThings - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <complexType name="ThingFilterSpec">
+        <annotation>
+            <documentation>
+                <summary>
+                    Schema for specifying filters on things.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="type-id" type="wc-types:guid" 
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Allows filtering based on a thing type id.
+                        </summary>
+                        <remarks>
+                            The list of thing types can be queried through the Dictionary. 
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="thing-state" type="wc-thing:ThingState" 
+                minOccurs="0" maxOccurs="2">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Allows filtering based on a state of a thing.
+                        </summary>
+                        <remarks>
+                            Current values for the state are "Active" and "Deleted".
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="eff-date-min" type="dateTime" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The minimum date the thing pertains to.
+                        </summary>
+                        <remarks>
+                            If this was a weight measurement, the effective time refers to the date
+                            the weight was taken, not when it was stored.
+                            When used with eff-date-max, can specify a range for effective dates
+                            for searching things.  If eff-date-max is not specified, things that
+                            are created after eff-date-min are returned.
+                            All values being compared are compared as greater than or equal to.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="eff-date-max" type="dateTime" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The maximum date the thing pertains to.
+                        </summary>
+                        <remarks>
+                            If this was a weight measurement, the effective time refers to the date
+                            the weight was taken, not when it was stored.
+                            When used with eff-date-min, can specify a range for effective dates
+                            for searching things.  If eff-date-min is not specified, things that
+                            are created earlier than eff-date-max are returned.
+                            All values being compared are compared as less than or equal to.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="created-app-id" type="wc-types:guid" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application that created this thing.
+                        </summary>
+                        <remarks>
+                            Each application is identified by a unique application id.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="created-person-id" type="wc-types:guid" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The person that created this thing.
+                        </summary>
+                        <remarks>
+                            Each person is identified by a unique person id.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="updated-app-id" type="wc-types:guid" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application that last updated this thing.
+                        </summary>
+                        <remarks>
+                            Each application is identified by a unique application id.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="updated-person-id" type="wc-types:guid" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The person that last updated this thing.
+                        </summary>
+                        <remarks>
+                            Each person is identified by a unique person id.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="created-date-min" type="dateTime" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The minimum date the thing was created on.
+                        </summary>
+                        <remarks>
+                            When used with created-date-max, can specify a creation date range
+                            for searching things.  If create-date-max is not specified, things that
+                            are created after created-date-min are returned.
+                            All values being compared are compared as greater than or equal to.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="created-date-max" type="dateTime" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The maximum date the thing was created on.
+                        </summary>
+                        <remarks>
+                            When used with created-date-min, can specify a creation date range
+                            for searching things.  If create-date-min is not specified, things that
+                            are created earlier than created-date-max are returned.
+                            All values being compared are compared as less than or equal to.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="updated-date-min" type="dateTime" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The minimum date the thing was last updated on.
+                        </summary>
+                        <remarks>
+                            When used with updated-date-max, can specify a updated date range
+                            for searching things.  If updated-date-max is not specified, things that
+                            are created after updated-date-min are returned.
+                            All values being compared are compared as greater than or equal to.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="updated-date-max" type="dateTime" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The maximum date the thing was last updated on.
+                        </summary>
+                        <remarks>
+                            When used with updated-date-min, can specify a updated date range
+                            for searching things.  If updated-date-min is not specified, things that
+                            are created earlier than updated-date-max are returned.
+                            All values being compared are compared as less than or equal to.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="xpath" type="string" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            An xpath that can be specified for filtering on the existence of specific data.
+                        </summary>
+                        <remarks>
+                            XPath with wildcards such as //, *, descendant::, descendant-or-self:: are 
+                            not allowed. The xpath is only used as a matching criteria. You can't use 
+                            the xpath to count the number of results or add up values.  The error
+                            INVALID_FILTER will be returned if wildcards are detected. 
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <!-- need to add full text search -->
+        </sequence>
+    </complexType>
+    <simpleType name="ThingSectionSpec">
+        <annotation>
+            <documentation>
+                <summary>
+                    Allows sections of the thing to be specified.
+                </summary>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="core">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies the core parts of the thing.
+                        </summary>
+                        <remarks>
+                            The core includes thing-id, version-stamp, type-id,
+                            eff-date, thing-state, flags.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="audits">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies the auditing section of the thing.
+                        </summary>
+                        <remarks>
+                            The audit section includes the updated element.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="otherdata">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies the other data section of the thing.
+                        </summary>
+                        <remarks>
+                            The other data section includes the data-other xml. Other data is an
+                            additional data element that is not subject to schema validation on
+                            the server.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </enumeration>          
+            <enumeration value="effectivepermissions">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies the effection permissions the caller has on the thing.
+                        </summary>
+                        <remarks>
+                            The effective permissions section includes the eff-permissions xml.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="digitalsignatures">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies the digital signautures on the thing.
+                        </summary>
+                        <remarks>
+                            The digital signatures section includes the signature xml, which
+                            contains any digital signatures on the returned thing. That digital
+                            signature includes a key and a cryptographic hash which can be used
+                            to verify that the contents of the thing have not changed since
+                            the time it was signed.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="tags">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies the tags on the thing.
+                        </summary>
+                        <remarks>
+                            The tags section includes the tags xml which is a string element
+                            that contains comma separated list of tags.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="ThingFormatSpec">
+        <annotation>
+            <documentation>
+                <summary>
+                    Specifies how the results are returned.
+                </summary>
+                <remarks>
+                    The section element specifies which sections are returned. The xml element
+                    specifies how the actual thing data is formatted.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="section" type="this:ThingSectionSpec" 
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies the sections to be retrieved.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="xml" type="string" 
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Name of the transforms to apply to the results. 
+                        </summary>
+                        <remarks>
+                            This could come in the form of the name of a server supported transform;
+                            an XSL fragment; or a URL to an external XSL.
+                            If present and blank, the raw data-xml will be returned. If not present,
+                            the data-xml will not be returned.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="type-version-format" 
+                type="wc-types:guid" 
+                minOccurs="0" 
+                maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The version ID for the type format in which the results should be 
+                            returned.
+                        </summary>
+                        <remarks>
+                            When a type gets versioned, HealthVault will retrieve instances of 
+                            multiple versions even when only one type is specified in the request
+                            filter.  By default HealthVault will map the XML of the instance to
+                            the version supported by the application based on the base 
+                            authorization XML specified in the configuration of the application in
+                            HealthVault. However, if multiple versions are supported by the 
+                            application, it can use this parameter to state the version format to
+                            use when writing out the instance XML.
+                            
+                            For example, when querying for medications, HealthVault will retrieve
+                            medications of both version one and two schemas. If an application
+                            only supports version one of the medication schema, then HealthVault
+                            will automatically map version two instances down to the version one
+                            schema. However, if the application supports both version one and two
+                            by declaring both type IDs in the applications configuration, then
+                            version one instances will be returned using the version one schema, and
+                            version two instances will be returned using the version two schema.
+                            If this application wants to retrieve all instances using a common 
+                            schema (say version two), then is would specify the version two type
+                            ID in this parameter and all instances will be mapped to version two
+                            of the medication schema before being returned.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="ThingRequestGroup">
+        <sequence>
+            <annotation>
+                <documentation>
+                    <summary>
+                        Specifies a filter group to be used for retrieving things from a record.
+                    </summary>
+                    <remarks>
+                        Each group is independent of the other groups and is distinguished by
+                        the name. Each clause in this group is AND'd together except the id 
+                        clause which is OR'd with the other clauses.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <choice>
+                <element name="id" type="wc-types:guid" minOccurs="0" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies thing ids that need to be returned.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="key" type="wc-thing:ThingKey" minOccurs="0" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies keys of things that need to be returned.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="client-thing-id" type="wc-types:string255"
+                         minOccurs="0" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies client assigned ids of things that need to be returned.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+            </choice>
+            <element name="filter" type="this:ThingFilterSpec"
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies a filter for things to be retrieved based on the properties 
+                            of the thing.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="format" type="this:ThingFormatSpec">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies a view for the results. 
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+                
+            <element name="current-version-only" type="boolean" 
+                minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies whether or not we should return only the current version 
+                            of things that satisfy the filter. 
+                        </summary>
+                        <remarks>
+                            This is true by default. If set to false all the versions of the 
+                            thing are returned.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+        <attribute name="name" type="string" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+                        Name of this request group.  
+                    </summary>
+                    <remarks>
+                        This is used to distinguish this group from other groups that 
+                        are specified as part of this same search.
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+        <attribute name="max" type="nonNegativeInteger" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+                        The maximum number of items to be returned for this group.
+                    </summary>
+                </documentation>
+            </annotation>
+        </attribute>
+        <attribute name="max-full" type="nonNegativeInteger" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+                        Maximum number of "full" items to be returned for this group.
+                    </summary>
+                    <remarks>
+                        For each request, the server might set a maximum number for complete things that might be returned.
+                        Past this maximum, the server will return the list of thing-ids of the results. To retrieve the things represented
+                        by these ids, additional GetThings calls can be made with these thing ids supplied in the ThingRequestGroup.
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="group" type="this:ThingRequestGroup" 
+                    minOccurs="1" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies the thing/things to be retrieved.
+                            </summary>
+                            <remarks>
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

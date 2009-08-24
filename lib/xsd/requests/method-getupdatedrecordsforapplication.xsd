@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.GetUpdatedRecordsForApplication"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-GETUPDATEDRECORDSFORAPPLICATION.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetUpdatedRecordsForApplication method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Gets a list of records for an application with things that
+                have been updated since a specified date.
+            </summary>
+
+            <remarks>
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- GetUpdatedRecordsForApplication - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="update-date" type="dateTime" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The date that should be used to when evaluating which record
+                                identifiers should be returned.
+                            </summary>
+
+                            <remarks>
+                                If no date is specified, then all records for a requesting
+                                application will be returned that contain an instance of the 
+                                thing-type-id specified.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

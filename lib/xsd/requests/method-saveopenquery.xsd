@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.SaveOpenQuery"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-request="urn:com.microsoft.wc.request"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-SAVEOPENQUERY.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for SaveOpenQuery method
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <import
+        namespace="urn:com.microsoft.wc.request"
+        schemaLocation="request.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Saves an open query and returns the query identifier.
+            </summary>
+
+            <remarks>
+                An open query is a saved request that may be invoked given the
+                returned query identifier issued by Microsoft Health Services.
+                The saved query is invoked by calling the openquery.ashx HTTP
+                handler providing the query identifier, id, as the HTTP query
+                parameter.<br/>
+                For example,<br/>
+                https://&lt;server&gt;/wildcat/openquery.ashx?id=9C4C77CF-1DF0-4c41-BD3D-EC9232B5BC8A
+                will invoke a saved request that corresponds to the specified
+                identifier.<br/>
+                <br/>
+                Currently the only supported request method of a saved query
+                is GetThings. Attempting to save queries for other methods
+                will result in the INVALID_OPENQUERY error.<br/>
+                <br/>
+                Security warning: invocation of the saved queries does
+                not require authentication or authorization when the
+                openquery.ashx handler is called. Anyone that knows the
+                query identifier may successfully execute it and obtain
+                the results.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the
+                        SaveOpenQuery method specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="expires" type="int" 
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Optional. Time in minutes from open query
+                                creation until this open query expires.
+                                Expired open queries no longer exists in
+                                the system, and don't need an explicit 
+                                call to DeleteOpenQuery to remove them.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="pin-code" type="wc-types:string128" 
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Optional PIN to protect this open query from
+                                unauthorized access.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="note" type="wc-types:string128"
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Optional note attached to this open query.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <!-- method name -->
+                <element name="method" type="string" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The name of the method the open query will call.
+                            </summary>
+
+                            <remarks>
+                                Currently the only supported request method of a
+                                saved query is GetThings. Attempting to save
+                                queries for other methods will result in the
+                                INVALID_OPENQUERY error.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <!-- method version -->
+                <element name="method-version" type="int" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The version of the method the open query will call.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <!-- record id (if appropriate for method) -->
+                <element name="record-id" type="wc-types:guid"
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The unique identifier for the health record that
+                                the open query will run against.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <!-- optional culture info -->
+                <element name="language" type="wc-types:iso639-1"
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The language that will be used for any localizable
+                                strings or data when the open query is run.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <element name="country" type="wc-types:iso3166"
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The country that will be used for any localizable
+                                strings or data when open query is run.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <!-- optional xsl to transform FINAL result (request.xsd) -->
+                <element name="final-xsl" type="string"
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The XSL used for transforming the results.
+                            </summary>
+
+                            <remarks>
+                                If this parameter is specified the resulting XML
+                                will be transformed using this XSL to produce
+                                the final response that will be sent to the caller.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="info" type="wc-request:Info" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                              The request XML that will be sent to
+                              Microsoft HealthVault when the open query is run.
+                            </summary>
+
+                            <remarks>
+                                This XML is not modified by the SaveOpenQuery
+                                or method processor or the open query handler.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

@@ -1,0 +1,17 @@
+<schema xmlns:concern="urn:com.microsoft.wc.thing.concern" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.concern"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><annotation><documentation><type-id>AEA2E8F2-11DD-4A7D-AB43-1D58764EBC19</type-id><type-name>Concern</type-name><wrapper-class-name>Concern</wrapper-class-name><wrapper-class-fwlink>136077</wrapper-class-fwlink><sample-xml-fwlink>136078</sample-xml-fwlink><data-type-guide-fwlink>136076</data-type-guide-fwlink><summary>
+                A concern that a person has about a condition or life issue.           
+            </summary><remarks>
+                Concerns are more general than conditions, and are about the person's feelings. Examples include
+                "concerned about managing a chronic condition", "family issues", "emotional issues", etc. 
+            </remarks></documentation></annotation><element name="concern"><complexType><annotation><documentation><summary>
+                        A concern that a person has about a condition or life issue.           
+                    </summary><remarks>
+                        Concerns are more general than conditions, and are about the person's feelings. Examples include
+                        "concerned about managing a chronic condition", "family issues", "emotional issues", etc. 
+                    </remarks></documentation></annotation><sequence><element name="description" type="t:codable-value"><annotation><documentation><summary>
+                                Description of the concern.
+                            </summary><preferred-vocabulary>concern-description</preferred-vocabulary></documentation></annotation></element><element name="status" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The state of the concern.
+                            </summary><remarks>
+                                Examples include active or inactive.
+                            </remarks><preferred-vocabulary>concern-status</preferred-vocabulary></documentation></annotation></element></sequence></complexType></element></schema>

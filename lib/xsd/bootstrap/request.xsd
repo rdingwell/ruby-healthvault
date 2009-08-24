@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<schema
+    targetNamespace="urn:com.microsoft.wc.request"
+    xmlns:wc-request="urn:com.microsoft.wc.request"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+    <!--
+
+    REQUEST.XSD
+    Microsoft Wildcat
+
+    Platform API: Incoming request schema
+
+    -->
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+    <complexType name="Xsl">
+        <simpleContent>
+            <extension base="string">
+                <attribute name="content-type"
+                    type="wc-types:string128" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="Info">
+        <sequence>
+            <any minOccurs="0" maxOccurs="unbounded"
+                namespace="##any" processContents="skip">
+            </any>
+        </sequence>
+    </complexType>
+    <complexType name="OfflinePersonInfo">
+        <sequence>
+            <element name="offline-person-id" type="wc-types:guid" >
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="AuthenticatedSessionInfo">
+        <sequence>
+            <element name="auth-token" type="string" >
+            </element>
+
+            <choice minOccurs="0" maxOccurs="1">
+                <element name="user-auth-token" type="string">
+                </element>
+
+                <element name="offline-person-info"
+                    type="wc-request:OfflinePersonInfo">
+                </element>
+            </choice>
+        </sequence>
+    </complexType>
+    <complexType name="Header">
+        <sequence>
+            <element name="method" type="string" >
+            </element>
+            <element name="method-version" type="int" >
+            </element>
+            <element name="target-person-id" type="wc-types:guid"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="record-id" type="wc-types:guid"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <choice minOccurs="1" maxOccurs="1">
+                <element name="app-id" type="wc-types:guid" >
+                </element>
+                <element name="auth-session" 
+                    type="wc-request:AuthenticatedSessionInfo" >
+                </element>
+            </choice>
+            <element name="language" type="wc-types:iso639-1"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="country" type="wc-types:iso3166"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="final-xsl" type="wc-request:Xsl"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="msg-time" type="dateTime" >
+            </element>
+            <element name="msg-ttl" type="nonNegativeInteger" >
+            </element>
+            <element name="version" type="wc-types:Version"
+                minOccurs="1" maxOccurs="1" >
+            </element>
+            <element name="info-hash" type="wc-types:HashFinalized"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+        </sequence>
+    </complexType>
+    <element name="request">
+        <complexType>
+            <sequence>
+                <element name="auth" type="wc-types:HMACFinalized"
+                    minOccurs="0" maxOccurs="1">
+                </element>
+                <element name="header" type="wc-request:Header" >
+                </element>
+                <element name="info" type="wc-request:Info" >
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

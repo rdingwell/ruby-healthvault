@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Thing::Allergy::Allergy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Thing::Allergy::Allergy</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../../files/lib/wc_data/generated/thing/allergy/allergy_rb.html">
+                lib/wc_data/generated/thing/allergy/allergy.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M002199">allergen_code</a>&nbsp;&nbsp;
+      <a href="#M002198">allergen_code=</a>&nbsp;&nbsp;
+      <a href="#M002197">allergen_type</a>&nbsp;&nbsp;
+      <a href="#M002196">allergen_type=</a>&nbsp;&nbsp;
+      <a href="#M002195">first_observed</a>&nbsp;&nbsp;
+      <a href="#M002194">first_observed=</a>&nbsp;&nbsp;
+      <a href="#M002205">is_negated</a>&nbsp;&nbsp;
+      <a href="#M002204">is_negated=</a>&nbsp;&nbsp;
+      <a href="#M002191">name</a>&nbsp;&nbsp;
+      <a href="#M002190">name=</a>&nbsp;&nbsp;
+      <a href="#M002206">new</a>&nbsp;&nbsp;
+      <a href="#M002193">reaction</a>&nbsp;&nbsp;
+      <a href="#M002192">reaction=</a>&nbsp;&nbsp;
+      <a href="#M002203">treatment</a>&nbsp;&nbsp;
+      <a href="#M002202">treatment=</a>&nbsp;&nbsp;
+      <a href="#M002201">treatment_provider</a>&nbsp;&nbsp;
+      <a href="#M002200">treatment_provider=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M002206" class="method-detail">
+        <a name="M002206"></a>
+
+        <div class="method-heading">
+          <a href="#M002206" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002206-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002206-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 142</span>
+142:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+143:           <span class="ruby-keyword kw">super</span>
+144:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'allergy'</span>
+145:         
+146:           
+147:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'name'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Codablevalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+148:             
+149:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Codablevalue</span>.<span class="ruby-identifier">new</span>
+150:             
+151:           
+152:         
+153:           
+154:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'reaction'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'reaction'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Codablevalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+155:             
+156:           
+157:         
+158:           
+159:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'first-observed'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'first-observed'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Approxdatetime</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+160:             
+161:           
+162:         
+163:           
+164:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'allergen-type'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'allergen-type'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Codablevalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+165:             
+166:           
+167:         
+168:           
+169:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'allergen-code'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'allergen-code'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Codablevalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+170:             
+171:           
+172:         
+173:           
+174:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'treatment-provider'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'treatment-provider'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Person</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+175:             
+176:           
+177:         
+178:           
+179:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'treatment'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'treatment'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Codablevalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+180:             
+181:           
+182:         
+183:           
+184:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'is-negated'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'is-negated'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">8</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+185:             
+186:           
+187:         
+188:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M002199" class="method-detail">
+        <a name="M002199"></a>
+
+        <div class="method-heading">
+          <a href="#M002199" class="method-signature">
+          <span class="method-name">allergen_code</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002199-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002199-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 91</span>
+91:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">allergen_code</span>
+92:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'allergen-code'</span>][<span class="ruby-identifier">:value</span>]
+93:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002198" class="method-detail">
+        <a name="M002198"></a>
+
+        <div class="method-heading">
+          <a href="#M002198" class="method-signature">
+          <span class="method-name">allergen_code=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The clinical allergen code. <b>preferred-vocabulary</b>:
+icd9cm <em>value</em> is a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002198-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002198-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 86</span>
+86:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">allergen_code=</span>(<span class="ruby-identifier">value</span>)
+87:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'allergen-code'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+88:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002197" class="method-detail">
+        <a name="M002197"></a>
+
+        <div class="method-heading">
+          <a href="#M002197" class="method-signature">
+          <span class="method-name">allergen_type</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002197-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002197-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 75</span>
+75:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">allergen_type</span>
+76:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'allergen-type'</span>][<span class="ruby-identifier">:value</span>]
+77:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002196" class="method-detail">
+        <a name="M002196"></a>
+
+        <div class="method-heading">
+          <a href="#M002196" class="method-signature">
+          <span class="method-name">allergen_type=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The allergen type provides a general category of the source
+of the allergic <a href="Allergy.html#M002193">reaction</a>.
+<b>remarks</b>: Examples include medication (penicillin, sulfonamides,
+etc.), food (peanuts, shell fish, wheat, etc.), animal (bee stings, canine,
+feline, etc.), plants (ragweed, birch, etc.), environmental (smoke, smog,
+dust, etc.). <b>preferred-vocabulary</b>: allergen-type <em>value</em> is a
+<a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002196-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002196-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 70</span>
+70:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">allergen_type=</span>(<span class="ruby-identifier">value</span>)
+71:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'allergen-type'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+72:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002195" class="method-detail">
+        <a name="M002195"></a>
+
+        <div class="method-heading">
+          <a href="#M002195" class="method-signature">
+          <span class="method-name">first_observed</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../../Dates/Approxdatetime.html">HealthVault::WCData::Dates::Approxdatetime</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002195-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002195-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 58</span>
+58:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">first_observed</span>
+59:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'first-observed'</span>][<span class="ruby-identifier">:value</span>]
+60:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002194" class="method-detail">
+        <a name="M002194"></a>
+
+        <div class="method-heading">
+          <a href="#M002194" class="method-signature">
+          <span class="method-name">first_observed=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The approximate date and time when the allergy was first
+observed. <em>value</em> is a <a
+href="../../Dates/Approxdatetime.html">HealthVault::WCData::Dates::Approxdatetime</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002194-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002194-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 53</span>
+53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">first_observed=</span>(<span class="ruby-identifier">value</span>)
+54:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'first-observed'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+55:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002205" class="method-detail">
+        <a name="M002205"></a>
+
+        <div class="method-heading">
+          <a href="#M002205" class="method-signature">
+          <span class="method-name">is_negated</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002205-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002205-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 136</span>
+136:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_negated</span>
+137:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'is-negated'</span>][<span class="ruby-identifier">:value</span>]
+138:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002204" class="method-detail">
+        <a name="M002204"></a>
+
+        <div class="method-heading">
+          <a href="#M002204" class="method-signature">
+          <span class="method-name">is_negated=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: True if the allergic reation is negated with <a
+href="Allergy.html#M002203">treatment</a>. <em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002204-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002204-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 131</span>
+131:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_negated=</span>(<span class="ruby-identifier">value</span>)
+132:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'is-negated'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+133:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002191" class="method-detail">
+        <a name="M002191"></a>
+
+        <div class="method-heading">
+          <a href="#M002191" class="method-signature">
+          <span class="method-name">name</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002191-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002191-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 27</span>
+27:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
+28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>]
+29:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002190" class="method-detail">
+        <a name="M002190"></a>
+
+        <div class="method-heading">
+          <a href="#M002190" class="method-signature">
+          <span class="method-name">name=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <b>summary</b>: The <a href="Allergy.html#M002191">name</a>
+of the allergy. <em>value</em> is a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002190-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002190-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 22</span>
+22:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name=</span>(<span class="ruby-identifier">value</span>)
+23:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+24:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002193" class="method-detail">
+        <a name="M002193"></a>
+
+        <div class="method-heading">
+          <a href="#M002193" class="method-signature">
+          <span class="method-name">reaction</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002193-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002193-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 43</span>
+43:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reaction</span>
+44:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'reaction'</span>][<span class="ruby-identifier">:value</span>]
+45:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002192" class="method-detail">
+        <a name="M002192"></a>
+
+        <div class="method-heading">
+          <a href="#M002192" class="method-signature">
+          <span class="method-name">reaction=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: A description of a typical <a
+href="Allergy.html#M002193">reaction</a> to the allergen.
+<b>preferred-vocabulary</b>: icd9cm <em>value</em> is a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002192-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002192-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 38</span>
+38:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reaction=</span>(<span class="ruby-identifier">value</span>)
+39:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'reaction'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+40:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002203" class="method-detail">
+        <a name="M002203"></a>
+
+        <div class="method-heading">
+          <a href="#M002203" class="method-signature">
+          <span class="method-name">treatment</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002203-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002203-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 121</span>
+121:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">treatment</span>
+122:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'treatment'</span>][<span class="ruby-identifier">:value</span>]
+123:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002202" class="method-detail">
+        <a name="M002202"></a>
+
+        <div class="method-heading">
+          <a href="#M002202" class="method-signature">
+          <span class="method-name">treatment=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The possible <a href="Allergy.html#M002203">treatment</a>
+description for this allergy. <em>value</em> is a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002202-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002202-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 116</span>
+116:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">treatment=</span>(<span class="ruby-identifier">value</span>)
+117:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'treatment'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+118:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002201" class="method-detail">
+        <a name="M002201"></a>
+
+        <div class="method-heading">
+          <a href="#M002201" class="method-signature">
+          <span class="method-name">treatment_provider</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Person.html">HealthVault::WCData::Thing::Types::Person</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002201-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002201-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 106</span>
+106:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">treatment_provider</span>
+107:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'treatment-provider'</span>][<span class="ruby-identifier">:value</span>]
+108:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002200" class="method-detail">
+        <a name="M002200"></a>
+
+        <div class="method-heading">
+          <a href="#M002200" class="method-signature">
+          <span class="method-name">treatment_provider=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: Information about the <a
+href="Allergy.html#M002203">treatment</a> provider for this allergy.
+<em>value</em> is a <a
+href="../Types/Person.html">HealthVault::WCData::Thing::Types::Person</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002200-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002200-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/allergy/allergy.rb, line 101</span>
+101:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">treatment_provider=</span>(<span class="ruby-identifier">value</span>)
+102:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'treatment-provider'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+103:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

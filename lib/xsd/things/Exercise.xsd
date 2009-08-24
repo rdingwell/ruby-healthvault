@@ -1,0 +1,88 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.exercise" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.exercise"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>85a21ddb-db20-4c65-8d30-33c899ccf612</type-id><type-name>Exercise</type-name><version>2</version><wrapper-class-name>Exercise</wrapper-class-name><wrapper-class-fwlink>136119</wrapper-class-fwlink><sample-xml-fwlink>136120</sample-xml-fwlink><data-type-guide-fwlink>136118</data-type-guide-fwlink><summary>
+                Records the completion of an exercise.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><complexType name="StructuredNameValue"><sequence><element name="name" type="t:coded-value"><annotation><documentation><summary>
+                            The name of the information stored in this detail.
+                        </summary><remarks>
+                            The units of the information are defined in the vocabulary key.
+                            <br />
+                            Example: Average heartrate uses the key AverageHeartrate_BPM.
+                            Example: Calories burned uses the key CaloriesBurned_calories.
+                        </remarks><preferred-vocabulary>exercise-detail-names</preferred-vocabulary></documentation></annotation></element><element name="value" type="t:structured-measurement"><annotation><documentation><summary>
+                            The value of the detail.
+                        </summary><remarks>
+                            For example, to store an average heartrate of 125, place 125 in the value element and 
+                            set the unit to "BPM".
+                            <br />
+                            Units should be coded using the exercise-units vocabulary.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="ExerciseSegment"><annotation><documentation><summary>
+                    Information pertaining to a portion of the overall exercise.
+                </summary><remarks>
+                    This is typically used to store information about separate laps in a race or individual events within
+                    a triathlon.
+                </remarks></documentation></annotation><sequence><element name="activity" type="t:codable-value"><annotation><documentation><summary>
+                            The type of activity for this segment.
+                        </summary></documentation></annotation></element><element name="title" type="string" minOccurs="0"><annotation><documentation><summary>
+                            A descriptive title for this segment.
+                        </summary><remarks>
+                            Examples: Lap 1, bicycle leg, first half.
+                        </remarks></documentation></annotation></element><element name="distance" type="t:length-value" minOccurs="0"><annotation><documentation><summary>
+                            The distance covered in the segment.
+                        </summary><remarks>
+                            Distances are stored in meters. The application
+                            must convert the distance entered by the user
+                            into meters and should also store the distance
+                            and units entered by the user in the display-value
+                            so that it can be displayed to the user in their
+                            preferred unit of measure when viewing the data.
+                        </remarks></documentation></annotation></element><element name="duration" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The duration of this segment in minutes.
+                        </summary></documentation></annotation></element><element name="offset" type="t:nonNegativeDouble" minOccurs="0"><annotation><documentation><summary>
+                            The offset of this segment from the start of the exercise, measured in minutes.
+                        </summary></documentation></annotation></element><element name="detail" type="this:StructuredNameValue" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Additional information about the segment.
+                        </summary></documentation></annotation></element></sequence></complexType><element name="exercise"><complexType><annotation><documentation><summary>
+                        Records the completion of an exercise.
+                    </summary><remarks>
+                        Sample data - such as heartrate values collected at intervals during the exercise - are
+                        stored using the exercise sample type. All samples for an exercise should be added to the related
+                        items collection for the exercise. 
+                        <br />
+                        The exercise type is an update to the aerobic exercise session type, and there are certain
+                        complexities to supporting existing data. See "Using the Exercise Type"
+                        for more information. 
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:approx-date-time"><annotation><documentation><summary>
+                                The date and time when the exercise occurred.
+                            </summary></documentation></annotation></element><element name="activity" type="t:codable-value"><annotation><documentation><summary>
+                                The type of activity.
+                            </summary><remarks>
+                                Stores the overall activity for the exercise period.
+                                <br />
+                                Examples: Running, hiking, walking, golfing, dancing.
+                            </remarks><preferred-vocabulary>exercise-activities</preferred-vocabulary><preferred-vocabulary>aerobic-activities</preferred-vocabulary></documentation></annotation></element><element name="title" type="string" minOccurs="0"><annotation><documentation><summary>
+                                A descriptive title for the exercise.
+                            </summary><remarks>
+                                Examples: Hiking up Mt. Baker, 3-day walk, Memorial day triathlon.
+                        </remarks></documentation></annotation></element><element name="distance" type="t:length-value" minOccurs="0"><annotation><documentation><summary>
+                                The distance covered in the exercise.
+                            </summary><remarks>
+                                Distances are stored in meters. The application
+                                must convert the distance entered by the user
+                                into meters and should also store the distance
+                                and units entered by the user in the display-value
+                                so that it can be displayed to the user in their
+                                preferred unit of measure when viewing the data.
+                            </remarks></documentation></annotation></element><element name="duration" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                                The duration of the exercise in minutes.
+                            </summary></documentation></annotation></element><element name="detail" type="this:StructuredNameValue" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Additional information about the exercise.
+                            </summary><remarks>
+                                The detail information typically stores information that is specific to the type of exercise activity
+                                and any device used to measure it.
+                                <br />
+                                Examples: Average heart rate, total distance, average temperature, intensity.
+                            </remarks></documentation></annotation></element><element name="segment" type="this:ExerciseSegment" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Information pertaining to a portion of the overall exercise.
+                            </summary><remarks>
+                                This is typically used to store information about separate laps in a race or individual events within
+                                a triathlon.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

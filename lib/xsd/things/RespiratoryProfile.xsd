@@ -1,0 +1,33 @@
+<schema xmlns:a="urn:com.microsoft.wc.thing.respiratory-profile" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.respiratory-profile"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>5fd15cb7-b717-4b1c-89e0-1dbcf7f815dd</type-id><type-name>Respiratory Profile</type-name><effective-date-element>when</effective-date-element><wrapper-class-name>RespiratoryProfile</wrapper-class-name><wrapper-class-fwlink>136227</wrapper-class-fwlink><sample-xml-fwlink>136228</sample-xml-fwlink><data-type-guide-fwlink>136226</data-type-guide-fwlink><summary>
+                A summary of a person's respiratory condition.
+            </summary><remarks>
+                A person's respiratory profile is made up of a set of
+                answers to common questions and measurements that indicate the 
+                respiratory condition of the person.
+            </remarks></documentation></annotation><element name="respiratory-profile"><complexType><annotation><documentation><summary>
+                        A summary of a person's respiratory condition.
+                    </summary><remarks>
+                        A person's respiratory profile is made up of a set of
+                        answers to common questions and measurements that indicate the
+                        respiratory condition of the person.
+                    </remarks></documentation></annotation><sequence><element name="when" minOccurs="1" maxOccurs="1" type="d:date-time"><annotation><documentation><summary>
+                                The date/time when the respiratory profile
+                                answers and measurements were taken.
+                            </summary></documentation></annotation></element><element name="expiratory-flow-red-zone-upper-boundary" type="t:flow-value" minOccurs="0"><annotation><documentation><summary>
+                                The upper zone boundary for the red zone.
+                            </summary><remarks>
+                                This zone covers flow between 0 and the 
+                                specified value (measured in L/s).
+                            </remarks></documentation></annotation></element><element name="expiratory-flow-orange-zone-upper-boundary" type="t:flow-value" minOccurs="0"><annotation><documentation><summary>
+                                The upper zone boundary for the orange zone.
+                            </summary><remarks>
+                                This zone covers flow between the red zone
+                                upper boundary and the
+                                specified value (measured in L/s).
+                            </remarks></documentation></annotation></element><element name="expiratory-flow-yellow-zone-upper-boundary" type="t:flow-value" minOccurs="0"><annotation><documentation><summary>
+                                The upper zone boundary for the yellow zone.
+                            </summary><remarks>
+                                This zone covers flow between the orange zone
+                                upper boundary and the
+                                specified value (measured in L/s).
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

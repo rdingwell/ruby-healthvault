@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.SendInsecureMessageFromApplication"
+    xmlns:this="urn:com.microsoft.wc.methods.SendInsecureMessageFromApplication"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-SENDINSECUREMESSAGEFROMAPPLICATIONS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for SendInsecureMessageFromApplication method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Sends an insecure email message originating from the 
+                application to the specified recipients. 
+            </summary>
+
+            <remarks>
+                An email gets sent from a specified mailbox name within the
+                application to the specified recipients. The mailbox name
+                that's specified is appended to the application's domain name
+                to form the e-mail address of the sender. The recipients can 
+                be specified by their email address, by using their 
+                Microsoft Health account unique identifier, or by specifying 
+                the health record unique identifier. If the health record 
+                unique identifier is specified, then all custodians of the 
+                record will receive the message.
+
+                This method returns an error if the application's domain name
+                hasn't been previously defined (usually part of application 
+                registration). Contact the Microsoft Health Partner team at:
+                hsfb@microsoft.com if this has not been set. 
+            </remarks>
+            <method-visibility>Public</method-visibility>
+            <errors>
+                <error id="MAIL_ADDRESS_MALFORMED">
+                    If a recipient address is specified and the email
+                    address is not a properly formatted email address.
+                </error>
+                <error id="INVALID_PERSON">
+                    If a recipient address is specified using a
+                    Microsoft Health account unique identifier and the
+                    account does not exist or is not active.
+                </error>
+                <error id="EMAIL_NOT_VALIDATED">
+                    If a recipient address is specified using a
+                    Microsoft Health account unique identifier or the
+                    unique health record identifier and the
+                    email address for the account has not be validated,
+                    or the sender's e-mail address has not been validated. 
+                </error>
+                <error id="INVALID_RECORD">
+                    If the health record unique identifier is specified
+                    as the recipient and the record could not be found.
+                </error>
+                <error id="INVALID_RECORD_STATE">
+                    If the health record unique identifier is specified
+                    as the recipient and the record is not in the active
+                    or read-only state.
+                </error>
+                <error id="DOMAIN_NAME_NOT_SET">
+                    If the domain name of the application hasn't been set.  
+                </error>
+            </errors>
+        </documentation>
+    </annotation>
+
+    <!-- SendInsecureMessage - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <!-- leaving this as a separate type since we may choose to add other fields
+    later. e.g. reply-to, -->
+    <complexType name="FromMailbox">
+        <annotation>
+            <documentation>
+                <summary>
+
+                </summary>
+
+                <remarks>
+                This specifies a mailbox within the application that is 
+                sending the message. 
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="mailbox-name" type="wc-types:string255" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                        The app specified name of the mailbox from which
+                        the message is being sent.
+                        </summary>
+
+                        <remarks>
+                        This is appended to the domain name of the 
+                        application to form the From email address. 
+                        This parameter should only contain the characters 
+                        before the @ symbol of the email address.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="name" type="wc-types:string255" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                           The display name of the sender
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>        
+    
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+
+                <element name="from-mailbox" type="this:FromMailbox" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                            The mailbox name is an application specified
+                            string which identifies the sender within the
+                            application.
+                            </summary>
+
+                            <remarks>
+                            This mailbox name will be appended to the app's 
+                            domain name to form the message's From email 
+                            address.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="rcpt-address" type="wc-types:RcptAddress"
+                    minOccurs="0" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The email address(es) to send the message to.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="rcpt-person" type="wc-types:RcptPerson"
+                    minOccurs="0" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The Microsoft Health account(s) to send the
+                                message to.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="rcpt-record" type="wc-types:RcptRecord"
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies that custodians of the health record
+                                identifier in the request envelope, should
+                                be sent the message. 
+                            </summary>
+                            
+                            <remarks>
+                                The recordId is passed in the request header.
+                                The application making the request and the 
+                                person through which the authorization was 
+                                obtained must be authorized for the record.
+                                The person must be either authenticated, or
+                                if the person is offline, their person Id
+                                specified through the offline person info in 
+                                the request header.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+                <!-- uses request rec -->                
+
+                <element name="subject" type="string"
+                    minOccurs="1" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The subject of the message.
+                            </summary>
+
+                            <remarks>
+                                This will show up in the subject field
+                                of the email message.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <element name="text-body" type="string"
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A textual representation of the message.
+                            </summary>
+
+                            <remarks>
+                                The message can consist of two parts. One
+                                part of the message can consist of richly
+                                formatted text using HTML and the other must
+                                be plain text to support email programs that
+                                don't support the rich views or those where
+                                rich viewing has been disabled.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="html-body" type="string"
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                An HTML representation of the message.
+                            </summary>
+
+                            <remarks>
+                                The message can consist of two parts. One
+                                part of the message can consist of richly
+                                formatted text using HTML and the other must
+                                be plain text to support email programs that
+                                don't support the rich views or those where
+                                rich viewing has been disabled.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+            </sequence>
+        </complexType>
+    </element>
+</schema>

@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.CreateAuthenticatedSessionToken"
+    xmlns:this="urn:com.microsoft.wc.methods.CreateAuthenticatedSessionToken"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-auth="urn:com.microsoft.wc.auth"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+    METHOD-CreateAuthenticatedSessionToken.XSD
+    Microsoft HealthVault
+
+    Platform API: Info schema for CreateAuthenticatedSessionToken method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+    <import
+        namespace="urn:com.microsoft.wc.auth"
+        schemaLocation="auth.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Provides a way for clients to establish an authenticated
+                session with Microsoft HealthVault.
+            </summary>
+
+            <remarks>
+                Once the authenticated session is established, the client
+                may call web methods that is authorized to call.  
+                The authorization context depends upon the credential type and 
+                the subsequent authenticated session context.  Both
+                application and user authorization policies apply to what
+                clients may call.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- this is a scoped down wc-types:Credential -->
+    <complexType name="Credential">
+        <annotation>
+            <documentation>
+                <summary>
+                    Credential in which the authenticated session
+                    will be in the context of.
+                </summary>
+
+                <remarks>
+                    The credential serves two purposes.  First,
+                    it must be verified as valid.  Once verified,
+                    the credential provides the authentication context
+                    for the session.
+                </remarks>
+            </documentation>
+        </annotation>
+        <choice>
+            <element name="cardspaceauthsession"
+                type="wc-types:CardSpaceCred">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A CardSpace SAML token.
+                        </summary>
+
+                        <remarks>
+                            The SAMLE token is generated via CardSpace using
+                            GetToken.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="appserver"
+                type="wc-types:AppServerCred">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Web application server credential.
+                        </summary>
+
+                        <remarks>
+                            The credential is a signed request showing 
+                            proof-of-posession of the application-specific 
+                            private key.  This credential may be used to
+                            establish two modes of authentication. First,
+                            it may be used to create an trusted anonymous session
+                            in the context of the application.  Secondly,
+                            it may be used to create a trusted session in 
+                            the context of a specified user.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <!--- temporary type for auth-plus release -->
+            <element name="userpassauthsession"
+                type="wc-auth:UserPassAuthSessionCred">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A credential consisting of username and password.
+                        </summary>
+
+                        <remarks>
+                            This is for test purposes only.
+                            Both the username and password are in plaintext.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </choice>
+    </complexType>
+
+    <!-- CreateAuthenticatedSessionToken - - - - - - - - - - - - - - - - - - - - - - - -->
+    <complexType name="AuthTokenInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    Parameters for creating an authenticated session token.
+                </summary>
+
+                <remarks>
+                    The caller must provide the application information as well
+                    as the user credential for which the session will be in 
+                    the context of.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="app-id" 
+                type="wc-types:AppInfo"
+                minOccurs="1" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Application identifier for the authenticated session.
+                        </summary>
+
+                        <remarks>
+                            In order for a session to be created,
+                            the user must grant access to the application to 
+                            run in the context of the user.  If permission
+                            has not been granted, this will result in a
+                            access denied error.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="credential"
+                type="this:Credential">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Credential in which the authenticated session
+                            will be in the context of.
+                        </summary>
+
+                        <remarks>
+                            The credential serves two purposes.  First,
+                            it must be verified as valid.  Once verified,
+                            the credential provides the authentication context
+                            for the session.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        Creates an authenticated session token.
+                    </summary>
+
+                    <remarks>
+                        The authenticated session is in the context
+                        of the provided credential and the application.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="auth-info"
+                    type="this:AuthTokenInfo">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Parameters for creating an authenticated session token.
+                            </summary>
+
+                            <remarks>
+                                The caller must provide the application information as well
+                                as the user credential for which the session will be in 
+                                the context of.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>
+
+

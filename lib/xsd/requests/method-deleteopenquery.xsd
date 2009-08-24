@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.DeleteOpenQuery"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-DELETEOPENQUERY.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for DeleteOpenQuery method
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Deletes a saved open query given the query identifier.
+            </summary>
+
+            <remarks>
+                Deletes a previously created query using the SaveOpenQuery
+                method. Expired open queries no longer exists in the 
+                system, and don't need an explicit call to DeleteOpenQuery 
+                to remove them.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="query-id" type="wc-types:guid" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The identifier of the saved query that is to be deleted.
+                        </summary>
+
+                        <remarks>
+                            When a query is saved by the SaveOpenQuery method
+                            a unique identifier is issued by the Microsoft
+                            Health Services. This identifier is used to delete
+                            the saved query by calling the DeleteOpenQuery method.
+                        </remarks>
+                    </documentation>
+                </annotation>
+                </element>
+
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

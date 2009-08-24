@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Methods::Response::GetThingType::Versions</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Methods::Response::GetThingType::Versions</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../../../files/lib/wc_data/generated/methods/response/get_thing_type/versions_rb.html">
+                lib/wc_data/generated/methods/response/get_thing_type/versions.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M003433">add_version_info</a>&nbsp;&nbsp;
+      <a href="#M003438">new</a>&nbsp;&nbsp;
+      <a href="#M003434">remove_version_info</a>&nbsp;&nbsp;
+      <a href="#M003437">thing_type_id</a>&nbsp;&nbsp;
+      <a href="#M003436">thing_type_id=</a>&nbsp;&nbsp;
+      <a href="#M003435">version_info</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M003438" class="method-detail">
+        <a name="M003438"></a>
+
+        <div class="method-heading">
+          <a href="#M003438" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003438-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003438-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 55</span>
+55:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+56:           <span class="ruby-keyword kw">super</span>
+57:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'versions'</span>
+58:         
+59:           
+60:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'version-info'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span><span class="ruby-operator">::</span><span class="ruby-constant">GetThingType</span><span class="ruby-operator">::</span><span class="ruby-constant">VersionInfo</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+61:           
+62:         
+63:           
+64:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'thing-type-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:attribute</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+65:             
+66:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>.<span class="ruby-identifier">new</span>
+67:             
+68:           
+69:         
+70:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M003433" class="method-detail">
+        <a name="M003433"></a>
+
+        <div class="method-heading">
+          <a href="#M003433" class="method-signature">
+          <span class="method-name">add_version_info</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="VersionInfo.html">HealthVault::WCData::Methods::Response::GetThingType::VersionInfo</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003433-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003433-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 21</span>
+21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_version_info</span>(<span class="ruby-identifier">value</span>)
+22:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+23:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003434" class="method-detail">
+        <a name="M003434"></a>
+
+        <div class="method-heading">
+          <a href="#M003434" class="method-signature">
+          <span class="method-name">remove_version_info</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../../../HealthVault.html">HealthVault</a>::<a
+href="VersionInfo.html">WCData::Methods::Response::GetThingType::VersionInfo</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003434-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003434-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 26</span>
+26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_version_info</span>(<span class="ruby-identifier">value</span>)
+27:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+28:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003437" class="method-detail">
+        <a name="M003437"></a>
+
+        <div class="method-heading">
+          <a href="#M003437" class="method-signature">
+          <span class="method-name">thing_type_id</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../../../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003437-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003437-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 49</span>
+49:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id</span>
+50:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>]
+51:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003436" class="method-detail">
+        <a name="M003436"></a>
+
+        <div class="method-heading">
+          <a href="#M003436" class="method-signature">
+          <span class="method-name">thing_type_id=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <b>summary</b>: The token that uniquely identifies a thing
+type. <b>remarks</b>: The thing-type-id should not be used by applications
+to reference the type as it is used only to group the types together.
+Instead, applications should use the version-type-id to reference the type.
+<em>value</em> is a <a
+href="../../../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003436-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003436-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 44</span>
+44:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id=</span>(<span class="ruby-identifier">value</span>)
+45:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+46:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003435" class="method-detail">
+        <a name="M003435"></a>
+
+        <div class="method-heading">
+          <a href="#M003435" class="method-signature">
+          <span class="method-name">version_info</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <b>summary</b>: The version information for a single
+version of a thing type. <b>returns</b>: a <a
+href="VersionInfo.html">HealthVault::WCData::Methods::Response::GetThingType::VersionInfo</a>
+Array
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003435-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003435-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 33</span>
+33:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version_info</span>
+34:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>][<span class="ruby-identifier">:value</span>]
+35:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

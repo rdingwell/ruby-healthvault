@@ -1,0 +1,80 @@
+<schema xmlns:a="urn:com.microsoft.wc.thing.cardiac-profile" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.cardiac-profile"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>adaf49ad-8e10-49f8-9783-174819e97051</type-id><type-name>Cardiac Profile</type-name><effective-date-element>when</effective-date-element><wrapper-class-name>CardiacProfile</wrapper-class-name><wrapper-class-fwlink>136071</wrapper-class-fwlink><sample-xml-fwlink>136072</sample-xml-fwlink><data-type-guide-fwlink>136070</data-type-guide-fwlink><summary>
+                A summary of a person's cardiac condition.
+            </summary><remarks>
+                A person's cardiac profile is made up of a set of
+                answers to common questions and measurements that indicate the 
+                cardiac condition of the person.
+            </remarks></documentation></annotation><element name="cardiac-profile"><complexType><annotation><documentation><summary>
+                        A summary of a person's cardiac condition.
+                    </summary><remarks>
+                        A person's cardiac profile is made up of a set of
+                        answers to common questions and measurements that indicate the
+                        cardiac condition of the person.
+                    </remarks></documentation></annotation><sequence><element name="when" minOccurs="1" maxOccurs="1" type="d:date-time"><annotation><documentation><summary>
+                                The date/time when the cardiac profile
+                                answers and measurements were taken.
+                            </summary></documentation></annotation></element><element name="on-hypertension-diet" minOccurs="0" maxOccurs="1" type="boolean"><annotation><documentation><summary>
+                                Whether the person is on a hypertension correcting
+                                diet or not.
+                            </summary><remarks>
+                                True if the person is on a hypertension
+                                correcting diet or false otherwise. This value,
+                                along with on-hypertension-medication,
+                                renal-failure-diagnosed, and diabetes-diagnosed
+                                can be used to determine a person's blood
+                                pressure zones.
+                            </remarks></documentation></annotation></element><element name="on-hypertension-medication" minOccurs="0" maxOccurs="1" type="boolean"><annotation><documentation><summary>
+                                Whether the person is on a hypertension correcting
+                                medication or not.
+                            </summary><remarks>
+                                True if the person is on a hypertension
+                                correcting medication or false otherwise. This value,
+                                along with on-hypertension-diet,
+                                renal-failure-diagnosed, and diabetes-diagnosed
+                                can be used to determine a person's blood
+                                pressure zones.
+                            </remarks></documentation></annotation></element><element name="renal-failure-diagnosed" minOccurs="0" maxOccurs="1" type="boolean"><annotation><documentation><summary>
+                                Whether the person has been diagnosed with
+                                renal failure.
+                            </summary><remarks>
+                                True if the person has been diagnosed with
+                                renal failure or false otherwise. This value,
+                                along with on-hypertension-diet,
+                                on-hypertension-medication, and diabetes-diagnosed
+                                can be used to determine a person's blood
+                                pressure zones.
+                            </remarks></documentation></annotation></element><element name="diabetes-diagnosed" minOccurs="0" maxOccurs="1" type="boolean"><annotation><documentation><summary>
+                                Whether the person has been diagnosed with
+                                diabetes.
+                            </summary><remarks>
+                                True if the person has been diagnosed with
+                                diabetes or false otherwise. This value,
+                                along with on-hypertension-diet,
+                                on-hypertension-medication, and
+                                renal-failure-diagnosed can be used to
+                                determine a person's blood pressure zones.
+                            </remarks></documentation></annotation></element><element name="has-family-heart-disease-history" minOccurs="0" type="boolean"><annotation><documentation><summary>
+                                Whether the person's family has a history of
+                                heart disease.
+                            </summary><remarks>
+                                True if there has been heart disease diagnosed
+                                for a family member, or false otherwise.
+                            </remarks></documentation></annotation></element><element name="has-family-stroke-history" minOccurs="0" type="boolean"><annotation><documentation><summary>
+                                Whether the person's family has a history of
+                                stroke.
+                            </summary><remarks>
+                                True if there has been stroke diagnosed
+                                for a family member, or false otherwise.
+                            </remarks></documentation></annotation></element><element name="has-personal-heart-disease-history" minOccurs="0" type="boolean"><annotation><documentation><summary>
+                                Whether the person has been diagnosed with
+                                heart disease.
+                            </summary><remarks>
+                                True if the person has been diagnosed with
+                                heart disease, or false otherwise.
+                            </remarks></documentation></annotation></element><element name="has-person-stroke-history" minOccurs="0" type="boolean"><annotation><documentation><summary>
+                                Whether the person has been diagnosed with a
+                                stroke.
+                            </summary><remarks>
+                                True if the person has had a stroke, or 
+                                false otherwise.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

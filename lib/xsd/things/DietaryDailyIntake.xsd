@@ -1,0 +1,51 @@
+<schema xmlns:diet="urn:com.microsoft.wc.thing.dietary-intake-daily" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.dietary-intake-daily"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>9c29c6b9-f40e-44ff-b24e-fba6f3074638</type-id><type-name>Daily Dietary Intake</type-name><wrapper-class-name>DietaryDailyIntake</wrapper-class-name><wrapper-class-fwlink>136089</wrapper-class-fwlink><sample-xml-fwlink>136090</sample-xml-fwlink><data-type-guide-fwlink>136088</data-type-guide-fwlink><summary>
+                The amount of dietary nutrients and minerals consumed
+                in a day.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><element name="dietary-intake-daily"><complexType><annotation><documentation><summary>
+                        The amount of dietary nutrients and minerals consumed 
+                        in a day. 
+                    </summary></documentation></annotation><sequence><element name="when" type="d:date"><annotation><documentation><summary>
+                                The date of consumption.
+                            </summary></documentation></annotation></element><element name="calories" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                                The amount of calories consumed in the day.
+                            </summary><remarks>
+                                Calories are measured in kilocalories (kCal).
+                            </remarks></documentation></annotation></element><element name="total-fat" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                                The total amount of fat consumed in the day.
+                            </summary><remarks>
+                                Fat is usually measured in grams (g).
+                            </remarks></documentation></annotation></element><element name="saturated-fat" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                                The total amount of saturated fat consumed in the
+                                day.
+                            </summary><remarks>
+                                Fat is usually measured in grams (g).
+                            </remarks></documentation></annotation></element><element name="trans-fat" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                                The total amount of trans fat consumed in the
+                                day.
+                            </summary><remarks>
+                                Fat is usually measured in grams (g).
+                            </remarks></documentation></annotation></element><element name="protein" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                                The amount of protein consumed in the day.
+                            </summary><remarks>
+                                Protein is usually measured in grams (g).
+                            </remarks></documentation></annotation></element><element name="total-carbohydrates" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                                The amount of carbohydrates consumed in the day.
+                            </summary><remarks>
+                                Carbohydrates are usually measured in grams (g).
+                            </remarks></documentation></annotation></element><element name="dietary-fiber" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                                The amount of dietary fiber consumed in the day.
+                            </summary><remarks>
+                                Dietary fiber is usually measured in grams (g).
+                            </remarks></documentation></annotation></element><element name="sugars" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                                The amount of sugars consumed in the day.
+                            </summary><remarks>
+                                Sugar is usually measured in grams (g).
+                            </remarks></documentation></annotation></element><element name="sodium" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                                The amount of sodiam consumed in the day.
+                            </summary><remarks>
+                                Sodium is usually measured in milligrams (mg).
+                            </remarks></documentation></annotation></element><element name="cholesterol" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                                The amount of cholesterol consumed in the day.
+                            </summary><remarks>
+                                Cholesterol is usually measured in milligrams (mg).
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

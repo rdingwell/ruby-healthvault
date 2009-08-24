@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.SaveOpenQuery"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-SAVEOPENQUERY.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for SaveOpenQuery method response
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Defines the response to a SaveOpenQuery.
+            </summary>
+
+            <remarks>
+                SaveOpenQuery is used to store a query that may be later
+                retrieved via an OpenQuery invocation.  See OpenQueryInfo
+                for further info.<br/>
+                GetOpenQueryInfo may be used to retrieve the following
+                OpenQueryInfo.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+
+            <errors>
+                <error id="INVALID_OPENQUERY">
+                    If the specified query method is not supported. Currently
+                    only GetThings method is supported.
+                </error>
+            </errors>
+        </documentation>
+    </annotation>
+
+    <element name="info"
+             type="wc-types:OpenQueryInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    The information describing the saved OpenQuery.
+                </summary>
+
+                <remarks>
+                    This information is used to invoke an OpenQuery
+                    after it is saved.
+                </remarks>
+            </documentation>
+        </annotation>
+    </element>
+
+</schema>
+

@@ -1,0 +1,43 @@
+<schema xmlns:ds="urn:com.microsoft.wc.thing.discharge-summary" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.discharge-summary"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>02EF57A2-A620-425A-8E92-A301542CCA54</type-id><type-name>Discharge Summary</type-name><wrapper-class-name>DischargeSummary</wrapper-class-name><wrapper-class-fwlink>136104</wrapper-class-fwlink><sample-xml-fwlink>136105</sample-xml-fwlink><data-type-guide-fwlink>136103</data-type-guide-fwlink><summary>
+                Information related to the discharge summary.
+            </summary><remarks>
+                This thing type describes the discharge summary of a person.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="discharge-summary"><complexType><annotation><documentation><summary>
+                        Information related to the discharge summary.
+                        </summary><remarks>
+                        This thing type describes the discharge summary of a person.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the report.
+                            </summary></documentation></annotation></element><element name="type" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The clinical type for discharge summary.
+                            </summary></documentation></annotation></element><element name="category" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The clinical category for discharge summary.
+                            </summary></documentation></annotation></element><element name="setting" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The clinical setting for discharge summary.
+                            </summary><preferred-vocabulary>note-setting</preferred-vocabulary></documentation></annotation></element><element name="specialty" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The medical specialty for discharge summary.
+                            </summary><preferred-vocabulary>medical-specialties</preferred-vocabulary></documentation></annotation></element><element name="text" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The discharge summary textual content.
+                            </summary></documentation></annotation></element><element name="primary-provider" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                The primary provider for discharge summary.
+                            </summary></documentation></annotation></element><element name="primary-provider-endorsement" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The primary provider endorsement for discharge summary.
+                            </summary></documentation></annotation></element><element name="secondary-provider" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                The secondary provider for discharge summary.
+                            </summary></documentation></annotation></element><element name="secondary-provider-endorsement" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The secondary provider endorsement for discharge summary.
+                            </summary></documentation></annotation></element><element name="discharge-date-time" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                The date and time of discharge.
+                            </summary></documentation></annotation></element><element name="admitting-diagnosis" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The admitting diagnosis for discharge summary.
+                            </summary><preferred-vocabulary>icd9cm</preferred-vocabulary></documentation></annotation></element><element name="principal-diagnosis" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The principal diagnonsis for discharge summary.
+                            </summary><preferred-vocabulary>icd9cm</preferred-vocabulary></documentation></annotation></element><element name="additional-diagnosis" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Additional diagnosis for discharge summary.
+                            </summary><preferred-vocabulary>icd9cm</preferred-vocabulary></documentation></annotation></element><element name="principal-procedure-physician" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                The primary procedure physician for discharge summary.
+                            </summary></documentation></annotation></element><element name="principal-procedure" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The principal procedure for discharge summary.
+                            </summary></documentation></annotation></element><element name="additional-procedure" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Any additional procedure for discharge summary.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

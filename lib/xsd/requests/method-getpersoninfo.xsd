@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.GetPersonInfo"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-GETPERSONINFO.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetPersonInfo method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Gets basic information about the authenticated person.
+            </summary>
+
+            <remarks>
+                GetPersonInfo is used to retrieve basic information about the
+                authenticated person, like, their name, email address,
+                application specific settings for the person, the selected
+                record for the application, and the records that the person
+                has authorized the application to use. It can also, optionally,
+                get the groups the person is a member of.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- GetPersonInfo - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method 
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any 
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="group-membership" type="boolean"
+                    minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Tells the method whether to return the groups the
+                                person is a member of.
+                            </summary>
+
+                            <remarks>
+                                If true, the groups the person is a member of are
+                                returned in the response.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

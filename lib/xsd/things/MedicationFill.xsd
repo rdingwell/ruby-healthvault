@@ -1,0 +1,34 @@
+<schema xmlns:med="urn:com.microsoft.wc.thing.medication-fill" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.medication-fill"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>167ecf6b-bb54-43f9-a473-507b334907e0</type-id><type-name>Medication Fill</type-name><wrapper-class-name>MedicationFill</wrapper-class-name><wrapper-class-fwlink>136194</wrapper-class-fwlink><sample-xml-fwlink>136195</sample-xml-fwlink><data-type-guide-fwlink>136193</data-type-guide-fwlink><summary>
+                Information related to filling a medication.
+            </summary><remarks>
+                This type contains information related to filling a medication, and is related to the medication type.
+                Instances of this type are typically linked to a medication instance using related items. 
+                For example, if the medication is prescribed, the medication fill describes typical information that a
+                pharmacy would add. 
+            </remarks></documentation></annotation><element name="medication-fill"><complexType><annotation><documentation><summary>
+                        Information related to filling a medication.
+                    </summary><remarks>
+                        This type contains information related to filling a medication, and is related to the medication type.
+                        Instances of this type are typically linked to a medication instance using related items. 
+                        For example, if the medication is prescribed, the medication fill describes typical information that a
+                        pharmacy would add. 
+                    </remarks></documentation></annotation><sequence><element name="name" type="t:codable-value"><annotation><documentation><summary>
+                                Name and clinical code for the medication.
+                             </summary><remarks>
+                                 This name should be understandable to the person taking
+                                 the medication, such as the brand name.
+                             </remarks><preferred-vocabulary>Rxnorm</preferred-vocabulary><preferred-vocabulary>NDC</preferred-vocabulary></documentation></annotation></element><element name="date-filled" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                Date the prescription was filled.
+                            </summary></documentation></annotation></element><element name="days-supply" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                                Number of days supply of medication.
+                            </summary></documentation></annotation></element><element name="next-refill-date" type="d:date" minOccurs="0"><annotation><documentation><summary>
+                                The date on which a prescription can be refilled.
+                            </summary></documentation></annotation></element><element name="refills-left" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                Number of medication refills left.
+                            </summary></documentation></annotation></element><element name="pharmacy" type="t:Organization" minOccurs="0"><annotation><documentation><summary>
+                                Pharmacy.
+                            </summary></documentation></annotation></element><element name="prescription-number" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form prescription number.
+                            </summary></documentation></annotation></element><element name="lot-number" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The lot number for the medication.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

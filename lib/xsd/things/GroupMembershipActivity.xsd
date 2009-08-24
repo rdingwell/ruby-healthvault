@@ -1,0 +1,13 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.group-membership-activity"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>e75fa095-31ed-4b30-b5f7-463963b5e734</type-id><type-name>Group Membership Activity</type-name><wrapper-class-name>GroupMembershipActivity</wrapper-class-name><wrapper-class-fwlink>136143</wrapper-class-fwlink><sample-xml-fwlink>136144</sample-xml-fwlink><data-type-guide-fwlink>136142</data-type-guide-fwlink><summary>
+                Describes an activity related to group membership.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><element name="group-membership-activity"><complexType><annotation><documentation><summary>
+                        Describes an activity related to group membership.
+                    </summary></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time of the activity.
+                            </summary></documentation></annotation></element><element name="activity" type="t:coded-value"><annotation><documentation><summary>
+                                The activity that occurred.
+                            </summary><remarks>
+                                For example: RecordAuthorizedForApplication.
+                            </remarks><preferred-vocabulary>group-membership-activities</preferred-vocabulary></documentation></annotation></element><element name="activity-info" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Additional information for this activity.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

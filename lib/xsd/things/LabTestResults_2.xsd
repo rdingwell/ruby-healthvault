@@ -1,0 +1,115 @@
+<schema xmlns:lab="urn:com.microsoft.wc.thing.lab-test-results" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.lab-test-results"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>5800eab5-a8c2-482a-a4d6-f1db25ae08c3</type-id><type-name>Lab Test Result</type-name><wrapper-class-name>LabTestResults</wrapper-class-name><wrapper-class-fwlink /><sample-xml-fwlink /><data-type-guide-fwlink /><summary>
+                A series of lab test results.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><complexType name="lab-test-results-group-type"><sequence><element name="group-name" type="t:codable-value"><annotation><documentation><summary>
+                            The name for this set of lab test results.
+                        </summary><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="laboratory-name" type="t:Organization" minOccurs="0"><annotation><documentation><summary>
+                                Name of the laboratory that performed the tests.
+                            </summary></documentation></annotation></element><element name="status" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The overall status of this group and any sub-groups.
+                        </summary><remarks>
+                            Examples of status include complete and pending.
+                        </remarks><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="sub-groups" type="lab:lab-test-results-group-type" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Lab test results sub-groups.
+                        </summary><remarks>
+                            If there is more than one group of results, they should be stored in the sub-groups.
+                        </remarks></documentation></annotation></element><element name="results" type="lab:lab-test-result-type" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            A set of results for this group.
+                        </summary><remarks>
+                            If there is a single set of results, they should be stored in results. If there are multiple ones, results
+                            should be omitted and the test results should be stored in sub-groups. 
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="lab-test-result-type"><annotation><documentation><summary>
+                    A single laboratory test.
+                </summary></documentation></annotation><sequence><element name="when" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                           The date of the laboratory test.
+                        </summary></documentation></annotation></element><element name="name" type="string" minOccurs="0"><annotation><documentation><summary>
+                           The name of the laboratory test.
+                        </summary></documentation></annotation></element><element name="substance" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                           The substance tested.
+                        </summary><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="collection-method" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                           The collection method for the laboratory test.
+                        </summary><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="clinical-code" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                           The clinical code for the laboratory test.
+                        </summary><preferred-vocabulary>LOINC</preferred-vocabulary></documentation></annotation></element><element name="value" type="lab:lab-test-result-value-type" minOccurs="0"><annotation><documentation><summary>
+                           A clinical value within a laboratory result.
+                        </summary><remarks>
+                            This type is define a clinical value within a laboratory result, 
+                            including value, unit, reference and toxic ranges.
+                        </remarks></documentation></annotation></element><element name="status" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The status of the laboratory result.
+                        </summary><remarks>
+                            Examples of status include complete and pending.
+                        </remarks><preferred-vocabulary>lab-status</preferred-vocabulary></documentation></annotation></element><element name="note" type="string" minOccurs="0"><annotation><documentation><summary>
+                            A note that augments the laboratory result.
+                        </summary><remarks>
+                            There are two scenarios in which a note is typically added:
+
+                            A note may provide additional information about interpreting the result beyond what is
+                            stored in the ranges associated with the value.
+
+                            Or, a note may be use to provide the textual result of a lab test that does not have a measured value.
+
+                            Formatting:
+                            Notes may come from systems that require a line-based approach to textual display. To support
+                            this, applications should render the spaces and newlines in the note, and use a fixed-width font. 
+                            
+                            The form transform for this type shows one way to do this. 
+                        </remarks><preferred-vocabulary>lab-status</preferred-vocabulary></documentation></annotation></element></sequence></complexType><complexType name="lab-test-result-value-type"><annotation><documentation><summary>
+                   A clinical value within a laboratory result.
+                </summary><remarks>
+                    This type is define a clinical value within a laboratory result, 
+                    including value, unit, reference and toxic ranges.
+                </remarks></documentation></annotation><sequence><element name="measurement" type="t:general-measurement"><annotation><documentation><summary>
+                            The value of the laboratory result.
+                        </summary><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="ranges" type="lab:test-result-range" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Ranges that are associated with this result.
+                        </summary><remarks>
+                            Each test result can contain multiple ranges that are useful to interpret the result value. 
+                            <br />
+                            Examples include reference range and therapeutic range.
+                        </remarks></documentation></annotation></element><element name="flag" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Flag for laboratory results.
+                        </summary><remarks>
+                            Example values are normal, critical, high and low.
+                        </remarks><preferred-vocabulary>lab-results-flag</preferred-vocabulary></documentation></annotation></element></sequence></complexType><complexType name="test-result-range"><annotation><documentation><summary>
+                    A range related to a specific test result.
+                </summary></documentation></annotation><sequence><element name="type" type="t:codable-value"><annotation><documentation><summary>
+                           The type of the range.
+                        </summary><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="text" type="t:codable-value"><annotation><documentation><summary>
+                            The range expressed as text.
+                        </summary><remarks>
+                            The text element is used in two different ways:
+                            When a numeric range is used, the text element should contain a textual version of the
+                            numeric range. 
+                            When the range is non-numeric, the text element contains the range and the range value is omitted. The range may
+                            also be coded to a vocabulary.
+                            
+                            Examples:
+                            A color range (such as clear to yellow) would be coded using by setting the text element to "clear to yellow",
+                            and by assigning a code from an appropriate vocabulary.
+                            
+                            A numeric range (such as 0.5 - 1.6) would be stored in the minimum and maximum elements of the value, and 
+                            additionally would be coded by setting the text element to "0.5 - 1.6".
+                        </remarks><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="value" type="lab:test-result-range-value" minOccurs="0"><annotation><documentation><summary>
+                            The minimum and maximum of the range.
+                        </summary><remarks>
+                            The minimum or maximum value may be omitted to specify open-ended ranges. 
+                            
+                            Example:
+                            The range "greater than 3.5" would be coded by setting the minimum to 3.5 and omitting the maximum.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="test-result-range-value"><annotation><documentation><summary>
+                    A pair of doubles used to create a range.
+                </summary><remarks>
+                    The minimum or maximum value may be omitted to specify open-ended ranges. 
+                </remarks></documentation></annotation><sequence><element name="minimum-range" type="double" minOccurs="0"><annotation><documentation><summary>
+                            The minimum value for the range.
+                        </summary></documentation></annotation></element><element name="maximum-range" type="double" minOccurs="0"><annotation><documentation><summary>
+                            The maximum value for the range.
+                        </summary></documentation></annotation></element></sequence></complexType><element name="lab-test-results"><complexType><annotation><documentation><summary>
+                        A series of lab test results.
+                    </summary></documentation></annotation><sequence><element name="when" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                The date and time of the results.
+                            </summary></documentation></annotation></element><element name="lab-group" type="lab:lab-test-results-group-type" maxOccurs="unbounded"><annotation><documentation><summary>
+                                    A set of lab results.
+                            </summary></documentation></annotation></element><element name="ordered-by" type="t:Organization" minOccurs="0"><annotation><documentation><summary>
+                                    The person or organization that ordered the lab tests.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

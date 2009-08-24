@@ -1,0 +1,31 @@
+<schema xmlns:fam="urn:com.microsoft.wc.thing.family-history" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.family-history"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>6D39F894-F7AC-4FCE-AC78-B22693BF96E6</type-id><type-name>Family History</type-name><wrapper-class-name>FamilyHistoryV1</wrapper-class-name><wrapper-class-fwlink>136335</wrapper-class-fwlink><sample-xml-fwlink>136336</sample-xml-fwlink><data-type-guide-fwlink>136334</data-type-guide-fwlink><summary>
+                Information related to a family history.
+            </summary><remarks>
+                Note: Please use the new version of this data type instead of this version.
+                <br />
+                This thing type describes the family history of a person.
+            </remarks></documentation></annotation><element name="family-history"><complexType><annotation><documentation><summary>
+                        Information related to a family history.
+                    </summary><remarks>
+                        Note: Please use the new version of this data type instead of this version.
+                        <br />
+                        This thing type describes the family history of a person.
+                    </remarks></documentation></annotation><sequence><element name="condition" type="t:codable-value"><annotation><documentation><summary>
+                                The condition for the family history entry.
+                            </summary><preferred-vocabulary>icd9cm</preferred-vocabulary></documentation></annotation></element><element name="relationship" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The relationship for the family history entry.
+                            </summary><preferred-vocabulary>personal-relationship</preferred-vocabulary></documentation></annotation></element><element name="age-of-onset" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                The age of onset for the family history entry.
+                            </summary></documentation></annotation></element><element name="date-of-birth" type="d:approx-date" minOccurs="0"><annotation><documentation><summary>
+                                The date of birth for the family history entry.
+                            </summary></documentation></annotation></element><element name="age-of-resolution" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                The age of resolution for the family history entry.
+                            </summary></documentation></annotation></element><element name="duration" type="t:duration-value" minOccurs="0"><annotation><documentation><summary>
+                                The duration for the family history entry.
+                            </summary></documentation></annotation></element><element name="severity" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The severity for the family history entry.
+                            </summary></documentation></annotation></element><element name="is-recurring" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                True if condition is recurring.
+                            </summary></documentation></annotation></element><element name="status" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The status for the family history entry.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

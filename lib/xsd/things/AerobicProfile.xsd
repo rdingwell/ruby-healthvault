@@ -1,0 +1,143 @@
+<schema xmlns:a="urn:com.microsoft.wc.thing.aerobic-profile" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.aerobic-profile"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>7b2ea78c-4b78-4f75-a6a7-5396fe38b09a</type-id><type-name>Aerobic Profile</type-name><effective-date-element>when</effective-date-element><wrapper-class-name>AerobicProfile</wrapper-class-name><wrapper-class-fwlink>136029</wrapper-class-fwlink><sample-xml-fwlink>136030</sample-xml-fwlink><data-type-guide-fwlink>136028</data-type-guide-fwlink><summary>
+                A summary of a person's aerobic condition.
+            </summary><remarks>
+                A person's aerobic profile is made up of a set of
+                measurements that indicate the aerobic capabilities of the person.
+            </remarks><seealso>urn:com.microsoft.wc.thing.aerobic</seealso><seealso>urn:com.microsoft.wc.thing.aerobic-weekly</seealso></documentation></annotation><element name="aerobic-profile"><complexType><annotation><documentation><summary>
+                        A summary of a person's aerobic condition.
+                    </summary><remarks>
+                        A person's aerobic profile is made up of a set of
+                        measurements that indicate the aerobic capabilities of the person.
+                    </remarks></documentation></annotation><sequence><element name="when" minOccurs="1" maxOccurs="1" type="d:date-time"><annotation><documentation><summary>
+                                The date/time when the aerobic profile 
+                                measurements were taken.
+                            </summary></documentation></annotation></element><element name="max-heartrate" minOccurs="0" maxOccurs="1" type="positiveInteger"><annotation><documentation><summary>
+                                The maximum heart rate of the person.
+                            </summary><remarks>
+                                The maximum heart rate is measured in beats per
+                                minute (BPM).
+                            </remarks></documentation></annotation></element><element name="resting-heartrate" minOccurs="0" maxOccurs="1" type="positiveInteger"><annotation><documentation><summary>
+                                The heart rate of the person when at rest.
+                            </summary><remarks>
+                                The resting heart rate is measured in beats per
+                                minute (BPM).
+                            </remarks></documentation></annotation></element><element name="anaerobic-threshold" minOccurs="0" maxOccurs="1" type="positiveInteger"><annotation><documentation><summary>
+                                The anaerobic threshold (AT) is the exercise
+                                intensity at which lactate starts to accumulate
+                                in the blood stream.
+                            </summary><remarks>
+                                The anaerobic threshold is measured in beats
+                                per minute (BPM).
+                            </remarks></documentation></annotation></element><element name="VO2-max" minOccurs="0" maxOccurs="1" type="a:MaxVO2"><annotation><documentation><summary>
+                                VO2 max is the maximum rate at which oxygen 
+                                is absorbed into the blood stream by the body.
+                            </summary><remarks>
+                                VO2 max can be measured as either and absolute rate
+                                in liters of oxygen per minute, or as a relative rate in
+                                milliters of oxygen per kilogram of bodyweight per minute.
+                            </remarks></documentation></annotation></element><element name="heartrate-zone-group" minOccurs="0" maxOccurs="unbounded" type="a:HeartrateZoneGroup"><annotation><documentation><summary>
+                                A grouping of heart rate zones.
+                            </summary><remarks>
+                                This allows for customized groupings of heart 
+                                rate zones based on different values.Heart 
+                                rate zones are often used to optimize
+                                exercise for different purposes. By grouping 
+                                heart rate zones into named groups it is easier
+                                to identify the zones to use for a particular 
+                                workout.
+                            </remarks></documentation></annotation></element></sequence></complexType></element><complexType name="HeartrateZoneGroup"><annotation><documentation><summary>
+                    A grouping of heart rate zones.
+                </summary><remarks>
+                    This allows for customized groupings of heart
+                    rate zones based on different values.Heart
+                    rate zones are often used to optimize
+                    exercise for different purposes. By grouping
+                    heart rate zones into named groups it is easier
+                    to identify the zones to use for a particular
+                    workout.
+                </remarks></documentation></annotation><sequence><element name="heartrate-zone" minOccurs="0" maxOccurs="unbounded" type="a:HeartrateZone"><annotation><documentation><summary>
+                            The heart rate zone definitions that make up the 
+                            zone group.
+                        </summary><remarks>
+                            Each heart rate zone definition defines a zone 
+                            for the zone group. In most cases the zone 
+                            definitions should not overlap.
+                        </remarks></documentation></annotation></element></sequence><attribute name="name" type="string" use="optional"><annotation><documentation><summary>
+                        The name of the heart rate zone group.
+                    </summary><remarks>
+                        The name is usually arbitrary. It is used by the
+                        person to easily identify a set of heart rate zones
+                        for use. In some cases, the group name may refer to
+                        common heart rate zones that have been popularized
+                        by sports trainers.
+                    </remarks></documentation></annotation></attribute></complexType><complexType name="HeartrateZone"><annotation><documentation><summary>
+                    A heart rate range.
+                </summary><remarks>
+                    A heart rate zone defines a range of heart rate measurements
+                    in beats per minute (BPM). A heart rate zone can be used to
+                    categorize the intensity of aerobic exercise or to guide
+                    an aerobic session.
+                    <br /><br />
+                    A zone is defined by a lower and upper limit measured in
+                    BPM or as a percentage of a person's maximum heart rate.
+                </remarks></documentation></annotation><sequence><element name="lower-bound" type="a:ZoneBoundary"><annotation><documentation><summary>
+                            The lower boundary of the heart rate zone.
+                        </summary></documentation></annotation></element><element name="upper-bound" type="a:ZoneBoundary"><annotation><documentation><summary>
+                            The upper boundary of the heart rate zone.
+                        </summary></documentation></annotation></element></sequence><attribute name="name" type="string" use="optional"><annotation><documentation><summary>
+                        The name of the heart rate zone.
+                    </summary><remarks>
+                        The name is usually arbitrary. It is used by the
+                        person to easily identify the zone without having
+                        to remember the boundaries. The name is often
+                        represented by the intensity or the benefits gained
+                        by exercising in that zone. <br />
+                        For example: <br />
+                        "fat burning zone" or "cardio zone".
+                    </remarks></documentation></annotation></attribute></complexType><complexType name="ZoneBoundary"><annotation><documentation><summary>
+                    A heart rate zone boundary.
+                </summary><remarks>
+                    The boundary of a heart rate zone may be set as either an
+                    absolute heart rate (measured in BPM) or as a percentage
+                    of a person's maximum heart rate.
+                </remarks></documentation></annotation><choice minOccurs="1" maxOccurs="1"><annotation><documentation><summary>
+                        Choice of absolute or relative boundary unites.
+                    </summary><remarks>
+                        The boundary of a heart rate zone may be set as either an
+                        absolute heart rate (measured in BPM) or as a percentage
+                        of a person's maximum heart rate.
+                    </remarks></documentation></annotation><element name="absolute-heartrate" type="positiveInteger"><annotation><documentation><summary>
+                            A zone boundary defined by an absolute heart
+                            rate.
+                        </summary><remarks>
+                            The zone boundary is expressed as an absolute
+                            heart rate in beats per minute (BPM).
+                        </remarks></documentation></annotation></element><element name="percent-max-heartrate" type="t:percentage"><annotation><documentation><summary>
+                            A zone boundary defined by a relative heart
+                            rate.
+                        </summary><remarks>
+                            The zone boundary is expressed as a percentage
+                            of the person's maximum heart rate.
+                        </remarks></documentation></annotation></element></choice></complexType><complexType name="MaxVO2"><annotation><documentation><summary>
+                    The maximum capacity of person to transport and 
+                    utilize oxygen during incremental exercise.
+                </summary><remarks>
+                    VO2 max can be measured as either an absolute
+                    amount of oxygen utilized, or as an amount
+                    that is relative to the person's body weight.
+                </remarks></documentation></annotation><sequence><element name="absolute" minOccurs="0" maxOccurs="1" type="t:positiveDouble"><annotation><documentation><summary>
+                            The amount of oxygen utilized per minute
+                            of exercise.
+                        </summary><remarks>
+                            Absolute VO2 max is measured in 
+                            liters per minute (l/min).
+                        </remarks></documentation></annotation></element><element name="relative" minOccurs="0" maxOccurs="1" type="t:positiveDouble"><annotation><documentation><summary>
+                            The amount of oxygen utilized per
+                            kilogram body weight per minute.
+                        </summary><remarks>
+                            Relative VO2 max is measured in 
+                            milliters per kilogram per minute
+                            (ml/kg/min). This measurement is the
+                            more common measurement used to compare
+                            aerobic performance.
+                        </remarks></documentation></annotation></element></sequence></complexType></schema>

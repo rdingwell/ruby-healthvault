@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Methods::Response::GetAuthorizedPeople::GetAuthorizedPeopleResponse</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Methods::Response::GetAuthorizedPeople::GetAuthorizedPeopleResponse</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../../../files/lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response_rb.html">
+                lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M003285">add_person_info</a>&nbsp;&nbsp;
+      <a href="#M003289">more_results</a>&nbsp;&nbsp;
+      <a href="#M003288">more_results=</a>&nbsp;&nbsp;
+      <a href="#M003290">new</a>&nbsp;&nbsp;
+      <a href="#M003287">person_info</a>&nbsp;&nbsp;
+      <a href="#M003286">remove_person_info</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M003290" class="method-detail">
+        <a name="M003290"></a>
+
+        <div class="method-heading">
+          <a href="#M003290" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003290-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003290-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response.rb, line 56</span>
+56:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+57:           <span class="ruby-keyword kw">super</span>
+58:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'getauthorizedpeopleresponse'</span>
+59:         
+60:           
+61:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-info'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'person-info'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">PersonInfo</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+62:           
+63:         
+64:           
+65:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'more-results'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'more-results'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+66:             
+67:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'more-results'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+68:             
+69:           
+70:         
+71:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M003285" class="method-detail">
+        <a name="M003285"></a>
+
+        <div class="method-heading">
+          <a href="#M003285" class="method-signature">
+          <span class="method-name">add_person_info</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../Types/PersonInfo.html">HealthVault::WCData::Types::PersonInfo</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003285-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003285-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response.rb, line 21</span>
+21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_person_info</span>(<span class="ruby-identifier">value</span>)
+22:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-info'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+23:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003289" class="method-detail">
+        <a name="M003289"></a>
+
+        <div class="method-heading">
+          <a href="#M003289" class="method-signature">
+          <span class="method-name">more_results</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003289-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003289-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response.rb, line 50</span>
+50:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">more_results</span>
+51:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'more-results'</span>][<span class="ruby-identifier">:value</span>]
+52:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003288" class="method-detail">
+        <a name="M003288"></a>
+
+        <div class="method-heading">
+          <a href="#M003288" class="method-signature">
+          <span class="method-name">more_results=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <b>summary</b>: Determines if there are more authorized
+people whose info can be requested by making a subsequent call to this
+method. <b>remarks</b>: True if there are additional authorized people
+whose info can be queried, otherwise False. <em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003288-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003288-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response.rb, line 45</span>
+45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">more_results=</span>(<span class="ruby-identifier">value</span>)
+46:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'more-results'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+47:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003287" class="method-detail">
+        <a name="M003287"></a>
+
+        <div class="method-heading">
+          <a href="#M003287" class="method-signature">
+          <span class="method-name">person_info</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The person info results for this page of data.
+<b>remarks</b>: The person id of the last PersonInfo element in this list
+should be used as the person id cursor parameter for the next call to this
+method. If this list is empty and the request included a person id cursor,
+then there are no more authorized people to page through. If the list is
+empty and the request did not include a person id cursor, there are no
+people authorized for the application. <b>returns</b>: a <a
+href="../../../Types/PersonInfo.html">HealthVault::WCData::Types::PersonInfo</a>
+Array
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003287-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003287-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response.rb, line 34</span>
+34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">person_info</span>
+35:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-info'</span>][<span class="ruby-identifier">:value</span>]
+36:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M003286" class="method-detail">
+        <a name="M003286"></a>
+
+        <div class="method-heading">
+          <a href="#M003286" class="method-signature">
+          <span class="method-name">remove_person_info</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../../../HealthVault.html">HealthVault</a>::<a
+href="../../../Types/PersonInfo.html">WCData::Types::PersonInfo</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M003286-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003286-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_authorized_people/get_authorized_people_response.rb, line 26</span>
+26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_person_info</span>(<span class="ruby-identifier">value</span>)
+27:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-info'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+28:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

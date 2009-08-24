@@ -1,0 +1,17 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.body-dimension" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.body-dimension"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>dd710b31-2b6f-45bd-9552-253562b9a7c1</type-id><type-name>Body Dimension</type-name><wrapper-class-name>BodyDimension</wrapper-class-name><wrapper-class-fwlink>136065</wrapper-class-fwlink><sample-xml-fwlink>136066</sample-xml-fwlink><data-type-guide-fwlink>136064</data-type-guide-fwlink><summary>
+                Stores a body dimension.
+            </summary><remarks>
+                Examples: Waist size, head circumference, length (pediatric). 
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="body-dimension"><complexType><annotation><documentation><summary>
+                        Stores a body dimension.
+                    </summary><remarks>
+                        Examples: Waist size, head circumference, length (pediatric). 
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:approx-date-time"><annotation><documentation><summary>
+                                The date and time of the measurement.
+                            </summary></documentation></annotation></element><element name="measurement-name" type="t:codable-value"><annotation><documentation><summary>
+                                The name of the measurement.
+                            </summary><remarks>
+                                Choose the appropriate preferred vocabulary based on your scenario. 
+                            </remarks><preferred-vocabulary>body-dimension-measurement-names</preferred-vocabulary><preferred-vocabulary>body-dimension-measurement-names-pediatric</preferred-vocabulary></documentation></annotation></element><element name="value" type="t:length-value"><annotation><documentation><summary>
+                                The value of the measurement.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

@@ -1,0 +1,19 @@
+<schema xmlns:lg="urn:com.microsoft.wc.thing.life-goal" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.life-goal"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><annotation><documentation><type-id>609319bf-35cc-40a4-b9d7-1b329679baaa</type-id><type-name>Life Goal</type-name><wrapper-class-name>LifeGoal</wrapper-class-name><wrapper-class-fwlink>136179</wrapper-class-fwlink><sample-xml-fwlink>136180</sample-xml-fwlink><data-type-guide-fwlink>136178</data-type-guide-fwlink><summary>
+                An unmeasurable "checklist" goal of the type you might
+                stick up on the fridge as a New Year's resolution.
+            </summary><remarks>
+                The effective-date implies the date on which this goal
+                was initiated.
+            </remarks></documentation></annotation><element name="life-goal"><complexType><annotation><documentation><summary>
+                        An unmeasurable "checklist" goal of the type you might
+                        stick up on the fridge as a New Year's resolution.
+                    </summary><remarks>
+                        The effective-date implies the date on which this goal
+                        was initiated.
+                    </remarks></documentation></annotation><sequence><element name="description" minOccurs="1" maxOccurs="1" type="string"><annotation><documentation><summary>
+                                Free-form description of the goal.
+                            </summary></documentation></annotation></element><element name="goal-info" minOccurs="0" maxOccurs="1" type="t:goal"><annotation><documentation><summary>
+                                General information about the goal such as
+                                the start date, completion date, and current
+                                status.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

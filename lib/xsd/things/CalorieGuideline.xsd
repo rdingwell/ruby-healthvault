@@ -1,0 +1,29 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.calorie-guideline" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.calorie-guideline"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>d3170d30-a41b-4bde-a116-87698c8a001a</type-id><type-name>Calorie Guideline</type-name><wrapper-class-name>CalorieGuideline</wrapper-class-name><wrapper-class-fwlink>136068</wrapper-class-fwlink><sample-xml-fwlink>136069</sample-xml-fwlink><data-type-guide-fwlink>136067</data-type-guide-fwlink><summary>
+                Stores suggested calorie intake guidelines.
+            </summary><remarks>
+                Examples: Daily calories suggested for weight loss, calories needed for weight maintenance, BMR.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="calorie-guideline"><complexType><annotation><documentation><summary>
+                        Stores suggested calorie intake guidelines.
+                    </summary><remarks>
+                        Examples: Daily calories suggested for weight loss, calories needed for weight maintenance, BMR.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:approx-date-time"><annotation><documentation><summary>
+                                Date and time the guidelines were created.
+                            </summary></documentation></annotation></element><element name="name" type="t:codable-value"><annotation><documentation><summary>
+                                Defines the guideline.
+                            </summary><remarks>
+                                Examples: Maintain weight, Lose weight slowly, Gain weight slowly, Basal metabolic rate (BMR).
+                            </remarks><preferred-vocabulary>calorie-guideline-names</preferred-vocabulary></documentation></annotation></element><element name="calories" type="t:general-measurement"><annotation><documentation><summary>
+                                The number of calories to support the guideline.
+                            </summary><remarks>
+                                This value expresses the number of calories for a specific time period.
+                                <br />
+                                For example, 2716 calories per day could be coded as follows:
+                                <br /><br />
+                                Display = "2716 calories/day"
+                                <br />
+                                Structured Value = "2716"
+                                <br />
+                                Structured Units = "calories-per-day"
+                                <br /><br />
+                                using the calorie-guideline-units vocabulary.
+                            </remarks><preferred-vocabulary>calorie-guideline-units</preferred-vocabulary></documentation></annotation></element></sequence></complexType></element></schema>

@@ -1,0 +1,74 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.genetic-snp-result" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.genetic-snp-result"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>9d006053-116c-43cc-9554-e0cda43558cb</type-id><type-name>Genetic SNP Result</type-name><wrapper-class-name>GeneticSnpResults</wrapper-class-name><wrapper-class-fwlink>136137</wrapper-class-fwlink><sample-xml-fwlink>136138</sample-xml-fwlink><data-type-guide-fwlink>136136</data-type-guide-fwlink><summary>
+                Stores a collection of results of a SNP genetic test.
+            </summary><remarks>
+                The SNP data is stored in the other-data section of the object, and must
+                be fetched by specifying HealthItemRecordSections.OtherData.
+                <br />
+                The format of the other-data section is the HealthVault comma-separated format.
+                <br />
+                Within the comma-separated data, each SNP is encoded as follows:
+                <br />
+                [refSNP id],[strand orientation],[result],[assay id],[start position],[end position]
+                <br />
+                Where:
+                refSNP id: identifier from NCBI dbSNP database.
+                strand orientation: "+" encodes top, "-" encodes bottom.
+                result: the result of the test.
+                assay id: Platform-dependent id.
+                start position: Start position on the chromosome.
+                end position: End position on the chromosome.
+                <br />
+                Example: rs1891906,-,GT,SNP_C-315533,940106,940107
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="genetic-snp-results"><complexType><annotation><documentation><summary>
+                        Stores a collection of results of a SNP genetic test.
+                    </summary><remarks>
+                        The SNP data is stored in the other-data section of the object, and must
+                        be fetched by specifying HealthItemRecordSections.OtherData.
+                        <br />
+                        The format of the other-data section is the HealthVault comma-separated format.
+                        <br />
+                        Within the comma-separated data, each SNP is encoded as follows:
+                        <br />
+                        [refSNP id],[strand orientation],[result],[assay id],[start position],[end position]
+                        <br />
+                        Where:
+                        refSNP id: identifier from NCBI dbSNP database.
+                        strand orientation: "+" encodes top, "-" encodes bottom.
+                        result: the result of the test.
+                        assay id: Platform-dependent id.
+                        start position: Start position on the chromosome.
+                        end position: End position on the chromosome.
+                        <br />
+                        Example: rs1891906,-,GT,SNP_C-315533,940106,940107
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:approx-date-time"><annotation><documentation><summary>
+                                The date and time of the test.
+                            </summary></documentation></annotation></element><element name="genome-build" type="string"><annotation><documentation><summary>
+                                The genome build that defines the SNPs.
+                            </summary><remarks>
+                                Example: NCBI Build 36.3
+                            </remarks></documentation></annotation></element><element name="chromosome" type="string"><annotation><documentation><summary>
+                                The chromosome on which the SNPs are located.
+                            </summary><remarks>
+                                Examples: 1, 22, X, MT
+                            </remarks></documentation></annotation></element><element name="numbering-scheme" type="nonNegativeInteger"><annotation><documentation><summary>
+                                The numbering scheme used for positions.
+                            </summary><remarks>
+                                0 = 0-based numbering.
+                                1 = 1-based numbering.
+                            </remarks></documentation></annotation></element><element name="ordered-by" type="t:Organization" minOccurs="0"><annotation><documentation><summary>
+                                The person or organization that ordered the test.
+                            </summary></documentation></annotation></element><element name="test-provider" type="t:Organization" minOccurs="0"><annotation><documentation><summary>
+                                The organization that provides SNP test service for the consumer.
+                            </summary><remarks>
+                                This organization typically also provides analysis of the results.
+                            </remarks></documentation></annotation></element><element name="laboratory-name" type="t:Organization" minOccurs="0"><annotation><documentation><summary>
+                                The name of the laboratory that performed the test.
+                            </summary></documentation></annotation></element><element name="annotation-version" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The annotation version associated with this set of results.
+                            </summary></documentation></annotation></element><element name="dbSNP-build " type="string" minOccurs="0"><annotation><documentation><summary>
+                                The build version of dbSNP used to map the probe set ID on the genome locus.
+                            </summary><remarks>
+                                For example: dbSNP build 113.
+                            </remarks></documentation></annotation></element><element name="platform" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The technology platform used to generate these results.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

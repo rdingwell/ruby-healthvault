@@ -1,0 +1,18 @@
+<schema xmlns:contact="urn:com.microsoft.wc.thing.contact" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.contact"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><annotation><documentation><type-id>162dd12d-9859-4a66-b75f-96760d67072b</type-id><type-name>Contact</type-name><wrapper-class-name>Contact</wrapper-class-name><wrapper-class-fwlink>136206</wrapper-class-fwlink><sample-xml-fwlink>136207</sample-xml-fwlink><data-type-guide-fwlink>136205</data-type-guide-fwlink><summary>
+              This is the contact information for the person owning
+              a health record in Microsoft HealthVault.
+            </summary><remarks>
+                This data should not be confused with the 'person'
+                type which is contact information for an emergency
+                contact or someone else related to the health record.
+            </remarks><singleton /></documentation></annotation><element name="contact"><complexType><annotation><documentation><summary>
+                      This is the contact information for the person owning
+                      a health record in Microsoft HealthVault.
+                    </summary><remarks>
+                        This data should not be confused with the 'person'
+                        type which is contact information for an emergency
+                        contact or someone else related to the health record.
+                    </remarks></documentation></annotation><sequence><element name="contact" minOccurs="1" maxOccurs="1" type="t:contact"><annotation><documentation><summary>
+                              Contact information for the person owning the
+                              health record in Microsoft HealthVault.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

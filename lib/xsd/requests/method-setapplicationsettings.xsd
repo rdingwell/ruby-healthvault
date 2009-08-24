@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.SetApplicationSettings"
+    xmlns:this="urn:com.microsoft.wc.methods.SetApplicationSettings"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+  <!--
+
+        METHOD-SETAPPLICATIONSETTINGS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for SetApplicationSettings methods
+
+    -->
+
+<import
+  namespace="urn:com.microsoft.wc.types"
+  schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Sets the application specific settings for the person.
+            </summary>
+
+            <remarks>
+                An application can store person preferences and other
+                settings for the person in the Microsoft Health
+                Service. These settings are automatically returned
+                when GetPersonInfo is called but can also be retrieved
+                by calling GetApplicationSettings.<br/>
+                <br/>
+                If you are familiar with Windows development, this
+                would be analogus to HKEY_CURRENT_USER settings in
+                the Windows Registry.<br/>
+                <br/>
+              Microsoft HealthVault does not interpret this
+              data at all and only acts as storage for it on
+              behalf of the application.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+
+            <errors>
+                <error id="ACCESS_DENIED">
+                    If the authenticated person or the application does not
+                    have method-level access rights to the method.
+                </error>
+                <error id="INVALID_PERSON">
+                    If the person identifier in the request does not
+                    exist.
+                </error>
+                <error id="INVALID_APP">
+                    If the application identifier in the request does not
+                    exist.
+                </error>
+            </errors>
+        </documentation>
+    </annotation>
+
+    <!-- SetApplicationSettings - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <complexType name="AppSettings">
+      <annotation>
+          <documentation>
+              <summary>
+                  The application specific settings for the person.
+              </summary>
+
+              <remarks>
+                  An application can store person preferences and other
+                  settings for the person in the Microsoft Health
+                  Service. These settings are automatically returned
+                  when GetPersonInfo is called but can also be retrieved
+                  through the use of GetApplicationSettings.<br/>
+                  <br/>
+                  If you are familiar with Windows development, this
+                  would be analogus to HKEY_CURRENT_USER settings in
+                  the Windows Registry.<br/>
+                  <br/>
+                Microsoft HealthVault does not interpret this
+                data at all and only acts as storage for it on
+                behalf of the application.
+              </remarks>
+
+          </documentation>
+      </annotation>
+      <sequence>
+          <any minOccurs="0" maxOccurs="unbounded"
+                    namespace="##any" processContents="skip">
+              <annotation>
+                  <documentation>
+                      <summary>
+                          The application settings in XML form.
+                      </summary>
+
+                      <remarks>
+                        An application can put any data in this portion of
+                        settings. Microsoft HealthVault does not
+                        interpret this data in any way and will return it
+                        to the application exactly as it was stored.
+                        HealthVault does validate that the
+                        containing node is valid XML so some characters
+                        may need to be escaped or encoded.
+                      </remarks>
+                  </documentation>
+              </annotation>
+          </any>
+      </sequence>
+  </complexType>
+  
+  <element name="info">
+    <complexType>
+        <annotation>
+            <documentation>
+                <summary>
+                    The element of the request that contains the method
+                    specific parameters.
+                </summary>
+
+                <remarks>
+                    All requests contain the info element to pass parameters
+                    that are specific to each method. If the method does not
+                    define an info element, the method does not take any
+                    parameters.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+          <element name="app-settings" type="this:AppSettings"
+            minOccurs="0" maxOccurs="1">
+              <annotation>
+                  <documentation>
+                      <summary>
+                          The application specific settings for the person.
+                      </summary>
+
+                      <remarks>
+                          An application can store person preferences and other
+                          settings for the person in the Microsoft Health
+                          Service. These settings are automatically returned
+                          when GetPersonInfo is called but can also be retrieved
+                          through the use of GetApplicationSettings.<br/>
+                          <br/>
+                          If you are familiar with Windows development, this
+                          would be analogus to HKEY_CURRENT_USER settings in
+                          the Windows Registry.<br/>
+                          <br/>
+                        Microsoft HealthVault does not interpret this
+                        data at all and only acts as storage for it on
+                        behalf of the application. It does verify that this
+                        element is valid XML so it may be necessary to
+                        escape or encode any text that is placed in this
+                        node if it is not intended to be XML.
+                      </remarks>
+                  </documentation>
+              </annotation>
+          </element>
+
+      </sequence>
+    </complexType>
+  </element>
+
+</schema>

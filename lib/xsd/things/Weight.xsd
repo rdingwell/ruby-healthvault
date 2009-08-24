@@ -1,0 +1,10 @@
+<schema xmlns:weight="urn:com.microsoft.wc.thing.weight" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.weight"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>3d34d87e-7fc1-4153-800f-f56592cb0d17</type-id><type-name>Weight Measurement</type-name><wrapper-class-name>Weight</wrapper-class-name><wrapper-class-fwlink>136248</wrapper-class-fwlink><sample-xml-fwlink>136249</sample-xml-fwlink><data-type-guide-fwlink>136247</data-type-guide-fwlink><summary>
+                A single weight measurement.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><element name="weight"><complexType><annotation><documentation><summary>
+                        A single weight measurement.
+                    </summary></documentation></annotation><sequence><element name="when" minOccurs="1" maxOccurs="1" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the weight measurement 
+                                occurred.
+                            </summary></documentation></annotation></element><element name="value" minOccurs="1" maxOccurs="1" type="t:weight-value"><annotation><documentation><summary>
+                                The value of the weight measurement.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

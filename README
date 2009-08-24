@@ -1,0 +1,19 @@
+== HealthVaultRubyLib
+
+Please refer to bin/example.rb as a quick introduction.
+
+The RDoc documentation provides basic but helpful api specifications for the 
+generated HealthVault classes.
+
+When using as a gem:
+require 'healthvault'
+
+KNOWN ISSUES:
+
+- PFX certificates do not load properly on Windows, they must be a pem
+- TestServer doesn't open a browser on Windows when running with JRuby
+- Validation of SimpleTypes and ComplexTypes is not implemented
+- All XSD base types including numbers (like 'int') are represented as String
+- HealthVault 'versions' of Things and Methods are not supported
+- When parsing a response that is defined to contain 'any' value, the parser
+  will only try to guess if its a Thing, otherwise it will skip

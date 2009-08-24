@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+   targetNamespace="urn:com.microsoft.wc.methods.response.DeleteOpenQuery"
+   xmlns:wc-types="urn:com.microsoft.wc.types"
+   xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-DELETEOPENQUERY.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for DeleteOpenQuery method response
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Describes the response to a DeleteOpenQuery request.
+            </summary>
+
+            <remarks>
+                DeleteOpenQuery is used to delete a previously created query
+                created using the SaveOpenQuery method. Expired open queries 
+                no longer exists in the system, and don't need an explicit 
+                call to DeleteOpenQuery to remove them.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+
+            <errors>
+                <error id="INVALID_OPENQUERY">
+                    If a query with the specified identifier does not exist.
+                </error>
+                <error id="ACCESS_DENIED">
+                    If the authenticated application or the target person does
+                    not match with the corresponding properties of the saved
+                    query.
+                </error>
+            </errors>
+        </documentation>
+    </annotation>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the response that contains the method
+                        specific return value(s).
+                    </summary>
+
+                    <remarks>
+                        All response schemas contain the info element which
+                        contains the return value of the method. If the method
+                        does not define an info element, the method has no
+                        return value.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="query-id" type="wc-types:guid" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                An identifier of the query that has been
+                                deleted with this call.
+                            </summary>
+
+                            <remarks>
+                                Using this identifier for subsequent calls to
+                                DeleteOpenQuery or for running the query
+                                will result in the INVALID_OPENQUERY error.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>
+

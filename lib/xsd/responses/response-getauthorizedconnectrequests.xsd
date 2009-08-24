@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetAuthorizedConnectRequests"
+    xmlns:this="urn:com.microsoft.wc.methods.response.GetAuthorizedConnectRequests"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-GETAUTHORIZEDCONNECTREQUESTS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetAuthorizedConnectRequests method
+
+    -->
+
+    <import
+      namespace="urn:com.microsoft.wc.types"
+      schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                A list of all connect requests that have been authorized by users (via
+                account.healthvault.com) or failure result.
+            </summary>
+
+            <remarks>
+                Each entry indicates the person id, the record id, the authorized
+                application's id, and the corresponding external id that make up the connect 
+                request.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+            <errors>
+                <error id="ACCESS_DENIED">
+                    If the calling application does not have method-level access rights to
+                    the method.
+                </error>
+                <error id="INVALID_DATETIME">
+                    If the authorized-connect-requests-since is an invalid datetime.
+                </error>
+            </errors>
+        </documentation>
+    </annotation>
+
+    <!-- GetAuthorizedConnectRequests - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+    <complexType name="ConnectRequest">
+        <annotation>
+            <documentation>
+                <summary>
+                    Specifies the person id, record id, application id, and external id that make 
+                    up the connect request.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="person-id" type="wc-types:guid">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique identifier for the person.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="record-id" type="wc-types:guid">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique identifier for the record.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="app-id" type="wc-types:guid">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The unique identifier for the authorized application (the same 
+                            application that called CreateConnectRequest).
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="external-id" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The external identifier for the connect request that allows the calling
+                            application to tie the HealthVault record to it's system.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        Contains the list of ConnectRequests returned by 
+                        GetAuthorizedConnectRequests.
+                    </summary>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="resume-key" type="dateTime" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Not implemented.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="connect-request" type="this:ConnectRequest" 
+                         minOccurs="0" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                List of authorized connect requests tied to the calling 
+                                application.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

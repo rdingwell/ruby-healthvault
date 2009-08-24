@@ -1,0 +1,23 @@
+<schema xmlns:HbA1C="urn:com.microsoft.wc.thing.HbA1C" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.HbA1C"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>227F55FB-1001-4D4E-9F6A-8D893E07B451</type-id><type-name>HbA1C Measurement</type-name><wrapper-class-name>HbA1C</wrapper-class-name><wrapper-class-fwlink>136146</wrapper-class-fwlink><sample-xml-fwlink>136147</sample-xml-fwlink><data-type-guide-fwlink>136145</data-type-guide-fwlink><summary>
+                Defines a single HbA1C reading.
+            </summary><remarks>
+                HbA1c is a test that measures the amount of glycosylated hemoglobin in your blood.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="HbA1C"><complexType><annotation><documentation><summary>
+                        Defines a single HbA1C reading.
+                    </summary><remarks>
+                        HbA1c is a test that measures the amount of glycosylated hemoglobin in your blood.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the reading was taken.
+                            </summary></documentation></annotation></element><element name="value" type="t:percentage"><annotation><documentation><summary>
+                                The HbA1C measurement as a percentage.
+                            </summary></documentation></annotation></element><element name="HbA1C-assay-method" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The HbA1C reference method used for this measurement.
+                            </summary><remarks>
+                                The measurement of HbA1c in human blood is most important for the longterm
+                                control of the glycaemic state in diabetic patients. There is no internationally agreed
+                                assay measurement method.
+                            </remarks><preferred-vocabulary>HbA1C-assay-method</preferred-vocabulary></documentation></annotation></element><element name="device-id" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The unique id or serial number for the measurment device.
+                            </summary><remarks>
+                                If available, this value can be used to correlate results.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

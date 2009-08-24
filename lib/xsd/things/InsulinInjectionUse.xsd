@@ -1,0 +1,26 @@
+<schema xmlns:iu="urn:com.microsoft.wc.thing.insulin-injection-use" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.insulin-injection-use"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>184166BE-8ADB-4D9C-8162-C403040E31AD</type-id><type-name>Diabetes Insulin Injection Usage</type-name><wrapper-class-name>InsulinInjectionUse</wrapper-class-name><wrapper-class-fwlink>136098</wrapper-class-fwlink><sample-xml-fwlink>136099</sample-xml-fwlink><data-type-guide-fwlink>136097</data-type-guide-fwlink><summary>
+                A single use of an insulin-injection.
+            </summary><remarks>
+                Note, this may wrap more than one "dose" if multiple
+                injections per use are prescribed.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="diabetes-insulin-injection-use"><complexType><annotation><documentation><summary>
+                        A single use of an insulin-injection.
+                    </summary><remarks>
+                        Note, this may wrap more than one "dose" if multiple
+                        injections per use are prescribed.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time when the insulin-injection was used.
+                            </summary></documentation></annotation></element><element name="type" type="t:codable-value"><annotation><documentation><summary>
+                                The type of the insulin used.
+                            </summary><remarks>
+                                For example, 'Analoga' or 'Normal'
+                            </remarks><preferred-vocabulary>insulin-types</preferred-vocabulary></documentation></annotation></element><element name="amount" type="t:insulin-injection-value"><annotation><documentation><summary>
+                                The amount of insulin injected.
+                            </summary><remarks>
+                                The typical range is 0.1-50IE. An IE unit is 1/100ml.
+                            </remarks></documentation></annotation></element><element name="device-id" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The unique id or serial number for the insulin package.
+                            </summary><remarks>
+                                If available, this value can be used to 
+                                correlate results.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

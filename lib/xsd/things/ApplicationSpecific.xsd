@@ -1,0 +1,42 @@
+<schema xmlns:app="urn:com.microsoft.wc.thing.application" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.application"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>a5033c9d-08cf-4204-9bd3-cb412ce39fc0</type-id><type-name>Application-Specific Information</type-name><wrapper-class-name>ApplicationSpecific</wrapper-class-name><wrapper-class-fwlink>136038</wrapper-class-fwlink><sample-xml-fwlink>136039</sample-xml-fwlink><data-type-guide-fwlink>136037</data-type-guide-fwlink><summary>
+                Defines a thing type to store arbitrary application
+                data.
+            </summary><remarks>
+                Applications are responsible for using the format-appid
+                and format-tag to guarantee uniques of the data format.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="app-specific"><complexType><annotation><documentation><summary>
+                        Defines a thing type to store arbitrary application 
+                        data.
+                    </summary><remarks>
+                        Applications are responsible for using the format-appid
+                        and format-tag to guarantee uniques of the data format.
+                    </remarks></documentation></annotation><sequence><element name="format-appid" minOccurs="1" maxOccurs="1" type="string"><annotation><documentation><summary>
+                              The unique application identifier issued to the
+                              application that "owns" this format by
+                              Microsoft HealthVault.
+                            </summary><remarks>
+                                The application id gives each application a 
+                                namespace in which to create unique 
+                                format-tags. This does not limit which apps can
+                                use the type. If an application format becomes
+                                popular it can become a de facto standard.
+                            </remarks></documentation></annotation></element><element name="format-tag" minOccurs="1" maxOccurs="1" type="string"><annotation><documentation><summary>
+                                A unique tag that identifies the 'subtype' of
+                                the thing.
+                            </summary><remarks>
+                                Applications are responsible for the uniqueness
+                                of this element.
+                            </remarks></documentation></annotation></element><element name="when" minOccurs="0" maxOccurs="1" type="d:date-time"><annotation><documentation><summary>
+                                The date and time of the thing.
+                            </summary><remarks>
+                                If not specified, the effective date will
+                                be the date the thing was created.
+                            </remarks></documentation></annotation></element><element name="summary" minOccurs="1" maxOccurs="1" type="string"><annotation><documentation><summary>
+                                A descriptive display text for this thing.
+                            </summary></documentation></annotation></element><any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="skip"><annotation><documentation><summary>
+                                Application specific data in XML form.
+                            </summary><remarks>
+                                An application can define any arbitrary XML
+                                as it's data. It may or may not adhere to
+                                a published schema.
+                            </remarks></documentation></annotation></any></sequence></complexType></element></schema>

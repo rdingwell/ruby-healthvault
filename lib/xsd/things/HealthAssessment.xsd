@@ -1,0 +1,51 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.health-assessment" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.health-assessment"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>58fd8ac4-6c47-41a3-94b2-478401f0e26c</type-id><type-name>Health Assessment</type-name><wrapper-class-name>HealthAssessment</wrapper-class-name><wrapper-class-fwlink>136149</wrapper-class-fwlink><sample-xml-fwlink>136150</sample-xml-fwlink><data-type-guide-fwlink>136148</data-type-guide-fwlink><summary>
+                Contains the results of a health assessment.
+            </summary><remarks>
+                Examples of health assessment include high blood pressure assessment and diabetes assessment.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><complexType name="Assessment"><annotation><documentation><summary>
+                    A single assessment, containing the name and value of the assessed area. 
+                </summary></documentation></annotation><sequence><element name="name" type="t:codable-value"><annotation><documentation><summary>
+                            The name of the assessed area. 
+                        </summary><remarks>
+                            Examples: Heart attack risk, high blood pressure.
+                            <br />
+                            Contact the HealthVault team to help define the preferred vocabulary.
+                        </remarks><preferred-vocabulary>health-assessment-name</preferred-vocabulary></documentation></annotation></element><element name="value" type="t:codable-value" maxOccurs="unbounded"><annotation><documentation><summary>
+                            The calculated value of the assessed area. 
+                        </summary><remarks>
+                            Values may be coded using a specific set of values. 
+                            <br />
+                            Example: Low/Medium/High risk.
+                            <br />
+                            A list of vocabularies may be found in the preferred vocabulary. 
+                            Contact the HealthVault team to help define the preferred vocabulary.
+                        </remarks><preferred-vocabulary>health-assessment-value-sets</preferred-vocabulary></documentation></annotation></element><element name="group" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            Additional information that can be used to organize the results.  
+                        </summary><remarks>
+                            The group is used to specify which group a specific result is in. 
+                            <br />
+                            For example, the supporting assessments that follow a main assessment are coded
+                            to indicate that they are supporting by specifying the "supporting" code.
+                            <br />
+                            Contact the HealthVault team to help define the preferred vocabulary.
+                        </remarks><preferred-vocabulary>health-assessment-groups</preferred-vocabulary></documentation></annotation></element></sequence></complexType><element name="health-assessment"><complexType><annotation><documentation><summary>
+                        Contains the results of a health assessment.
+                    </summary><remarks>
+                        Examples of health assessment include high blood pressure assessment and diabetes assessment.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date the assessment was completed. 
+                            </summary></documentation></annotation></element><element name="name" type="string"><annotation><documentation><summary>
+                                The application's name for the assessment. 
+                            </summary><remarks>
+                                Example: Fabrikam's Heart Risk Assessment.
+                            </remarks></documentation></annotation></element><element name="category" type="t:codable-value"><annotation><documentation><summary>
+                                The type of the assessment.
+                            </summary><remarks>
+                                Examples: Heart assessment, diabetes assessment, colon cancer assessment.
+                                <br />
+                                Contact the HealthVault team to help define the preferred vocabulary.
+                            </remarks><preferred-vocabulary>health-assessment-category</preferred-vocabulary></documentation></annotation></element><element name="result" type="this:Assessment" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The results for this assessment. 
+                            </summary><remarks>
+                                Example: High blood pressure, low risk. 
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

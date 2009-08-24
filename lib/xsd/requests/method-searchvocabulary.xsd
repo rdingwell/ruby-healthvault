@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.SearchVocabulary"
+    xmlns:this="urn:com.microsoft.wc.methods.SearchVocabulary"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-vocab="urn:com.microsoft.wc.vocab"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-SEARCHVOCABULARY.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for searchvocabulary method
+
+    -->
+
+    <import namespace="urn:com.microsoft.wc.types" schemaLocation="types.xsd" />
+    <import namespace="urn:com.microsoft.wc.vocab" schemaLocation="vocab.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                This method is used to search a vocabulary and retrieve the code items
+                that match a given search criteria.
+            </summary>
+
+            <remarks>
+
+            </remarks>
+
+            <errors>
+                <error id="INVALID_VOCABULARY">
+                    If the vocabulary specified by the vocabulary keys doesn't 
+                    exist on the system.
+                </error>
+
+                <error id="INVALID_XML">
+                    If the search mode isn't defined.
+                </error> 
+                
+            </errors>
+            
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- SEARCHVOCABULARY - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <complexType name="VocabularySearchParams">
+        <annotation>
+            <documentation>
+                <summary>
+                    Specifies the text search parameters for the vocabulary search
+                    request.
+                </summary>
+
+                <remarks>
+                    The text search parameters apply to the culture specifed
+                    in the request header by language and country. If the country
+                    is absent, items for the language are searched. If language
+                    is absent, items for the default culture of the system are
+                    searched.
+                </remarks>
+            </documentation>
+        </annotation>
+
+        <sequence>
+            <element name="search-string" type="this:VocabularySearchString">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The vocabulary search string to use.
+                        </summary>
+
+                        <remarks>
+                            
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>            
+
+            <element name="max-results" type="positiveInteger" 
+                     minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Specifies the maximum number of vocabularies or vocabulary items 
+                            to return that match the search criteria. 
+                        </summary>
+
+                        <remarks>
+                            If this element is absent, the number of returned results is
+                            limited to a system configuration value defined as
+                            "MaxResultsVocabularyRetrieval" which can be retrived through 
+                            GetServiceDefinition.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+        
+    </complexType>
+
+    <complexType name="VocabularySearchString">
+        <annotation>
+            <documentation>
+                <summary>
+                    Type defining a vocabulary search string.
+                </summary>
+
+                <remarks>
+                    The search string is a culture specific string of characters against 
+                    which vocabulary items are compared using the specified search mode.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="wc-types:string255">
+                <attribute name="search-mode" type="wc-types:string64" use="optional">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The search mode to use for this search string. 
+                                If not specified, the "Prefix" search mode is used.
+                            </summary>
+
+                            <remarks>
+                                Allowable values for the search mode string are:
+                                <br></br>
+                                1) "Prefix"
+                                <br></br>
+                                The Prefix search mode retrieves all vocabulary items
+                                that begin with the search string. For instance if the
+                                search string is "ab" all vocabulary items beginning with
+                                "ab" are returned.
+                                <br></br>
+                                2) "Contains"
+                                <br></br>
+                                The Contains search mode retrieves vocabulary items that
+                                contain the search string as a substring.
+                                <br></br>
+                                An INVALID_XML error is returned if the search mode doesn't 
+                                match one of the above strings.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="vocabulary-key" type="wc-vocab:VocabularyKey"
+                         minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The unique key used to identify the vocabulary to search.                                
+                            </summary>
+
+                            <remarks>
+                                If the vocabulary key is not present to identify a vocabulary,
+                                the vocabulary headers are searched.
+                                <br></br>
+                                If the vocabulary key is present, then the vocabulary name,
+                                family and version must identify an existing vocabulary on
+                                the system otherwise an INVALID_VOCABULARY error is returned.
+                                <br></br>
+                                If the family is not specified in the vocabulary key, the system                                
+                                looks for a vocabulary with the specified name in the
+                                HealthVault Vocabularies family.
+                                <br></br>
+                                If the vocabulary version is empty, the latest version of the 
+                                vocabulary is used in the search.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="text-search-parameters"
+                         type="this:VocabularySearchParams">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies the text search parameters for the vocabulary search
+                                request. 
+                            </summary>
+
+                            <remarks>
+                                The text search parameters apply to the culture specifed
+                                in the request header by language and country. If the country
+                                is absent, items for the language are searched. If language
+                                is absent, items for the default culture of the system are 
+                                searched.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                    
+                </element>
+                         
+
+            </sequence>
+        </complexType>
+    </element>
+</schema>

@@ -1,0 +1,60 @@
+<schema xmlns:dir="urn:com.microsoft.wc.thing.directive" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.directive"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>822a5e5a-14f1-4d06-b92f-8f3f1b05218f</type-id><type-name>Advance Directive</type-name><wrapper-class-name>Directive</wrapper-class-name><wrapper-class-fwlink>136023</wrapper-class-fwlink><sample-xml-fwlink>136024</sample-xml-fwlink><data-type-guide-fwlink>136022</data-type-guide-fwlink><summary>
+                A single advance directive.
+            </summary><remarks>
+                An advance directive (or advance health directive) is
+                legal directive when dealing with health related issues.
+                Examples include living wills and power of attorney for
+                health care.
+            </remarks><effective-date-element>start-date</effective-date-element></documentation></annotation><element name="directive"><complexType><annotation><documentation><summary>
+                        A single advance directive.
+                    </summary><remarks>
+                        An advance directive (or advance health directive) is
+                        legal directive when dealing with health related issues.
+                        Examples include living wills and power of attorney for
+                        health care.
+                    </remarks></documentation></annotation><sequence><element name="start-date" type="d:approx-date-time"><annotation><documentation><summary>
+                                The date and time of the directive started.
+                            </summary></documentation></annotation></element><element name="stop-date" type="d:approx-date-time"><annotation><documentation><summary>
+                                The date and time of the directive stops.
+                            </summary></documentation></annotation></element><element name="description" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Display information about this directive.
+                            </summary><remarks>
+                                This should be a short set of information like
+                                DNR (Do not resuscitate). More verbose 
+                                information should go into the common/note 
+                                section of the thing.
+                            </remarks></documentation></annotation></element><element name="full-resuscitation" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                The full resuscitation directive value.
+                            </summary><remarks>
+                                True for full resuscitation.
+                        </remarks></documentation></annotation></element><element name="prohibited-interventions" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The list of prohibited interventions in this directive.
+                            </summary></documentation></annotation></element><element name="additional-instructions" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Additional directive instructions.
+                            </summary><remarks>
+                                This provides a free form type for additional directive instructions.
+                            </remarks></documentation></annotation></element><element name="attending-physician" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                The attending physician details.
+                            </summary></documentation></annotation></element><element name="attending-physician-endorsement" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The attending physician endorsement date and 
+                                time
+                            </summary></documentation></annotation></element><element name="attending-nurse" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                The attending nurse details.
+                            </summary></documentation></annotation></element><element name="attending-nurse-endorsement" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The attending nurse endorsement details.
+                            </summary></documentation></annotation></element><element name="expiration-date" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The date and time of patient expired.
+                            </summary></documentation></annotation></element><element name="discontinuation-date" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                The date and time clinical support was 
+                                discontinued.
+                            </summary></documentation></annotation></element><element name="discontinuation-physician" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                The attending physician details.
+                            </summary></documentation></annotation></element><element name="discontinuation-physician-endorsement" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The attending physician discontinuation 
+                                endorsement date and time
+                            </summary></documentation></annotation></element><element name="discontinuation-nurse" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                The attending nurse details.
+                            </summary></documentation></annotation></element><element name="discontinuation-nurse-endorsement" type="d:date-time" minOccurs="0"><annotation><documentation><summary>
+                                The attending nurse discontinuation endorsement 
+                                date and time
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

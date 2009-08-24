@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetVocabulary"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-vocab="urn:com.microsoft.wc.vocab"    
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-GETVOCABULARY.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for getvocabulary method response
+
+    -->
+
+    <import namespace="urn:com.microsoft.wc.types" schemaLocation="types.xsd" />
+    <import namespace="urn:com.microsoft.wc.vocab" schemaLocation="vocab.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Info schema for the response to GetVocabulary 
+            </summary>
+
+            <remarks>
+
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+    
+    <!-- getvocabulary  - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <choice>
+                <element name="vocabulary"
+                         type="wc-vocab:VocabularyCodeSet"
+                         minOccurs="1" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                List of vocabularies with their detailed information
+                                include the actual code items
+                            </summary>
+
+                            <remarks>                                
+                                
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <element name="vocabulary-key"
+                         type="wc-vocab:VocabularyKeyInfo"
+                         minOccurs="1" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                List of vocabularies
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+            </choice>
+        </complexType>
+    </element>
+
+</schema>

@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.CreateAuthenticatedSessionToken"
+    xmlns:this="urn:com.microsoft.wc.methods.response.CreateAuthenticatedSessionToken"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-auth="urn:com.microsoft.wc.auth"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-CreateAuthenticatedSessionToken.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for CreateAuthenticatedSessionToken method response
+
+    -->
+
+    <import
+          namespace="urn:com.microsoft.wc.types"
+          schemaLocation="types.xsd" />
+    
+    <import
+        namespace="urn:com.microsoft.wc.auth"
+        schemaLocation="auth.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                The authenticated session token or failure result.
+            </summary>
+
+            <remarks>
+                Callers may request an authenticated session token for one 
+                application.
+                If an authenticated session token cannot be created,
+                the entire request will not fail, rather we return the absence 
+                reason for the application id for whom token could not be 
+                created. 
+                The request is considered a success if the authenticated 
+                session token could be created for the specified application id.   
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <simpleType name="AuthTokenAbsenceReason">
+        <annotation>
+            <documentation>
+                <summary>
+                    Reasons why an authenticated session token was not returned.
+                </summary>
+
+                <remarks>
+                    Depending upon the reason, there may be user-actionable
+                    events that would enable the request to succeed.
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="PersonNotAuthorizedForApp">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The person is not authorized to run the specified 
+                            application.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    <complexType name="AppAuthTokenAbsenceReason">
+        <annotation>
+            <documentation>
+                <summary>
+                    Reasons why an authenticated session token was not returned.
+                </summary>
+
+                <remarks>
+                    Depending upon the reason, there may be user-actionable
+                    events that would enable the request to succeed.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="this:AuthTokenAbsenceReason">
+                <attribute name="app-id" type="wc-types:guid" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The reason the request failed.
+                            </summary>
+
+                            <remarks>
+                                See the specific absence reasons for 
+                                user-actionable details.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </attribute>
+
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <element name="info">
+        <annotation>
+            <documentation>
+                <summary>
+                    The response for the request to create an authenticated
+                    session token.
+                </summary>
+
+                <remarks>
+                    When a token is requested, if the request is a success then
+                    there will be a token.  Otherwise, there will be an absence
+                    reason.
+                </remarks>
+            </documentation>
+        </annotation>
+        <complexType>
+            <choice
+                 minOccurs="1" maxOccurs="unbounded">
+                <element name="token"
+                         type="wc-auth:Token">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The authenticated session token.
+                            </summary>
+
+                            <remarks>
+                                The token has a limited time-to-live.  When
+                                the token expires, requests will fail with 
+                                access denied.
+                                If there is no token, then there must be an
+                                absence reason.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <element name ="token-absence-reason"
+                         type="this:AppAuthTokenAbsenceReason" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The reason the token could not be created.
+                            </summary>
+
+                            <remarks>
+                                If the token can be created, then there will
+                                be no absence reason.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+            </choice>
+        </complexType>
+    </element>
+
+</schema>

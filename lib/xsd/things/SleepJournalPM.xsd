@@ -1,0 +1,45 @@
+<schema xmlns:sjpm="urn:com.microsoft.wc.thing.sjpm" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.sjpm"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>031F5706-7F1A-11DB-AD56-7BD355D89593</type-id><type-name>Sleep Related Activity</type-name><wrapper-class-name>SleepJournalPM</wrapper-class-name><wrapper-class-fwlink>136230</wrapper-class-fwlink><sample-xml-fwlink>136231</sample-xml-fwlink><data-type-guide-fwlink>136229</data-type-guide-fwlink><summary>
+                Defines an evening sleep journal.
+            </summary><remarks>
+                The data items in this schema are adapted from NIH
+                publication #06-5271, November 2005, "Your Guide to
+                Healthy Sleep", ISBN 1-933236-05-1.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><complexType name="Activity"><annotation><documentation><summary>
+                    Defines an activity taken by the person before laying down
+                    for the night.
+                </summary></documentation></annotation><sequence><element name="when" type="d:time"><annotation><documentation><summary>
+                            The time when the activity occurred.
+                        </summary></documentation></annotation></element><element name="minutes" type="nonNegativeInteger"><annotation><documentation><summary>
+                            The duration of the activity in minutes.
+                        </summary></documentation></annotation></element></sequence></complexType><element name="sleep-pm"><complexType><annotation><documentation><summary>
+                        Defines an evening sleep journal.
+                    </summary><remarks>
+                        The data items in this schema are adapted from NIH
+                        publication #06-5271, November 2005, "Your Guide to
+                        Healthy Sleep", ISBN 1-933236-05-1.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time that the journal entry refers
+                                to.
+                            </summary></documentation></annotation></element><element name="caffeine" type="d:time" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The time of each caffeine consumed for the day.
+                            </summary></documentation></annotation></element><element name="alcohol" type="d:time" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The time of each alcohol consumed for the day.
+                            </summary></documentation></annotation></element><element name="nap" type="sjpm:Activity" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The time and duration of each nap taken in the
+                                day.
+                            </summary></documentation></annotation></element><element name="exercise" type="sjpm:Activity" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The time and duration of each exercise session 
+                                in the day.
+                            </summary><remarks>
+                                Note, an application should (but is not required)
+                                to query the aerobic sessions in the person's 
+                                health record to fill in this information.
+                            </remarks></documentation></annotation></element><element name="sleepiness"><simpleType><annotation><documentation><summary>
+                                    How sleepy the person felt during the day.
+                                </summary><remarks>
+                                    1 = So sleepy had to struggle to stay away
+                                    during much of the day,
+                                    2 = Somewhat tired
+                                    3 = Fairly alert
+                                    4 = Wide awake
+                                </remarks></documentation></annotation><restriction base="int"><minInclusive value="1" /><maxInclusive value="4" /></restriction></simpleType></element></sequence></complexType></element></schema>

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetPersonInfo"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-GETPERSONINFO.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetPersonInfo method response
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                The basic information about an authenticated person.
+            </summary>
+
+            <remarks>
+                GetPersonInfo is used to retrieve basic information about the
+                authenticated person, like, their name,
+                application specific settings for the person, the selected
+                record for the application, and the records that the person
+                has authorized the application to use. It can also, optionally,
+                get the groups the person is a member of.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+            <errors>
+                <error id="ACCESS_DENIED">
+                    If the authenticated person or the application does not
+                    have method-level access rights to the method.
+                </error>
+            </errors>            
+        </documentation>
+    </annotation>
+
+    <!-- GetPersonInfo - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the response that contains the method
+                        specific return value(s).
+                    </summary>
+
+                    <remarks>
+                        All response schemas contain the info element which 
+                        contain the return value of the method. If the method 
+                        does not define an info element, the method has no
+                        return value.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="person-info" type="wc-types:PersonInfo" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Basic information about a person.
+                            </summary>
+
+                            <remarks>
+                                Basic information about a person including their
+                                name, application  specific settings, record 
+                                selected for use by the application, and other 
+                                records that are the person authorized the 
+                                application to use.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

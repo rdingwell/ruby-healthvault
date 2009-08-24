@@ -1,0 +1,1117 @@
+<?xml version="1.0"?>
+<schema
+    targetNamespace="urn:com.microsoft.wc.types"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        TYPES.XSD
+        Microsoft Wildcat
+
+        Platform API: Shared types 
+
+    -->      
+    <complexType name="Phone">
+        <sequence>
+            <element name="description" type="string"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="is-primary" type="boolean"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="number" type="string" >
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="Email">
+        <sequence>
+            <element name="description" type="string"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="is-primary" type="boolean"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="address" type="wc-types:EmailAddress" >
+            </element>
+        </sequence>
+    </complexType>
+    <simpleType name="EmailAddress">
+        <restriction base="string">
+            <minLength value="6" />
+            <maxLength value="128" />
+        </restriction>
+    </simpleType>    
+    <complexType name="RcptAddress">
+        <sequence>
+            <element name="address" type="string" >
+            </element>
+            <element name="name" type="string" >
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="RcptPerson">
+        <simpleContent>
+            <extension base="wc-types:guid">
+                <attribute name="validated" type="boolean" use="required" >
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="RcptRecord">
+        <sequence />
+        <attribute name="validated" type="boolean" use="required" >
+        </attribute>
+    </complexType>
+    <simpleType name="LoginName">
+        <restriction base="string">
+            <minLength value="6" />
+            <maxLength value="128" />
+        </restriction>
+    </simpleType>
+    <simpleType name="Version">
+        <restriction base="string">
+            <minLength value="7" />
+            <maxLength value="19" />
+        </restriction>
+    </simpleType>
+    <complexType name="Address">
+        <sequence>
+            <element name="description" type="string"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="is-primary" type="boolean"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="street" type="string"
+                minOccurs="1" maxOccurs="unbounded" >
+            </element>
+            <element name="city" type="string" >
+            </element>
+            <element name="state" type="string" >
+            </element>
+            <element name="postcode" type="string"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="country" type="wc-types:iso3166" >
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="Sig">
+        <simpleContent>
+            <extension base="wc-types:string512">
+                <attribute name="digestMethod"
+                    type="wc-types:string16" use="required">
+                </attribute>
+                <attribute name="sigMethod"
+                    type="wc-types:string16" use="required">
+                </attribute>
+                <attribute name="thumbprint"
+                    type="string" use="required" >
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="HashFinalizedData">
+        <simpleContent>
+            <extension base="wc-types:string512">
+                <attribute name="algName"
+                    type="wc-types:stringnz" use="required">
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="HashFinalized">
+        <sequence>
+            <element name="hash-data" type="wc-types:HashFinalizedData">
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="HMACAlgorithmData">
+        <simpleContent>
+            <!-- element value is KeyMaterial for HMAC -->
+            <extension base="wc-types:string512">
+                <attribute name="algName"
+                    type="wc-types:stringnz" use="required">
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="HMACAlgorithm">
+        <sequence>
+            <element name="hmac-alg" type="wc-types:HMACAlgorithmData">
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="HMACFinalizedData">
+        <simpleContent>
+            <extension base="wc-types:string512">
+                <attribute name="algName"
+                    type="wc-types:stringnz" use="required">
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="HMACFinalized">
+        <sequence>
+            <element name="hmac-data" type="wc-types:HMACFinalizedData">
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="CardSpaceCred">
+        <sequence>
+            <any minOccurs="1" maxOccurs="unbounded"
+                namespace="##any" processContents="skip">
+            </any>
+        </sequence>
+    </complexType>
+    <complexType name="AppInfo">
+        <simpleContent>
+            <extension base="wc-types:guid">
+                <attribute name="is-multi-record-app"
+                    type="boolean" use="optional">
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="AppServerCredInfo">
+        <sequence>
+            <element name="app-id"
+                type="wc-types:guid" >
+            </element>
+            <element name="shared-secret"
+                type="wc-types:HMACAlgorithm">
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="AppServerCred">
+        <sequence>
+            <element name="sig" type="wc-types:Sig" >
+            </element>
+            <element name="content"
+                type="wc-types:AppServerCredInfo" >
+            </element>
+        </sequence>
+    </complexType>
+    <simpleType name="Gender">
+        <restriction base="string">
+            <enumeration value="m">
+            </enumeration>
+            <enumeration value="f">
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <simpleType name="Url">
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="1024" />
+        </restriction>
+    </simpleType>    
+    <simpleType name="positiveLong">
+        <restriction base="long">
+            <minInclusive value="0" />
+        </restriction>
+    </simpleType>    
+    <simpleType name="guid">
+        <restriction base="string">
+            <pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="puid">
+        <restriction base="string">
+            <pattern value="[a-fA-F0-9]{16}"/>
+        </restriction>
+    </simpleType>
+    <complexType name="DateRange">
+        <sequence>
+            <element name="date-min" type="dateTime"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="date-max" type="dateTime"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+        </sequence>
+    </complexType>
+    <simpleType name="Permission">
+        <restriction base="string">
+            <enumeration value="All">
+            </enumeration>
+            <enumeration value="Read">
+            </enumeration>
+            <enumeration value="Update">
+            </enumeration>
+            <enumeration value="Create">
+            </enumeration>
+            <enumeration value="Delete">
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <simpleType name="NameMatchType">
+        <restriction base="string">
+            <enumeration value="exact">
+            </enumeration>
+            <enumeration value="prefix">
+            </enumeration>
+            <enumeration value="contains">
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <simpleType name="base64Sha1">
+        <restriction base="string">
+            <minLength value="28" />
+            <maxLength value="28" />
+        </restriction>
+    </simpleType>
+    <simpleType name="string1024">
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="1024" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="string512">
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="512" />
+        </restriction>
+    </simpleType>
+    <simpleType name="string255">
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="255" />
+        </restriction>
+    </simpleType>
+    <simpleType name="string128">
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="128" />
+        </restriction>
+    </simpleType>
+    <simpleType name="string64">
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="64" />
+        </restriction>
+    </simpleType>
+    <simpleType name="string32">
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="32" />
+        </restriction>
+    </simpleType>
+    <simpleType name="string16">
+        <restriction base="string">
+            <minLength value="1" />
+            <maxLength value="16" />
+        </restriction>
+    </simpleType>
+    <simpleType name="stringz1024">
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="1024" />
+        </restriction>
+    </simpleType>
+    <simpleType name="stringz512">
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="512" />
+        </restriction>
+    </simpleType>
+    <simpleType name="stringz255">
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="255" />
+        </restriction>
+    </simpleType>
+    <simpleType name="stringz128">
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="128" />
+        </restriction>
+    </simpleType>
+    <simpleType name="stringz64">
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="64" />
+        </restriction>
+    </simpleType>
+    <simpleType name="stringz32">
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="32" />
+        </restriction>
+    </simpleType>
+    <simpleType name="stringz16">
+        <restriction base="string">
+            <minLength value="0" />
+            <maxLength value="16" />
+        </restriction>
+    </simpleType>
+    <simpleType name="stringnz">
+        <restriction base="string">
+            <minLength value="1" />
+        </restriction>
+    </simpleType>
+    <simpleType name="char2">
+        <restriction base="string">
+            <minLength value="2" />
+            <maxLength value="2" />
+        </restriction>
+    </simpleType>
+    <simpleType name="OmbEthnicity">
+        <restriction base="string">
+            <enumeration value="American Indian or Alaska Native" />
+            <enumeration value="Asian" />
+            <enumeration value="Black or African American" />
+            <enumeration value="Hispanic or Latino" />
+            <enumeration value="Native Hawaiian or Other Pacific Islander" />
+            <enumeration value="White" />
+        </restriction>
+    </simpleType>
+
+    <complexType name="Culture">
+        <sequence>
+            <element name="language" type="wc-types:iso639-1"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+            <element name="country" type="wc-types:iso3166"
+                minOccurs="0" maxOccurs="1" >
+            </element>            
+        </sequence>
+    </complexType>
+    <simpleType name="iso639-1">
+        <restriction base="string">
+            <enumeration value="aa" />
+            <enumeration value="ab" />
+            <enumeration value="af" />
+            <enumeration value="am" />
+            <enumeration value="ar" />
+            <enumeration value="as" />
+            <enumeration value="ay" />
+            <enumeration value="az" />
+            <enumeration value="ba" />
+            <enumeration value="be" />
+            <enumeration value="bg" />
+            <enumeration value="bh" />
+            <enumeration value="bi" />
+            <enumeration value="bn" />
+            <enumeration value="bo" />
+            <enumeration value="br" />
+            <enumeration value="ca" />
+            <enumeration value="co" />
+            <enumeration value="cs" />
+            <enumeration value="cy" />
+            <enumeration value="da" />
+            <enumeration value="de" />
+            <enumeration value="dz" />
+            <enumeration value="el" />
+            <enumeration value="en" />
+            <enumeration value="eo" />
+            <enumeration value="es" />
+            <enumeration value="et" />
+            <enumeration value="eu" />
+            <enumeration value="fa" />
+            <enumeration value="fi" />
+            <enumeration value="fj" />
+            <enumeration value="fo" />
+            <enumeration value="fr" />
+            <enumeration value="fy" />
+            <enumeration value="ga" />
+            <enumeration value="gd" />
+            <enumeration value="gl" />
+            <enumeration value="gn" />
+            <enumeration value="gu" />
+            <enumeration value="ha" />
+            <enumeration value="hi" />
+            <enumeration value="hr" />
+            <enumeration value="hu" />
+            <enumeration value="hy" />
+            <enumeration value="ia" />
+            <enumeration value="ie" />
+            <enumeration value="ik" />
+            <enumeration value="in" />
+            <enumeration value="is" />
+            <enumeration value="it" />
+            <enumeration value="iw" />
+            <enumeration value="ja" />
+            <enumeration value="ji" />
+            <enumeration value="jw" />
+            <enumeration value="ka" />
+            <enumeration value="kk" />
+            <enumeration value="kl" />
+            <enumeration value="km" />
+            <enumeration value="kn" />
+            <enumeration value="ko" />
+            <enumeration value="ks" />
+            <enumeration value="ku" />
+            <enumeration value="ky" />
+            <enumeration value="la" />
+            <enumeration value="ln" />
+            <enumeration value="lo" />
+            <enumeration value="lt" />
+            <enumeration value="lv" />
+            <enumeration value="mg" />
+            <enumeration value="mi" />
+            <enumeration value="mk" />
+            <enumeration value="ml" />
+            <enumeration value="mn" />
+            <enumeration value="mo" />
+            <enumeration value="mr" />
+            <enumeration value="ms" />
+            <enumeration value="mt" />
+            <enumeration value="my" />
+            <enumeration value="na" />
+            <enumeration value="ne" />
+            <enumeration value="nl" />
+            <enumeration value="no" />
+            <enumeration value="oc" />
+            <enumeration value="om" />
+            <enumeration value="or" />
+            <enumeration value="pa" />
+            <enumeration value="pl" />
+            <enumeration value="ps" />
+            <enumeration value="pt" />
+            <enumeration value="qu" />
+            <enumeration value="rm" />
+            <enumeration value="rn" />
+            <enumeration value="ro" />
+            <enumeration value="ru" />
+            <enumeration value="rw" />
+            <enumeration value="sa" />
+            <enumeration value="sd" />
+            <enumeration value="sg" />
+            <enumeration value="sh" />
+            <enumeration value="si" />
+            <enumeration value="sk" />
+            <enumeration value="sl" />
+            <enumeration value="sm" />
+            <enumeration value="sn" />
+            <enumeration value="so" />
+            <enumeration value="sq" />
+            <enumeration value="sr" />
+            <enumeration value="ss" />
+            <enumeration value="st" />
+            <enumeration value="su" />
+            <enumeration value="sv" />
+            <enumeration value="sw" />
+            <enumeration value="ta" />
+            <enumeration value="te" />
+            <enumeration value="tg" />
+            <enumeration value="th" />
+            <enumeration value="ti" />
+            <enumeration value="tk" />
+            <enumeration value="tl" />
+            <enumeration value="tn" />
+            <enumeration value="to" />
+            <enumeration value="tr" />
+            <enumeration value="ts" />
+            <enumeration value="tt" />
+            <enumeration value="tw" />
+            <enumeration value="uk" />
+            <enumeration value="ur" />
+            <enumeration value="uz" />
+            <enumeration value="vi" />
+            <enumeration value="vo" />
+            <enumeration value="wo" />
+            <enumeration value="xh" />
+            <enumeration value="yo" />
+            <enumeration value="zh" />
+            <enumeration value="zu" />
+        </restriction>
+    </simpleType>
+    <simpleType name="iso3166">
+        <restriction base="string">
+            <enumeration value="AF" />
+            <enumeration value="AX" />
+            <enumeration value="AL" />
+            <enumeration value="DZ" />
+            <enumeration value="AS" />
+            <enumeration value="AD" />
+            <enumeration value="AO" />
+            <enumeration value="AI" />
+            <enumeration value="AQ" />
+            <enumeration value="AG" />
+            <enumeration value="AR" />
+            <enumeration value="AM" />
+            <enumeration value="AW" />
+            <enumeration value="AU" />
+            <enumeration value="AT" />
+            <enumeration value="AZ" />
+            <enumeration value="BS" />
+            <enumeration value="BH" />
+            <enumeration value="BD" />
+            <enumeration value="BB" />
+            <enumeration value="BY" />
+            <enumeration value="BE" />
+            <enumeration value="BZ" />
+            <enumeration value="BJ" />
+            <enumeration value="BM" />
+            <enumeration value="BT" />
+            <enumeration value="BO" />
+            <enumeration value="BA" />
+            <enumeration value="BW" />
+            <enumeration value="BV" />
+            <enumeration value="BR" />
+            <enumeration value="IO" />
+            <enumeration value="BN" />
+            <enumeration value="BG" />
+            <enumeration value="BF" />
+            <enumeration value="BI" />
+            <enumeration value="KH" />
+            <enumeration value="CM" />
+            <enumeration value="CA" />
+            <enumeration value="CV" />
+            <enumeration value="KY" />
+            <enumeration value="CF" />
+            <enumeration value="TD" />
+            <enumeration value="CL" />
+            <enumeration value="CN" />
+            <enumeration value="CX" />
+            <enumeration value="CC" />
+            <enumeration value="CO" />
+            <enumeration value="KM" />
+            <enumeration value="CG" />
+            <enumeration value="CD" />
+            <enumeration value="CK" />
+            <enumeration value="CR" />
+            <enumeration value="CI" />
+            <enumeration value="HR" />
+            <enumeration value="CU" />
+            <enumeration value="CY" />
+            <enumeration value="CZ" />
+            <enumeration value="DK" />
+            <enumeration value="DJ" />
+            <enumeration value="DM" />
+            <enumeration value="DO" />
+            <enumeration value="EC" />
+            <enumeration value="EG" />
+            <enumeration value="SV" />
+            <enumeration value="GQ" />
+            <enumeration value="ER" />
+            <enumeration value="EE" />
+            <enumeration value="ET" />
+            <enumeration value="FK" />
+            <enumeration value="FO" />
+            <enumeration value="FJ" />
+            <enumeration value="FI" />
+            <enumeration value="FR" />
+            <enumeration value="GF" />
+            <enumeration value="PF" />
+            <enumeration value="TF" />
+            <enumeration value="GA" />
+            <enumeration value="GM" />
+            <enumeration value="GE" />
+            <enumeration value="DE" />
+            <enumeration value="GH" />
+            <enumeration value="GI" />
+            <enumeration value="GR" />
+            <enumeration value="GL" />
+            <enumeration value="GD" />
+            <enumeration value="GP" />
+            <enumeration value="GU" />
+            <enumeration value="GT" />
+            <enumeration value="GN" />
+            <enumeration value="GW" />
+            <enumeration value="GY" />
+            <enumeration value="HT" />
+            <enumeration value="HM" />
+            <enumeration value="VA" />
+            <enumeration value="HN" />
+            <enumeration value="HK" />
+            <enumeration value="HU" />
+            <enumeration value="IS" />
+            <enumeration value="IN" />
+            <enumeration value="ID" />
+            <enumeration value="IR" />
+            <enumeration value="IQ" />
+            <enumeration value="IE" />
+            <enumeration value="IL" />
+            <enumeration value="IT" />
+            <enumeration value="JM" />
+            <enumeration value="JP" />
+            <enumeration value="JO" />
+            <enumeration value="KZ" />
+            <enumeration value="KE" />
+            <enumeration value="KI" />
+            <enumeration value="KP" />
+            <enumeration value="KR" />
+            <enumeration value="KW" />
+            <enumeration value="KG" />
+            <enumeration value="LA" />
+            <enumeration value="LV" />
+            <enumeration value="LB" />
+            <enumeration value="LS" />
+            <enumeration value="LR" />
+            <enumeration value="LY" />
+            <enumeration value="LI" />
+            <enumeration value="LT" />
+            <enumeration value="LU" />
+            <enumeration value="MO" />
+            <enumeration value="MK" />
+            <enumeration value="MG" />
+            <enumeration value="MW" />
+            <enumeration value="MY" />
+            <enumeration value="MV" />
+            <enumeration value="ML" />
+            <enumeration value="MT" />
+            <enumeration value="MH" />
+            <enumeration value="MQ" />
+            <enumeration value="MR" />
+            <enumeration value="MU" />
+            <enumeration value="YT" />
+            <enumeration value="MX" />
+            <enumeration value="FM" />
+            <enumeration value="MD" />
+            <enumeration value="MC" />
+            <enumeration value="MN" />
+            <enumeration value="MS" />
+            <enumeration value="MA" />
+            <enumeration value="MZ" />
+            <enumeration value="MM" />
+            <enumeration value="NA" />
+            <enumeration value="NR" />
+            <enumeration value="NP" />
+            <enumeration value="NL" />
+            <enumeration value="AN" />
+            <enumeration value="NC" />
+            <enumeration value="NZ" />
+            <enumeration value="NI" />
+            <enumeration value="NE" />
+            <enumeration value="NG" />
+            <enumeration value="NU" />
+            <enumeration value="NF" />
+            <enumeration value="MP" />
+            <enumeration value="NO" />
+            <enumeration value="OM" />
+            <enumeration value="PK" />
+            <enumeration value="PW" />
+            <enumeration value="PS" />
+            <enumeration value="PA" />
+            <enumeration value="PG" />
+            <enumeration value="PY" />
+            <enumeration value="PE" />
+            <enumeration value="PH" />
+            <enumeration value="PN" />
+            <enumeration value="PL" />
+            <enumeration value="PT" />
+            <enumeration value="PR" />
+            <enumeration value="QA" />
+            <enumeration value="RE" />
+            <enumeration value="RO" />
+            <enumeration value="RU" />
+            <enumeration value="RW" />
+            <enumeration value="SH" />
+            <enumeration value="KN" />
+            <enumeration value="LC" />
+            <enumeration value="PM" />
+            <enumeration value="VC" />
+            <enumeration value="WS" />
+            <enumeration value="SM" />
+            <enumeration value="ST" />
+            <enumeration value="SA" />
+            <enumeration value="SN" />
+            <enumeration value="CS" />
+            <enumeration value="SC" />
+            <enumeration value="SL" />
+            <enumeration value="SG" />
+            <enumeration value="SK" />
+            <enumeration value="SI" />
+            <enumeration value="SB" />
+            <enumeration value="SO" />
+            <enumeration value="ZA" />
+            <enumeration value="GS" />
+            <enumeration value="ES" />
+            <enumeration value="LK" />
+            <enumeration value="SD" />
+            <enumeration value="SR" />
+            <enumeration value="SJ" />
+            <enumeration value="SZ" />
+            <enumeration value="SE" />
+            <enumeration value="CH" />
+            <enumeration value="SY" />
+            <enumeration value="TW" />
+            <enumeration value="TJ" />
+            <enumeration value="TZ" />
+            <enumeration value="TH" />
+            <enumeration value="TL" />
+            <enumeration value="TG" />
+            <enumeration value="TK" />
+            <enumeration value="TO" />
+            <enumeration value="TT" />
+            <enumeration value="TN" />
+            <enumeration value="TR" />
+            <enumeration value="TM" />
+            <enumeration value="TC" />
+            <enumeration value="TV" />
+            <enumeration value="UG" />
+            <enumeration value="UA" />
+            <enumeration value="AE" />
+            <enumeration value="GB" />
+            <enumeration value="US" />
+            <enumeration value="UM" />
+            <enumeration value="UY" />
+            <enumeration value="UZ" />
+            <enumeration value="VU" />
+            <enumeration value="VE" />
+            <enumeration value="VN" />
+            <enumeration value="VG" />
+            <enumeration value="VI" />
+            <enumeration value="WF" />
+            <enumeration value="EH" />
+            <enumeration value="YE" />
+            <enumeration value="ZM" />
+            <enumeration value="ZW" />
+        </restriction>
+    </simpleType>
+    <simpleType name="iso4217">
+        <restriction base="string">
+            <enumeration value="aed" />
+            <enumeration value="afa" />
+            <enumeration value="all" />
+            <enumeration value="amd" />
+            <enumeration value="ang" />
+            <enumeration value="aoa" />
+            <enumeration value="ars" />
+            <enumeration value="aud" />
+            <enumeration value="awg" />
+            <enumeration value="azm" />
+            <enumeration value="bam" />
+            <enumeration value="bbd" />
+            <enumeration value="bdt" />
+            <enumeration value="bgn" />
+            <enumeration value="bhd" />
+            <enumeration value="bif" />
+            <enumeration value="bmd" />
+            <enumeration value="bnd" />
+            <enumeration value="bob" />
+            <enumeration value="brl" />
+            <enumeration value="bsd" />
+            <enumeration value="btn" />
+            <enumeration value="bwp" />
+            <enumeration value="byr" />
+            <enumeration value="bzd" />
+            <enumeration value="cad" />
+            <enumeration value="cdf" />
+            <enumeration value="chf" />
+            <enumeration value="clp" />
+            <enumeration value="cny" />
+            <enumeration value="cop" />
+            <enumeration value="crc" />
+            <enumeration value="csd" />
+            <enumeration value="cup" />
+            <enumeration value="cve" />
+            <enumeration value="cyp" />
+            <enumeration value="czk" />
+            <enumeration value="djf" />
+            <enumeration value="dkk" />
+            <enumeration value="dop" />
+            <enumeration value="dzd" />
+            <enumeration value="eek" />
+            <enumeration value="egp" />
+            <enumeration value="ern" />
+            <enumeration value="etb" />
+            <enumeration value="eur" />
+            <enumeration value="fjd" />
+            <enumeration value="fkp" />
+            <enumeration value="gbp" />
+            <enumeration value="gel" />
+            <enumeration value="ggp" />
+            <enumeration value="ghc" />
+            <enumeration value="gip" />
+            <enumeration value="gmd" />
+            <enumeration value="gnf" />
+            <enumeration value="gtq" />
+            <enumeration value="gyd" />
+            <enumeration value="hkd" />
+            <enumeration value="hnl" />
+            <enumeration value="hrk" />
+            <enumeration value="htg" />
+            <enumeration value="huf" />
+            <enumeration value="idr" />
+            <enumeration value="ils" />
+            <enumeration value="imp" />
+            <enumeration value="inr" />
+            <enumeration value="iqd" />
+            <enumeration value="irr" />
+            <enumeration value="isk" />
+            <enumeration value="jep" />
+            <enumeration value="jmd" />
+            <enumeration value="jod" />
+            <enumeration value="jpy" />
+            <enumeration value="kes" />
+            <enumeration value="kgs" />
+            <enumeration value="khr" />
+            <enumeration value="kmf" />
+            <enumeration value="kpw" />
+            <enumeration value="krw" />
+            <enumeration value="kwd" />
+            <enumeration value="kyd" />
+            <enumeration value="kzt" />
+            <enumeration value="lak" />
+            <enumeration value="lbp" />
+            <enumeration value="lkr" />
+            <enumeration value="lrd" />
+            <enumeration value="lsl" />
+            <enumeration value="ltl" />
+            <enumeration value="lvl" />
+            <enumeration value="lyd" />
+            <enumeration value="mad" />
+            <enumeration value="mdl" />
+            <enumeration value="mga" />
+            <enumeration value="mkd" />
+            <enumeration value="mmk" />
+            <enumeration value="mnt" />
+            <enumeration value="mop" />
+            <enumeration value="mro" />
+            <enumeration value="mtl" />
+            <enumeration value="mur" />
+            <enumeration value="mvr" />
+            <enumeration value="mwk" />
+            <enumeration value="mxn" />
+            <enumeration value="myr" />
+            <enumeration value="mzm" />
+            <enumeration value="nad" />
+            <enumeration value="ngn" />
+            <enumeration value="nio" />
+            <enumeration value="nok" />
+            <enumeration value="npr" />
+            <enumeration value="nzd" />
+            <enumeration value="omr" />
+            <enumeration value="pab" />
+            <enumeration value="pen" />
+            <enumeration value="pgk" />
+            <enumeration value="php" />
+            <enumeration value="pkr" />
+            <enumeration value="pln" />
+            <enumeration value="pyg" />
+            <enumeration value="qar" />
+            <enumeration value="rol" />
+            <enumeration value="rub" />
+            <enumeration value="rwf" />
+            <enumeration value="sar" />
+            <enumeration value="sbd" />
+            <enumeration value="scr" />
+            <enumeration value="sdd" />
+            <enumeration value="sek" />
+            <enumeration value="sgd" />
+            <enumeration value="shp" />
+            <enumeration value="sit" />
+            <enumeration value="skk" />
+            <enumeration value="sll" />
+            <enumeration value="sos" />
+            <enumeration value="spl" />
+            <enumeration value="srd" />
+            <enumeration value="std" />
+            <enumeration value="svc" />
+            <enumeration value="syp" />
+            <enumeration value="szl" />
+            <enumeration value="thb" />
+            <enumeration value="tjs" />
+            <enumeration value="tmm" />
+            <enumeration value="tnd" />
+            <enumeration value="top" />
+            <enumeration value="trl" />
+            <enumeration value="try" />
+            <enumeration value="ttd" />
+            <enumeration value="tvd" />
+            <enumeration value="twd" />
+            <enumeration value="tzs" />
+            <enumeration value="uah" />
+            <enumeration value="ugx" />
+            <enumeration value="usd" />
+            <enumeration value="uyu" />
+            <enumeration value="uzs" />
+            <enumeration value="veb" />
+            <enumeration value="vnd" />
+            <enumeration value="vuv" />
+            <enumeration value="wst" />
+            <enumeration value="xaf" />
+            <enumeration value="xag" />
+            <enumeration value="xau" />
+            <enumeration value="xcd" />
+            <enumeration value="xdr" />
+            <enumeration value="xof" />
+            <enumeration value="xpd" />
+            <enumeration value="xpf" />
+            <enumeration value="xpt" />
+            <enumeration value="yer" />
+            <enumeration value="zar" />
+            <enumeration value="zmk" />
+            <enumeration value="zwd" />
+        </restriction>
+    </simpleType>
+    <complexType name="Group">
+        <sequence>
+            <element name="name" type="wc-types:string255">
+            </element>
+            <element name="id" type="wc-types:guid">
+            </element>
+            <element name="contact-email" type="wc-types:EmailAddress">
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="Groups">
+        <sequence>
+            <element name="group" type="wc-types:Group"
+                minOccurs="1" maxOccurs="unbounded">
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="PersonInfo">
+        <sequence>
+            <element name="person-id" type="wc-types:guid">
+            </element>
+
+            <element name="name" type="wc-types:string255">
+            </element>
+
+            <element name="app-settings" type="wc-types:AppSettings"
+                     minOccurs="0" maxOccurs="1">
+            </element>
+
+
+            <element name="selected-record-id" type="wc-types:guid"
+                     minOccurs="0" maxOccurs="1">
+            </element>
+
+            <element name="more-records" type="boolean" minOccurs="0">
+            </element>
+            
+            <element name="record" type="wc-types:Record"
+                     minOccurs="0" maxOccurs="unbounded" >
+            </element>
+
+
+            <element name="groups" type="wc-types:Groups"
+                     minOccurs="0" maxOccurs="1" >
+            </element>
+
+            <element name="preferred-culture" type="wc-types:Culture"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+
+            <element name="preferred-uiculture" type="wc-types:Culture"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="AppSettings">
+        <sequence>
+            <any namespace="##any"
+                 minOccurs="0"
+                 maxOccurs="unbounded"
+                 processContents="skip">
+            </any>
+        </sequence>
+    </complexType>
+
+    <simpleType name="RecordState">
+        <restriction base="string">
+            <enumeration value="Active">
+            </enumeration>
+            <enumeration value="ReadOnly">
+            </enumeration>
+            <enumeration value="Suspended">
+            </enumeration>
+            <enumeration value="Deleted">
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Record">
+        <simpleContent>
+            <extension base="wc-types:string255">
+                <attribute name="id" type="wc-types:guid" use="required">
+                </attribute>
+                <attribute name="record-custodian" type="boolean"
+                           use="optional">
+                </attribute>
+                <attribute name="rel-type" type="int" use="required">
+                </attribute>
+                <attribute name="rel-name" type="wc-types:string255" use="optional">
+                </attribute>
+                <attribute name="auth-expires" type="dateTime"
+                           use="optional">
+                </attribute>
+                <attribute name="auth-expired" type="boolean" use="optional">
+                </attribute>
+                <attribute name="display-name" type="wc-types:string255"
+                           use="optional">
+                </attribute>
+                <attribute name="state" type="wc-types:RecordState" >
+                </attribute>
+                <attribute name="date-created" type="dateTime" use="optional">
+                </attribute>                
+                <attribute name="max-size-bytes" type="wc-types:positiveLong" use="optional">            
+                </attribute>                
+                <attribute name="size-bytes" type="wc-types:positiveLong" use="optional">
+                </attribute>                
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="LanguageCompetency">
+        <simpleContent>
+            <extension base="wc-types:iso639-1">
+                <attribute name="is-primary" type="boolean" use="optional">
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <complexType name="LocalizedString">
+        <simpleContent>
+            <extension base="string">
+                <attribute name="language"
+                    type="wc-types:iso639-1" use="optional">
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="OpenQueryInfo">
+        <sequence>
+            <element name="query-id" type="wc-types:guid" >
+            </element>
+
+            <element name="app-name" type="wc-types:string255" >
+            </element>
+
+            <element name="date-created" type="dateTime" >>
+            </element>
+
+            <element name="expires-date" type="dateTime" 
+                minOccurs="0" maxOccurs="1" >
+            </element>
+
+            <element name="pin-required" type="boolean" >
+            </element>
+
+            <element name="note" type="wc-types:string128"
+                minOccurs="0" maxOccurs="1" >
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="coded-value">
+        <sequence>
+            <element name="value" type="string">
+            </element>
+            <element name="family" type="string" minOccurs="0">
+            </element>
+            <element name="type" type="string">
+            </element>
+            <element name="version" type="string" minOccurs="0">
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="codable-value">
+        <sequence>
+            <element name="text" type="string">
+            </element>
+            <element name="code" type="wc-types:coded-value" minOccurs="0" maxOccurs="unbounded">
+            </element>
+        </sequence>
+    </complexType>
+</schema>

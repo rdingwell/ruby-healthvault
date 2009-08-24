@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.vocab"
+    xmlns:this="urn:com.microsoft.wc.vocab"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        VOCAB.XSD
+        Microsoft HealthVault
+
+        Platform API: Shared vocab types 
+
+    -->
+
+    <import namespace="urn:com.microsoft.wc.types" schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Defines common types for interfacing with vocabularies in the system.
+            </summary>
+
+            <remarks>
+
+            </remarks>
+        </documentation>
+    </annotation>
+
+    <complexType name="VocabularyKey">
+        <annotation>
+            <documentation>
+                <summary>
+                    Used to uniquely identify a specific vocabulary in the system.
+                </summary>
+
+                <remarks>
+                    Information about supported vocabularies can be obtained though 
+                    the partner labs site.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="name" type="wc-types:stringnz">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The name of the vocabulary being referenced.
+                        </summary>
+
+                        <remarks>
+                        
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="family" type="wc-types:stringnz"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The family to which the vocabulary being referenced belongs.
+                        </summary>
+
+                        <remarks>
+                            Vocabularies can be defined by HealthVault or by a number 
+                            of standards organizations such as the ISO. The family 
+                            parameter specfies this source.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="version" type="wc-types:stringnz"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The version of the vocabulary being referenced.
+                        </summary>
+
+                        <remarks>
+                            A string used to identify a particular version of a 
+                            vocabulary.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="code-value" type ="string" minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+
+                        </summary>
+
+                        <remarks>
+                            If the code-value is specified, all vocabulary code items starting with
+                            the one which has the specified code value are returned.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+        <attribute ref="xml:lang" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+                        The language of the vocabulary code set. 
+                    </summary>
+                    <remarks>
+                        This is used to track the locale of the returning vocabulary. 
+                        When the vocabulary of requested locale doesn't exist in HealthVault
+                        platform, the platform will try to locate the vocabulary according 
+                        to the locale default logic. As a result, the locale of the returning 
+                        vocabulary may not be identical to the requesting locale.  
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+    </complexType>
+
+    <complexType name="VocabularyKeyInfo">
+        <annotation>
+            <documentation>
+                <summary>
+                    Summary information about a vocabulary in the system.
+                </summary>
+
+                <remarks>
+                    This information is made up of the key and a description
+                    of the vocabulary. The key is made up of the name, family, 
+                    and version.
+                </remarks>
+            </documentation>
+        </annotation>
+        <complexContent>
+            <extension base="this:VocabularyKey">                
+                <sequence>
+                    <element name="description"
+                             type ="string" minOccurs="0" maxOccurs="1" >
+                        <annotation>
+                            <documentation>
+                                <summary>
+                                    This is a description of the vocabulary being returned.
+                                </summary>
+
+                                <remarks>
+                                    This is a text description of the vocabulary returned by
+                                    the system as a part of vocabulary key information.
+                                </remarks>
+                            </documentation>
+                        </annotation>
+                    </element>
+
+
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="VocabularyCodeSet">
+        <annotation>
+            <documentation>
+                <summary>
+                    Contains information about a vocabulary along with items
+                    belonging to that vocabulary.
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="name" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The name of the referenced vocabulary.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="family" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The family the referenced vocabulary belongs to.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="version" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The version of the referenced vocabulary.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="code-item"
+                     type="this:VocabularyCodeItem"
+                     minOccurs="0" maxOccurs="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A list of vocabulary items belonging to a vocabulary.
+                        </summary>
+
+                        <remarks>                            
+                            This is the full list of items in the vocabulary for a GetVocabulary 
+                            call, and a list of matching items for a SearchVocabulary call.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="is-vocab-truncated"
+                     type="boolean" minOccurs="0" maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Indicates if list of vocabulary items in the vocabulary has been
+                            truncated.
+                        </summary>
+
+                        <remarks>
+                            HealthVault only returns a maximum number of vocabulary items indicated
+                            by the configuration.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+        <attribute ref="xml:lang" use="optional">
+            <annotation>
+                <documentation>
+                    <summary>
+                        The language of the vocabulary code set. 
+                    </summary>
+                    <remarks>
+                        This is used to track the locale of the returning vocabulary. 
+                        When the vocabulary of requested locale doesn't exist in HealthVault
+                        platform, the platform will try to locate the vocabulary according 
+                        to the locale default logic. As a result, the locale of the returning 
+                        vocabulary may not be identical to the requesting locale.  
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+    </complexType>
+
+
+    <complexType name="VocabularyCodeItem">
+        <annotation>
+            <documentation>
+                <summary>
+                    Describes an indivdual code item.
+                </summary>
+
+                <remarks>
+                    A code item is a unit member of a vocabulary.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="code-value" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            This is the value associated with the item which uniquely
+                            identifies it within a vocabulary.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="display-text" type="string"
+                     minOccurs ="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            This is the display text of the item.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="abbreviation-text" type="string"
+                     minOccurs ="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            This is the abbreviation text of an item.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="info-xml" type="this:InfoXml"
+                     minOccurs="0" maxOccurs="1">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Contains important auxillary information that can be used
+                            for operations such as unit conversions.
+                        </summary>
+
+                        <remarks>
+
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="InfoXml">
+        <annotation>
+            <documentation>
+                <summary>
+                    Contains important auxillary information that can be used
+                    for operations such as unit conversions.
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <any namespace="##any" processContents="skip">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Code item specific blob that contains auxillary information about
+                            the code item.
+                        </summary>
+
+                        <remarks>
+                            This can be for instance, information on how to convert a 
+                            value from one measurement unit to another, or nutritional
+                            information of a food item.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </any>
+        </sequence>
+    </complexType>
+    
+    <complexType name="vocabulary-mapping-item">
+        <annotation>
+            <documentation>
+                <summary>
+                    Defines a single mapping from one vocabulary to another.
+                </summary>
+                <remarks />
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="reference-id" type="wc-types:coded-value" minOccurs="1" maxOccurs="1" />
+        </sequence>
+    </complexType>
+
+    <complexType name="vocabulary-mapping">
+        <annotation>
+            <documentation>
+                <summary>
+                    Defines a collection of mappings from one vocabulary to another.
+                </summary>
+                <remarks />
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="vocabulary-mapping-item"
+                     type="this:vocabulary-mapping-item"
+                     minOccurs="0"
+                     maxOccurs="unbounded" />
+        </sequence>
+    </complexType>
+
+    <complexType name="vocabulary-synonym">
+        <annotation>
+            <documentation>
+                <summary>
+                    Defines a single vocabulary synonym.
+                </summary>
+                <remarks />
+            </documentation>
+        </annotation>
+        <attribute name="term" type="string" use="required" />
+    </complexType>
+
+    <complexType name="vocabulary-synonyms">
+        <annotation>
+            <documentation>
+                <summary>
+                    Defines a collection of vocabulary synonyms.
+                </summary>
+                <remarks />
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="vocabulary-synonym"
+                     type="this:vocabulary-synonym"
+                     minOccurs="0"
+                     maxOccurs="unbounded" />
+        </sequence>
+    </complexType>
+</schema>

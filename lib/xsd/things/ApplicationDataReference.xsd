@@ -1,0 +1,32 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.application-data-reference" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.application-data-reference"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>9ad2a94f-c6a4-4d78-8b50-75b65be0e250</type-id><type-name>Application Data Reference</type-name><wrapper-class-name>ApplicationDataReference</wrapper-class-name><wrapper-class-fwlink>151810</wrapper-class-fwlink><sample-xml-fwlink>151811</sample-xml-fwlink><data-type-guide-fwlink>151809</data-type-guide-fwlink><summary>
+                Information that can be used by an application to render content from another
+                application.
+            </summary></documentation></annotation><element name="application-data-reference"><annotation><documentation><summary>
+                    Information that can be used by an application to render content from another
+                    application.
+                </summary></documentation></annotation><complexType><sequence><element name="name" type="t:stringnz"><annotation><documentation><summary>
+                                Consumer-friendly name.
+                            </summary></documentation></annotation></element><element name="render-filename" type="t:stringnz" minOccurs="0"><annotation><documentation><summary>
+                                The fully qualified name of the SilverLight application.
+                            </summary><remarks>
+                                In current implementations, the xap files themselves must be hosted by Microsoft.
+                                This name will be used to look-up the src location of the widget for the purpose of display.
+                            </remarks></documentation></annotation></element><element name="public-url" type="t:stringnz" minOccurs="0"><annotation><documentation><summary>
+                                The url that renders the application, suitable for IFrame embedding.
+                            </summary></documentation></annotation></element><element name="configuration-url" type="t:stringnz" minOccurs="0"><annotation><documentation><summary>
+                                The url to the application's configuration page.
+                            </summary><remarks>
+                                This page is where the user can enable/disable the application.
+                            </remarks></documentation></annotation></element><element name="open-query-id" type="t:guid" minOccurs="0"><annotation><documentation><summary>
+                                Identifier to pass to open query.
+                            </summary><remarks>
+                                The open query is executed by referencing
+                                {platform url}/OpenQuery.ashx?id={open-query-id}
+                                
+                                This is used when HealthVault serves data to the application directly. 
+                            </remarks></documentation></annotation></element><element name="application-data-url" type="t:stringnz" minOccurs="0"><annotation><documentation><summary>
+                                Url to obtain data from the application.
+                            </summary><remarks>
+                                If there is application specific data, or data that needs to be served from the application
+                                rather than directly from HealthVault, then this field should contain the fully qualified https url.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

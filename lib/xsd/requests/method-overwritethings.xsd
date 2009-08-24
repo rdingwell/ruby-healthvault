@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.OverwriteThings"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-thing="urn:com.microsoft.wc.thing"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-OVERWRITETHINGS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for OverwriteThings method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <import
+        namespace="urn:com.microsoft.wc.thing"
+        schemaLocation="thing.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                This method allows a Thing to be updated even if the type
+                version is less than the instance type version that already
+                exists.
+            </summary>
+
+            <remarks>
+                Most applications should use PutThings to update instances of 
+                things in HealthVault. However, PutThings will fail if an 
+                update is attempted with a thing type version that is less than
+                the thing type version of the instance that HealthVault is 
+                storing. For some applications it will be acceptable to "downversion"
+                the instance to an older type version.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- OverwriteThings - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="thing" type="wc-thing:Thing"
+                    minOccurs="1" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The thing to be updated. If the thing-id
+                                exists, then the previous thing is updated. If thing-id
+                                is not provided, then a new thing is created.
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

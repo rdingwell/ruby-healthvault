@@ -1,0 +1,27 @@
+<schema xmlns:contraindication="urn:com.microsoft.wc.thing.contraindication" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.contraindication"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>046d0ad7-6d7f-4bfd-afd4-4192ca2e913d</type-id><type-name>Contraindication</type-name><wrapper-class-name>Contraindication</wrapper-class-name><wrapper-class-fwlink>136086</wrapper-class-fwlink><sample-xml-fwlink>136087</sample-xml-fwlink><data-type-guide-fwlink>136085</data-type-guide-fwlink><summary>
+                Information related to an contraindication.
+            </summary><remarks>
+            This thing type is used to store substances (such as food or drugs) that interacts badly with a 
+            specific condition or drugs a patient is already taking.
+            </remarks><effective-date-element>documented-date</effective-date-element></documentation></annotation><element name="contraindication"><complexType><annotation><documentation><summary>
+                        Information related to an contraindication.
+                    </summary><remarks>
+                        This thing type is used to store substances (such as food or drugs) that interacts badly with a 
+                        specific condition or drugs a patient is already taking.
+                    </remarks></documentation></annotation><sequence><element name="substance" type="t:codable-value"><annotation><documentation><summary>
+                                The substance that is contraindicated.
+                            </summary></documentation></annotation></element><element name="status" type="t:codable-value"><annotation><documentation><summary>
+                                The status of the contraindication.
+                            </summary><remarks>
+                             A contraindication can be inactive or active.                              
+                            </remarks></documentation></annotation></element><element name="source" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The source of the contraindication.
+                            </summary><remarks>
+                             For example, a contraindication against leafy green
+                                 vegetables might have as a source the blood thinner Warfarin, which would be coded here using
+                                  an appropriate medication vocabulary.
+                            </remarks></documentation></annotation></element><element name="documenter" type="t:person" minOccurs="0"><annotation><documentation><summary>
+                                The person who documented this issue (physician, pharmacist, etc.)
+                            </summary></documentation></annotation></element><element name="documented-date" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                The date the contraindication was documented.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

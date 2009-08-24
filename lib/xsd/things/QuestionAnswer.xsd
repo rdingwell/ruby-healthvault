@@ -1,0 +1,26 @@
+<schema xmlns:this="urn:com.microsoft.wc.thing.question-answer" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.question-answer"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>55d33791-58de-4cae-8c78-819e12ba5059</type-id><type-name>Question Answer</type-name><wrapper-class-name>QuestionAnswer</wrapper-class-name><wrapper-class-fwlink>136221</wrapper-class-fwlink><sample-xml-fwlink>136222</sample-xml-fwlink><data-type-guide-fwlink>136220</data-type-guide-fwlink><summary>
+                A question that was asked and the answers given. 
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><element name="question-answer"><complexType><annotation><documentation><summary>
+                        A question that was asked and the answers given.
+                    </summary></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                Date and time the question was asked.
+                            </summary></documentation></annotation></element><element name="question" type="t:codable-value"><annotation><documentation><summary>
+                                The question that was asked.
+                            </summary><remarks>
+                                A list of vocabularies may be found in the preferred vocabulary. 
+                                Contact the HealthVault team to help define the preferred vocabulary.
+                            </remarks><preferred-vocabulary>question-sets</preferred-vocabulary></documentation></annotation></element><element name="answer-choice" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The list of possible answers to this question. 
+                            </summary><remarks>
+                                Questions that are answered using free-form text will not specify answer choices.
+                                <br />
+                                The answer vocabulary used is typically one related to the vocabulary used for the question.
+                                <br />
+                                For example, the choice for "High blood pressure" would code for that condition. 
+                                <br />
+                                Standard answers (such as yes/no) can be coded using the preferred vocabulary.
+                            </remarks><preferred-vocabulary>answer-choice-sets</preferred-vocabulary></documentation></annotation></element><element name="answer" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The recorded answers. 
+                            </summary><remarks>
+                                In many cases, the coding of the answer is identical to the coding of the selected answer-choices.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

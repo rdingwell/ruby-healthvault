@@ -1,0 +1,28 @@
+<schema xmlns:c="urn:com.microsoft.wc.thing.condition" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.condition"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>7ea7a1f9-880b-4bd4-b593-f5660f20eda8</type-id><type-name>Condition</type-name><wrapper-class-name>Condition</wrapper-class-name><wrapper-class-fwlink>136080</wrapper-class-fwlink><sample-xml-fwlink>136081</sample-xml-fwlink><data-type-guide-fwlink>136079</data-type-guide-fwlink><summary>
+                Defines a single health or medical issue/problem.
+            </summary><remarks>
+                CCR qualifiers and other notes should go in the
+                common/note section of the thing.
+            </remarks></documentation></annotation><element name="condition"><complexType><annotation><documentation><summary>
+                        Defines a single health or medical issue/problem.
+                    </summary><remarks>
+                        CCR qualifiers and other notes should go in the
+                        common/note section of the thing.
+                    </remarks></documentation></annotation><sequence><element name="name" minOccurs="1" maxOccurs="1" type="t:codable-value"><annotation><documentation><summary>
+                                The name or description of the condition.
+                            </summary><remarks>
+                                Codes for the condition may be found in zero or
+                                more of the Microsoft Health vocabularies.
+                            </remarks></documentation></annotation></element><element name="onset-date" minOccurs="0" maxOccurs="1" type="d:approx-date-time"><annotation><documentation><summary>
+                                The date of onset or the first diagnosis.
+                            </summary></documentation></annotation></element><element name="status" minOccurs="0" maxOccurs="1" type="t:codable-value"><annotation><documentation><summary>
+                                The description of the status.
+                            </summary><remarks>
+                                For example, 'acute' or 'chronic'.
+                            </remarks></documentation></annotation></element><element name="stop-date" minOccurs="0" maxOccurs="1" type="d:approx-date-time"><annotation><documentation><summary>
+                                The date the condition resolved (or for
+                                multiple acute episodes, the last date the
+                                condition resolved).
+                            </summary></documentation></annotation></element><element name="stop-reason" minOccurs="0" maxOccurs="1" type="string"><annotation><documentation><summary>
+                                A statement of how the condition was resolved.
+                            </summary></documentation></annotation></element><!-- CCR qualifiers or other notes go into common/note --></sequence></complexType></element></schema>

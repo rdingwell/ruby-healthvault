@@ -1,0 +1,514 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetServiceDefinition"
+    xmlns:this="urn:com.microsoft.wc.methods.response.GetServiceDefinition"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-GETSERVICEDEFINITION.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetServiceDefinition method
+
+    -->
+
+    <import
+      namespace="urn:com.microsoft.wc.types"
+      schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+              Gets information about Microsoft HealthVault and
+              its related features.
+            </summary>
+
+            <remarks>
+              GetServiceDefinition gets information about
+              Microsoft HealthVault such as its version, the schemas for its
+              published methods, and pointers to the Microsoft HealthVault
+              Shell and software development kit.
+
+              It is recommended that instead of calling this method, that
+              you get the "servicedefinition.xml" file at the root of the
+              HealthVault Platform application.
+              For example: "http://platform.healthvault.com/platform/servicedefinition.xml".
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+
+    <!-- info - - - - - -  - - - - - - - - - - - - - - -->
+
+    <complexType name="ConfigurationEntry">
+        <annotation>
+            <documentation>
+                <summary>
+                  A configuration value that is important for developers
+                  to know about Microsoft HealthVault.
+                </summary>
+
+                <remarks>
+                  Microsoft HealthVault has some configuration that
+                  dictates the behavior of certain methods and data. For
+                  instance, GetThings will return only a certain number
+                  of full things in the response and give only thing keys
+                  for anything beyond that limit. The number of full things
+                  returned is defined by configuration and can be changed
+                  at any time to optimize the services ability to respond
+                  to applications. These configuration values are surfaced
+                  here so that application developers can make programmatic
+                  decisions based on these values if necessary.
+                </remarks>
+            </documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="string">
+                <attribute name="key"
+                    type="string" use="required">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The name of the configuration value.
+                            </summary>
+                       </documentation>
+                    </annotation>
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="Platform">
+        <annotation>
+            <documentation>
+                <summary>
+                  Information about Microsoft HealthVault.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="url" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The URL to use to access the Microsoft HealthVault
+                            web service methods.
+                        </summary>
+
+                        <remarks>
+                          Microsoft HealthVault method requests
+                          must go through this URL.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="version" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                          The Microsoft HealthVault version number.
+                        </summary>
+
+                        <remarks>
+                            This version number will follow the general
+                            .NET guidlines for versioning of assemblies:
+                            major.minor.build.revision. Changes to the
+                            major version number signify breaking changes.
+                            Changes to other parts of the version signify
+                            added or updates to functionality.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="configuration"
+                type="this:ConfigurationEntry"
+                minOccurs="0"
+                maxOccurs="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                          Configuration values that are important for developers
+                          to know about Microsoft HealthVault.
+                        </summary>
+
+                        <remarks>
+                          Microsoft HealthVault has some configuration that
+                          dictates the behavior of certain methods and data. For
+                          instance, GetThings will return only a certain number
+                          of full things in the response and give only thing keys
+                          for anything beyond that limit. The number of full things
+                          returned is defined by configuration and can be changed
+                          at any time to optimize the services ability to respond
+                          to applications. These configuration values are surfaced
+                          here so that application developers can make programmatic
+                          decisions based on these values if necessary.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+
+    <complexType name="ShellRedirectToken">
+        <annotation>
+            <documentation>
+                <summary>
+                    A representation of the redirect information that can be
+                    supplied along with the Shell redirect url to access specific
+                    functionalities in the Shell.
+                </summary>
+            </documentation>
+        </annotation>        
+        <sequence>
+            <element name="token" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A string token used to redirect to specific parts
+                            within the Shell, accessing specific functions.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="description" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A localized text description of the Shell 
+                            functionality accessible by using the token.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="querystring-parameters" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            A comma seperated list of parameters that must
+                            be supplied in the query string in addition to 
+                            the redirect token.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+        </sequence>
+    </complexType>
+    
+    <complexType name="Shell">
+        <annotation>
+            <documentation>
+                <summary>
+                    Information about the Microsoft HealthVault Shell.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="url" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The URL used to access the Microsoft HealthVault Shell.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+            <element name="redirect-url" type="string">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The URL used to redirect to specific functions within the Microsoft HealthVault Shell.
+                        </summary>
+                    </documentation>
+                </annotation>               
+            </element>
+            <element name="redirect-token" 
+                type="this:ShellRedirectToken" 
+                minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The possible redirect tokens that can be supplied 
+                            in addition to the redirect url to route to specific 
+                            functionalities within the Shell.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+        </sequence>
+    </complexType>
+
+    <complexType name="SDKAssembly">
+        <annotation>
+            <documentation>
+                <summary>
+                  Information about the .NET assembly that can be used to
+                  access Microsoft HealthVault.
+                </summary>
+
+                <remarks>
+                  Microsoft HealthVault can be accessed via XML
+                  web methods. Microsoft has also developed .NET assemblies
+                  for making it easier for developers using .NET to access
+                  Microsoft HealthVault. The following contains
+                  information about those assemblies.
+                </remarks>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="url" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                          The URL of the Microsoft HealthVault .NET assembly
+                          for download.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+            <element name="version" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                          The version number for the Microsoft HealthVault
+                          .NET assembly.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="doc-url" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The URL of the documentation for the Microsoft
+                            HealthVault .NET assembly.
+                        </summary>
+
+                        <remarks>
+                          The URL of the online reference documentation for the
+                          Microsoft HealthVault .NET APIs.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <complexType name="XmlMethodVersion">
+        <annotation>
+            <documentation>
+                <summary>
+                  Information about a particular version of one of the
+                  Microsoft HealthVault XML web-methods.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="request-schema-url"
+                     type="string"
+                     minOccurs="0"
+                     maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The URL of the method request schema.
+                        </summary>
+
+                        <remarks>
+                            The URL points to an .xsd file defining the 
+                            schema for a request to this method.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="response-schema-url"
+                     type="string"
+                     minOccurs="0"
+                     maxOccurs="1" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The URL of the method response schema.
+                        </summary>
+
+                        <remarks>
+                            The URL points to an .xsd file defining the
+                            schema for a response from this method.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+        <attribute name="number" type="string" use="required">
+            <annotation>
+                <documentation>
+                    <summary>
+                        The version number of the method.
+                    </summary>
+
+                    <remarks>
+                      The version number for a Microsoft HealthVault
+                      web-method is a sequencially increasing number starting
+                      at one. Breaking changes to a method will increment
+                      the version number for the method but old versions of
+                      a method are still available to handle requests. The
+                      method request must contain the appropriate method
+                      version number for the XML schema that it is sending.
+                    </remarks>
+                </documentation>
+            </annotation>
+        </attribute>
+
+    </complexType>
+
+    <complexType name="XmlMethod">
+        <annotation>
+            <documentation>
+                <summary>
+                  Information about a Microsoft HealthVault web-method.
+                </summary>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="name" type="string" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                          The name of the Microsoft HealthVault method.
+                        </summary>
+
+                        <remarks>
+                            The name is used in the XML request to define the
+                            method the request is calling.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+            <element name="version"
+                type="this:XmlMethodVersion"
+                minOccurs="0"
+                maxOccurs="unbounded" >
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The set of available versions of the method.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </element>
+
+
+        </sequence>
+    </complexType>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="platform"
+                         type="this:Platform">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                              Information about Microsoft HealthVault.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <element name="shell"
+                         type="this:Shell" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Information about the Microsoft HealthVault Shell.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <element name="sdk-assembly"
+                         type="this:SDKAssembly"
+                         minOccurs="1"
+                         maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                              Information about the Microsoft HealthVault
+                              .NET software development kit.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <element name="xml-method"
+                         type="this:XmlMethod"
+                         minOccurs="1"
+                         maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                              Information about the Microsoft HealthVault
+                              web methods.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="common-schema"
+                         type="string"
+                         minOccurs="0"
+                         maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                URLs of schemas referenced by the Microsoft 
+                                HealthVault web service methods.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

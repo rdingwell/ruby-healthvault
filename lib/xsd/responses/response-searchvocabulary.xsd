@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.SearchVocabulary"
+    xmlns:wc-types="urn:com.microsoft.wc.types"    
+    xmlns:wc-vocab="urn:com.microsoft.wc.vocab"    
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-SEARCHVOCABULARY.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for searchvocabulary method response
+
+    -->
+
+    <import namespace="urn:com.microsoft.wc.types" schemaLocation="types.xsd" />
+    <import namespace="urn:com.microsoft.wc.vocab" schemaLocation="vocab.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Info schema for the response to SearchVocabulary
+            </summary>
+
+            <remarks>
+
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- searchvocabulary  - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        Specifies the schema for the SearchVocabulary method response.
+                    </summary>
+
+                    <remarks>
+                        
+                    </remarks>
+                </documentation>
+            </annotation>
+            <choice>
+
+                <element name="vocabulary-key" type="wc-vocab:VocabularyKeyInfo"
+                         minOccurs="0" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                When searching vocabulary headers, this element
+                                contains the list of vocabulary key infos for 
+                                vocabularies matching the search criteria.
+                            </summary>
+
+                            <remarks>
+                                This element is absent no matching vocabularies 
+                                were found.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="code-set-result" type="wc-vocab:VocabularyCodeSet">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                When searching a specific vocabulary, this element
+                                contains the list of code items matching the search
+                                criteria, along with the vocabulary that was searched.
+                            </summary>
+
+                            <remarks>
+                                The code-item member is absent if no matches were found.                                
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>               
+
+
+            </choice>
+        </complexType>
+    </element>
+
+</schema>

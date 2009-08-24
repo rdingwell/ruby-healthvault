@@ -1,0 +1,23 @@
+<schema xmlns:a="urn:com.microsoft.wc.thing.aerobic" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.aerobic"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>90dbf000-fc55-4b92-b4a1-da45c36ad8bb</type-id><type-name>Aerobic Exercise Session</type-name><wrapper-class-name>AerobicSession</wrapper-class-name><wrapper-class-fwlink>136026</wrapper-class-fwlink><sample-xml-fwlink>136027</sample-xml-fwlink><data-type-guide-fwlink>136025</data-type-guide-fwlink><summary>
+                A single session of aerobic exercise.
+            </summary><remarks>
+                Note: Please use the new exercise type instead of this type.
+                <br />
+                An aerobic session is a single instance of exercise like
+                running, biking, etc.
+            </remarks><effective-date-element>when</effective-date-element><seealso>urn:com.microsoft.wc.thing.aerobic-profile</seealso><seealso>urn:com.microsoft.wc.thing.aerobic-weekly</seealso></documentation></annotation><element name="aerobic-session"><complexType><annotation><documentation><summary>
+                        A single session of aerobic exercise.
+                    </summary><remarks>
+                        Note: Please use the new exercise type instead of this type.
+                        <br />
+                        An aerobic session is a single instance of exercise like
+                        running, biking, etc.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time when the aerobic session occurred.
+                            </summary></documentation></annotation></element><element name="session" type="t:aerobic-session"><annotation><documentation><summary>
+                                The information about the entire aerobic session.
+                            </summary></documentation></annotation></element><element name="session-samples" type="t:aerobic-session-samples" minOccurs="0"><annotation><documentation><summary>
+                                The information about the sample sets within the aerobic session.
+                            </summary></documentation></annotation></element><element name="lap-session" type="t:aerobic-lap-session" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The information about the lap within an aerobic session.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

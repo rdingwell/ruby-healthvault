@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Thing::Pregnancy::Baby</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Thing::Pregnancy::Baby</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../../files/lib/wc_data/generated/thing/pregnancy/baby_rb.html">
+                lib/wc_data/generated/thing/pregnancy/baby.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M002224">gender</a>&nbsp;&nbsp;
+      <a href="#M002223">gender=</a>&nbsp;&nbsp;
+      <a href="#M002230">head_circumference</a>&nbsp;&nbsp;
+      <a href="#M002229">head_circumference=</a>&nbsp;&nbsp;
+      <a href="#M002228">length</a>&nbsp;&nbsp;
+      <a href="#M002227">length=</a>&nbsp;&nbsp;
+      <a href="#M002222">name</a>&nbsp;&nbsp;
+      <a href="#M002221">name=</a>&nbsp;&nbsp;
+      <a href="#M002233">new</a>&nbsp;&nbsp;
+      <a href="#M002232">note</a>&nbsp;&nbsp;
+      <a href="#M002231">note=</a>&nbsp;&nbsp;
+      <a href="#M002226">weight</a>&nbsp;&nbsp;
+      <a href="#M002225">weight=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M002233" class="method-detail">
+        <a name="M002233"></a>
+
+        <div class="method-heading">
+          <a href="#M002233" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002233-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002233-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 109</span>
+109:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+110:           <span class="ruby-keyword kw">super</span>
+111:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'baby'</span>
+112:         
+113:           
+114:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'name'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Name</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+115:             
+116:           
+117:         
+118:           
+119:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'gender'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'gender'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Codablevalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+120:             
+121:           
+122:         
+123:           
+124:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'weight'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'weight'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Weightvalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+125:             
+126:           
+127:         
+128:           
+129:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'length'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'length'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Lengthvalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+130:             
+131:           
+132:         
+133:           
+134:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'head-circumference'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'head-circumference'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Lengthvalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+135:             
+136:           
+137:         
+138:           
+139:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'note'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+140:             
+141:           
+142:         
+143:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M002224" class="method-detail">
+        <a name="M002224"></a>
+
+        <div class="method-heading">
+          <a href="#M002224" class="method-signature">
+          <span class="method-name">gender</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002224-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002224-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 43</span>
+43:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gender</span>
+44:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'gender'</span>][<span class="ruby-identifier">:value</span>]
+45:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002223" class="method-detail">
+        <a name="M002223"></a>
+
+        <div class="method-heading">
+          <a href="#M002223" class="method-signature">
+          <span class="method-name">gender=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The <a href="Baby.html#M002224">gender</a> of the baby.
+<b>preferred-vocabulary</b>: <a href="Baby.html#M002224">gender</a>-types
+<em>value</em> is a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002223-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002223-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 38</span>
+38:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gender=</span>(<span class="ruby-identifier">value</span>)
+39:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'gender'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+40:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002230" class="method-detail">
+        <a name="M002230"></a>
+
+        <div class="method-heading">
+          <a href="#M002230" class="method-signature">
+          <span class="method-name">head_circumference</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Lengthvalue.html">HealthVault::WCData::Thing::Types::Lengthvalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002230-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002230-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 88</span>
+88:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">head_circumference</span>
+89:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'head-circumference'</span>][<span class="ruby-identifier">:value</span>]
+90:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002229" class="method-detail">
+        <a name="M002229"></a>
+
+        <div class="method-heading">
+          <a href="#M002229" class="method-signature">
+          <span class="method-name">head_circumference=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The circumference of the baby&#8216;s head. <em>value</em>
+is a <a
+href="../Types/Lengthvalue.html">HealthVault::WCData::Thing::Types::Lengthvalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002229-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002229-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 83</span>
+83:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">head_circumference=</span>(<span class="ruby-identifier">value</span>)
+84:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'head-circumference'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+85:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002228" class="method-detail">
+        <a name="M002228"></a>
+
+        <div class="method-heading">
+          <a href="#M002228" class="method-signature">
+          <span class="method-name">length</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Lengthvalue.html">HealthVault::WCData::Thing::Types::Lengthvalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002228-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002228-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 73</span>
+73:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">length</span>
+74:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'length'</span>][<span class="ruby-identifier">:value</span>]
+75:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002227" class="method-detail">
+        <a name="M002227"></a>
+
+        <div class="method-heading">
+          <a href="#M002227" class="method-signature">
+          <span class="method-name">length=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The birth <a href="Baby.html#M002228">length</a> of the
+baby. <em>value</em> is a <a
+href="../Types/Lengthvalue.html">HealthVault::WCData::Thing::Types::Lengthvalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002227-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002227-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 68</span>
+68:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">length=</span>(<span class="ruby-identifier">value</span>)
+69:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'length'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+70:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002222" class="method-detail">
+        <a name="M002222"></a>
+
+        <div class="method-heading">
+          <a href="#M002222" class="method-signature">
+          <span class="method-name">name</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Name.html">HealthVault::WCData::Thing::Types::Name</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002222-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002222-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 27</span>
+27:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
+28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>]
+29:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002221" class="method-detail">
+        <a name="M002221"></a>
+
+        <div class="method-heading">
+          <a href="#M002221" class="method-signature">
+          <span class="method-name">name=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The <a href="Baby.html#M002222">name</a> of the baby.
+<em>value</em> is a <a
+href="../Types/Name.html">HealthVault::WCData::Thing::Types::Name</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002221-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002221-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 22</span>
+22:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name=</span>(<span class="ruby-identifier">value</span>)
+23:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+24:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002232" class="method-detail">
+        <a name="M002232"></a>
+
+        <div class="method-heading">
+          <a href="#M002232" class="method-signature">
+          <span class="method-name">note</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002232-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002232-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 103</span>
+103:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">note</span>
+104:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>][<span class="ruby-identifier">:value</span>]
+105:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002231" class="method-detail">
+        <a name="M002231"></a>
+
+        <div class="method-heading">
+          <a href="#M002231" class="method-signature">
+          <span class="method-name">note=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: Additional information about the baby. <em>value</em> is a
+String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002231-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002231-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 98</span>
+ 98:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">note=</span>(<span class="ruby-identifier">value</span>)
+ 99:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+100:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002226" class="method-detail">
+        <a name="M002226"></a>
+
+        <div class="method-heading">
+          <a href="#M002226" class="method-signature">
+          <span class="method-name">weight</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Weightvalue.html">HealthVault::WCData::Thing::Types::Weightvalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002226-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002226-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 58</span>
+58:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weight</span>
+59:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'weight'</span>][<span class="ruby-identifier">:value</span>]
+60:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002225" class="method-detail">
+        <a name="M002225"></a>
+
+        <div class="method-heading">
+          <a href="#M002225" class="method-signature">
+          <span class="method-name">weight=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The birth <a href="Baby.html#M002226">weight</a> of the
+baby. <em>value</em> is a <a
+href="../Types/Weightvalue.html">HealthVault::WCData::Thing::Types::Weightvalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002225-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002225-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/pregnancy/baby.rb, line 53</span>
+53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weight=</span>(<span class="ruby-identifier">value</span>)
+54:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'weight'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+55:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

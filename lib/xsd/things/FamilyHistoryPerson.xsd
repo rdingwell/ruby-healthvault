@@ -1,0 +1,22 @@
+<schema xmlns:fam="urn:com.microsoft.wc.thing.family-history-person" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.family-history-person"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>cc23422c-4fba-4a23-b52a-c01d6cd53fdf</type-id><type-name>FamilyHistoryPerson</type-name><wrapper-class-name>FamilyHistoryPerson</wrapper-class-name><wrapper-class-fwlink>136131</wrapper-class-fwlink><sample-xml-fwlink>136132</sample-xml-fwlink><data-type-guide-fwlink>136130</data-type-guide-fwlink><summary>
+                Information about a relative of the record owner.
+            </summary><remarks>
+                Note: Please use the family history type instead of this type.
+                <br />
+                Stores information about a relative of the record owner, such as a mother, father, or aunt.<br />
+                Relate this item to Family History Condition items.
+            </remarks></documentation></annotation><element name="family-history-person"><complexType><annotation><documentation><summary>
+                        Information about a relative of the record owner.
+                    </summary><remarks>
+                        Note: Please use the family history type instead of this type.
+                        <br />
+                        Stores information about a relative of the record owner, such as a mother, father, or aunt.
+                    </remarks></documentation></annotation><sequence><element name="relative-name" type="t:person"><annotation><documentation><summary>
+                                The name and other information about the relative.
+                            </summary></documentation></annotation></element><element name="relationship" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The relationship of this person to the record owner.
+                            </summary><preferred-vocabulary>personal-relationship</preferred-vocabulary></documentation></annotation></element><element name="date-of-birth" type="d:approx-date" minOccurs="0"><annotation><documentation><summary>
+                                The date of birth for the relative.
+                            </summary></documentation></annotation></element><element name="date-of-death" type="d:approx-date" minOccurs="0"><annotation><documentation><summary>
+                                The date of death for the relative. 
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

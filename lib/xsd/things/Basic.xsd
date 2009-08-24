@@ -1,0 +1,49 @@
+<schema xmlns:basic="urn:com.microsoft.wc.thing.basic" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.basic"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><annotation><documentation><type-id>bf516a61-5252-4c28-a979-27f45f62f78d</type-id><type-name>Basic Demographic Information</type-name><wrapper-class-name>Basic</wrapper-class-name><wrapper-class-fwlink>136050</wrapper-class-fwlink><sample-xml-fwlink>136051</sample-xml-fwlink><data-type-guide-fwlink>136049</data-type-guide-fwlink><summary>
+                Defines a set of data about the health record that is
+                considered not to be personally-identifiable.
+            </summary><remarks>
+                Unlike the personal demographic information, this data
+                is consider to be less sensitive in nature.
+            </remarks><singleton /></documentation></annotation><element name="basic"><complexType><annotation><documentation><summary>
+                        Defines a set of data about the health record that is
+                        considered not to be personally-identifiable.
+                    </summary><remarks>
+                        Unlike the personal demographic information, this data
+                        is consider to be less sensitive in nature.
+                    </remarks><singleton /></documentation></annotation><sequence><element name="gender" minOccurs="0" maxOccurs="1"><simpleType><annotation><documentation><summary>
+                                    The person's gender.
+                                </summary><remarks>
+                                    [m]ale or [f]emale
+                                </remarks></documentation></annotation><restriction base="string"><enumeration value="m"><annotation><documentation><summary>
+                                            Value indicating a male.
+                                        </summary></documentation></annotation></enumeration><enumeration value="f"><annotation><documentation><summary>
+                                            Value indicating a female.
+                                        </summary></documentation></annotation></enumeration></restriction></simpleType></element><element name="birthyear" minOccurs="0" maxOccurs="1"><simpleType><annotation><documentation><summary>
+                                    The year the person was born.
+                                </summary><remarks>
+                                    A year between 1000 and 3000.
+                                </remarks></documentation></annotation><restriction base="int"><minInclusive value="1000" /><maxInclusive value="3000" /></restriction></simpleType></element><element name="country" minOccurs="0" maxOccurs="1"><simpleType><annotation><documentation><summary>
+                                    The country of residence as an ISO-3166
+                                    two character code.
+                                </summary></documentation></annotation><restriction base="string"><pattern value="[a-zA-Z][a-zA-Z]" /></restriction></simpleType></element><element name="postcode" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The country specific postal code.
+                            </summary></documentation></annotation></element><element name="city" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The city of residence.
+                            </summary></documentation></annotation></element><element name="state" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The state or province of residence.
+                            </summary></documentation></annotation></element><element name="firstdow" minOccurs="0" maxOccurs="1"><simpleType><annotation><documentation><summary>
+                                    The users preferred first day of the week.
+                                </summary><remarks>
+                                    The user can define which day of the week
+                                    they want calendars and weekly computations
+                                    to start with. 
+                                    1 = Sunday
+                                    2 = Monday
+                                    3 = Tuesday
+                                    4 = Wednesday
+                                    5 = Thursday
+                                    6 = Friday
+                                    7 = Saturday
+                                </remarks></documentation></annotation><restriction base="int"><minInclusive value="1" /><maxInclusive value="7" /></restriction></simpleType></element><element name="language" type="t:language" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                The language(s) a person speaks.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

@@ -1,0 +1,33 @@
+<schema xmlns:wg="urn:com.microsoft.wc.thing.weight-goal" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.weight-goal"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><annotation><documentation><type-id>b7925180-d69e-48fa-ae1d-cb3748ca170e</type-id><type-name>Weight Goal</type-name><wrapper-class-name>WeightGoal</wrapper-class-name><wrapper-class-fwlink>136245</wrapper-class-fwlink><sample-xml-fwlink>136246</sample-xml-fwlink><data-type-guide-fwlink>136244</data-type-guide-fwlink><summary>
+                A target weight range with an associated target date.
+            </summary><remarks>
+                More than one weight goal may exist in a record. It is
+                up to the application to determine which is the active
+                goal.<br /><br />
+                The thing's effective-date implies the date on which
+                the goal was initiated, for purposes of graphing, etc.
+            </remarks></documentation></annotation><element name="weight-goal"><complexType><annotation><documentation><summary>
+                        A target weight range with an associated target date.
+                    </summary><remarks>
+                        More than one weight goal may exist in a record. It is
+                        up to the application to determine which is the active
+                        goal.<br /><br />
+                        The thing's effective-date implies the date on which
+                        the goal was initiated, for purposes of graphing, etc.
+                    </remarks></documentation></annotation><sequence><element name="initial" minOccurs="0" maxOccurs="1" type="t:weight-value"><annotation><documentation><summary>
+                                The person's starting weight when starting 
+                                work toward the goal.
+                            </summary><remarks>
+                                If not present, the initial weight can be
+                                inferred from the "weight" thing with the
+                                closest match to effective-date.
+                            </remarks></documentation></annotation></element><element name="minimum" minOccurs="0" maxOccurs="1" type="t:weight-value"><annotation><documentation><summary>
+                                The lowest desired weight.
+                            </summary></documentation></annotation></element><element name="maximum" minOccurs="0" maxOccurs="1" type="t:weight-value"><annotation><documentation><summary>
+                                The highest desired weight.
+                            </summary></documentation></annotation></element><element name="goal-info" minOccurs="0" maxOccurs="1" type="t:goal"><annotation><documentation><summary>
+                                General information about the goal.
+                            </summary><remarks>
+                                A goal contains information like the starting
+                                date, completion date, and current status.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

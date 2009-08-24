@@ -1,0 +1,30 @@
+<schema xmlns:insulin="urn:com.microsoft.wc.thing.insulin" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.insulin"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>3B3C053B-B1FE-4E11-9E22-D4B480DE74E8</type-id><type-name>Insulin Injection</type-name><wrapper-class-name>InsulinInjection</wrapper-class-name><wrapper-class-fwlink>136170</wrapper-class-fwlink><sample-xml-fwlink>136171</sample-xml-fwlink><data-type-guide-fwlink>136169</data-type-guide-fwlink><summary>
+                Any insulin injection used to treat diabetes.
+            </summary><remarks>
+                The injection may or may not have a device component.
+                Each new injection package should have a new insulin-injection thing, even
+                if there is a containing device that is reusable.
+                Changes in regimen (min/max doses per day) should also
+                cause a new thing to be created.
+            </remarks></documentation></annotation><element name="insulin-injection"><complexType><annotation><documentation><summary>
+                        Any insulin injection used to treat diabetes.
+                    </summary><remarks>
+                        The injection may or may not have a device component.
+                        Each new injection package should have a new insulin-injection thing, even
+                        if there is a containing device that is reusable.
+                        Changes in regimen (min/max doses per day) should also
+                        cause a new thing to be created.
+                    </remarks></documentation></annotation><sequence><element name="type" type="t:codable-value"><annotation><documentation><summary>
+                                The type of the insulin used.
+                            </summary><remarks>
+                                For example, 'Analoga' or 'Normal'
+                            </remarks><preferred-vocabulary>insulin-types</preferred-vocabulary></documentation></annotation></element><element name="amount" type="t:insulin-injection-value"><annotation><documentation><summary>
+                                The amount of insulin injected.
+                            </summary><remarks>
+                                The typical range is 0.1-50IE. An IE unit is 1/100ml.
+                            </remarks></documentation></annotation></element><element name="device-id" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The unique id or serial number for the insulin package.
+                            </summary><remarks>
+                                If available, this value can be used to 
+                                correlate results.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

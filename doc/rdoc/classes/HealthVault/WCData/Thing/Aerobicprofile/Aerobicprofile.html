@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Thing::Aerobicprofile::Aerobicprofile</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Thing::Aerobicprofile::Aerobicprofile</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../../files/lib/wc_data/generated/thing/aerobic_profile/aerobic_profile_rb.html">
+                lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M001954">add_heartrate_zone_group</a>&nbsp;&nbsp;
+      <a href="#M001951">anaerobic_threshold</a>&nbsp;&nbsp;
+      <a href="#M001950">anaerobic_threshold=</a>&nbsp;&nbsp;
+      <a href="#M001956">heartrate_zone_group</a>&nbsp;&nbsp;
+      <a href="#M001947">max_heartrate</a>&nbsp;&nbsp;
+      <a href="#M001946">max_heartrate=</a>&nbsp;&nbsp;
+      <a href="#M001957">new</a>&nbsp;&nbsp;
+      <a href="#M001955">remove_heartrate_zone_group</a>&nbsp;&nbsp;
+      <a href="#M001949">resting_heartrate</a>&nbsp;&nbsp;
+      <a href="#M001948">resting_heartrate=</a>&nbsp;&nbsp;
+      <a href="#M001953">vo2_max</a>&nbsp;&nbsp;
+      <a href="#M001952">vo2_max=</a>&nbsp;&nbsp;
+      <a href="#M001945">when</a>&nbsp;&nbsp;
+      <a href="#M001944">when</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M001957" class="method-detail">
+        <a name="M001957"></a>
+
+        <div class="method-heading">
+          <a href="#M001957" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001957-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001957-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 118</span>
+118:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+119:           <span class="ruby-keyword kw">super</span>
+120:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'aerobic-profile'</span>
+121:         
+122:           
+123:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'when'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+124:             
+125:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>.<span class="ruby-identifier">new</span>
+126:             
+127:           
+128:         
+129:           
+130:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'max-heartrate'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'max-heartrate'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+131:             
+132:           
+133:         
+134:           
+135:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'resting-heartrate'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'resting-heartrate'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+136:             
+137:           
+138:         
+139:           
+140:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'anaerobic-threshold'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'anaerobic-threshold'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+141:             
+142:           
+143:         
+144:           
+145:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'VO2-max'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'VO2-max'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Aerobicprofile</span><span class="ruby-operator">::</span><span class="ruby-constant">MaxVO2</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+146:             
+147:           
+148:         
+149:           
+150:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'heartrate-zone-group'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'heartrate-zone-group'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Aerobicprofile</span><span class="ruby-operator">::</span><span class="ruby-constant">HeartrateZoneGroup</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+151:           
+152:         
+153:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M001954" class="method-detail">
+        <a name="M001954"></a>
+
+        <div class="method-heading">
+          <a href="#M001954" class="method-signature">
+          <span class="method-name">add_heartrate_zone_group</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="HeartrateZoneGroup.html">HealthVault::WCData::Thing::Aerobicprofile::HeartrateZoneGroup</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001954-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001954-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 99</span>
+ 99:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_heartrate_zone_group</span>(<span class="ruby-identifier">value</span>)
+100:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'heartrate-zone-group'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+101:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001951" class="method-detail">
+        <a name="M001951"></a>
+
+        <div class="method-heading">
+          <a href="#M001951" class="method-signature">
+          <span class="method-name">anaerobic_threshold</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001951-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001951-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 75</span>
+75:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">anaerobic_threshold</span>
+76:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'anaerobic-threshold'</span>][<span class="ruby-identifier">:value</span>]
+77:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001950" class="method-detail">
+        <a name="M001950"></a>
+
+        <div class="method-heading">
+          <a href="#M001950" class="method-signature">
+          <span class="method-name">anaerobic_threshold=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The anaerobic threshold (AT) is the exercise intensity at
+which lactate starts to accumulate in the blood stream. <b>remarks</b>: The
+anaerobic threshold is measured in beats per minute (BPM). <em>value</em>
+is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001950-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001950-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 70</span>
+70:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">anaerobic_threshold=</span>(<span class="ruby-identifier">value</span>)
+71:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'anaerobic-threshold'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+72:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001956" class="method-detail">
+        <a name="M001956"></a>
+
+        <div class="method-heading">
+          <a href="#M001956" class="method-signature">
+          <span class="method-name">heartrate_zone_group</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: A grouping of heart rate zones. <b>remarks</b>: This allows
+for customized groupings of heart rate zones based on different
+values.Heart rate zones are often used to optimize exercise for different
+purposes. By grouping heart rate zones into named groups it is easier to
+identify the zones to use for a particular workout. <b>returns</b>: a <a
+href="HeartrateZoneGroup.html">HealthVault::WCData::Thing::Aerobicprofile::HeartrateZoneGroup</a>
+Array
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001956-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001956-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 112</span>
+112:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">heartrate_zone_group</span>
+113:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'heartrate-zone-group'</span>][<span class="ruby-identifier">:value</span>]
+114:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001947" class="method-detail">
+        <a name="M001947"></a>
+
+        <div class="method-heading">
+          <a href="#M001947" class="method-signature">
+          <span class="method-name">max_heartrate</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001947-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001947-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 43</span>
+43:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">max_heartrate</span>
+44:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'max-heartrate'</span>][<span class="ruby-identifier">:value</span>]
+45:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001946" class="method-detail">
+        <a name="M001946"></a>
+
+        <div class="method-heading">
+          <a href="#M001946" class="method-signature">
+          <span class="method-name">max_heartrate=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The maximum heart rate of the person. <b>remarks</b>: The
+maximum heart rate is measured in beats per minute (BPM). <em>value</em> is
+a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001946-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001946-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 38</span>
+38:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">max_heartrate=</span>(<span class="ruby-identifier">value</span>)
+39:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'max-heartrate'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+40:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001955" class="method-detail">
+        <a name="M001955"></a>
+
+        <div class="method-heading">
+          <a href="#M001955" class="method-signature">
+          <span class="method-name">remove_heartrate_zone_group</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../../../../HealthVault.html">HealthVault</a>::<a
+href="HeartrateZoneGroup.html">WCData::Thing::Aerobicprofile::HeartrateZoneGroup</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001955-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001955-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 104</span>
+104:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_heartrate_zone_group</span>(<span class="ruby-identifier">value</span>)
+105:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'heartrate-zone-group'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+106:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001949" class="method-detail">
+        <a name="M001949"></a>
+
+        <div class="method-heading">
+          <a href="#M001949" class="method-signature">
+          <span class="method-name">resting_heartrate</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001949-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001949-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 59</span>
+59:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resting_heartrate</span>
+60:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'resting-heartrate'</span>][<span class="ruby-identifier">:value</span>]
+61:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001948" class="method-detail">
+        <a name="M001948"></a>
+
+        <div class="method-heading">
+          <a href="#M001948" class="method-signature">
+          <span class="method-name">resting_heartrate=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The heart rate of the person <a
+href="Aerobicprofile.html#M001944">when</a> at rest. <b>remarks</b>: The
+resting heart rate is measured in beats per minute (BPM). <em>value</em> is
+a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001948-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001948-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 54</span>
+54:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resting_heartrate=</span>(<span class="ruby-identifier">value</span>)
+55:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'resting-heartrate'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+56:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001953" class="method-detail">
+        <a name="M001953"></a>
+
+        <div class="method-heading">
+          <a href="#M001953" class="method-signature">
+          <span class="method-name">vo2_max</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="MaxVO2.html">HealthVault::WCData::Thing::Aerobicprofile::MaxVO2</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001953-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001953-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 91</span>
+91:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">vo2_max</span>
+92:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'VO2-max'</span>][<span class="ruby-identifier">:value</span>]
+93:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001952" class="method-detail">
+        <a name="M001952"></a>
+
+        <div class="method-heading">
+          <a href="#M001952" class="method-signature">
+          <span class="method-name">vo2_max=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: VO2 max is the maximum rate at which oxygen is absorbed
+into the blood stream by the body. <b>remarks</b>: VO2 max can be measured
+as either and absolute rate in liters of oxygen per minute, or as a
+relative rate in milliters of oxygen per kilogram of bodyweight per minute.
+<em>value</em> is a <a
+href="MaxVO2.html">HealthVault::WCData::Thing::Aerobicprofile::MaxVO2</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001952-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001952-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 86</span>
+86:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">vo2_max=</span>(<span class="ruby-identifier">value</span>)
+87:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'VO2-max'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+88:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001945" class="method-detail">
+        <a name="M001945"></a>
+
+        <div class="method-heading">
+          <a href="#M001945" class="method-signature">
+          <span class="method-name">when</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../../Dates/Datetime.html">HealthVault::WCData::Dates::Datetime</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001945-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001945-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 27</span>
+27:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>
+28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>]
+29:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001944" class="method-detail">
+        <a name="M001944"></a>
+
+        <div class="method-heading">
+          <a href="#M001944" class="method-signature">
+          <span class="method-name">when</span><span class="method-args">(=(value))</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <b>summary</b>: The date/time <a
+href="Aerobicprofile.html#M001944">when</a> the aerobic profile
+measurements were taken. <em>value</em> is a <a
+href="../../Dates/Datetime.html">HealthVault::WCData::Dates::Datetime</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001944-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001944-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/aerobic_profile/aerobic_profile.rb, line 22</span>
+22:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>=(<span class="ruby-identifier">value</span>)
+23:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+24:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

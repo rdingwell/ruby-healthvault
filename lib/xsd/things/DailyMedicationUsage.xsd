@@ -1,0 +1,41 @@
+<schema xmlns:iu="urn:com.microsoft.wc.thing.daily-medication-usage" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.daily-medication-usage"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>A9A76456-0357-493e-B840-598BBB9483FD</type-id><type-name>Daily Medication Usage</type-name><wrapper-class-name>DailyMedicationUsage</wrapper-class-name><wrapper-class-fwlink>136092</wrapper-class-fwlink><sample-xml-fwlink>136093</sample-xml-fwlink><data-type-guide-fwlink>136091</data-type-guide-fwlink><summary>
+              Record regular medication and dietary supplement usage.
+            </summary><remarks>
+              This health record item type enables a user to keep a record of the actual doses taken for prescription medications, over-the-counter drugs and regular dietary supplements.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="daily-medication-usage"><complexType><annotation><documentation><summary>
+                      Recording the act taking a medication.
+                    </summary></documentation></annotation><sequence><element name="when" type="d:date"><annotation><documentation><summary>
+                                Date on which the medication was taken.
+                            </summary></documentation></annotation></element><element name="drug-name" type="t:codable-value"><annotation><documentation><summary>
+                                Name of the medication, drug or supplement taken.
+                            </summary><remarks>
+                                For example, 'ventolin' or 'albuterol.' This element allows for completely free-text input of names.
+                            </remarks></documentation></annotation></element><element name="number-doses-consumed-in-day" type="int"><annotation><documentation><summary>
+                                Number of units of the medication taken.
+                            </summary><remarks>
+                                Ties to the 'single-dose-description' element to determine actual dosage taken.
+                            </remarks></documentation></annotation></element><element name="purpose-of-use" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Textual description of the purpose of use for this drug.
+                            </summary><preferred-vocabulary>dose-purpose</preferred-vocabulary><remarks>
+                                Examples include 'high blood pressure' or 'diabetes.' Users may select from the existing vocabulary or use their own descriptions.
+                            </remarks></documentation></annotation></element><element name="number-doses-intended-in-day" type="int" minOccurs="0"><annotation><documentation><summary>
+                                Number of units called for by prescription or intent for the drug.
+                            </summary><remarks>
+                                Intend for this to be used to ensure that patient is keeping track of their usage in comparison to the prescribed usage. Will enable an application to easily alert the user in instances where the patient has come short or is taking too much.
+                            </remarks></documentation></annotation></element><element name="medication-usage-schedule" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                              General schedule for the usage of the medication in quesiton.
+                            </summary><preferred-vocabulary>usage-schedule</preferred-vocabulary><remarks>
+                              This will be used to distinguish between drugs that are taken daily vs. those that are taken 'as needed.' User may select from the existing values or use their own.
+                            </remarks></documentation></annotation></element><element name="drug-form" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                              Form in which the drug is administered.
+                            </summary><preferred-vocabulary>x12-de-1330</preferred-vocabulary><remarks>
+                              For example, pill, powder, capsule, etc. User may select from the existing values or use their own.
+                            </remarks></documentation></annotation></element><element name="prescription-type" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                              Means through which the drug was determined to be needed.
+                            </summary><preferred-vocabulary>prescription-type</preferred-vocabulary><remarks>
+                              For example, Unknown, MedicallyPrescribed, or SelfChosen.
+                            </remarks></documentation></annotation></element><element name="single-dose-description" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                              Description that defines what a 'single dose' of the medication constitutes. 
+                            </summary><preferred-vocabulary>x12-d3-355</preferred-vocabulary><remarks>
+                              This element qualifies the 'number-units-consumed' element. It allows control over the definition of a dosage. The intent is to allow for free-form text to enable the user or provider to have complete control over the definition of a 'unit' for a specific drug. Examples include '3 200mg tablets,' '1 Tablespoon full' or '2.5 tablets.' User may select from the existing values or use their own.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

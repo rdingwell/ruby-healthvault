@@ -1,0 +1,44 @@
+<schema xmlns:iu="urn:com.microsoft.wc.thing.inhaler-use" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.inhaler-use"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>03efe378-976a-42f8-ae1e-507c497a8c6d</type-id><type-name>Asthma Inhaler Usage</type-name><wrapper-class-name>AsthmaInhalerUse</wrapper-class-name><wrapper-class-fwlink>136047</wrapper-class-fwlink><sample-xml-fwlink>136048</sample-xml-fwlink><data-type-guide-fwlink>136046</data-type-guide-fwlink><summary>
+                A single use of an inhaler.
+            </summary><remarks>
+                Note, this may wrap more than one "dose" if multiple
+                puffs per use are prescribed.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="asthma-inhaler-use"><complexType><annotation><documentation><summary>
+                        A single use of an inhaler.
+                    </summary><remarks>
+                        Note, this may wrap more than one "dose" if multiple
+                        puffs per use are prescribed.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time when the inhaler was used.
+                            </summary></documentation></annotation></element><element name="drug" type="t:codable-value"><annotation><documentation><summary>
+                                The name of the drug in the canister.
+                            </summary><remarks>
+                                For example, 'ventolin' or 'albuterol'.
+                            </remarks></documentation></annotation></element><element name="strength" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The textual description of the drug strength.
+                            </summary><remarks>
+                                For example, '44 mcg / puff'.
+                            </remarks></documentation></annotation></element><element name="dose-count" type="int" minOccurs="0"><annotation><documentation><summary>
+                                The number of doses used.
+                            </summary><remarks>
+                                A dose is one puff.
+                            </remarks></documentation></annotation></element><element name="device-id" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The unique id or serial number for the 
+                                canister.
+                            </summary><remarks>
+                                The id can be used to correlate uses.
+                            </remarks></documentation></annotation></element><element name="dose-purpose" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                An enumeration of the possible purposes the
+                                inhaler usage is targeting.
+                            </summary><remarks>
+                                Examples include; relief (the dose purpose is
+                                intended to relieve immediate asthma symptoms), 
+                                prevention (the dose purpose is intended to 
+                                prevent asthma symptoms), control (the dose 
+                                purpose is intended to control the impact of 
+                                current asthma symptoms), other (the dose 
+                                purpose is known, but other than to relieve, 
+                                prevent or control asthma symptoms), and 
+                                undefined (there is not enough information 
+                                about the inhaler usage to discern purpose).
+                            </remarks><preferred-vocabulary>inhaler-dose-purpose</preferred-vocabulary></documentation></annotation></element></sequence></complexType></element></schema>

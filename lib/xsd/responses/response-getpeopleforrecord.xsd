@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetPeopleForRecord"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-record="urn:com.microsoft.wc.record"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-GETPEOPLEFORRECORD.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetPeopleForRecord method 
+        response
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <import
+        namespace="urn:com.microsoft.wc.record"
+        schemaLocation="record.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Gets information about the people that have been authorized
+                to the record specified in the header or have been invited
+                to share the record.
+            </summary>
+            <remarks>
+                This method can only be called record custodians.
+            </remarks>
+        </documentation>
+    </annotation>
+
+    <!-- - - - - - - - - - - GetPeopleForRecord - - - - - - - - - -->
+
+
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element that contains the method
+                        specific response.
+                    </summary>
+                    <remarks>
+                        All responses contain the info element to return data
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not expect any
+                        data for the response.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="active-person-authorization"
+                        type="wc-record:ActivePersonAuthorizationNoIds"
+                        minOccurs="1" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                List of persons that have authorizations to the record.
+                            </summary>
+                            <remarks>
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <element name="non-active-authorization"
+                        type="wc-record:NonActiveAuthorizationNoIds"
+                        minOccurs="0" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                List of persons that have not accepted their sharing invites to 
+                                the record.
+                            </summary>
+                            <remarks>
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

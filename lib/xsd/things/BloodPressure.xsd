@@ -1,0 +1,30 @@
+<schema xmlns:BloodPressure="urn:com.microsoft.wc.thing.BloodPressure" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.BloodPressure"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="..\..\..\platform\web\xsd\dates.xsd" /><annotation><documentation><type-id>ca3c57f4-f4c1-4e15-be67-0a3caf5414ed</type-id><type-name>Blood Pressure Measurement</type-name><wrapper-class-name>BloodPressure</wrapper-class-name><wrapper-class-fwlink>136059</wrapper-class-fwlink><sample-xml-fwlink>136060</sample-xml-fwlink><data-type-guide-fwlink>136058</data-type-guide-fwlink><summary>
+                Defines a single blood pressure reading.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><element name="blood-pressure"><complexType><annotation><documentation><summary>
+                        Defines a single blood pressure reading.
+                    </summary></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the reading was taken.
+                            </summary></documentation></annotation></element><element name="systolic" type="nonNegativeInteger"><annotation><documentation><summary>
+                                The systolic pressure at the time of the 
+                                reading.
+                            </summary><remarks>
+                                The systolic pressure is the peak pressure
+                                in the arteries during a cardiac cycle. It
+                                is measured in millimeters of mercury (mmHg).
+                            </remarks></documentation></annotation></element><element name="diastolic" type="nonNegativeInteger"><annotation><documentation><summary>
+                                The diastolic pressure at the time of the
+                                reading.
+                            </summary><remarks>
+                                The diastolic pressure is the lowest pressure
+                                in the arteries during a cardiac cycle. It
+                                is measured in millimeters of mercury (mmHg).
+                            </remarks></documentation></annotation></element><element name="pulse" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                The person's pulse rate at the time of the 
+                                reading.
+                            </summary><remarks>
+                                The pulse is measured in beats per minute.
+                            </remarks></documentation></annotation></element><element name="irregular-heartbeat" type="boolean" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                Indicates whether an irregular heartbeat (arrhythmia) was detected when the measurement was taken.
+                            </summary><remarks>
+                                The irregular heartbeat is a boolean indicator.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

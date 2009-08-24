@@ -1,0 +1,25 @@
+<schema xmlns:aw="urn:com.microsoft.wc.thing.aerobic-weekly" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.aerobic-weekly"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><annotation><documentation><type-id>e4501363-fb95-4a11-bb60-da64e98048b5</type-id><type-name>Weekly Aerobic Exercise Goal</type-name><wrapper-class-name>AerobicWeeklyGoal</wrapper-class-name><wrapper-class-fwlink>136242</wrapper-class-fwlink><sample-xml-fwlink>136243</sample-xml-fwlink><data-type-guide-fwlink>136241</data-type-guide-fwlink><summary>
+                Defines a weekly goal for aerobic exercise.
+            </summary><remarks>
+                The thing's effective_date metadata implies the date on which
+                this goal was initiated, for purposes of graphing, etc.
+            </remarks></documentation></annotation><element name="aerobic-weekly"><complexType><annotation><documentation><summary>
+                        Defines a weekly goal for aerobic exercise.
+                    </summary><remarks>
+                        The thing's effective_date metadata implies the date on which
+                        this goal was initiated, for purposes of graphing, etc.
+                    </remarks></documentation></annotation><sequence><element name="session" minOccurs="1" maxOccurs="1" type="t:aerobic-session"><annotation><documentation><summary>
+                                The metrics to use for measuring the goal.
+                            </summary><remarks>
+                                A recorded aerobic-session must match or
+                                exceed this session in order to mark the
+                                goal as achieved.
+                            </remarks></documentation></annotation></element><element name="recurrence" minOccurs="1" maxOccurs="1" type="positiveInteger"><annotation><documentation><summary>
+                                The number of times per week the session must
+                                occur to meet the goal.
+                            </summary><remarks>
+                                For example, if I want to run 5 kilometers 
+                                three times a week, the session would have a
+                                mode of 'run' and a distance of '5' and the
+                                recurrence would be set to '3'.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

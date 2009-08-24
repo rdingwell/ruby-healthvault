@@ -1,0 +1,968 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:wct="urn:com.microsoft.wc.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.types"><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><import namespace="urn:com.microsoft.wc.types" schemaLocation="types.xsd" /><!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Shared Types
+
+    For use across multiple thing types. Think hard before putting
+    something into this file, because it increases our dependency
+    management signficantly
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --><annotation><documentation><summary>
+                Types that are used across multiple thing types.
+            </summary><remarks>
+                For instance, a weight-value type is used for the weight
+                thing type as well as the dietary-intake-daily thing type.
+            </remarks></documentation></annotation><simpleType name="positiveDouble"><annotation><documentation><summary>
+                    A number, including a decimal point, greater than
+                    zero.
+                </summary><remarks>
+                    This type derives from double and ensures that all
+                    values are greater than zero.
+                </remarks></documentation></annotation><restriction base="double"><minExclusive value="0" /></restriction></simpleType><simpleType name="nonNegativeDouble"><annotation><documentation><summary>
+                    A number, including a decimal point, greater than or equal
+                    to zero.
+                </summary><remarks>
+                    This type derives from double and ensures that all
+                    values are greater than or equal to zero.
+                </remarks></documentation></annotation><restriction base="double"><minInclusive value="0" /></restriction></simpleType><simpleType name="percentage"><annotation><documentation><summary>
+                    A decimal number between zero and one.
+                </summary><remarks>
+                    This type derives from double and ensures that all
+                    values are between zero and one inclusive.
+                </remarks></documentation></annotation><restriction base="double"><minInclusive value="0" /><maxInclusive value="1" /></restriction></simpleType><complexType name="duration-value"><annotation><documentation><summary>
+                    A pair of approximate date-times used to create a
+                    range.
+                </summary><remarks>
+                    This type derives uses two approximate date-times to 
+                    provide a duration range.
+                </remarks></documentation></annotation><sequence><element name="start-date" type="d:approx-date-time"><annotation><documentation><summary>
+                            The approximate start date and time for the duration range.
+                        </summary></documentation></annotation></element><element name="end-date" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                            The approximate end date and time for the duration range.
+                        </summary><remarks>
+                            The end-date is optional in order to support indefinite durations.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="double-range"><annotation><documentation><summary>
+                    A pair of doubles used to create a
+                    range.
+                </summary></documentation></annotation><sequence><element name="minimum-range" type="double"><annotation><documentation><summary>
+                            The minimum value for the range.
+                        </summary></documentation></annotation></element><element name="maximum-range" type="double"><annotation><documentation><summary>
+                            The maximum value for the range.
+                        </summary></documentation></annotation></element></sequence></complexType><complexType name="display-value"><annotation><documentation><summary>
+                    A numeric value used for display purposes
+                    and tagged with arbitrary units.
+                </summary><remarks>
+                  Microsoft HealthVault standardizes its storage
+                  of data like length, weight, and temperature so that
+                  applications can process the data more easily. So,
+                  in order to support the user's preference of units
+                  the display value type is used to maintain the user
+                  entered value such that any application can display
+                  the value back to the user in the same form they
+                  entered it even though the data is stored in a base
+                  unit value. This prevents rounding errors on the
+                  data when converting to and from the base unit of
+                  measure.<br /><br />
+                    The display value should be set whenever data is taken
+                    directly from the user through UI and it should be
+                    used to show data to the user when available.
+                </remarks></documentation></annotation><simpleContent><extension base="double"><attribute name="units" type="string" use="required"><annotation><documentation><summary>
+                                An arbitrary string representing the units
+                                of measure for the value.
+                            </summary><remarks>
+                                For example, the base unit of measure for
+                                length is meters, this display value may
+                                contain a length in feet. The units attribute
+                                would contain "feet" or an appropriate 
+                                abbreviation.
+                            </remarks></documentation></annotation></attribute><attribute name="units-code" type="string" use="optional"><annotation><documentation><summary>
+                                The Microsoft Health Lexicon code for the unit
+                                of measure.
+                            </summary><remarks>
+                                If the unit of measure is available from one of
+                                the Microsoft Health Lexicon vocabularies, this
+                                attribute is the code in the lexicon for that
+                                unit.<br /><br />
+                                The advantage of using the units-code is that
+                                the unit can be easily translated for use by
+                                any application for the supported languages.
+                            </remarks></documentation></annotation></attribute></extension></simpleContent></complexType><complexType name="weight-value"><annotation><documentation><summary>
+                    A weight measurement.
+                </summary><remarks>
+                    A weight measurement consists of the value in kilograms,
+                    which is the base unit of measurement for weight, and
+                    an optional display value. The display value is used to
+                    store the weight measurement in the user's preference of
+                    weight units. This avoids rounding errors when 
+                    converting to and back from kilograms.
+                </remarks></documentation></annotation><sequence><element name="kg" type="t:positiveDouble"><annotation><documentation><summary>
+                            The weight measurement in kilograms.
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the weight measurement.
+                        </summary><remarks>
+                            The display value contains the weight measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="length-value"><annotation><documentation><summary>
+                    A length measurement.
+                </summary><remarks>
+                    A length measurement consists of the value in meters,
+                    which is the base unit of measurement for length, and
+                    an optional display value. The display value is used to
+                    store the length measurement in the user's preference of
+                    length units. This avoids rounding errors when
+                    converting to and back from meters.
+                </remarks></documentation></annotation><sequence><element name="m" type="t:positiveDouble"><annotation><documentation><summary>
+                            The length measurement in meters.
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the length measurement.
+                        </summary><remarks>
+                            The display value contains the length measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="flow-value"><annotation><documentation><summary>
+                    A flow measurement.
+                </summary><remarks>
+                    A flow measurement consists of the value in liters per
+                    second (L/s), which is the base unit of measurement for 
+                    flow, and an optional display value. The display value is 
+                    used to store the flow measurement in the user'
+                    s preference of flow units. This avoids rounding errors 
+                    when converting to and back from L/s.
+                </remarks></documentation></annotation><sequence><element name="liters-per-second" type="t:positiveDouble"><annotation><documentation><summary>
+                            The flow measurement in liters per second (L/s).
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the flow measurement.
+                        </summary><remarks>
+                            The display value contains the flow measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="altitude-value"><annotation><documentation><summary>
+                    An altitude measurement.
+                </summary><remarks>
+                    An altitude measurement consists of the value in meters
+                    above sea level,
+                    which is the base unit of measurement for altitude, and
+                    an optional display value. The display value is used to
+                    store the altitude measurement in the user's preference of
+                    altitude units. This avoids rounding errors when
+                    converting to and back from meters.
+                </remarks></documentation></annotation><sequence><element name="m" type="double"><annotation><documentation><summary>
+                            The altitude measurement in meters.
+                        </summary><remarks>
+                            A negative value indicates the measurement was
+                            take below sea level.
+                        </remarks></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the altitude measurement.
+                        </summary><remarks>
+                            The display value contains the altitude measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="temperature-value"><annotation><documentation><summary>
+                    A temperature measurement.
+                </summary><remarks>
+                    A temperature measurement consists of the value in Celsuis
+                    (C), which is the base unit of measurement for temperature,
+                    and an optional display value. The display value is used to
+                    store the temperature in the user's preference of
+                    units. This avoids rounding errors when
+                    converting to and back from Celsius.
+                </remarks></documentation></annotation><sequence><element name="celsius" type="double"><annotation><documentation><summary>
+                            The temperature measurement in Celsius(C).
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the temperature measurement.
+                        </summary><remarks>
+                            The display value contains the temperature measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="pace-value"><annotation><documentation><summary>
+                    A pace measurement.
+                </summary><remarks>
+                    A pace measurement consists of the value in seconds per
+                    100 meters, which is the base unit of measurement for 
+                    pace, and an optional display value. The display value is 
+                    used to store the pace in the user's preference of
+                    units. This avoids rounding errors when
+                    converting to and back from seconds per 100 meters.
+                </remarks></documentation></annotation><sequence><element name="seconds-per-hundred-meters" type="t:positiveDouble"><annotation><documentation><summary>
+                            The pace measurement in seconds per 100 meters.
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the pace measurement.
+                        </summary><remarks>
+                            The display value contains the pace measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="power-value"><annotation><documentation><summary>
+                    A power measurement.
+                </summary><remarks>
+                    A power measurement consists of the value in watts,
+                    which is the base unit of measurement for
+                    power, and an optional display value. The display value is
+                    used to store the power in the user's preference of
+                    units. This avoids rounding errors when
+                    converting to and back from watts.
+                </remarks></documentation></annotation><sequence><element name="watts" type="t:positiveDouble"><annotation><documentation><summary>
+                            The power measurement in watts.
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the power measurement.
+                        </summary><remarks>
+                            The display value contains the power measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="torque-value"><annotation><documentation><summary>
+                    A torque measurement.
+                </summary><remarks>
+                    A torque measurement consists of the value in newton meters,
+                    which is the base unit of measurement for
+                    torque, and an optional display value. The display value is
+                    used to store the torque in the user's preference of
+                    units. This avoids rounding errors when
+                    converting to and back from newton meters.
+                </remarks></documentation></annotation><sequence><element name="newton-meters" type="t:positiveDouble"><annotation><documentation><summary>
+                            The torque measurement in newton meters.
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the torque measurement.
+                        </summary><remarks>
+                            The display value contains the torque measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="speed-value"><annotation><documentation><summary>
+                    A speed measurement.
+                </summary><remarks>
+                    A speed measurement consists of the value in meters per
+                    second (m/s), which is the base unit of measurement for 
+                    speed, and an optional display value. The display value 
+                    is used to store the speed in the user's preference of
+                    units. This avoids rounding errors when
+                    converting to and back from m/s.
+                </remarks></documentation></annotation><sequence><element name="meters-per-second" type="t:positiveDouble"><annotation><documentation><summary>
+                            The speed measurement in meters per second (m/s).
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the speed measurement.
+                        </summary><remarks>
+                            The display value contains the speed measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="blood-glucose-value"><annotation><documentation><summary>
+                    A blood glucose measurement.
+                </summary><remarks>
+                    A blood glucose measurement consists of the value in millimoles per liter (mmol/L),
+                    which is the base unit of measurement for blood glucose, and
+                    an optional display value. The display value is used to
+                    store the blood glucose measurement in the user's preference of
+                    measurement units. This avoids rounding errors when 
+                    converting to and back from mmol/L.
+                </remarks></documentation></annotation><sequence><element name="mmolPerL" type="t:positiveDouble"><annotation><documentation><summary>
+                            The blood glucose measurement in millimoles per liter.
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the blood glucose measurement.
+                        </summary><remarks>
+                            The display value contains the blood glucose measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="insulin-injection-value"><annotation><documentation><summary>
+                    A insulin injection measurement.
+                </summary><remarks>
+                    A insulin injection consists of the value in IE units (1/100ml),
+                    which is the base unit of insulin injections, and
+                    an optional display value. The display value is used to
+                    store the insulin injection amount the user's preference of
+                     units. This avoids rounding errors when 
+                    converting to and back from IE units
+                </remarks></documentation></annotation><sequence><element name="IE" type="t:positiveDouble"><annotation><documentation><summary>
+                            The insulin injeciton amount in IE units (1/100ml).
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the insulin injection amount.
+                        </summary><remarks>
+                            The display value contains the insulin injection amount
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><simpleType name="dow"><annotation><documentation><summary>
+                    The day of the week.
+                </summary><remarks>
+                    1 = Sunday
+                    2 = Monday
+                    3 = Tuesday
+                    4 = Wednesday
+                    5 = Thursday
+                    6 = Friday
+                    7 = Saturday
+                </remarks></documentation></annotation><restriction base="int"><minInclusive value="1" /><maxInclusive value="7" /></restriction></simpleType><simpleType name="goal-status"><annotation><documentation><summary>
+                    An enumeration of the possible goal states.
+                </summary></documentation></annotation><restriction base="string"><enumeration value="Active"><annotation><documentation><summary>
+                            The goal is actively being worked toward.
+                        </summary></documentation></annotation></enumeration><enumeration value="Achieved"><annotation><documentation><summary>
+                            The goal has been achieved.
+                        </summary></documentation></annotation></enumeration><enumeration value="Abandoned"><annotation><documentation><summary>
+                            The goal has been abandoned.
+                        </summary></documentation></annotation></enumeration></restriction></simpleType><complexType name="goal"><annotation><documentation><summary>
+                    Defines a health or fitness goal.
+                </summary><remarks>
+                    A goal may be a short-term achievement like losing
+                    weight or a long-term goal like competing in a marathon.
+                </remarks></documentation></annotation><sequence><element name="target-date" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                            The date upon which the person wants to complete 
+                            the goal.
+                        </summary></documentation></annotation></element><element name="completion-date" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                            The date on which the goal was completed.
+                        </summary></documentation></annotation></element><element name="status" type="t:goal-status" minOccurs="0"><annotation><documentation><summary>
+                            The current status of the goal.
+                        </summary><remarks>
+                            The status is not automatically updated. "Active"
+                            goals may need to be evaluated to determine if they
+                            have been "achieved".
+                        </remarks></documentation></annotation></element></sequence></complexType><simpleType name="one-to-five"><annotation><documentation><summary>
+                    An integer value from one to five.
+                </summary><remarks>
+                    This type is used in rating something. For instance,
+                    an aerobic session intensity may be rated from one
+                    to five where five is the most intense and one is the
+                    least intense.
+                </remarks></documentation></annotation><restriction base="int"><minInclusive value="1" /><maxInclusive value="5" /></restriction></simpleType><complexType name="sample"><annotation><documentation><summary>
+                    Defines a single sample.
+                </summary></documentation></annotation><sequence><element name="time-offset" type="t:nonNegativeDouble"><annotation><documentation><summary>
+                            Offset is seconds from sample set base time.
+                        </summary></documentation></annotation></element><element name="note" type="string" minOccurs="0"><annotation><documentation><summary>
+                            Description of sample.
+                        </summary></documentation></annotation></element><element name="value" type="string" minOccurs="0"><annotation><documentation><summary>
+                            Value of sample.
+                        </summary><remarks>
+                            The value of the sample can be any string. The
+                            value depends on the type of sample. Some sample
+                            types will have a simple int or double as the
+                            value. Others will have a comma separated list.
+                            For example, a "position" sample may have
+                            "25E,66N" (longitude,latitude) as the value.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="sample-set"><annotation><documentation><summary>
+                    Defines a sample set.
+                </summary></documentation></annotation><sequence><element name="base-time" type="d:date-time"><annotation><documentation><summary>
+                            Sample set base time from which samples are offset.
+                        </summary></documentation></annotation></element><element name="sample-unit" type="string"><annotation><documentation><summary>
+                            The unit that the value is stored in.
+                        </summary><remarks>
+                            Each sample contains a value. All samples in a
+                            sample set should be stored using the same units.
+                            This value is a text description of the units the
+                            sample value is stored in. Use the 
+                            "sample-unit-code" to describe the units as a 
+                            dictionary code.
+                        </remarks></documentation></annotation></element><element name="sample-unit-code" type="t:codable-value"><annotation><documentation><summary>
+                            The dictionary code for the unit that the value 
+                            is stored in.
+                        </summary><remarks>
+                            Each sample contains a value. All samples in a
+                            sample set should be stored using the same units.
+                        </remarks><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="sample" type="t:sample" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Sample set samples.
+                        </summary></documentation></annotation></element></sequence></complexType><complexType name="aerobic-session"><annotation><documentation><summary>
+                    Defines a lap within a single aerobic session.
+                </summary></documentation></annotation><sequence><element name="mode" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The type of activity for the session.
+                        </summary><remarks>
+                            The mode is the type of activity for the session,
+                            like biking, running, etc. The most common
+                            activities are part the of the Microsoft Health
+                            Lexicon and should be referenced using the code
+                            retrieved by calling GetVocabulary with
+                            "aerobic-activities" as the vocabulary name.<br /><br />
+                            For activities that are not in the Microsoft
+                            Health Lexicon you can add the value to the
+                            text element of the codable value.
+                        </remarks><preferred-vocabulary>aerobic-activities</preferred-vocabulary></documentation></annotation></element><element name="distance" type="t:length-value" minOccurs="0"><annotation><documentation><summary>
+                            The distance covered in the session.
+                        </summary><remarks>
+                            Distances are stored in meters. The application
+                            must convert the distance entered by the user
+                            into meters and should also store the distance
+                            and units entered by the user in the display-value
+                            so that it can be displayed to the user in their
+                            preferred unit of measure when viewing the data.
+                        </remarks></documentation></annotation></element><element name="minutes" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The duration of the session in minutes.
+                        </summary></documentation></annotation></element><element name="intensity" type="t:one-to-five" minOccurs="0"><annotation><documentation><summary>
+                            The subjective average intensity of the session.
+                        </summary><remarks>
+                            Intensity is measured on a scale from one to five
+                            where one is easy and five is the most intense.
+                        </remarks></documentation></annotation></element><element name="peak-heartrate" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                            The highest heart rate reached during the session.
+                        </summary><remarks>
+                            The peak heart rate for a session differs from the
+                            person's maximum heart rate in that a person most
+                            likely will not reach their maximum heart rate
+                            during an aerobic session. This measurement defines
+                            the highest heart rate recorded during the session.
+                        </remarks></documentation></annotation></element><element name="avg-heartrate" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                            The average heart rate reached during the session.
+                        </summary></documentation></annotation></element><element name="min-heartrate" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                            The minimum heart rate reached during the session.
+                        </summary><remarks>
+                            This is measured in beats per minute.
+                        </remarks></documentation></annotation></element><element name="energy" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The food energy expended during the session.
+                        </summary><remarks>
+                            This is measured in kilojoules .
+                        </remarks></documentation></annotation></element><element name="energy-from-fat" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The food energy burned from fat during the session.
+                        </summary><remarks>
+                            This is measured in kilojoules.
+                        </remarks></documentation></annotation></element><element name="peak-speed" type="t:speed-value" minOccurs="0"><annotation><documentation><summary>
+                            The maximum speed achieved during the session.
+                        </summary><remarks>
+                            This is measured in meters per second.
+                        </remarks></documentation></annotation></element><element name="avg-speed" type="t:speed-value" minOccurs="0"><annotation><documentation><summary>
+                            The average speed achieved during the session.
+                        </summary><remarks>
+                            This is measured in meters per second.
+                        </remarks></documentation></annotation></element><element name="min-speed" type="t:speed-value" minOccurs="0"><annotation><documentation><summary>
+                            The minimum speed achieved during the session.
+                        </summary><remarks>
+                            This is measured in meters per second.
+                        </remarks></documentation></annotation></element><element name="peak-pace" type="t:pace-value" minOccurs="0"><annotation><documentation><summary>
+                            The maximum pace achieved during the session.
+                        </summary><remarks>
+                            This is measured in seconds per 100 meters.
+                        </remarks></documentation></annotation></element><element name="avg-pace" type="t:pace-value" minOccurs="0"><annotation><documentation><summary>
+                            The average pace achieved during the session.
+                        </summary><remarks>
+                            This is measured in seconds per 100 meters.
+                        </remarks></documentation></annotation></element><element name="min-pace" type="t:pace-value" minOccurs="0"><annotation><documentation><summary>
+                            The minimum pace achieved during the session.
+                        </summary><remarks>
+                            This is measured in seconds per 100 meters.
+                        </remarks></documentation></annotation></element><element name="peak-power" type="t:power-value" minOccurs="0"><annotation><documentation><summary>
+                            The maximum power achieved during the session.
+                        </summary><remarks>
+                            This is measured in watts.
+                        </remarks></documentation></annotation></element><element name="avg-power" type="t:power-value" minOccurs="0"><annotation><documentation><summary>
+                            The average power achieved during the session.
+                        </summary><remarks>
+                            This is measured in watts.
+                        </remarks></documentation></annotation></element><element name="min-power" type="t:power-value" minOccurs="0"><annotation><documentation><summary>
+                            The minimum power achieved during the session.
+                        </summary><remarks>
+                            This is measured in watts.
+                        </remarks></documentation></annotation></element><element name="peak-torque" type="t:torque-value" minOccurs="0"><annotation><documentation><summary>
+                            The maximum torque achieved during the session.
+                        </summary><remarks>
+                            This is measured in newton meters.
+                        </remarks></documentation></annotation></element><element name="avg-torque" type="t:torque-value" minOccurs="0"><annotation><documentation><summary>
+                            The average torque achieved during the session.
+                        </summary><remarks>
+                            This is measured in newton meters.
+                        </remarks></documentation></annotation></element><element name="min-torque" type="t:torque-value" minOccurs="0"><annotation><documentation><summary>
+                            The minimum torque achieved during the session.
+                        </summary><remarks>
+                            This is measured in newton meters.
+                        </remarks></documentation></annotation></element><element name="left-right-balance" type="t:percentage" minOccurs="0"><annotation><documentation><summary>
+                            The power output balance between left and right strokes.
+                        </summary><remarks>
+                            This is measured as  a percentage (%)  relating to the left.
+                            For example, a value of 30 indicates that 30% of the power
+                            came from the left, while 70% came from the right.
+                        </remarks></documentation></annotation></element><element name="peak-cadence" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The maximum cadence achieved during the session. T
+                        </summary><remarks>
+                            his is measured in revolutions per minute (rpm).
+                        </remarks></documentation></annotation></element><element name="avg-cadence" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The average cadence achieved during the session.
+                        </summary><remarks>
+                            This is measured in revolutions per minute (rpm).
+                        </remarks></documentation></annotation></element><element name="min-cadence" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The minimum cadence achieved during the session.
+                        </summary><remarks>
+                            This is measured in revolutions per minute (rpm).
+                        </remarks></documentation></annotation></element><element name="peak-temperature" type="t:temperature-value" minOccurs="0"><annotation><documentation><summary>
+                            The maximum temperature achieved during the session.
+                        </summary><remarks>
+                            This is measured in degrees Celsius (C).
+                        </remarks></documentation></annotation></element><element name="avg-temperature" type="t:temperature-value" minOccurs="0"><annotation><documentation><summary>
+                            The average temperature achieved during the session.
+                        </summary><remarks>
+                            This is measured in degrees Celsius (C).
+                        </remarks></documentation></annotation></element><element name="min-temperature" type="t:temperature-value" minOccurs="0"><annotation><documentation><summary>
+                            The minimum temperature achieved during the session.
+                        </summary><remarks>
+                            This is measured in degrees Celsius (C).
+                        </remarks></documentation></annotation></element><element name="peak-altitude" type="t:altitude-value" minOccurs="0"><annotation><documentation><summary>
+                            The maximum altitude achieved during the session.
+                        </summary><remarks>
+                            This is measured in meters above mean sea level.
+                        </remarks></documentation></annotation></element><element name="avg-altitude" type="t:altitude-value" minOccurs="0"><annotation><documentation><summary>
+                            The average altitude achieved during the session.
+                        </summary><remarks>
+                            This is measured in meters above mean sea level.
+                        </remarks></documentation></annotation></element><element name="min-altitude" type="t:altitude-value" minOccurs="0"><annotation><documentation><summary>
+                            The minimum altitude achieved during the session.
+                        </summary><remarks>
+                            This is measured in meters above mean sea level.
+                        </remarks></documentation></annotation></element><element name="elevation-gain" type="t:length-value" minOccurs="0"><annotation><documentation><summary>
+                            The gain in elevation achieved during the session.
+                        </summary><remarks>
+                            This is measured in meters.
+                        </remarks></documentation></annotation></element><element name="elevation-loss" type="t:length-value" minOccurs="0"><annotation><documentation><summary>
+                            The loss in elevation achieved during the session.
+                        </summary><remarks>
+                            This is measured in meters.
+                        </remarks></documentation></annotation></element><element name="number-of-steps" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                  Number of steps taken in this session.
+                </summary></documentation></annotation></element><element name="number-of-aerobic-steps" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                  Total steps taken in the aerobic activity range.
+                </summary><remarks>
+                  Total steps taken in the aerobic activity range. This will be less than or 
+                  equal to the total steps taken given that the participant may not remain
+                  in the aerobic activity range for the entire session.
+                </remarks></documentation></annotation></element><element name="aerobic-step-minutes" type="t:nonNegativeDouble" minOccurs="0"><annotation><documentation><summary>
+                  Total duration spent in the aerobic activity range.
+                </summary><remarks>
+                  This item will be recorded in units of minutes.
+                </remarks></documentation></annotation></element></sequence></complexType><complexType name="aerobic-session-samples"><annotation><documentation><summary>
+                    Defines sample sets for an aerobic session.
+                </summary></documentation></annotation><sequence><element name="heartrate-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Heart rate sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            urn:com.microsoft.wc.thing.types.nonNegativeDouble
+                        </preferred-sample-value></documentation></annotation></element><element name="distance-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Distance sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            urn:com.microsoft.wc.thing.types.nonNegativeDouble
+                        </preferred-sample-value></documentation></annotation></element><element name="position-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Position sample set for aerobic session.
+                        </summary><remarks>
+                            Positions are expected to be in either 
+                            longitude/latitude or UTM coordinates.
+                        </remarks></documentation></annotation></element><element name="speed-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Speed sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            urn:com.microsoft.wc.thing.types.nonNegativeDouble
+                        </preferred-sample-value></documentation></annotation></element><element name="pace-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Pace sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            urn:com.microsoft.wc.thing.types.nonNegativeDouble
+                        </preferred-sample-value></documentation></annotation></element><element name="power-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Power sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            urn:com.microsoft.wc.thing.types.nonNegativeDouble
+                        </preferred-sample-value></documentation></annotation></element><element name="torque-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Torque sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            urn:com.microsoft.wc.thing.types.nonNegativeDouble
+                        </preferred-sample-value></documentation></annotation></element><element name="cadence-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Cadence sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            urn:com.microsoft.wc.thing.types.nonNegativeDouble
+                        </preferred-sample-value></documentation></annotation></element><element name="temperature-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Temperature sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            double
+                        </preferred-sample-value></documentation></annotation></element><element name="altitude-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Altitude sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            double
+                        </preferred-sample-value></documentation></annotation></element><element name="air-pressure-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                            Air pressure sample set for aerobic session.
+                        </summary><preferred-sample-value>
+                            urn:com.microsoft.wc.thing.types.nonNegativeDouble
+                        </preferred-sample-value></documentation></annotation></element><element name="number-of-steps-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                  Number of steps taken during this sample.
+                </summary><preferred-sample-value>
+                  urn:com.microsoft.wc.thing.types.nonNegativeInteger
+                </preferred-sample-value></documentation></annotation></element><element name="number-of-aerobic-steps-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                  Total steps taken in the aerobic activity range.
+                </summary><preferred-sample-value>
+                  urn:com.microsoft.wc.thing.types.nonNegativeInteger
+                </preferred-sample-value><remarks>
+                  Total steps taken in the aerobic activity range for the relevant sample.
+                  This value will be less than or equal to the total steps taken given 
+                  that the participant may not remain in the aerobic activity range for 
+                  the entire sample.
+                </remarks></documentation></annotation></element><element name="aerobic-step-minutes-samples" type="t:sample-set" minOccurs="0"><annotation><documentation><summary>
+                  Total duration spent in the aerobic activity range.
+                </summary><preferred-sample-value>
+                  urn:com.microsoft.wc.thing.types.nonNegativeDouble
+                </preferred-sample-value><remarks>
+                  This item will be recorded in units of minutes.
+                </remarks></documentation></annotation></element></sequence></complexType><complexType name="aerobic-lap-session"><annotation><documentation><summary>
+                    One stage of the aerobic session.
+                </summary><remarks>
+                    For example, one circuit of a running track or one length of a swimming pool.
+                    Usually indicated by the person pressing the stopwatch during exercise.
+                    This may occur multiple times in a session.
+                </remarks></documentation></annotation><sequence><element name="name" type="string" minOccurs="0"><annotation><documentation><summary>
+                            Optional description for this lap, such as "lap 1".
+                        </summary></documentation></annotation></element><element name="seconds-into-session" type="t:nonNegativeDouble" minOccurs="0"><annotation><documentation><summary>
+                            The start time of the lap relative to the entire session.
+                        </summary><remarks>
+                            This is measured in seconds.
+                        </remarks></documentation></annotation></element><element name="lap-session" type="t:aerobic-session" minOccurs="0"><annotation><documentation><summary>
+                            The lap session aerobic measurements.
+                        </summary></documentation></annotation></element></sequence></complexType><!-- Address --><complexType name="address"><annotation><documentation><summary>
+                    Defines a physical or mailing address.
+                </summary><remarks>
+                    An address may be used for either a mailing address or
+                    physical location.
+                </remarks></documentation></annotation><sequence><element name="description" type="string" minOccurs="0"><annotation><documentation><summary>
+                            A description of the address.
+                        </summary><remarks>
+                            For example, a person may label the address as
+                            "My home address" or "My mailing address".
+                        </remarks></documentation></annotation></element><element name="is-primary" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                            States if the addresses is the primary address
+                            for contacting the person.
+                        </summary><remarks>
+                            If true, the address is the preferred address
+                            for contacting the person.
+                        </remarks></documentation></annotation></element><element name="street" type="string" maxOccurs="unbounded"><annotation><documentation><summary>
+                            The street portion of the address.
+                        </summary><remarks>
+                            The street address may be made up of one or more
+                            lines and should adhere to the standard for the 
+                            locale in which the address resides.
+                        </remarks></documentation></annotation></element><element name="city" type="string"><annotation><documentation><summary>
+                            The city portion of the address.
+                        </summary></documentation></annotation></element><element name="state" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The state or province portion of the address.
+                        </summary></documentation></annotation></element><!-- or province, etc. --><element name="postcode" type="string"><annotation><documentation><summary>
+                            The postal code portion of the address.
+                        </summary><remarks>
+                            The postal code should adhere to the standard
+                            for the locale in which the address resides.
+                        </remarks></documentation></annotation></element><element name="country" type="string"><annotation><documentation><summary>
+                            The country portion of the address.
+                        </summary><remarks>
+                            This should be a string representation of the
+                            country as defined by the user. It is not used
+                            for processing so it doesn't have to be an
+                            ISO-3166 code. For example, a person could 
+                            refer to the United States of America as "US",
+                            "USA", "United States", or "United States of
+                            America".
+                        </remarks></documentation></annotation></element></sequence></complexType><!-- phone --><complexType name="phone"><annotation><documentation><summary>
+                    A phone number.
+                </summary></documentation></annotation><sequence><element name="description" type="string" minOccurs="0"><annotation><documentation><summary>
+                            A person's description of the phone number.
+                        </summary><remarks>
+                            This is used to describe the phone number. For
+                            example, "home", "mobile", "work", etc.
+                        </remarks></documentation></annotation></element><element name="is-primary" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                            States if the phone number is the primary number
+                            for contacting the person.
+                        </summary><remarks>
+                            If true, the phone number is the preferred number
+                            for contacting the person.
+                        </remarks></documentation></annotation></element><element name="number" type="string"><annotation><documentation><summary>
+                            The phone number.
+                        </summary></documentation></annotation></element></sequence></complexType><!-- Email --><complexType name="email"><annotation><documentation><summary>
+                    An email address.
+                </summary></documentation></annotation><sequence><element name="description" type="string" minOccurs="0"><annotation><documentation><summary>
+                            A person's description of the email address.
+                        </summary><remarks>
+                            This is used to describe the email address. For
+                            example, "personal", "work", etc.
+                        </remarks></documentation></annotation></element><element name="is-primary" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                            States if the email address is the primary address
+                            for contacting the person.
+                        </summary><remarks>
+                            If true, the email address is the preferred address
+                            for contacting the person.
+                        </remarks></documentation></annotation></element><element name="address" type="string"><annotation><documentation><summary>
+                            The email address.
+                        </summary></documentation></annotation></element></sequence></complexType><complexType name="communication-type"><annotation><documentation><summary>
+                    Defines what type of communication is used.
+                </summary><remarks>
+                    This type is used to specify the communication medium
+                    (i.e. phone, email, pager, etc.), the priority of which
+                    medium is preferred and the class (i.e. home, office,
+                    mobile, etc.) of medium.
+                </remarks></documentation></annotation><sequence><!--phone, email, pager, etc--><element name="communication-medium" type="t:codable-value"><annotation><documentation><summary>
+                            Defines medium of communication used.
+                        </summary><preferred-vocabulary>communication-medium</preferred-vocabulary></documentation></annotation></element><element name="priority" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                            Defines priority of communication medium.
+                        </summary><remarks>
+                            Preferred medium is lower value, such as phone-1, phone-2, etc.
+                        </remarks></documentation></annotation></element><!--home, mobile, office, etc--><element name="class" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            Defines class of communication used.
+                        </summary><preferred-vocabulary>communication-class</preferred-vocabulary></documentation></annotation></element><element name="value" type="string"><annotation><documentation><summary>
+                           Detailed value of communication type.
+                        </summary><summary>
+                           Examples are phone number, fax number, etc.
+                        </summary></documentation></annotation></element></sequence></complexType><complexType name="language"><annotation><documentation><summary>
+                    Defines a spoken language.
+                </summary></documentation></annotation><sequence><element name="language" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The language.
+                        </summary><remarks>
+                            The Microsoft Health Lexicon defines codes for
+                            many of the common spoken languages. In most
+                            cases the language should be specified by using
+                            the code retrieved from the Microsoft Health
+                            Lexicon by calling GetVocabulary with "languages"
+                            as the vocabulary name. If the language doesn't
+                            exist the Microsoft Health Lexicon the "text"
+                            element of the codable value can be used to specify
+                            the language.
+                        </remarks><preferred-vocabulary>iso:iso639-1</preferred-vocabulary></documentation></annotation></element><element name="is-primary" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                            States if the language is the primary language
+                            of the person.
+                        </summary><remarks>
+                            If true, the language is the preferred spoken
+                            language of the person.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="name"><annotation><documentation><summary>
+                    Defines a person's name.
+                </summary></documentation></annotation><sequence><element name="full" type="string"><annotation><documentation><summary>
+                            The person's full name.
+                        </summary></documentation></annotation></element><element name="title" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The person's title.
+                        </summary><remarks>
+                            For example, "Mr.", "Ms.", "Mrs.", etc.
+                        </remarks><preferred-vocabulary>name-prefixes</preferred-vocabulary></documentation></annotation></element><element name="first" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The person's given name.
+                        </summary></documentation></annotation></element><element name="middle" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The person's middle name.
+                        </summary></documentation></annotation></element><element name="last" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The person's family/sur name.
+                        </summary></documentation></annotation></element><element name="suffix" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The person's name suffix.
+                        </summary><remarks>
+                            For example, "Jr.", "Sr.", etc.
+                        </remarks><preferred-vocabulary>name-suffixes</preferred-vocabulary></documentation></annotation></element></sequence></complexType><complexType name="person"><annotation><documentation><summary>
+                    Information related to a contact.
+                </summary><remarks>
+                    A contact may be an emergency contact, contact information
+                    for a doctor, lawyer, etc.
+                </remarks></documentation></annotation><sequence><element name="name" type="t:name"><annotation><documentation><summary>
+                            The name of the contact person.
+                        </summary></documentation></annotation></element><element name="organization" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The name of the organization the contact
+                            belongs to.
+                        </summary></documentation></annotation></element><element name="professional-training" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The person's professional training.
+                        </summary></documentation></annotation></element><element name="id" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The identification number for the person
+                            in the organization.
+                        </summary></documentation></annotation></element><element name="contact" type="t:contact" minOccurs="0"><annotation><documentation><summary>
+                            Information on how to contact the person.
+                        </summary></documentation></annotation></element><element name="type" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The type of the contact person.
+                        </summary><remarks>
+                            A person may be an emergency contact, 
+                            a health care provider, etc. The values
+                            should be taken from the Microsoft Health
+                            Lexicon vocabulary 'person-types'.
+                        </remarks><preferred-vocabulary>person-types</preferred-vocabulary></documentation></annotation></element></sequence></complexType><complexType name="contact"><annotation><documentation><summary>
+                    Defines a set of contact information.
+                </summary><remarks>
+                    The contact information can consist of any number of
+                    physical/mailing addresses, phone numbers, or email 
+                    addresses.
+                </remarks></documentation></annotation><sequence><element name="address" type="t:address" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Physical or mailing addresses.
+                        </summary></documentation></annotation></element><element name="phone" type="t:phone" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Telephone numbers such as home, work, or mobile.
+                        </summary></documentation></annotation></element><element name="email" type="t:email" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Email addresses.
+                        </summary></documentation></annotation></element></sequence></complexType><complexType name="coded-value"><annotation><documentation><summary>
+                    Defines a value which has been coded in a Microsoft Health
+                    Vocabulary.
+                </summary><remarks>
+                  Microsoft HealthVault provides a set of vocabularies
+                  containing common health and fitness terms and codes.
+                  Vocabularies are identified by their family, type, and
+                  version and contain values which identify an entry in that
+                  vocabulary by code.<br /><br />
+                    For example, a prescription
+                    vocabulary may be identified by the family 'NCPDP', type
+                    'SCRIPT', and version '1.0' and contain a code of 10 which
+                    identifies a 'tablet' form of medication.
+                </remarks></documentation></annotation><sequence><element name="value" type="string"><annotation><documentation><summary>
+                            The code value which identifies the item in the 
+                            vocabulary.
+                        </summary><remarks>
+                            Codes are unique to the vocabulary they reside in.
+                            The codes for a particular vocabulary can be 
+                            enumerated using GetVocabulary.
+                        </remarks></documentation></annotation></element><element name="family" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The family of the vocabulary. 
+                        </summary><remarks>
+                            The family of a vocabulary partially identifies the
+                            vocabulary instance along with type and version. If 
+                            the value is missing the family is assumed to be 
+                            'wc' which is the Microsoft Health Lexicon.
+                            <br />
+                            For example, 'NCPDP' is the vocabulary family for
+                            codes in the National Council for Prescription Drug
+                            Programs.
+                        </remarks></documentation></annotation></element><element name="type" type="string"><annotation><documentation><summary>
+                            The type of the vocabulary.
+                        </summary><remarks>
+                            This is the name that identifies the vocabulary in
+                            the family of vocabularies.<br /><br />
+                            For example, 'SCRIPT' is the vocabulary name for
+                            medical prescriptions in the 'NCPDP' family of 
+                            vocabularies.
+                        </remarks></documentation></annotation></element><element name="version" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The version of the vocabulary.
+                        </summary><remarks>
+                            The version identifies which version of a vocabulary
+                            identified by the 'type' element the code is in if
+                            more than one version is present.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="codable-value"><annotation><documentation><summary>
+                    A value that may have codes from one or more Microsoft 
+                    Health vocabularies associated with it.
+                </summary><remarks>
+                    A codable value represents a value that may reference a
+                    coded value in one or more of the Microsoft Health 
+                    vocabularies. Though it does not require the value to
+                    be in a vocabulary.<br /><br />
+                    For example, aerobic session data has a mode element
+                    of type codable-value. Although many common forms of
+                    aerobic session mode can be found in the Microsoft
+                    Health Lexicon using the 'aerobic-activities' vocabulary,
+                    not all possible activities can be found there. If the
+                    activity does exist in the vocabulary it is recommended
+                    that applications add the coded-value for that code as
+                    a 'code' element and set the 'text' element to the 
+                    display value for that code. If the activity does not
+                    exist in the vocabulary the 'code' element should not
+                    be specified and the 'text' element should contain the
+                    data the user entered.<br /><br />
+                  By using the coded-value when available the data can
+                  be easily localized by Microsoft HealthVault and
+                  can also be utilized by applications that are mining the
+                  data based on certain code values.
+                </remarks></documentation></annotation><sequence><element name="text" type="string"><annotation><documentation><summary>
+                            The textual representation of the value.
+                        </summary><remarks>
+                            This may be the display value from one of the 
+                            coded-values or it may be the user entered
+                            value.
+                        </remarks></documentation></annotation></element><element name="code" type="t:coded-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            The codes representing the value from a 
+                            Microsoft Health vocabulary.
+                        </summary><remarks>
+                            Some values can be represented by codes in more
+                            that one vocabulary. If appropriate add coded-values
+                            from as many vocabularies as are relevant.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="lab-result-type"><annotation><documentation><summary>
+                    A clinical value within a laboratory result.
+                </summary><remarks>
+                    This type is define a clinical value within a laboratory result,
+                    including value, unit, reference and toxic ranges.
+                </remarks></documentation></annotation><sequence><element name="value" type="double" minOccurs="0"><annotation><documentation><summary>
+                            The value of the laboratory result.
+                        </summary></documentation></annotation></element><element name="unit" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            Units used to define laboratory result.
+                        </summary><preferred-vocabulary>lab-results-units</preferred-vocabulary></documentation></annotation></element><element name="reference-range" type="t:double-range" minOccurs="0"><annotation><documentation><summary>
+                            The reference range for the laboratory result.
+                        </summary></documentation></annotation></element><element name="toxic-range" type="t:double-range" minOccurs="0"><annotation><documentation><summary>
+                            The toxic range for the laboratory result.
+                        </summary></documentation></annotation></element><element name="text-value" type="string" minOccurs="0"><annotation><documentation><summary>
+                            Free form text for laboratory results.
+                        </summary></documentation></annotation></element><element name="flag" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Flag for laboratory results.
+                        </summary><remarks>
+                            Example values are normal, critical, high and low.
+                        </remarks><preferred-vocabulary>lab-results-flag</preferred-vocabulary></documentation></annotation></element></sequence></complexType><complexType name="lab-test-type"><annotation><documentation><summary>
+                    A laboratory test component, including the lab result value details.
+                </summary><remarks>
+                    This type is used to define components without a larger clinical laboratory report.
+                </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                            The date of the laboratory test.
+                        </summary></documentation></annotation></element><element name="name" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The name of the laboratory test.
+                        </summary></documentation></annotation></element><element name="substance" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The substance tested.
+                        </summary><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="collection-method" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The collection method for the laboratory test.
+                        </summary><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="abbreviation" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The abbreviation for the laboratory test.
+                        </summary></documentation></annotation></element><element name="description" type="string" minOccurs="0"><annotation><documentation><summary>
+                            Free form description of the laboratory test.
+                        </summary></documentation></annotation></element><element name="code" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            The clinical code for the laboratory test.
+                        </summary><preferred-vocabulary>LOINC</preferred-vocabulary></documentation></annotation></element><element name="result" type="t:lab-result-type" minOccurs="0"><annotation><documentation><summary>
+                            A clinical value within a laboratory result.
+                        </summary><remarks>
+                            This type is define a clinical value within a laboratory result,
+                            including value, unit, reference and toxic ranges.
+                        </remarks></documentation></annotation></element><element name="status" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The status of the laboratory result.
+                        </summary><remarks>
+                            Examples of status include complete and pending.
+                        </remarks><preferred-vocabulary>lab-results-status</preferred-vocabulary></documentation></annotation></element></sequence></complexType><complexType name="document-reference-type"><annotation><documentation><summary>
+                    Defines a document reference.
+                </summary><remarks>
+                    This type is used to define a specific document reference, including
+                    classification, index and version.
+                </remarks></documentation></annotation><sequence><element name="title" type="string"><annotation><documentation><summary>
+                            The title of the document reference.
+                        </summary></documentation></annotation></element><element name="url" type="string"><annotation><documentation><summary>
+                            The URL for the document reference.
+                        </summary></documentation></annotation></element><element name="document-index" type="string"><annotation><documentation><summary>
+                            The index for the document reference.
+                        </summary></documentation></annotation></element><element name="version" type="string"><annotation><documentation><summary>
+                            The version of the document reference.
+                        </summary></documentation></annotation></element></sequence></complexType><complexType name="Organization"><annotation><documentation><summary>An organization entity.</summary><remarks>
+                    An entity such as a hospital, a pharmacy, or a doctor's office.
+                </remarks></documentation></annotation><sequence><element name="name" type="string"><annotation><documentation><summary>The name of the organization.</summary></documentation></annotation></element><element name="contact" type="t:contact" minOccurs="0"><annotation><documentation><summary>
+                            The contact information for the organization.
+                        </summary></documentation></annotation></element><element name="type" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The type of the organization.
+                        </summary><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="website" type="string" minOccurs="0"><annotation><documentation><summary>
+                            The url for the organization's website.
+                        </summary></documentation></annotation></element></sequence></complexType><complexType name="condition"><annotation><documentation><summary>
+                Defines a single health or medical issue/problem.
+            </summary><remarks>
+                CCR qualifiers and other notes should go in the
+                common/note section of the thing.
+            </remarks></documentation></annotation><sequence><element name="name" type="t:codable-value"><annotation><documentation><summary>
+                            The name or description of the condition.
+                        </summary><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="onset-date" type="d:approx-date" minOccurs="0"><annotation><documentation><summary>
+                            The date of onset or the first diagnosis.
+                        </summary></documentation></annotation></element><element name="resolution-date" type="d:approx-date" minOccurs="0"><annotation><documentation><summary>
+                            The date the condition resolved (or for
+                            multiple acute episodes, the last date the
+                            condition resolved).
+                        </summary></documentation></annotation></element><element name="resolution" type="string" minOccurs="0"><annotation><documentation><summary>
+                            A statement of how the condition was resolved.
+                        </summary></documentation></annotation></element><!-- CCR qualifiers or other notes go into common/note --><element name="occurrence" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            How often the condition occurs.
+                        </summary><remarks>
+                            Examples: acute, chronic.
+                        </remarks><preferred-vocabulary>Contact the HealthVault team to help define this vocabulary.</preferred-vocabulary></documentation></annotation></element><element name="severity" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The severity for the condition
+                        </summary><preferred-vocabulary>condition-severity</preferred-vocabulary></documentation></annotation></element></sequence></complexType><complexType name="structured-measurement"><annotation><documentation><summary>
+                    A measurement using specific units.
+                </summary><remarks>
+                    Examples include 30 cc, 500 mg, 15 liters, 30 inches, etc. 
+                </remarks></documentation></annotation><sequence><element name="value" type="double"><annotation><documentation><summary>
+                           The value of the measurement.
+                        </summary></documentation></annotation></element><element name="units" type="t:codable-value"><annotation><documentation><summary>
+                            The units for the measurement.
+                        </summary><remarks>
+                            A list of vocabularies may be found in the preferred vocabulary.
+                        </remarks><preferred-vocabulary>measurement-unit-sets</preferred-vocabulary></documentation></annotation></element></sequence></complexType><complexType name="general-measurement"><annotation><documentation><summary>
+                    A coded measurement and a display representation.
+                </summary><remarks>
+                    Examples include 30 cc, 500 mg, 15 liters, 30 inches, etc. 
+                </remarks></documentation></annotation><sequence><element name="display" type="string"><annotation><documentation><summary>
+                            A user-readable string.
+                        </summary><remarks>
+                            Applications typically display this string. 
+                        </remarks></documentation></annotation></element><element name="structured" type="t:structured-measurement" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            The coded value of the measurement
+                        </summary><remarks>
+                            Applications typically use this for calculations, charting, or graphing.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="group-membership-type"><annotation><documentation><summary>
+                    A membership of the record owner in a specific group.
+                </summary></documentation></annotation><sequence><element name="name" type="t:codable-value"><annotation><documentation><summary>
+                            The name of the group type.
+                        </summary><remarks>
+                            Examples: Organization, SpecialProgram, BargainingUnit.
+                        </remarks><preferred-vocabulary>group-membership-type-name</preferred-vocabulary></documentation></annotation></element><element name="value" type="string"><annotation><documentation><summary>
+                            The value the member has for the group type.
+                        </summary><remarks>
+                            For example, a name of BargainingUnit might have a value of HourlyWorkers.
+                        </remarks></documentation></annotation></element></sequence></complexType><complexType name="volume-value"><annotation><documentation><summary>
+                    A volume measurement.
+                </summary><remarks>
+                    A volume measurement consists of the value in liters (L), 
+                    and an 
+                    optional display value. The display value is used to store 
+                    the volume measurement in the user's preference of volume 
+                    units. This avoids rounding errors when converting between units.
+                </remarks></documentation></annotation><sequence><element name="liters" type="t:nonNegativeDouble"><annotation><documentation><summary>
+                            The volume measurement in liters (L).
+                        </summary></documentation></annotation></element><element name="display" type="t:display-value" minOccurs="0"><annotation><documentation><summary>
+                            The display value for the volume measurement.
+                        </summary><remarks>
+                            The display value contains the volume measurement
+                            value stored in the user's preference of units.
+                        </remarks></documentation></annotation></element></sequence></complexType><simpleType name="stringnz"><annotation><documentation><summary>
+                    A string that is at least one character in length. 
+                </summary></documentation></annotation><restriction base="string"><minLength value="1" /></restriction></simpleType><simpleType name="guid"><annotation><documentation><summary /><remarks /></documentation></annotation><restriction base="string"><pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}" /></restriction></simpleType></schema>

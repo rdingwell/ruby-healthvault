@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.CreateConnectPackage"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-CREATECONNECTPACKAGE.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for CreateConnectPackage method response
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                The unique identity code (to access the package) or failure result.
+            </summary>
+            <method-visibility>Public</method-visibility>
+            <errors>
+                <error id="ACCESS_DENIED">
+                    If the application does not have method-level access rights to the method.
+                </error>
+                <error id="INVALID_VERIFICATION_QUESTION">
+                    If the question is empty or blank (made up of only whitespace).
+                </error>
+                <error id="DUPLICATE_CONNECT_REQUEST_FOUND">
+                    If the package was already created by the calling application for the
+                    specified external id.
+                </error>
+                <error id="INVALID_XML">
+                    If the package's data-other was empty or if the package's encryption method or
+                    parameters are not supported.
+                </error>
+            </errors>
+        </documentation>
+    </annotation>
+
+    <!-- CreateConnectPackage - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the response that contains the method
+                        specific return value(s).
+                    </summary>
+
+                    <remarks>
+                        All response schemas contain the info element which
+                        contain the return value of the method. If the method
+                        does not define an info element, the method has no
+                        return value.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="identity-code" type="string">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A 20 digit unique code that the user will need to enter into
+                                account.healthvault.com in order to face the challenge question
+                                and access the PPP.
+                            </summary>
+                            
+                            <remarks>
+                                This code is to be kept secret. If the code is lost, the
+                                application should call DeleteConnectPackage in order
+                                to  delete it, then call CreateConnectPackage again in order
+                                to obtain a new identity code.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

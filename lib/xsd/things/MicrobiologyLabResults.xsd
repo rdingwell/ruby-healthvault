@@ -1,0 +1,25 @@
+<schema xmlns:mic="urn:com.microsoft.wc.thing.microbiology" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.microbiology"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>B8FCB138-F8E6-436A-A15D-E3A2D6916094</type-id><type-name>Microbiology Lab Test Result</type-name><wrapper-class-name>MicrobiologyLabResults</wrapper-class-name><wrapper-class-fwlink>136197</wrapper-class-fwlink><sample-xml-fwlink>136198</sample-xml-fwlink><data-type-guide-fwlink>136196</data-type-guide-fwlink><summary>
+                Information related to a microbiology lab test.
+            </summary><remarks>
+                This thing type describes the microbiology lab test results of a person.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="microbiology-lab-results"><complexType><annotation><documentation><summary>
+                        Information related to a microbiology lab test.
+                    </summary><remarks>
+                        This thing type describes the microbiology lab test results of a person.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time of the report.
+                            </summary></documentation></annotation></element><element name="lab-tests" type="t:lab-test-type" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Type of microbiology lab test.
+                            </summary></documentation></annotation></element><element name="sensitivity-agent" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Free form description of agent for a sensitivity type.
+                            </summary></documentation></annotation></element><element name="sensitivity-value" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Free form description of value for a sensitivity type.
+                            </summary></documentation></annotation></element><element name="sensitivity-interpretation" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form description of interpretation for a sensitivity type.
+                            </summary></documentation></annotation></element><element name="specimen-type" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Free form description of specimen type for a microbiology lab test.
+                            </summary></documentation></annotation></element><element name="organism-name" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Free form description of organism name for a microbiology lab test.
+                            </summary></documentation></annotation></element><element name="organism-comment" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form organism comment for a microbiology lab test.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

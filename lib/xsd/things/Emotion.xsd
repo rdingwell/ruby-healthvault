@@ -1,0 +1,24 @@
+<schema xmlns:e="urn:com.microsoft.wc.thing.emotion" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.emotion"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>4b7971d6-e427-427d-bf2c-2fbcf76606b3</type-id><type-name>Emotional State</type-name><wrapper-class-name>Emotion</wrapper-class-name><wrapper-class-fwlink>136110</wrapper-class-fwlink><sample-xml-fwlink>136111</sample-xml-fwlink><data-type-guide-fwlink>136109</data-type-guide-fwlink><summary>
+                A subjective record of an emotional state.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><element name="emotion"><complexType><annotation><documentation><summary>
+                        A subjective record of an emotional state.
+                    </summary></documentation></annotation><sequence><element name="when" minOccurs="1" maxOccurs="1" type="d:date-time"><annotation><documentation><summary>
+                                The date and time when the emotional state 
+                                occurred.
+                            </summary></documentation></annotation></element><element name="mood" minOccurs="0" maxOccurs="1" type="t:one-to-five"><annotation><documentation><summary>
+                                A subjective ranking of the emotional state.
+                            </summary><remarks>
+                                The value ranges from one to five, with one 
+                                being sad and five being very happy.
+                            </remarks></documentation></annotation></element><element name="stress" minOccurs="0" maxOccurs="1" type="t:one-to-five"><annotation><documentation><summary>
+                                A subjective ranking of the person's stress 
+                                level.
+                            </summary><remarks>
+                                The value ranges from one to five, with one
+                                being relaxed to five being stressed.
+                            </remarks></documentation></annotation></element><element name="wellbeing" minOccurs="0" maxOccurs="1" type="t:one-to-five"><annotation><documentation><summary>
+                                A subjective ranking of the person's health.
+                            </summary><remarks>
+                                The value ranges from one to five, with one
+                                being sick to five being healthy.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

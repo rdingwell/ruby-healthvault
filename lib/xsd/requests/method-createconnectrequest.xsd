@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.CreateConnectRequest"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-CREATECONNECTREQUEST.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for CreateConnectRequest method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Creates a connect request which will allow the user to tie their HealthVault 
+                account to the calling application once the user validates the connect request.
+            </summary>
+
+            <remarks>
+                The connect requests are validated when the HealthVault user correctly supplies the
+                identity code and is able to successfully answer the challenge question 
+                (via account.healthvault.com). Validated connect requests will be delivered once 
+                the corresponding external application calls GetAuthorizedConnectRequests.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- CreateConnectRequest - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="friendly-name" type="wc-types:stringnz">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A friendly name that will be presented to the user after the user
+                                successfully answers the challenge question. 
+                            </summary>
+                            
+                            <remarks>
+                                The friendly name should be something that is recognizable and
+                                distinguishes one connect request from another so that the user may
+                                choose the expected record during application authorization. For 
+                                example, a mother of 2 children may want to name her connect 
+                                requests after each child so she can distinguish one child's 
+                                connect request from the others.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="question" type="wc-types:stringnz">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A challenge question posed to the user once the identity code has 
+                                been successfully entered.
+                            </summary>
+                            
+                            <remarks>
+                                The challenge question should be personal and easy to answer for
+                                the user. It is recommended that the challenge question require a
+                                one word answer. An empty question will result in an
+                                InvalidVerificationQuestion error.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="answer" type="wc-types:stringnz">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The answer that the patient is expected to provide when posed with 
+                                the challenge question.
+                            </summary>
+                            
+                            <remarks>
+                                It is recommended that this be a single word. The answer is
+                                case-insensitive, however, it is whitespace sensitive. An empty
+                                answer will result in an InvalidVerificationAnswer error.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="external-id" type="wc-types:stringnz">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                An identifier supplied by the external application for the 
+                                connect request.
+                            </summary>
+                            
+                            <remarks>
+                                This value will tie the external application to the HealthVault
+                                record being shared. For instance, this could be the patient 
+                                identifier used to store information in the calling application's 
+                                database.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="call-back-url" type="wc-types:stringnz" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A URL for call back once the connect request is validated.
+                            </summary>
+
+                            <remarks>
+                                Currently not supported.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

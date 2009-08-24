@@ -1,0 +1,76 @@
+﻿<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.GetValidGroupMembership"
+    xmlns:this="urn:com.microsoft.wc.methods.GetValidGroupMembership"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-GETVALIDGROUPMEMBERSHIPS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetValidGroupMemberships method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Gets a list of valid things of type Group Membership.
+            </summary>
+
+            <remarks>
+              Checks the expiration date. Also checks that the last writing
+              application has offline read and delete access.
+              Optionally checks that the last writing application id is on a list of
+              application ids.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- GetValidGroupMemberships - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="application-id" type="wc-types:guid"
+                         minOccurs="0" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A list of application id's. If the list contains 1 or more
+                                application id's, only Group Membership things last written 
+                                by an application whose id is on the list will be returned.
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

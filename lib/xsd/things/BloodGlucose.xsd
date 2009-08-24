@@ -1,0 +1,28 @@
+<schema xmlns:BloodGlucose="urn:com.microsoft.wc.thing.BloodGlucose" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.BloodGlucose"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>879e7c04-4e8a-4707-9ad3-b054df467ce4</type-id><type-name>Blood Glucose Measurement</type-name><wrapper-class-name>BloodGlucose</wrapper-class-name><wrapper-class-fwlink>136053</wrapper-class-fwlink><sample-xml-fwlink>136054</sample-xml-fwlink><data-type-guide-fwlink>136052</data-type-guide-fwlink><summary>
+                Defines a single blood glucose reading.
+            </summary><effective-date-element>when</effective-date-element></documentation></annotation><element name="blood-glucose"><complexType><annotation><documentation><summary>
+                        Defines a single blood glucose reading.
+                    </summary></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the reading was taken.
+                            </summary></documentation></annotation></element><element name="value" type="t:blood-glucose-value"><annotation><documentation><summary>
+                                The value of the blood glucose measurement.
+                            </summary></documentation></annotation></element><element name="glucose-measurement-type" type="t:codable-value"><annotation><documentation><summary>
+                                An enumeration of the possible blood glucose measurement types, whole blood or plasma (serum).
+                            </summary><preferred-vocabulary>glucose-measurement-type</preferred-vocabulary></documentation></annotation></element><element name="outside-operating-temp" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                Indicates whether the reading is outside the operating temperature range of the device that made the reading.
+                            </summary><remarks>
+                                Indicates whether the reading is outside the operating temperature range of the device that made the reading.
+                            </remarks></documentation></annotation></element><element name="is-control-test" type="boolean" minOccurs="0"><annotation><documentation><summary>
+                                Indicates whether the reading was the result of a control test.
+                            </summary><remarks>
+                                Indicates whether the reading was the result of a control test.
+                            </remarks></documentation></annotation></element><element name="normalcy" type="t:one-to-five" minOccurs="0"><annotation><documentation><summary>
+                                A that indicates how the reading compares to normal blood glucose concentrations 
+                                (usually the same as the measurement range of the device that made the reading).
+                            </summary><remarks>
+                                The value ranges from one to five with 1 being much lower than a normal reading, 
+                                2 being lower than a normal reading, 3 being equivalent to a normal reading, 
+                                4 being higher than a normal reading and 5 being much higher than a normal reading. 
+                            </remarks></documentation></annotation></element><element name="measurement-context" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                An optional enumeration string that indicates contextual information about the reading.
+                            </summary><preferred-vocabulary>glucose-measurement-context</preferred-vocabulary></documentation></annotation></element></sequence></complexType></element></schema>

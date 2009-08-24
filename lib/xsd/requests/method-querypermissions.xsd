@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.QueryPermissions"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-QUERYPERMISSIONS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for QueryPermissions method
+
+    -->
+
+    <import
+          namespace="urn:com.microsoft.wc.types"
+          schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Gets the permissions the authenticated person has for the 
+                specified thing type for the specified record.
+            </summary>
+
+            <remarks>
+                The online and offline access permissions that the 
+                currently authenticated person has for the specified record
+                for a thing type in the context of the current application 
+                are returned. If a person has neither online nor offline 
+                access permissions a result is not returned for that thing
+                type.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- QueryPermissions - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains method 
+                        specific parameters. 
+                    </summary>
+                    
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="thing-type-id" type="wc-types:guid" 
+                         minOccurs="1" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The thing type ids identifying the thing types
+                                for which the permissions are being queried.
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
+

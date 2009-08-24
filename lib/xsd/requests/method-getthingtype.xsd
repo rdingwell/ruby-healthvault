@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.GetThingType"
+    xmlns:this="urn:com.microsoft.wc.methods.GetThingType"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-GETTHINGTYPES.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetThingType method
+
+    -->
+
+    <import
+          namespace="urn:com.microsoft.wc.types"
+          schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                This method is used to get information about supported thing types 
+            </summary>
+
+            <remarks>
+
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- GETTHINGTYPES - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <simpleType name ="ThingTypeSectionSpec">
+        <annotation>
+            <documentation>
+                <summary>
+                    This allows the caller to specify which information about a thing type
+                    should be returned with this request.
+                </summary>
+
+                <remarks>
+
+                </remarks>
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <enumeration value="core">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The essential information about the thing type should
+                            be returned.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="xsd">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The schema of the thing type should
+                            be returned.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="columns">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            Columns used by the thing type should
+                            be returned.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="transforms">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The transforms supported by the thing type should
+                            be returned.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="transformsource">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The transforms and their XSL source supported by the thing type should
+                            be returned.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="versions">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The versions of the thing type should be returned.
+                        </summary>
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="effectivedatexpath">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The effective date XPath of the thing type should be returned.
+                        </summary>
+                        <remarks>
+                            The effective date XPath allows obtaining the node which will contain
+                            the thing's effective date value, since this is different for each
+                            thing type.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="id"
+                         type="wc-types:guid"
+                         minOccurs="0" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Optional parameter. If a list of thing-types is provided, 
+                                information about those thing types are returned.
+                                If a list is not provided, then a list of all supported
+                                thing types is returned. 
+                            </summary>
+
+                            <remarks>
+
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="section"
+                         type="this:ThingTypeSectionSpec"
+                         minOccurs ="0" maxOccurs="7">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Indicates which information about a thing-type
+                                is to be returned.
+                            </summary>
+
+                            <remarks>
+                                
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="image-type" type="string" minOccurs="0" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Specifies which thing type images should be retrieved.
+                            </summary>
+                            <remarks>
+                                This requests an image of the specified mime type should be returned.
+                                For example, to request a GIF image, "image/gif" should be specified.
+                                For icons, "image/vnd.microsoft.icon" should be specified. Note, not
+                                all thing types will have all image types and some may not have any
+                                images at all.
+                                
+                                If '*' is specified, all image types will be returned.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="last-client-refresh" type="dateTime" minOccurs="0">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Allows the caller to tell the server to only respond if there have
+                                been changes made to the thing types since the date/time specified.
+                            </summary>
+                            <remarks>
+                                This parameter is typically used by callers who cache the results of
+                                the response. You can timestamp the data returned and then poll for
+                                thing type updates periodically and pass that timestamp in this parameter.
+                                The server will determine if any updates have occurred since that
+                                timestamp and only return results if there were any updates. This
+                                determination does not take into account the data you are asking for
+                                in the section or image-type specified but for all thing type definitions.
+                                Note, there may be slight variations between servers depending on 
+                                when each server was updated with the new data. This variation may
+                                differ in a number of minutes but under normal conditions will be
+                                less than an hour.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

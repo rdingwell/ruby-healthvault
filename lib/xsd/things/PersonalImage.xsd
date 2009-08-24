@@ -1,0 +1,13 @@
+<schema xmlns:pi="urn:com.microsoft.wc.thing.personal-image" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.personal-image"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><annotation><documentation><type-id>a5294488-f865-4ce3-92fa-187cd3b58930</type-id><type-name>Personal Image</type-name><uses-blob-store>true</uses-blob-store><wrapper-class-name>PersonalImage</wrapper-class-name><wrapper-class-fwlink>136212</wrapper-class-fwlink><sample-xml-fwlink>136213</sample-xml-fwlink><data-type-guide-fwlink>136211</data-type-guide-fwlink><summary>
+                An image that represents the person.
+            </summary><remarks>
+                This type has no XML data associated with it. All data
+                is stored as base64 encoded binary data in the "other
+                data" section of the thing.
+            </remarks><singleton /></documentation></annotation><element name="personal-image"><complexType><annotation><documentation><summary>
+                        An image that represents the person.
+                    </summary><remarks>
+                        This type has no XML data associated with it. All data
+                        is stored as base64 encoded binary data in the "other
+                        data" section of the thing.
+                    </remarks></documentation></annotation><sequence /></complexType></element></schema>

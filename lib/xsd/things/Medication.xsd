@@ -1,0 +1,71 @@
+<schema xmlns:med="urn:com.microsoft.wc.thing.medication" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.medication"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>30cafccc-047d-4288-94ef-643571f7919d</type-id><type-name>Medication</type-name><version>2</version><wrapper-class-name>Medication</wrapper-class-name><wrapper-class-fwlink>136191</wrapper-class-fwlink><sample-xml-fwlink>136192</sample-xml-fwlink><data-type-guide-fwlink>136190</data-type-guide-fwlink><summary>
+                Information related to a medication.
+            </summary><remarks>
+                This type contains information describing a medication, and is related to the medication fill type.
+                Instances of the medication fill type are linked to instances of this type using related items. 
+                For example, if the medication is prescribed, the medication fill describes typical information that a
+                pharmacy would add.
+            </remarks></documentation></annotation><complexType name="Prescription"><annotation><documentation><summary>
+                        Information related to a medication prescription.
+                    </summary></documentation></annotation><sequence><element name="prescribed-by" type="t:person"><annotation><documentation><summary>
+                                The person who prescribed this medication.
+                            </summary></documentation></annotation></element><element name="date-prescribed" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                Date medication was prescribed.
+                            </summary></documentation></annotation></element><element name="amount-prescribed" type="t:general-measurement" minOccurs="0"><annotation><documentation><summary>
+                                Amount of medication prescribed
+                            </summary></documentation></annotation></element><element name="substitution" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Whether a substitution is permitted.
+                            </summary><remarks>
+                                Example: Dispense as written, substitution allowed
+                            </remarks><preferred-vocabulary>medication-substitution</preferred-vocabulary></documentation></annotation></element><element name="refills" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                Number of medication refills.
+                            </summary></documentation></annotation></element><element name="days-supply" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                                Number of days supply of medication.
+                            </summary></documentation></annotation></element><element name="prescription-expiration" type="d:date" minOccurs="0"><annotation><documentation><summary>
+                            Date the prescription expires.
+                        </summary></documentation></annotation></element><element name="instructions" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            Medication instructions.
+                        </summary></documentation></annotation></element></sequence></complexType><element name="medication"><complexType><annotation><documentation><summary>
+                        Information related to a medication.
+                    </summary><remarks>
+                        This type contains information describing a medication, and is related to the medication fill type.
+                        Instances of the medication fill type are linked to instances of this type using related items. 
+                        For example, if the medication is prescribed, the medication fill describes typical information that a
+                        pharmacy would add.
+                    </remarks></documentation></annotation><sequence><element name="name" type="t:codable-value"><annotation><documentation><summary>
+                                Name and clinical code for the medication.
+                             </summary><remarks>
+                                 This name should be understandable to the person taking
+                                 the medication, such as the brand name.
+                             </remarks><preferred-vocabulary>Rxnorm</preferred-vocabulary><preferred-vocabulary>NDC</preferred-vocabulary></documentation></annotation></element><element name="generic-name" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Generic name and clinical code for the medication.
+                             </summary><remarks>
+                                 The generic name is often the drug name rather than the brand name.
+                             </remarks><preferred-vocabulary>Rxnorm</preferred-vocabulary><preferred-vocabulary>NDC</preferred-vocabulary></documentation></annotation></element><element name="dose" type="t:general-measurement" minOccurs="0"><annotation><documentation><summary>
+                                Dose of the medication
+                            </summary><remarks>
+                            Examples: 1 tablet, 50 ml.
+                            </remarks></documentation></annotation></element><element name="strength" type="t:general-measurement" minOccurs="0"><annotation><documentation><summary>
+                                Strength of medication.
+                            </summary><remarks>
+                                Example: 500mg, 10 mg/ml
+                            </remarks></documentation></annotation></element><element name="frequency" type="t:general-measurement" minOccurs="0"><annotation><documentation><summary>
+                                How often the medication is taken.
+                            </summary><remarks>
+                                Example: 1 tablet per day, 2 every 6 hours, as needed. 
+                            </remarks></documentation></annotation></element><element name="route" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Route of medication.
+                            </summary><preferred-vocabulary>medication-routes</preferred-vocabulary></documentation></annotation></element><element name="indication" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Indication for medication.
+                            </summary></documentation></annotation></element><element name="date-started" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                Date medication was started.
+                            </summary></documentation></annotation></element><element name="date-discontinued" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                                Date medication was discontinued.
+                            </summary></documentation></annotation></element><element name="prescribed" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The source of the prescription 
+                            </summary><remarks>
+                                A medication that is prescribed by a physician should code "prescribed"
+                                into this element. 
+                            </remarks><preferred-vocabulary>medication-prescribed</preferred-vocabulary></documentation></annotation></element><element name="prescription" type="med:Prescription" minOccurs="0"><annotation><documentation><summary>
+                                Details of a prescribed medication. 
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

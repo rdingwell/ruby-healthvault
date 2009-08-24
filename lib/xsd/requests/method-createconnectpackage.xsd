@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.CreateConnectPackage"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-thing="urn:com.microsoft.wc.thing"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-CREATECONNECTPACKAGE.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for CreateConnectPackage method
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <import
+        namespace="urn:com.microsoft.wc.thing"
+        schemaLocation="thing.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Creates a package containing a data that the user can claim using the identity code 
+                returned by this method
+            </summary>
+
+            <remarks>
+                The connect package are validated when the HealthVault user correctly supplies the
+                identity code. The contents are decrypted after the user answers the challenge 
+                question (via account.healthvault.com). The contents of the validated data
+                will be inserted into the users record.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+            <errors>
+                <error id="ACCESS_DENIED">
+                    If the application does not have method-level access rights to the method.
+                </error>
+                <error id="INVALID_VERIFICATION_QUESTION">
+                    If the question is empty or blank (made up of only whitespace).
+                </error>
+                <error id="DUPLICATE_CONNECT_REQUEST_FOUND">
+                    If the package was already created by the calling application for the
+                    specified external id.
+                </error>
+                <error id="INVALID_XML">
+                    If the package's data-other was empty or if the package's encryption
+                    method/parameters are not supported.
+                </error>
+            </errors>
+        </documentation>
+    </annotation>
+
+    <!-- CreateConnectPackage - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the request that contains the method
+                        specific parameters.
+                    </summary>
+
+                    <remarks>
+                        All requests contain the info element to pass parameters
+                        that are specific to each method. If the method does not
+                        define an info element, the method does not take any
+                        parameters.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="identity-code" type="string" minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                            </summary>
+                            
+                            <remarks>
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+                <element name="friendly-name" type="wc-types:stringnz">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A friendly name that will be presented to the user after the user
+                                successfully answers the challenge question. 
+                            </summary>
+                            
+                            <remarks>
+                                The friendly name should be something that is recognizable and
+                                distinguishes one package from another so that the user may choose
+                                the expected record during validation. For example, a mother of 2
+                                children may want her packages named after each child so she can
+                                distinguish one child's package from the others.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="question" type="wc-types:stringnz">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                A challenge question posed to the user once the identity code has 
+                                been successfully entered.
+                            </summary>
+                            
+                            <remarks>
+                                The challenge question should be personal and easy to answer for
+                                the user. An empty question will result in an 
+                                InvalidVerificationQuestion error.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="external-id" type="wc-types:stringnz">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                An identifier supplied by the external application for the 
+                                connect package.
+                            </summary>
+                            
+                            <remarks>
+                                This value will tie the external application to the HealthVault
+                                record being shared. For instance, this could be the patient 
+                                identifier used to store information in the calling application's 
+                                database.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+                <element name="package" type="wc-thing:Thing">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The package to create.
+                            </summary>
+                            <remarks>
+                                This package must be a Password Protected Package Thing. It's
+                                data-other must be Base64 encoded, and must contain the encrypted
+                                data which the user will be able to decrypt by answering the
+                                verification question. The decoded and decrypted data must be a
+                                sequence of thing elements as defined by the following schema:
+                                
+                                <sequence>
+                                    <element name="thing" type="wc-thing:Thing" minOccurs="1" maxOccurs="unbounded" />
+                                </sequence>
+                                
+                                For example:
+                                <thing>
+                                    <type-id>3d34d87e-7fc1-4153-800f-f56592cb0d17</type-id>
+                                    <data-xml>
+                                        ...
+                                    </data-xml>
+                                </thing>
+                                <thing>
+                                    <type-id>40750a6a-89b2-455c-bd8d-b420a4cb500b</type-id>
+                                    <data-xml>
+                                        ...
+                                    </data-xml>
+                                </thing>
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

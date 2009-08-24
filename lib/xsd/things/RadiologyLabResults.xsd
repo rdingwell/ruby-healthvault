@@ -1,0 +1,19 @@
+<schema xmlns:lab="urn:com.microsoft.wc.thing.radiology-lab-results" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.radiology-lab-results"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>E4911BD3-61BF-4E10-AE78-9C574B888B8F</type-id><type-name>Radiology Lab Result</type-name><wrapper-class-name>RadiologyLabResults</wrapper-class-name><wrapper-class-fwlink>136224</wrapper-class-fwlink><sample-xml-fwlink>136225</sample-xml-fwlink><data-type-guide-fwlink>136223</data-type-guide-fwlink><summary>
+                Information related to a radiology lab results.
+            </summary><remarks>
+                This thing type describes the radiology lab results a person 
+                has.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="radiology-lab-results"><complexType><annotation><documentation><summary>
+                        Information related to a radiology lab-results.
+                    </summary><remarks>
+                        This thing type describes the radiology lab results a 
+                        person has.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time the lab results.
+                            </summary></documentation></annotation></element><element name="title" type="string" minOccurs="0"><annotation><documentation><summary>
+                                Free form title for radiology lab results.
+                            </summary></documentation></annotation></element><element name="anatomic-site" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The anatomic site description in a radiology lab results.
+                            </summary></documentation></annotation></element><element name="result-text" type="string" minOccurs="0"><annotation><documentation><summary>
+                                The textual content for radiology lab results.
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

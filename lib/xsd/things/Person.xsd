@@ -1,0 +1,11 @@
+<schema xmlns:person="urn:com.microsoft.wc.thing.person" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.person"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><annotation><documentation><type-id>25c94a9f-9d3d-4576-96dc-6791178a8143</type-id><type-name>Emergency or Provider Contact</type-name><wrapper-class-name>Person</wrapper-class-name><wrapper-class-fwlink>136107</wrapper-class-fwlink><sample-xml-fwlink>136108</sample-xml-fwlink><data-type-guide-fwlink>136106</data-type-guide-fwlink><summary>
+                Information related to a contact.
+            </summary><remarks>
+                A contact may be an emergency contact, contact information
+                for a doctor, lawyer, etc.
+            </remarks></documentation></annotation><element name="person" type="t:person"><annotation><documentation><summary>
+                    Information related to a contact.
+                </summary><remarks>
+                    A contact may be an emergency contact, contact information
+                    for a doctor, lawyer, etc.
+                </remarks></documentation></annotation></element></schema>

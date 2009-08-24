@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetValidGroupMembership"
+    xmlns:this="urn:com.microsoft.wc.methods.response.GetValidGroupMembership"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns:wc-thing="urn:com.microsoft.wc.thing"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-GETALIDGROUPMEMBERSHIP.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetValidGroupMembership method response
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <import
+        namespace="urn:com.microsoft.wc.thing"
+        schemaLocation="thing.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                A list of valid Group Membership things for a record.
+            </summary>
+
+            <remarks>
+                Gets a list of valid things of type Group Membership.
+                Checks the expiration date. Also checks that the last writing
+                application has offline read and delete access.
+                Optionally checks that the last writing application id is on a list of
+                application ids.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- GetValidGroupMemberships - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        Contains the response of the GetValidGroupMemberships method request.
+                    </summary>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="thing" type="wc-thing:Thing"
+                    minOccurs="0" maxOccurs="unbounded">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The valid Group Membership things.
+                            </summary>
+                            <remarks>
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

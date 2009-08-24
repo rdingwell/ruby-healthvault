@@ -1,0 +1,99 @@
+<schema xmlns:inhaler="urn:com.microsoft.wc.thing.inhaler" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.inhaler"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>ff9ce191-2096-47d8-9300-5469a9883746</type-id><type-name>Asthma Inhaler</type-name><wrapper-class-name>AsthmaInhaler</wrapper-class-name><wrapper-class-fwlink>136044</wrapper-class-fwlink><sample-xml-fwlink>136045</sample-xml-fwlink><data-type-guide-fwlink>136043</data-type-guide-fwlink><summary>
+                Any inhaler unit used to treat asthma.
+            </summary><remarks>
+                The inhaler may or may not have a device component.
+                Each new canister should have a new inhaler thing, even
+                if there is a containing device that is reusable.
+                Changes in regimen (min/max doses per day) should also
+                cause a new thing to be created.
+            </remarks></documentation></annotation><simpleType name="dow"><annotation><documentation><summary>
+                    The day of the week.
+                </summary><remarks>
+                    1 = Sunday
+                    2 = Monday
+                    3 = Tuesday
+                    4 = Wednesday
+                    5 = Thursday
+                    6 = Friday
+                    7 = Saturday
+                </remarks></documentation></annotation><restriction base="int"><minInclusive value="1" /><maxInclusive value="7" /></restriction></simpleType><complexType name="alert"><annotation><documentation><summary>
+                    A weekly alert schedule.
+                </summary><remarks>
+                    A weekly alert schedule consists of one or more days of the
+                    week plus one or more time values.
+                </remarks></documentation></annotation><sequence><element name="dow" type="inhaler:dow" minOccurs="1" maxOccurs="7"><annotation><documentation><summary>
+                            The day(s) of the week the alert is effective.
+                        </summary></documentation></annotation></element><element name="time" type="d:time" minOccurs="1" maxOccurs="unbounded"><annotation><documentation><summary>
+                            The time(s) of day the alert is scheduled. 
+                        </summary></documentation></annotation></element></sequence></complexType><simpleType name="purpose"><annotation><documentation><summary>
+                    The intended purpose of the inhaler.
+                </summary></documentation></annotation><restriction base="string"><enumeration value="Control"><annotation><documentation><summary>
+                            To control the onset of attacks.
+                        </summary></documentation></annotation></enumeration><enumeration value="Rescue"><annotation><documentation><summary>
+                            To rescue during an attack.
+                        </summary></documentation></annotation></enumeration><enumeration value="Combination"><annotation><documentation><summary>
+                            A combination of control and rescue.
+                        </summary></documentation></annotation></enumeration></restriction></simpleType><element name="asthma-inhaler"><complexType><annotation><documentation><summary>
+                        Any inhaler unit used to treat asthma.
+                    </summary><remarks>
+                        The inhaler may or may not have a device component.
+                        Each new canister should have a new inhaler thing, even
+                        if there is a containing device that is reusable. 
+                        Changes in regimen (min/max doses per day) should also
+                        cause a new thing to be created.
+                    </remarks></documentation></annotation><sequence><element name="drug" type="t:codable-value" minOccurs="1" maxOccurs="1"><annotation><documentation><summary>
+                                The name of the drug in the canister.
+                            </summary><remarks>
+                                For example, 'ventolin' or 'albuterol'.
+                            </remarks></documentation></annotation></element><element name="strength" type="t:codable-value" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The textual description of the drug strength.
+                            </summary><remarks>
+                                For example, '44 mcg / puff'.
+                            </remarks></documentation></annotation></element><element name="purpose" type="inhaler:purpose" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The purpose for the inhaler.
+                            </summary></documentation></annotation></element><element name="start-date" type="d:approx-date-time" minOccurs="1" maxOccurs="1"><annotation><documentation><summary>
+                                The approximate date of when the inhaler 
+                                started being used.
+                            </summary></documentation></annotation></element><element name="stop-date" type="d:approx-date-time" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The approximate date of when the inhaler
+                                was retired.
+                            </summary><remarks>
+                                Absence of this element implied that as far
+                                as we know the canister is still in use.
+                            </remarks></documentation></annotation></element><element name="expiration-date" type="d:approx-date-time" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The date the canister is clinically expired.
+                            </summary></documentation></annotation></element><element name="device-id" type="string" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The unique id or serial number for the canister.
+                            </summary><remarks>
+                                If available, this value can be used to 
+                                correlate uses.
+                            </remarks></documentation></annotation></element><element name="initial-doses" type="int" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The number of doses in the unit at the time the
+                                thing instance was created.
+                            </summary><remarks>
+                                This may not be the number the canister started
+                                with since the expectation is that a change in
+                                regimen will cause a new thing to be created as
+                                well.<br /><br />
+                                A dose is one puff.
+                            </remarks></documentation></annotation></element><element name="min-daily-doses" type="int" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The minimum number of doses that should be 
+                                taken per day.
+                            </summary><remarks>
+                                A dose is one puff.
+                            </remarks></documentation></annotation></element><element name="max-daily-doses" type="int" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                The maximum number of doses that should be 
+                                taken per day.
+                            </summary><remarks>
+                                A dose is one puff.
+                            </remarks></documentation></annotation></element><element name="can-alert" type="boolean" minOccurs="0" maxOccurs="1"><annotation><documentation><summary>
+                                States whether the inhaler can show alerts.
+                            </summary></documentation></annotation></element><element name="alert" type="inhaler:alert" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                A set of the alert times that the device should
+                                activate its feature.
+                            </summary><remarks>
+                                Note that his information can change without 
+                                requiring a new thing to be created. The device
+                                data is the key for alerts, we just keep it 
+                                here for display purposes.
+                            </remarks></documentation></annotation></element></sequence></complexType></element></schema>

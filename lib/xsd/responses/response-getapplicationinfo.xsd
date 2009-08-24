@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetApplicationInfo"
+    xmlns:wc-app="urn:com.microsoft.wc.application"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-GETAPPLICATIONINFO.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetApplicationInfo response
+
+    -->
+
+    <import
+      namespace="urn:com.microsoft.wc.application"
+      schemaLocation="application.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                GetApplicationInfo returns information about
+                the calling application.
+            </summary>
+
+            <remarks>
+                Configuration and installation values are returned
+                for the calling application.
+            </remarks>
+        </documentation>
+    </annotation>
+
+    <!-- info - - - - - -  - - - - - - - - - - - - - - -->
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        GetApplicationInfo returns information about
+                        the calling application.
+                    </summary>
+
+                    <remarks>
+                        Configuration and installation values are returned 
+                        for the calling application.  
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="application" type ="wc-app:AppWithLogos">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Configuration and installation values for
+                                the application.
+                            </summary>
+
+                            <remarks>
+                                This element contains information about the
+                                installation and configuration of the application
+                                including logos, authorization rules, and descriptions.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<schema
+    targetNamespace=
+        "urn:com.microsoft.wc.methods.response.GetServiceDefinition"
+    xmlns:wc-getservicedefinition-response=
+        "urn:com.microsoft.wc.methods.response.GetServiceDefinition"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+    <!-- rubyhealthvault bootstrap response-getservicedefinition.xsd -->
+    <complexType name="ConfigurationEntry">
+        <simpleContent>
+            <extension base="string">
+                <attribute name="key"
+                    type="string" use="required">
+                </attribute>
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <complexType name="Platform">
+        <sequence>
+            <element name="url" type="string" >
+            </element>
+            <element name="version" type="string" >
+            </element>
+            <element name="configuration"
+                type="wc-getservicedefinition-response:ConfigurationEntry"
+                minOccurs="0"
+                maxOccurs="unbounded" >                    
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="ShellRedirectToken">      
+        <sequence>
+            <element name="token" type="string">
+            </element>
+            <element name="description" type="string">
+            </element>
+            <element name="querystring-parameters" type="string">
+            </element>
+        </sequence>
+    </complexType>    
+    <complexType name="Shell">
+        <sequence>
+            <element name="url" type="string" >
+            </element>
+            <element name="redirect-url" type="string">              
+            </element>
+            <element name="redirect-token" 
+                type="wc-getservicedefinition-response:ShellRedirectToken" 
+                minOccurs="0" maxOccurs="unbounded">
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="SDKAssembly">
+        <sequence>
+            <element name="url" type="string" >
+            </element>
+            <element name="version" type="string" >
+            </element>
+            <element name="doc-url" type="string" >
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="XmlMethodVersion">
+        <sequence>
+            <element name="request-schema-url"
+                     type="string"
+                     minOccurs="0"
+                     maxOccurs="1" >
+            </element>
+            <element name="response-schema-url"
+                     type="string"
+                     minOccurs="0"
+                     maxOccurs="1" >
+            </element>
+        </sequence>
+        <attribute name="number" type="string" use="required">
+        </attribute>
+    </complexType>
+    <complexType name="XmlMethod">
+        <sequence>
+            <element name="name" type="string" >
+            </element>
+            <element name="version"
+                type="wc-getservicedefinition-response:XmlMethodVersion"
+                minOccurs="0"
+                maxOccurs="unbounded" >
+            </element>
+        </sequence>
+    </complexType>
+    <element name="info">
+        <complexType>
+            <sequence>
+                <element name="platform"
+                         type="wc-getservicedefinition-response:Platform">
+                </element>
+                <element name="shell"
+                         type="wc-getservicedefinition-response:Shell" >
+                </element>
+                <element name="sdk-assembly"
+                         type="wc-getservicedefinition-response:SDKAssembly"
+                         minOccurs="1"
+                         maxOccurs="unbounded">
+                </element>
+                <element name="xml-method"
+                         type="wc-getservicedefinition-response:XmlMethod"
+                         minOccurs="1"
+                         maxOccurs="unbounded" >
+                </element>
+                <element name="common-schema"
+                         type="string"
+                         minOccurs="0"
+                         maxOccurs="unbounded" >
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

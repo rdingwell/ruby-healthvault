@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetApplicationSettings"
+    xmlns:this="urn:com.microsoft.wc.methods.response.GetApplicationSettings"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        METHOD-GETAPPLICATIONSETTINGS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetApplicationSettings methods
+
+    -->
+
+    <import
+      namespace="urn:com.microsoft.wc.types"
+      schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                Gets the application specific settings for the person.
+            </summary>
+
+            <remarks>
+                An application can store person preferences and other
+                settings for the person in the Microsoft Health
+                Service. These settings are automatically returned
+                when GetPersonInfo is called but can also be retrieved
+                through the use of GetApplicationSettings.<br/>
+                <br/>
+                If you are familiar with Windows development, this
+                would be analogus to HKEY_CURRENT_USER settings in
+                the Windows Registry.<br/>
+                <br/>
+              Microsoft HealthVault does not interpret this
+              data at all and only acts as storage for it on
+              behalf of the application.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+
+            <errors>
+                <error id="ACCESS_DENIED">
+                    If the authenticated person or the application does not
+                    have method-level access rights to the method.
+                </error>
+                <error id="INVALID_PERSON">
+                    If the person identifier in the request does not
+                    exist.
+                </error>
+                <error id="INVALID_APP">
+                    If the application identifier in the request does not
+                    exist.
+                </error>
+            </errors>
+
+        </documentation>
+    </annotation>
+
+    <!-- GetApplicationSettings - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <complexType name="AppSettings">
+        <annotation>
+            <documentation>
+                <summary>
+                    The application specific settings for the person.
+                </summary>
+
+                <remarks>
+                    An application can store person preferences and other
+                    settings for the person in the Microsoft Health
+                    Service. These settings are automatically returned
+                    when GetPersonInfo is called but can also be retrieved
+                    through the use of GetApplicationSettings.<br/>
+                    <br/>
+                    If you are familiar with Windows development, this
+                    would be analogus to HKEY_CURRENT_USER settings in
+                    the Windows Registry.<br/>
+                    <br/>
+                  Microsoft HealthVault does not interpret this
+                  data at all and only acts as storage for it on
+                  behalf of the application.
+                </remarks>
+
+            </documentation>
+        </annotation>
+        <sequence>
+            <any minOccurs="0" maxOccurs="unbounded"
+                      namespace="##any" processContents="skip">
+                <annotation>
+                    <documentation>
+                        <summary>
+                            The application settings.
+                        </summary>
+
+                        <remarks>
+                          An application can put any data in this portion of
+                          settings. Microsoft HealthVault does not
+                          interpret this data in any way and will return it
+                          to the application exactly as it was stored.
+                          HealthVault does verify that the
+                          outer node containing the data is valid XML so
+                          some characters may need to be escaped or encoded.
+                        </remarks>
+                    </documentation>
+                </annotation>
+            </any>
+        </sequence>
+    </complexType>
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the response that contains the method
+                        specific return value(s).
+                    </summary>
+
+                    <remarks>
+                        All response schemas contain the info element which
+                        contain the return value of the method. If the method
+                        does not define an info element, the method has no
+                        return value.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="app-settings"
+                    type="this:AppSettings"
+                    minOccurs="0" maxOccurs="1">
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The application specific settings for the person.
+                            </summary>
+
+                            <remarks>
+                                An application can store person preferences and other
+                                settings for the person in the Microsoft Health
+                                Service. These settings are automatically returned
+                                when GetPersonInfo is called but can also be retrieved
+                                through the use of GetApplicationSettings.<br/>
+                                <br/>
+                                If you are familiar with Windows development, this
+                                would be analogus to HKEY_CURRENT_USER settings in
+                                the Windows Registry.<br/>
+                                <br/>
+                              Microsoft HealthVault does not interpret this
+                              data at all and only acts as storage for it on
+                              behalf of the application.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+                <element name="selected-record-id" type="wc-types:guid"
+                         minOccurs="0" maxOccurs="1" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                The unique identifier for the health record 
+                                that the person chose to use for this application.
+                            </summary>
+
+                            <remarks>
+                              Most Microsoft HealthVault applications will work with
+                              single health record at a time.<br /><br />
+                              The first time a person uses an application, they are
+                              required to select a health record to use with the
+                              application.  The HealthVault platform remembers the
+                              selection and authorizes the application to use that
+                              record.<br /><br />
+                              A person may choose to have multiple records
+                              authorized for one application but the application
+                              should use the selected record by default.
+                            </remarks>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

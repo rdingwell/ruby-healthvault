@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<schema
+    targetNamespace="urn:com.microsoft.wc.methods.response.GetAuthorizedRecords"
+    xmlns:wc-types="urn:com.microsoft.wc.types"
+    xmlns="http://www.w3.org/2001/XMLSchema" >
+
+    <!--
+
+        RESPONSE-GETAUTHORIZEDRECORDS.XSD
+        Microsoft HealthVault
+
+        Platform API: Info schema for GetAuthorizedRecords method response
+
+    -->
+
+    <import
+        namespace="urn:com.microsoft.wc.types"
+        schemaLocation="types.xsd" />
+
+    <annotation>
+        <documentation>
+            <summary>
+                The basic information about one or more health records.
+            </summary>
+
+            <remarks>
+                GetAuthorizedRecords is used to get information about
+                health records that the authenticated person is 
+                authorized to view for the calling application.
+            </remarks>
+            <method-visibility>Public</method-visibility>
+        </documentation>
+    </annotation>
+
+    <!-- GetAuthorizedRecords - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <element name="info">
+        <complexType>
+            <annotation>
+                <documentation>
+                    <summary>
+                        The element of the response that contains the method
+                        specific return value(s).
+                    </summary>
+
+                    <remarks>
+                        All response schemas contain the info element which
+                        contain the return value of the method. If the method
+                        does not define an info element, the method has no
+                        return value.
+                    </remarks>
+                </documentation>
+            </annotation>
+            <sequence>
+                <element name="record" type="wc-types:Record"
+                         minOccurs="0" maxOccurs="unbounded" >
+                    <annotation>
+                        <documentation>
+                            <summary>
+                                Information about the requested record(s) that
+                                the authenticated person is authorized to view
+                                for the calling application.
+                            </summary>
+                        </documentation>
+                    </annotation>
+                </element>
+
+
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

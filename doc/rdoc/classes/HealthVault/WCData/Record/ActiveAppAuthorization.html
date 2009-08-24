@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HealthVault::WCData::Record::ActiveAppAuthorization</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HealthVault::WCData::Record::ActiveAppAuthorization</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../files/lib/wc_data/generated/record/active_app_authorization_rb.html">
+                lib/wc_data/generated/record/active_app_authorization.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ComplexType
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M002895">application_id</a>&nbsp;&nbsp;
+      <a href="#M002894">application_id=</a>&nbsp;&nbsp;
+      <a href="#M002905">date_auth_created</a>&nbsp;&nbsp;
+      <a href="#M002904">date_auth_created=</a>&nbsp;&nbsp;
+      <a href="#M002899">date_auth_expires</a>&nbsp;&nbsp;
+      <a href="#M002898">date_auth_expires=</a>&nbsp;&nbsp;
+      <a href="#M002907">date_auth_updated</a>&nbsp;&nbsp;
+      <a href="#M002906">date_auth_updated=</a>&nbsp;&nbsp;
+      <a href="#M002897">name</a>&nbsp;&nbsp;
+      <a href="#M002896">name=</a>&nbsp;&nbsp;
+      <a href="#M002910">new</a>&nbsp;&nbsp;
+      <a href="#M002903">person_offline_auth_xml</a>&nbsp;&nbsp;
+      <a href="#M002902">person_offline_auth_xml=</a>&nbsp;&nbsp;
+      <a href="#M002901">person_online_auth_xml</a>&nbsp;&nbsp;
+      <a href="#M002900">person_online_auth_xml=</a>&nbsp;&nbsp;
+      <a href="#M002909">record_display_name</a>&nbsp;&nbsp;
+      <a href="#M002908">record_display_name=</a>&nbsp;&nbsp;
+      <a href="#M002893">record_id</a>&nbsp;&nbsp;
+      <a href="#M002892">record_id=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M002910" class="method-detail">
+        <a name="M002910"></a>
+
+        <div class="method-heading">
+          <a href="#M002910" class="method-signature">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002910-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002910-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 143</span>
+143:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+144:           <span class="ruby-keyword kw">super</span>
+145:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'activeappauthorization'</span>
+146:         
+147:           
+148:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'record-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+149:             
+150:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>.<span class="ruby-identifier">new</span>
+151:             
+152:           
+153:         
+154:           
+155:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'application-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'application-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+156:             
+157:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'application-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>.<span class="ruby-identifier">new</span>
+158:             
+159:           
+160:         
+161:           
+162:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'name'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+163:             
+164:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+165:             
+166:           
+167:         
+168:           
+169:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'date-auth-expires'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'date-auth-expires'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+170:             
+171:           
+172:         
+173:           
+174:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-online-auth-xml'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'person-online-auth-xml'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">AuthXml</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+175:             
+176:           
+177:         
+178:           
+179:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-offline-auth-xml'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'person-offline-auth-xml'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">AuthXml</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+180:             
+181:           
+182:         
+183:           
+184:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'date-auth-created'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'date-auth-created'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+185:             
+186:           
+187:         
+188:           
+189:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'date-auth-updated'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'date-auth-updated'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">8</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+190:             
+191:           
+192:         
+193:           
+194:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-display-name'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'record-display-name'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">String255</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">9</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+195:             
+196:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-display-name'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">String255</span>.<span class="ruby-identifier">new</span>
+197:             
+198:           
+199:         
+200:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M002895" class="method-detail">
+        <a name="M002895"></a>
+
+        <div class="method-heading">
+          <a href="#M002895" class="method-signature">
+          <span class="method-name">application_id</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002895-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002895-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 39</span>
+39:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">application_id</span>
+40:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'application-id'</span>][<span class="ruby-identifier">:value</span>]
+41:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002894" class="method-detail">
+        <a name="M002894"></a>
+
+        <div class="method-heading">
+          <a href="#M002894" class="method-signature">
+          <span class="method-name">application_id=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <em>value</em> is a <a
+href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002894-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002894-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 34</span>
+34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">application_id=</span>(<span class="ruby-identifier">value</span>)
+35:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'application-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+36:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002905" class="method-detail">
+        <a name="M002905"></a>
+
+        <div class="method-heading">
+          <a href="#M002905" class="method-signature">
+          <span class="method-name">date_auth_created</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002905-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002905-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 109</span>
+109:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">date_auth_created</span>
+110:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'date-auth-created'</span>][<span class="ruby-identifier">:value</span>]
+111:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002904" class="method-detail">
+        <a name="M002904"></a>
+
+        <div class="method-heading">
+          <a href="#M002904" class="method-signature">
+          <span class="method-name">date_auth_created=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002904-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002904-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 104</span>
+104:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">date_auth_created=</span>(<span class="ruby-identifier">value</span>)
+105:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'date-auth-created'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+106:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002899" class="method-detail">
+        <a name="M002899"></a>
+
+        <div class="method-heading">
+          <a href="#M002899" class="method-signature">
+          <span class="method-name">date_auth_expires</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002899-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002899-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 67</span>
+67:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">date_auth_expires</span>
+68:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'date-auth-expires'</span>][<span class="ruby-identifier">:value</span>]
+69:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002898" class="method-detail">
+        <a name="M002898"></a>
+
+        <div class="method-heading">
+          <a href="#M002898" class="method-signature">
+          <span class="method-name">date_auth_expires=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002898-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002898-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 62</span>
+62:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">date_auth_expires=</span>(<span class="ruby-identifier">value</span>)
+63:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'date-auth-expires'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+64:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002907" class="method-detail">
+        <a name="M002907"></a>
+
+        <div class="method-heading">
+          <a href="#M002907" class="method-signature">
+          <span class="method-name">date_auth_updated</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002907-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002907-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 123</span>
+123:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">date_auth_updated</span>
+124:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'date-auth-updated'</span>][<span class="ruby-identifier">:value</span>]
+125:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002906" class="method-detail">
+        <a name="M002906"></a>
+
+        <div class="method-heading">
+          <a href="#M002906" class="method-signature">
+          <span class="method-name">date_auth_updated=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002906-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002906-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 118</span>
+118:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">date_auth_updated=</span>(<span class="ruby-identifier">value</span>)
+119:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'date-auth-updated'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+120:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002897" class="method-detail">
+        <a name="M002897"></a>
+
+        <div class="method-heading">
+          <a href="#M002897" class="method-signature">
+          <span class="method-name">name</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002897-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002897-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 53</span>
+53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
+54:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>]
+55:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002896" class="method-detail">
+        <a name="M002896"></a>
+
+        <div class="method-heading">
+          <a href="#M002896" class="method-signature">
+          <span class="method-name">name=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002896-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002896-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 48</span>
+48:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name=</span>(<span class="ruby-identifier">value</span>)
+49:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+50:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002903" class="method-detail">
+        <a name="M002903"></a>
+
+        <div class="method-heading">
+          <a href="#M002903" class="method-signature">
+          <span class="method-name">person_offline_auth_xml</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Auth/AuthXml.html">HealthVault::WCData::Auth::AuthXml</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002903-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002903-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 95</span>
+95:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">person_offline_auth_xml</span>
+96:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-offline-auth-xml'</span>][<span class="ruby-identifier">:value</span>]
+97:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002902" class="method-detail">
+        <a name="M002902"></a>
+
+        <div class="method-heading">
+          <a href="#M002902" class="method-signature">
+          <span class="method-name">person_offline_auth_xml=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../Auth/AuthXml.html">HealthVault::WCData::Auth::AuthXml</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002902-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002902-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 90</span>
+90:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">person_offline_auth_xml=</span>(<span class="ruby-identifier">value</span>)
+91:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-offline-auth-xml'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+92:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002901" class="method-detail">
+        <a name="M002901"></a>
+
+        <div class="method-heading">
+          <a href="#M002901" class="method-signature">
+          <span class="method-name">person_online_auth_xml</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Auth/AuthXml.html">HealthVault::WCData::Auth::AuthXml</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002901-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002901-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 81</span>
+81:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">person_online_auth_xml</span>
+82:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-online-auth-xml'</span>][<span class="ruby-identifier">:value</span>]
+83:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002900" class="method-detail">
+        <a name="M002900"></a>
+
+        <div class="method-heading">
+          <a href="#M002900" class="method-signature">
+          <span class="method-name">person_online_auth_xml=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<em>value</em> is a <a
+href="../Auth/AuthXml.html">HealthVault::WCData::Auth::AuthXml</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002900-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002900-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 76</span>
+76:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">person_online_auth_xml=</span>(<span class="ruby-identifier">value</span>)
+77:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'person-online-auth-xml'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+78:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002909" class="method-detail">
+        <a name="M002909"></a>
+
+        <div class="method-heading">
+          <a href="#M002909" class="method-signature">
+          <span class="method-name">record_display_name</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/String255.html">HealthVault::WCData::Types::String255</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002909-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002909-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 137</span>
+137:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record_display_name</span>
+138:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-display-name'</span>][<span class="ruby-identifier">:value</span>]
+139:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002908" class="method-detail">
+        <a name="M002908"></a>
+
+        <div class="method-heading">
+          <a href="#M002908" class="method-signature">
+          <span class="method-name">record_display_name=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <em>value</em> is a <a
+href="../Types/String255.html">HealthVault::WCData::Types::String255</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002908-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002908-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 132</span>
+132:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record_display_name=</span>(<span class="ruby-identifier">value</span>)
+133:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-display-name'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+134:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002893" class="method-detail">
+        <a name="M002893"></a>
+
+        <div class="method-heading">
+          <a href="#M002893" class="method-signature">
+          <span class="method-name">record_id</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002893-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002893-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 25</span>
+25:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record_id</span>
+26:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>][<span class="ruby-identifier">:value</span>]
+27:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M002892" class="method-detail">
+        <a name="M002892"></a>
+
+        <div class="method-heading">
+          <a href="#M002892" class="method-signature">
+          <span class="method-name">record_id=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <em>value</em> is a <a
+href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M002892-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M002892-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/record/active_app_authorization.rb, line 20</span>
+20:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record_id=</span>(<span class="ruby-identifier">value</span>)
+21:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+22:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

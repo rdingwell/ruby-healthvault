@@ -1,0 +1,19 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.heart-rate" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.heart-rate"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>b81eb4a6-6eac-4292-ae93-3872d6870994</type-id><type-name>Heart Rate</type-name><wrapper-class-name>HeartRate</wrapper-class-name><wrapper-class-fwlink>136155</wrapper-class-fwlink><sample-xml-fwlink>136156</sample-xml-fwlink><data-type-guide-fwlink>136154</data-type-guide-fwlink><summary>
+                A measurement of the record owner's heart rate.
+            </summary></documentation></annotation><element name="heart-rate"><complexType><annotation><documentation><summary>
+                        A measurement of the record owner's heart rate.
+                    </summary></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time of this measurement.
+                            </summary></documentation></annotation></element><element name="value" type="nonNegativeInteger"><annotation><documentation><summary>
+                                The heart rate in beats per minute (BPM).
+                            </summary></documentation></annotation></element><element name="measurement-method" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The technique used to obtain the measurement.
+                            </summary><preferred-vocabulary>heart-rate-measurement-method</preferred-vocabulary></documentation></annotation></element><element name="measurement-conditions" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The conditions under which the heart rate was measured.
+                            </summary><remarks>
+                                Examples: Resting, Active, Morning, Evening.
+                            </remarks><preferred-vocabulary>heart-rate-measurement-conditions</preferred-vocabulary></documentation></annotation></element><element name="measurement-flags" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                Additional information about the measurement.
+                            </summary><remarks>
+                                Examples: Incomplete measurement, irregular heartbeat, triple scan.
+                            </remarks><preferred-vocabulary>heart-rate-measurement-flags</preferred-vocabulary></documentation></annotation></element></sequence></complexType></element></schema>

@@ -1,0 +1,51 @@
+<schema xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns:this="urn:com.microsoft.wc.thing.pregnancy" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.pregnancy"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>46d485cf-2b84-429d-9159-83152ba801f4</type-id><type-name>Pregnancy</type-name><wrapper-class-name>Pregnancy</wrapper-class-name><wrapper-class-fwlink>136215</wrapper-class-fwlink><sample-xml-fwlink>136216</sample-xml-fwlink><data-type-guide-fwlink>136214</data-type-guide-fwlink><summary>
+                Record of a pregnancy.
+            </summary></documentation></annotation><complexType name="Delivery"><annotation><documentation><summary>
+                    Details about the delivery.
+                </summary></documentation></annotation><sequence><element name="location" type="t:Organization" minOccurs="0"><annotation><documentation><summary>
+                            The place where the delivery occurred.
+                        </summary></documentation></annotation></element><element name="time-of-delivery" type="d:approx-date-time" minOccurs="0"><annotation><documentation><summary>
+                            The data and time of the delivery.
+                        </summary></documentation></annotation></element><element name="labor-duration" type="t:positiveDouble" minOccurs="0"><annotation><documentation><summary>
+                            The duration of the labor in minutes.
+                        </summary></documentation></annotation></element><element name="complications" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            Any complications during labor and delivery.
+                        </summary><preferred-vocabulary>delivery-complications</preferred-vocabulary></documentation></annotation></element><element name="anesthesia" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                            The anesthesia used during labor and delivery.
+                        </summary><preferred-vocabulary>anesthesia-methods</preferred-vocabulary></documentation></annotation></element><element name="delivery-method" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The method of the delivery.
+                        </summary><preferred-vocabulary>delivery-methods</preferred-vocabulary></documentation></annotation></element><element name="outcome" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The outcome for a fetus.
+                        </summary><preferred-vocabulary>pregnancy-outcomes</preferred-vocabulary></documentation></annotation></element><element name="baby" type="this:Baby" minOccurs="0"><annotation><documentation><summary>
+                            Details about the baby.
+                        </summary></documentation></annotation></element><element name="note" type="string" minOccurs="0"><annotation><documentation><summary>
+                            Additional information about the delivery.
+                        </summary></documentation></annotation></element></sequence></complexType><complexType name="Baby"><annotation><documentation><summary>
+                    Details about the baby.
+                </summary></documentation></annotation><sequence><element name="name" type="t:name" minOccurs="0"><annotation><documentation><summary>
+                            The name of the baby.
+                        </summary></documentation></annotation></element><element name="gender" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                            The gender of the baby.
+                        </summary><preferred-vocabulary>gender-types</preferred-vocabulary></documentation></annotation></element><element name="weight" type="t:weight-value" minOccurs="0"><annotation><documentation><summary>
+                            The birth weight of the baby.
+                        </summary></documentation></annotation></element><element name="length" type="t:length-value" minOccurs="0"><annotation><documentation><summary>
+                            The birth length of the baby. 
+                        </summary></documentation></annotation></element><element name="head-circumference" type="t:length-value" minOccurs="0"><annotation><documentation><summary>
+                            The circumference of the baby's head.
+                        </summary></documentation></annotation></element><element name="note" type="string" minOccurs="0"><annotation><documentation><summary>
+                            Additional information about the baby.
+                        </summary></documentation></annotation></element></sequence></complexType><element name="pregnancy"><complexType><annotation><documentation><summary>
+                    Record of a pregnancy.
+                </summary></documentation></annotation><sequence><element name="due-date" type="d:approx-date" minOccurs="0"><annotation><documentation><summary>
+                                The approximate due date.
+                            </summary></documentation></annotation></element><element name="last-menstrual-period" type="d:date" minOccurs="0"><annotation><documentation><summary>
+                                The first day of the last menstrual cycle. 
+                            </summary></documentation></annotation></element><element name="conception-method" type="t:codable-value" minOccurs="0"><annotation><documentation><summary>
+                                The method of conception.
+                            </summary><preferred-vocabulary>conception-methods</preferred-vocabulary></documentation></annotation></element><element name="fetus-count" type="nonNegativeInteger" minOccurs="0"><annotation><documentation><summary>
+                                The number of fetuses.
+                            </summary></documentation></annotation></element><element name="gestational-age" type="positiveInteger" minOccurs="0"><annotation><documentation><summary>
+                            Number of weeks of pregnancy at the time of delivery. 
+                        </summary></documentation></annotation></element><element name="delivery" type="this:Delivery" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Details about the resolution for each fetus. 
+                            </summary></documentation></annotation></element></sequence></complexType></element></schema>

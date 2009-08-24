@@ -1,0 +1,23 @@
+<schema xmlns:prob="urn:com.microsoft.wc.thing.problem" xmlns:t="urn:com.microsoft.wc.thing.types" xmlns:d="urn:com.microsoft.wc.dates" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:com.microsoft.wc.thing.problem"><import namespace="urn:com.microsoft.wc.thing.types" schemaLocation="base.xsd" /><import namespace="urn:com.microsoft.wc.dates" schemaLocation="dates.xsd" /><annotation><documentation><type-id>5E2C027E-3417-4CFC-BD10-5A6F2E91AD23</type-id><type-name>Medical Problem</type-name><wrapper-class-name>Problem</wrapper-class-name><wrapper-class-fwlink>136188</wrapper-class-fwlink><sample-xml-fwlink>136189</sample-xml-fwlink><data-type-guide-fwlink>136187</data-type-guide-fwlink><summary>
+                Information related to a medical problem (please see remarks).
+            </summary><remarks>
+                Note: 
+                We are in the process of merging the problem and condition types, and
+                recommend that applications use the condition type instead of the problem type. 
+
+                This thing type describes the medical problem of a person.
+            </remarks><effective-date-element>when</effective-date-element></documentation></annotation><element name="problem"><complexType><annotation><documentation><summary>
+                        Information related to a medical problem (please see remarks).
+                    </summary><remarks>
+                        Note: 
+                        We are in the process of merging the problem and condition types, and
+                        recommend that applications use the condition type instead of the problem type. 
+
+                        This thing type describes the medical problem of a person.
+                    </remarks></documentation></annotation><sequence><element name="when" type="d:date-time"><annotation><documentation><summary>
+                                The date and time of the medical problem.
+                            </summary></documentation></annotation></element><element name="diagnosis" type="t:codable-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Medical diagnosis.
+                            </summary><preferred-vocabulary>icd9cm</preferred-vocabulary></documentation></annotation></element><element name="duration" type="t:duration-value" minOccurs="0" maxOccurs="unbounded"><annotation><documentation><summary>
+                                Duration for a medical problem.
+                            </summary></documentation></annotation></element><element name="importance" minOccurs="0"><simpleType><restriction base="positiveInteger"><maxInclusive value="5" /></restriction></simpleType></element></sequence></complexType></element></schema>
