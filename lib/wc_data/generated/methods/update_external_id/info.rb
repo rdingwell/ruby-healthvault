@@ -64,12 +64,12 @@ module HealthVault
           self.tag_name = 'info'
         
           
-          @children['identity-code'] = {:name => 'identity-code', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 183285093 }
+          @children['identity-code'] = {:name => 'identity-code', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 428789875 }
             
           
         
           
-          @children['old-external-id'] = {:name => 'old-external-id', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 183285093 }
+          @children['old-external-id'] = {:name => 'old-external-id', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 428789875 }
             
           
         

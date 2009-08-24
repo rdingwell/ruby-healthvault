@@ -16,14 +16,14 @@ module HealthVault
      
         
        
-        #<b>REQUIRED</b>
+        
         #<b>summary</b>: The date and time the procedure.
-#<em>value</em> is a HealthVault::WCData::Dates::Datetime
+#<em>value</em> is a HealthVault::WCData::Dates::Approxdatetime
         def when=(value)
           @children['when'][:value] = value
         end
         
-        #<b>returns</b>: a HealthVault::WCData::Dates::Datetime
+        #<b>returns</b>: a HealthVault::WCData::Dates::Approxdatetime
         def when
           return @children['when'][:value]
         end
@@ -31,31 +31,16 @@ module HealthVault
      
         
        
-        
-        #<b>summary</b>: Title of medical procedure.
+        #<b>REQUIRED</b>
+        #<b>summary</b>: Name of the medical procedure.
 #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
-        def title=(value)
-          @children['title'][:value] = value
+        def name=(value)
+          @children['name'][:value] = value
         end
         
         #<b>returns</b>: a HealthVault::WCData::Thing::Types::Codablevalue
-        def title
-          return @children['title'][:value]
-        end
-       
-     
-        
-       
-        
-        #<b>summary</b>: Primary provider for a medical procedure.
-#<em>value</em> is a HealthVault::WCData::Thing::Types::Person
-        def primary_provider=(value)
-          @children['primary-provider'][:value] = value
-        end
-        
-        #<b>returns</b>: a HealthVault::WCData::Thing::Types::Person
-        def primary_provider
-          return @children['primary-provider'][:value]
+        def name
+          return @children['name'][:value]
         end
        
      
@@ -71,6 +56,21 @@ module HealthVault
         #<b>returns</b>: a HealthVault::WCData::Thing::Types::Codablevalue
         def anatomic_location
           return @children['anatomic-location'][:value]
+        end
+       
+     
+        
+       
+        
+        #<b>summary</b>: Primary provider for a medical procedure.
+#<em>value</em> is a HealthVault::WCData::Thing::Types::Person
+        def primary_provider=(value)
+          @children['primary-provider'][:value] = value
+        end
+        
+        #<b>returns</b>: a HealthVault::WCData::Thing::Types::Person
+        def primary_provider
+          return @children['primary-provider'][:value]
         end
        
      
@@ -95,24 +95,24 @@ module HealthVault
           self.tag_name = 'procedure'
         
           
-          @children['when'] = {:name => 'when', :class => HealthVault::WCData::Dates::Datetime, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 0 }
-            
-          @children['when'][:value] = HealthVault::WCData::Dates::Datetime.new
+          @children['when'] = {:name => 'when', :class => HealthVault::WCData::Dates::Approxdatetime, :value => nil, :min => 0, :max => 1, :order => 1, :place => :element, :choice => 0 }
             
           
         
           
-          @children['title'] = {:name => 'title', :class => HealthVault::WCData::Thing::Types::Codablevalue, :value => nil, :min => 0, :max => 1, :order => 2, :place => :element, :choice => 0 }
+          @children['name'] = {:name => 'name', :class => HealthVault::WCData::Thing::Types::Codablevalue, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 0 }
+            
+          @children['name'][:value] = HealthVault::WCData::Thing::Types::Codablevalue.new
             
           
         
           
-          @children['primary-provider'] = {:name => 'primary-provider', :class => HealthVault::WCData::Thing::Types::Person, :value => nil, :min => 0, :max => 1, :order => 3, :place => :element, :choice => 0 }
+          @children['anatomic-location'] = {:name => 'anatomic-location', :class => HealthVault::WCData::Thing::Types::Codablevalue, :value => nil, :min => 0, :max => 1, :order => 3, :place => :element, :choice => 0 }
             
           
         
           
-          @children['anatomic-location'] = {:name => 'anatomic-location', :class => HealthVault::WCData::Thing::Types::Codablevalue, :value => nil, :min => 0, :max => 1, :order => 4, :place => :element, :choice => 0 }
+          @children['primary-provider'] = {:name => 'primary-provider', :class => HealthVault::WCData::Thing::Types::Person, :value => nil, :min => 0, :max => 1, :order => 4, :place => :element, :choice => 0 }
             
           
         

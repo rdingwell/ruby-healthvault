@@ -49,12 +49,12 @@ module HealthVault
           self.tag_name = 'info'
         
           
-          @children['identity-code'] = {:name => 'identity-code', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 125684774 }
+          @children['identity-code'] = {:name => 'identity-code', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 237671761 }
             
           
         
           
-          @children['external-id'] = {:name => 'external-id', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 125684774 }
+          @children['external-id'] = {:name => 'external-id', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 237671761 }
             
           
         

@@ -178,15 +178,15 @@ module HealthVault
           self.tag_name = 'thingrequestgroup'
         
           
-          @children['id'] = {:name => 'id', :class => HealthVault::WCData::Types::Guid, :value => Array.new, :min => 0, :max => 999999, :order => 1, :place => :element, :choice => 77022138 }
+          @children['id'] = {:name => 'id', :class => HealthVault::WCData::Types::Guid, :value => Array.new, :min => 0, :max => 999999, :order => 1, :place => :element, :choice => 458359143 }
           
         
           
-          @children['key'] = {:name => 'key', :class => HealthVault::WCData::Thing::ThingKey, :value => Array.new, :min => 0, :max => 999999, :order => 2, :place => :element, :choice => 77022138 }
+          @children['key'] = {:name => 'key', :class => HealthVault::WCData::Thing::ThingKey, :value => Array.new, :min => 0, :max => 999999, :order => 2, :place => :element, :choice => 458359143 }
           
         
           
-          @children['client-thing-id'] = {:name => 'client-thing-id', :class => HealthVault::WCData::Types::String255, :value => Array.new, :min => 0, :max => 999999, :order => 3, :place => :element, :choice => 77022138 }
+          @children['client-thing-id'] = {:name => 'client-thing-id', :class => HealthVault::WCData::Types::String255, :value => Array.new, :min => 0, :max => 999999, :order => 3, :place => :element, :choice => 458359143 }
           
         
           

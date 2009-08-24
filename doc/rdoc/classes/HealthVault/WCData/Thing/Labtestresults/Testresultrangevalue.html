@@ -86,11 +86,11 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M001119">maximum_range</a>&nbsp;&nbsp;
-      <a href="#M001118">maximum_range=</a>&nbsp;&nbsp;
-      <a href="#M001117">minimum_range</a>&nbsp;&nbsp;
-      <a href="#M001116">minimum_range=</a>&nbsp;&nbsp;
-      <a href="#M001120">new</a>&nbsp;&nbsp;
+      <a href="#M001117">maximum_range</a>&nbsp;&nbsp;
+      <a href="#M001116">maximum_range=</a>&nbsp;&nbsp;
+      <a href="#M001115">minimum_range</a>&nbsp;&nbsp;
+      <a href="#M001114">minimum_range=</a>&nbsp;&nbsp;
+      <a href="#M001118">new</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -112,19 +112,19 @@
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M001120" class="method-detail">
-        <a name="M001120"></a>
+      <div id="method-M001118" class="method-detail">
+        <a name="M001118"></a>
 
         <div class="method-heading">
-          <a href="#M001120" class="method-signature">
+          <a href="#M001118" class="method-signature">
           <span class="method-name">new</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001120-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001120-source">
+            onclick="toggleCode('M001118-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001118-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range_value.rb, line 48</span>
 48:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
@@ -149,64 +149,12 @@
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M001119" class="method-detail">
-        <a name="M001119"></a>
-
-        <div class="method-heading">
-          <a href="#M001119" class="method-signature">
-          <span class="method-name">maximum_range</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>returns</b>: a String
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001119-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001119-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range_value.rb, line 42</span>
-42:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">maximum_range</span>
-43:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'maximum-range'</span>][<span class="ruby-identifier">:value</span>]
-44:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001118" class="method-detail">
-        <a name="M001118"></a>
-
-        <div class="method-heading">
-          <a href="#M001118" class="method-signature">
-          <span class="method-name">maximum_range=</span><span class="method-args">(value)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>summary</b>: The maximum value for the range. <em>value</em> is a String
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001118-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001118-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range_value.rb, line 37</span>
-37:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">maximum_range=</span>(<span class="ruby-identifier">value</span>)
-38:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'maximum-range'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-39:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
       <div id="method-M001117" class="method-detail">
         <a name="M001117"></a>
 
         <div class="method-heading">
           <a href="#M001117" class="method-signature">
-          <span class="method-name">minimum_range</span><span class="method-args">()</span>
+          <span class="method-name">maximum_range</span><span class="method-args">()</span>
           </a>
         </div>
       
@@ -218,10 +166,10 @@
             onclick="toggleCode('M001117-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001117-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range_value.rb, line 27</span>
-27:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minimum_range</span>
-28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'minimum-range'</span>][<span class="ruby-identifier">:value</span>]
-29:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range_value.rb, line 42</span>
+42:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">maximum_range</span>
+43:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'maximum-range'</span>][<span class="ruby-identifier">:value</span>]
+44:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -232,6 +180,58 @@
 
         <div class="method-heading">
           <a href="#M001116" class="method-signature">
+          <span class="method-name">maximum_range=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The maximum value for the range. <em>value</em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001116-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001116-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range_value.rb, line 37</span>
+37:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">maximum_range=</span>(<span class="ruby-identifier">value</span>)
+38:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'maximum-range'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+39:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001115" class="method-detail">
+        <a name="M001115"></a>
+
+        <div class="method-heading">
+          <a href="#M001115" class="method-signature">
+          <span class="method-name">minimum_range</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001115-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001115-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range_value.rb, line 27</span>
+27:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minimum_range</span>
+28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'minimum-range'</span>][<span class="ruby-identifier">:value</span>]
+29:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001114" class="method-detail">
+        <a name="M001114"></a>
+
+        <div class="method-heading">
+          <a href="#M001114" class="method-signature">
           <span class="method-name">minimum_range=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -241,8 +241,8 @@
 <b>summary</b>: The minimum value for the range. <em>value</em> is a String
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001116-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001116-source">
+            onclick="toggleCode('M001114-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001114-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range_value.rb, line 22</span>
 22:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minimum_range=</span>(<span class="ruby-identifier">value</span>)

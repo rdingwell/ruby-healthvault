@@ -34,16 +34,22 @@ module HealthVault
         mods = Array.new
         begin
           mods = (tgt_namespace.match(/urn\:com\.microsoft\.wc\.(.*)/)[1]).split('.')
+         
           guid = XPath.first(@xml.root, "//type-id").text.to_s#@xml.root.get_elements('annotation/documentation/type-id')[0].text.to_s
           el = @xml.root.get_elements('element')[0]
-          cname = el.attribute('name').to_s
+          wrapper_class = REXML::XPath.first(@xml,"//wrapper-class-name")
+          cname =   el.attribute('name').to_s
+          
           type = el.attribute('type').to_s
           class_path = "HealthVault::WCData::"
           if type.empty?
             class_path += (mods.collect {|s| classify(s)}).join('::') + "::" + classify(cname)
           else
+           
             namespaces = get_namespaces
-            class_path = get_class_path(type)
+            class_path = get_class_path(wrapper_class ? wrapper_class.text : type)
+            
+              
           end
           @thing_hash ||= Hash.new
           @thing_hash[guid] = class_path
@@ -72,6 +78,14 @@ module HealthVault
         @namespace = @xml.root.attribute('targetNamespace').to_s
         begin
           @modules = (@namespace.match(/urn\:com\.microsoft\.wc\.(.*)/)[1]).split('.')
+          
+           wrapper_class = REXML::XPath.first(@xml,"//wrapper-class-name")
+           puts wrapper_class.text if wrapper_class
+           puts @modules.inspect
+           puts underscore(wrapper_class.text) != underscore(@modules[1]) if wrapper_class
+            if wrapper_class && wrapper_class.text && @modules[0] == "thing" && underscore(wrapper_class.text) != underscore(@modules[1])
+               @modules[1] = wrapper_class.text
+             end
         rescue
           @logger.error "Not a HealthVault targetNamespace, can't parse #{@filename}"
           return
@@ -131,6 +145,7 @@ module HealthVault
           Dir.mkdir(@file_path)
         end        
         @modules.each do |m| 
+        
           @file_path << "/#{underscore(m)}"
           unless File.exists?(@file_path)
             Dir.mkdir(@file_path)

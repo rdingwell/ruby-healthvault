@@ -231,12 +231,12 @@ module HealthVault
           
         
           
-          @children['app-id'] = {:name => 'app-id', :class => HealthVault::WCData::Types::Guid, :value => nil, :min => 1, :max => 1, :order => 5, :place => :element, :choice => 19745364 }
+          @children['app-id'] = {:name => 'app-id', :class => HealthVault::WCData::Types::Guid, :value => nil, :min => 1, :max => 1, :order => 5, :place => :element, :choice => 221496581 }
             
           
         
           
-          @children['auth-session'] = {:name => 'auth-session', :class => HealthVault::WCData::Request::AuthenticatedSessionInfo, :value => nil, :min => 1, :max => 1, :order => 6, :place => :element, :choice => 19745364 }
+          @children['auth-session'] = {:name => 'auth-session', :class => HealthVault::WCData::Request::AuthenticatedSessionInfo, :value => nil, :min => 1, :max => 1, :order => 6, :place => :element, :choice => 221496581 }
             
           
         

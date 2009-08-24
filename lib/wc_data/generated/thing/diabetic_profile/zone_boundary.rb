@@ -52,12 +52,12 @@ module HealthVault
           self.tag_name = 'zoneboundary'
         
           
-          @children['absolute-glucose'] = {:name => 'absolute-glucose', :class => HealthVault::WCData::Thing::Types::Bloodglucosevalue, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 245759829 }
+          @children['absolute-glucose'] = {:name => 'absolute-glucose', :class => HealthVault::WCData::Thing::Types::Bloodglucosevalue, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 262476853 }
             
           
         
           
-          @children['percent-max-glucose'] = {:name => 'percent-max-glucose', :class => HealthVault::WCData::Thing::Types::Percentage, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 245759829 }
+          @children['percent-max-glucose'] = {:name => 'percent-max-glucose', :class => HealthVault::WCData::Thing::Types::Percentage, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 262476853 }
             
           
         

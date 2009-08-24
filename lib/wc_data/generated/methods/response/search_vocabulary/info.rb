@@ -58,11 +58,11 @@ module HealthVault
           self.tag_name = 'info'
         
           
-          @children['vocabulary-key'] = {:name => 'vocabulary-key', :class => HealthVault::WCData::Vocab::VocabularyKeyInfo, :value => Array.new, :min => 0, :max => 999999, :order => 1, :place => :element, :choice => 86075591 }
+          @children['vocabulary-key'] = {:name => 'vocabulary-key', :class => HealthVault::WCData::Vocab::VocabularyKeyInfo, :value => Array.new, :min => 0, :max => 999999, :order => 1, :place => :element, :choice => 50067809 }
           
         
           
-          @children['code-set-result'] = {:name => 'code-set-result', :class => HealthVault::WCData::Vocab::VocabularyCodeSet, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 86075591 }
+          @children['code-set-result'] = {:name => 'code-set-result', :class => HealthVault::WCData::Vocab::VocabularyCodeSet, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 50067809 }
             
           
         

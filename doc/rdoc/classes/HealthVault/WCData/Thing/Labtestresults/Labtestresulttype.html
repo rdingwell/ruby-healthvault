@@ -86,23 +86,23 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M001100">clinical_code</a>&nbsp;&nbsp;
-      <a href="#M001099">clinical_code=</a>&nbsp;&nbsp;
-      <a href="#M001098">collection_method</a>&nbsp;&nbsp;
-      <a href="#M001097">collection_method=</a>&nbsp;&nbsp;
-      <a href="#M001094">name</a>&nbsp;&nbsp;
-      <a href="#M001093">name=</a>&nbsp;&nbsp;
-      <a href="#M001107">new</a>&nbsp;&nbsp;
-      <a href="#M001106">note</a>&nbsp;&nbsp;
-      <a href="#M001105">note=</a>&nbsp;&nbsp;
-      <a href="#M001104">status</a>&nbsp;&nbsp;
-      <a href="#M001103">status=</a>&nbsp;&nbsp;
-      <a href="#M001096">substance</a>&nbsp;&nbsp;
-      <a href="#M001095">substance=</a>&nbsp;&nbsp;
-      <a href="#M001102">value</a>&nbsp;&nbsp;
-      <a href="#M001101">value=</a>&nbsp;&nbsp;
-      <a href="#M001092">when</a>&nbsp;&nbsp;
-      <a href="#M001091">when</a>&nbsp;&nbsp;
+      <a href="#M001098">clinical_code</a>&nbsp;&nbsp;
+      <a href="#M001097">clinical_code=</a>&nbsp;&nbsp;
+      <a href="#M001096">collection_method</a>&nbsp;&nbsp;
+      <a href="#M001095">collection_method=</a>&nbsp;&nbsp;
+      <a href="#M001092">name</a>&nbsp;&nbsp;
+      <a href="#M001091">name=</a>&nbsp;&nbsp;
+      <a href="#M001105">new</a>&nbsp;&nbsp;
+      <a href="#M001104">note</a>&nbsp;&nbsp;
+      <a href="#M001103">note=</a>&nbsp;&nbsp;
+      <a href="#M001102">status</a>&nbsp;&nbsp;
+      <a href="#M001101">status=</a>&nbsp;&nbsp;
+      <a href="#M001094">substance</a>&nbsp;&nbsp;
+      <a href="#M001093">substance=</a>&nbsp;&nbsp;
+      <a href="#M001100">value</a>&nbsp;&nbsp;
+      <a href="#M001099">value=</a>&nbsp;&nbsp;
+      <a href="#M001090">when</a>&nbsp;&nbsp;
+      <a href="#M001089">when</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -124,19 +124,19 @@
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M001107" class="method-detail">
-        <a name="M001107"></a>
+      <div id="method-M001105" class="method-detail">
+        <a name="M001105"></a>
 
         <div class="method-heading">
-          <a href="#M001107" class="method-signature">
+          <a href="#M001105" class="method-signature">
           <span class="method-name">new</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001107-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001107-source">
+            onclick="toggleCode('M001105-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001105-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 146</span>
 146:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
@@ -191,68 +191,12 @@
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M001100" class="method-detail">
-        <a name="M001100"></a>
-
-        <div class="method-heading">
-          <a href="#M001100" class="method-signature">
-          <span class="method-name">clinical_code</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>returns</b>: a <a
-href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001100-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001100-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 90</span>
-90:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clinical_code</span>
-91:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'clinical-code'</span>][<span class="ruby-identifier">:value</span>]
-92:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001099" class="method-detail">
-        <a name="M001099"></a>
-
-        <div class="method-heading">
-          <a href="#M001099" class="method-signature">
-          <span class="method-name">clinical_code=</span><span class="method-args">(value)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>summary</b>: The clinical code for the laboratory test.
-<b>preferred-vocabulary</b>: LOINC <em><a
-href="Labtestresulttype.html#M001102">value</a></em> is a <a
-href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001099-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001099-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 85</span>
-85:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clinical_code=</span>(<span class="ruby-identifier">value</span>)
-86:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'clinical-code'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-87:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
       <div id="method-M001098" class="method-detail">
         <a name="M001098"></a>
 
         <div class="method-heading">
           <a href="#M001098" class="method-signature">
-          <span class="method-name">collection_method</span><span class="method-args">()</span>
+          <span class="method-name">clinical_code</span><span class="method-args">()</span>
           </a>
         </div>
       
@@ -265,10 +209,10 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
             onclick="toggleCode('M001098-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001098-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 74</span>
-74:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">collection_method</span>
-75:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'collection-method'</span>][<span class="ruby-identifier">:value</span>]
-76:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 90</span>
+90:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clinical_code</span>
+91:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'clinical-code'</span>][<span class="ruby-identifier">:value</span>]
+92:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -279,208 +223,25 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
 
         <div class="method-heading">
           <a href="#M001097" class="method-signature">
-          <span class="method-name">collection_method=</span><span class="method-args">(value)</span>
+          <span class="method-name">clinical_code=</span><span class="method-args">(value)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-<b>summary</b>: The collection method for the laboratory test.
-<b>preferred-vocabulary</b>: <a href="../Contact.html">Contact</a> the <a
-href="../../../../HealthVault.html">HealthVault</a> team to help define
-this vocabulary. <em><a
-href="Labtestresulttype.html#M001102">value</a></em> is a <a
+<b>summary</b>: The clinical code for the laboratory test.
+<b>preferred-vocabulary</b>: LOINC <em><a
+href="Labtestresulttype.html#M001100">value</a></em> is a <a
 href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
 </p>
           <p><a class="source-toggle" href="#"
             onclick="toggleCode('M001097-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001097-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 69</span>
-69:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">collection_method=</span>(<span class="ruby-identifier">value</span>)
-70:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'collection-method'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-71:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001094" class="method-detail">
-        <a name="M001094"></a>
-
-        <div class="method-heading">
-          <a href="#M001094" class="method-signature">
-          <span class="method-name">name</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>returns</b>: a String
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001094-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001094-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 42</span>
-42:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
-43:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>]
-44:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001093" class="method-detail">
-        <a name="M001093"></a>
-
-        <div class="method-heading">
-          <a href="#M001093" class="method-signature">
-          <span class="method-name">name=</span><span class="method-args">(value)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>summary</b>: The <a href="Labtestresulttype.html#M001094">name</a> of
-the laboratory test. <em><a
-href="Labtestresulttype.html#M001102">value</a></em> is a String
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001093-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001093-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 37</span>
-37:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name=</span>(<span class="ruby-identifier">value</span>)
-38:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-39:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001106" class="method-detail">
-        <a name="M001106"></a>
-
-        <div class="method-heading">
-          <a href="#M001106" class="method-signature">
-          <span class="method-name">note</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>returns</b>: a String
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001106-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001106-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 140</span>
-140:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">note</span>
-141:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>][<span class="ruby-identifier">:value</span>]
-142:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001105" class="method-detail">
-        <a name="M001105"></a>
-
-        <div class="method-heading">
-          <a href="#M001105" class="method-signature">
-          <span class="method-name">note=</span><span class="method-args">(value)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>summary</b>: A <a href="Labtestresulttype.html#M001106">note</a> that
-augments the laboratory result. <b>remarks</b>: There are two scenarios in
-which a <a href="Labtestresulttype.html#M001106">note</a> is typically
-added: A <a href="Labtestresulttype.html#M001106">note</a> may provide
-additional information about interpreting the result beyond what is stored
-in the ranges associated with the <a
-href="Labtestresulttype.html#M001102">value</a>. Or, a <a
-href="Labtestresulttype.html#M001106">note</a> may be use to provide the
-textual result of a lab test that does not have a measured <a
-href="Labtestresulttype.html#M001102">value</a>. Formatting: Notes may come
-from systems that require a line-based approach to textual display. To
-support this, applications should render the spaces and newlines in the <a
-href="Labtestresulttype.html#M001106">note</a>, and use a fixed-width font.
-The form transform for this type shows one way to do this.
-<b>preferred-vocabulary</b>: lab-<a
-href="Labtestresulttype.html#M001104">status</a> <em><a
-href="Labtestresulttype.html#M001102">value</a></em> is a String
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001105-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001105-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 135</span>
-135:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">note=</span>(<span class="ruby-identifier">value</span>)
-136:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-137:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001104" class="method-detail">
-        <a name="M001104"></a>
-
-        <div class="method-heading">
-          <a href="#M001104" class="method-signature">
-          <span class="method-name">status</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>returns</b>: a <a
-href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001104-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001104-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 123</span>
-123:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">status</span>
-124:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'status'</span>][<span class="ruby-identifier">:value</span>]
-125:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001103" class="method-detail">
-        <a name="M001103"></a>
-
-        <div class="method-heading">
-          <a href="#M001103" class="method-signature">
-          <span class="method-name">status=</span><span class="method-args">(value)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>summary</b>: The <a href="Labtestresulttype.html#M001104">status</a> of
-the laboratory result. <b>remarks</b>: Examples of <a
-href="Labtestresulttype.html#M001104">status</a> include complete and
-pending. <b>preferred-vocabulary</b>: lab-<a
-href="Labtestresulttype.html#M001104">status</a> <em><a
-href="Labtestresulttype.html#M001102">value</a></em> is a <a
-href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001103-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001103-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 118</span>
-118:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">status=</span>(<span class="ruby-identifier">value</span>)
-119:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'status'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-120:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 85</span>
+85:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clinical_code=</span>(<span class="ruby-identifier">value</span>)
+86:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'clinical-code'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+87:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -491,7 +252,7 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
 
         <div class="method-heading">
           <a href="#M001096" class="method-signature">
-          <span class="method-name">substance</span><span class="method-args">()</span>
+          <span class="method-name">collection_method</span><span class="method-args">()</span>
           </a>
         </div>
       
@@ -504,10 +265,10 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
             onclick="toggleCode('M001096-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001096-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 58</span>
-58:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">substance</span>
-59:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'substance'</span>][<span class="ruby-identifier">:value</span>]
-60:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 74</span>
+74:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">collection_method</span>
+75:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'collection-method'</span>][<span class="ruby-identifier">:value</span>]
+76:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -518,87 +279,27 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
 
         <div class="method-heading">
           <a href="#M001095" class="method-signature">
-          <span class="method-name">substance=</span><span class="method-args">(value)</span>
+          <span class="method-name">collection_method=</span><span class="method-args">(value)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-<b>summary</b>: The <a href="Labtestresulttype.html#M001096">substance</a>
-tested. <b>preferred-vocabulary</b>: <a href="../Contact.html">Contact</a>
-the <a href="../../../../HealthVault.html">HealthVault</a> team to help
-define this vocabulary. <em><a
-href="Labtestresulttype.html#M001102">value</a></em> is a <a
+<b>summary</b>: The collection method for the laboratory test.
+<b>preferred-vocabulary</b>: <a href="../Contact.html">Contact</a> the <a
+href="../../../../HealthVault.html">HealthVault</a> team to help define
+this vocabulary. <em><a
+href="Labtestresulttype.html#M001100">value</a></em> is a <a
 href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
 </p>
           <p><a class="source-toggle" href="#"
             onclick="toggleCode('M001095-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001095-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 53</span>
-53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">substance=</span>(<span class="ruby-identifier">value</span>)
-54:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'substance'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-55:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001102" class="method-detail">
-        <a name="M001102"></a>
-
-        <div class="method-heading">
-          <a href="#M001102" class="method-signature">
-          <span class="method-name">value</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>returns</b>: a <a
-href="Labtestresultvaluetype.html">HealthVault::WCData::Thing::Labtestresults::Labtestresultvaluetype</a>
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001102-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001102-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 106</span>
-106:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value</span>
-107:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'value'</span>][<span class="ruby-identifier">:value</span>]
-108:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001101" class="method-detail">
-        <a name="M001101"></a>
-
-        <div class="method-heading">
-          <a href="#M001101" class="method-signature">
-          <span class="method-name">value=</span><span class="method-args">(value)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>summary</b>: A clinical <a
-href="Labtestresulttype.html#M001102">value</a> within a laboratory result.
-<b>remarks</b>: This type is define a clinical <a
-href="Labtestresulttype.html#M001102">value</a> within a laboratory result,
-including <a href="Labtestresulttype.html#M001102">value</a>, unit,
-reference and toxic ranges. <em><a
-href="Labtestresulttype.html#M001102">value</a></em> is a <a
-href="Labtestresultvaluetype.html">HealthVault::WCData::Thing::Labtestresults::Labtestresultvaluetype</a>
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001101-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001101-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 101</span>
-101:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value=</span>(<span class="ruby-identifier">value</span>)
-102:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'value'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-103:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 69</span>
+69:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">collection_method=</span>(<span class="ruby-identifier">value</span>)
+70:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'collection-method'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+71:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -609,23 +310,22 @@ href="Labtestresultvaluetype.html">HealthVault::WCData::Thing::Labtestresults::L
 
         <div class="method-heading">
           <a href="#M001092" class="method-signature">
-          <span class="method-name">when</span><span class="method-args">()</span>
+          <span class="method-name">name</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-<b>returns</b>: a <a
-href="../../Dates/Approxdatetime.html">HealthVault::WCData::Dates::Approxdatetime</a>
+<b>returns</b>: a String
 </p>
           <p><a class="source-toggle" href="#"
             onclick="toggleCode('M001092-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001092-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 27</span>
-27:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>
-28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>]
-29:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 42</span>
+42:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
+43:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>]
+44:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -636,6 +336,306 @@ href="../../Dates/Approxdatetime.html">HealthVault::WCData::Dates::Approxdatetim
 
         <div class="method-heading">
           <a href="#M001091" class="method-signature">
+          <span class="method-name">name=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The <a href="Labtestresulttype.html#M001092">name</a> of
+the laboratory test. <em><a
+href="Labtestresulttype.html#M001100">value</a></em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001091-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001091-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 37</span>
+37:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name=</span>(<span class="ruby-identifier">value</span>)
+38:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'name'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+39:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001104" class="method-detail">
+        <a name="M001104"></a>
+
+        <div class="method-heading">
+          <a href="#M001104" class="method-signature">
+          <span class="method-name">note</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001104-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001104-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 140</span>
+140:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">note</span>
+141:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>][<span class="ruby-identifier">:value</span>]
+142:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001103" class="method-detail">
+        <a name="M001103"></a>
+
+        <div class="method-heading">
+          <a href="#M001103" class="method-signature">
+          <span class="method-name">note=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: A <a href="Labtestresulttype.html#M001104">note</a> that
+augments the laboratory result. <b>remarks</b>: There are two scenarios in
+which a <a href="Labtestresulttype.html#M001104">note</a> is typically
+added: A <a href="Labtestresulttype.html#M001104">note</a> may provide
+additional information about interpreting the result beyond what is stored
+in the ranges associated with the <a
+href="Labtestresulttype.html#M001100">value</a>. Or, a <a
+href="Labtestresulttype.html#M001104">note</a> may be use to provide the
+textual result of a lab test that does not have a measured <a
+href="Labtestresulttype.html#M001100">value</a>. Formatting: Notes may come
+from systems that require a line-based approach to textual display. To
+support this, applications should render the spaces and newlines in the <a
+href="Labtestresulttype.html#M001104">note</a>, and use a fixed-width font.
+The form transform for this type shows one way to do this.
+<b>preferred-vocabulary</b>: lab-<a
+href="Labtestresulttype.html#M001102">status</a> <em><a
+href="Labtestresulttype.html#M001100">value</a></em> is a String
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001103-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001103-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 135</span>
+135:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">note=</span>(<span class="ruby-identifier">value</span>)
+136:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'note'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+137:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001102" class="method-detail">
+        <a name="M001102"></a>
+
+        <div class="method-heading">
+          <a href="#M001102" class="method-signature">
+          <span class="method-name">status</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001102-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001102-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 123</span>
+123:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">status</span>
+124:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'status'</span>][<span class="ruby-identifier">:value</span>]
+125:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001101" class="method-detail">
+        <a name="M001101"></a>
+
+        <div class="method-heading">
+          <a href="#M001101" class="method-signature">
+          <span class="method-name">status=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The <a href="Labtestresulttype.html#M001102">status</a> of
+the laboratory result. <b>remarks</b>: Examples of <a
+href="Labtestresulttype.html#M001102">status</a> include complete and
+pending. <b>preferred-vocabulary</b>: lab-<a
+href="Labtestresulttype.html#M001102">status</a> <em><a
+href="Labtestresulttype.html#M001100">value</a></em> is a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001101-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001101-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 118</span>
+118:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">status=</span>(<span class="ruby-identifier">value</span>)
+119:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'status'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+120:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001094" class="method-detail">
+        <a name="M001094"></a>
+
+        <div class="method-heading">
+          <a href="#M001094" class="method-signature">
+          <span class="method-name">substance</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001094-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001094-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 58</span>
+58:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">substance</span>
+59:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'substance'</span>][<span class="ruby-identifier">:value</span>]
+60:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001093" class="method-detail">
+        <a name="M001093"></a>
+
+        <div class="method-heading">
+          <a href="#M001093" class="method-signature">
+          <span class="method-name">substance=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: The <a href="Labtestresulttype.html#M001094">substance</a>
+tested. <b>preferred-vocabulary</b>: <a href="../Contact.html">Contact</a>
+the <a href="../../../../HealthVault.html">HealthVault</a> team to help
+define this vocabulary. <em><a
+href="Labtestresulttype.html#M001100">value</a></em> is a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001093-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001093-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 53</span>
+53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">substance=</span>(<span class="ruby-identifier">value</span>)
+54:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'substance'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+55:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001100" class="method-detail">
+        <a name="M001100"></a>
+
+        <div class="method-heading">
+          <a href="#M001100" class="method-signature">
+          <span class="method-name">value</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="Labtestresultvaluetype.html">HealthVault::WCData::Thing::Labtestresults::Labtestresultvaluetype</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001100-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001100-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 106</span>
+106:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value</span>
+107:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'value'</span>][<span class="ruby-identifier">:value</span>]
+108:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001099" class="method-detail">
+        <a name="M001099"></a>
+
+        <div class="method-heading">
+          <a href="#M001099" class="method-signature">
+          <span class="method-name">value=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>summary</b>: A clinical <a
+href="Labtestresulttype.html#M001100">value</a> within a laboratory result.
+<b>remarks</b>: This type is define a clinical <a
+href="Labtestresulttype.html#M001100">value</a> within a laboratory result,
+including <a href="Labtestresulttype.html#M001100">value</a>, unit,
+reference and toxic ranges. <em><a
+href="Labtestresulttype.html#M001100">value</a></em> is a <a
+href="Labtestresultvaluetype.html">HealthVault::WCData::Thing::Labtestresults::Labtestresultvaluetype</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001099-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001099-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 101</span>
+101:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value=</span>(<span class="ruby-identifier">value</span>)
+102:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'value'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+103:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001090" class="method-detail">
+        <a name="M001090"></a>
+
+        <div class="method-heading">
+          <a href="#M001090" class="method-signature">
+          <span class="method-name">when</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../../Dates/Approxdatetime.html">HealthVault::WCData::Dates::Approxdatetime</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001090-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001090-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 27</span>
+27:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>
+28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>]
+29:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001089" class="method-detail">
+        <a name="M001089"></a>
+
+        <div class="method-heading">
+          <a href="#M001089" class="method-signature">
           <span class="method-name">when</span><span class="method-args">(=(value))</span>
           </a>
         </div>
@@ -643,12 +643,12 @@ href="../../Dates/Approxdatetime.html">HealthVault::WCData::Dates::Approxdatetim
         <div class="method-description">
           <p>
 <b>summary</b>: The date of the laboratory test. <em><a
-href="Labtestresulttype.html#M001102">value</a></em> is a <a
+href="Labtestresulttype.html#M001100">value</a></em> is a <a
 href="../../Dates/Approxdatetime.html">HealthVault::WCData::Dates::Approxdatetime</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001091-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001091-source">
+            onclick="toggleCode('M001089-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001089-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/lab_test_result_type.rb, line 22</span>
 22:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>=(<span class="ruby-identifier">value</span>)

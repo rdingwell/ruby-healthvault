@@ -52,12 +52,12 @@ module HealthVault
           self.tag_name = 'zoneboundary'
         
           
-          @children['absolute-heartrate'] = {:name => 'absolute-heartrate', :class => String, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 320211814 }
+          @children['absolute-heartrate'] = {:name => 'absolute-heartrate', :class => String, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 137663260 }
             
           
         
           
-          @children['percent-max-heartrate'] = {:name => 'percent-max-heartrate', :class => HealthVault::WCData::Thing::Types::Percentage, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 320211814 }
+          @children['percent-max-heartrate'] = {:name => 'percent-max-heartrate', :class => HealthVault::WCData::Thing::Types::Percentage, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 137663260 }
             
           
         

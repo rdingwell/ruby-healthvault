@@ -16,8 +16,8 @@ module HealthVault
      
         
        
-        #<b>REQUIRED</b>
-        #<b>summary</b>: The date and time the medical encounter.
+        
+        #<b>summary</b>: The date and time of the medical encounter.
 #<em>value</em> is a HealthVault::WCData::Dates::Datetime
         def when=(value)
           @children['when'][:value] = value
@@ -31,14 +31,14 @@ module HealthVault
      
         
        
-        #<b>REQUIRED</b>
+        
         #<b>summary</b>: The type of medical encounter.
-#<em>value</em> is a String
+#<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
         def type=(value)
           @children['type'][:value] = value
         end
         
-        #<b>returns</b>: a String
+        #<b>returns</b>: a HealthVault::WCData::Thing::Types::Codablevalue
         def type
           return @children['type'][:value]
         end
@@ -47,15 +47,16 @@ module HealthVault
         
        
         
-        #<b>summary</b>: The identify for the medical encounter.
+        #<b>summary</b>: The description of the encounter.
+#<b>remarks</b>: Examples include heart failure, broken leg, or annual physical.
 #<em>value</em> is a String
-        def id=(value)
-          @children['id'][:value] = value
+        def reason=(value)
+          @children['reason'][:value] = value
         end
         
         #<b>returns</b>: a String
-        def id
-          return @children['id'][:value]
+        def reason
+          return @children['reason'][:value]
         end
        
      
@@ -77,22 +78,7 @@ module HealthVault
         
        
         
-        #<b>summary</b>: The location of the medical encounter .
-#<em>value</em> is a HealthVault::WCData::Thing::Types::Address
-        def location=(value)
-          @children['location'][:value] = value
-        end
-        
-        #<b>returns</b>: a HealthVault::WCData::Thing::Types::Address
-        def location
-          return @children['location'][:value]
-        end
-       
-     
-        
-       
-        
-        #<b>summary</b>: Boolean consent for medical encounter.
+        #<b>summary</b>: Did the person grant consent for this encounter?
 #<em>value</em> is a String
         def consent_granted=(value)
           @children['consent-granted'][:value] = value
@@ -103,6 +89,21 @@ module HealthVault
           return @children['consent-granted'][:value]
         end
        
+     
+        
+       
+        
+        #<b>summary</b>: The facility where the encounter occurred.
+#<em>value</em> is a HealthVault::WCData::Thing::Types::Organization
+        def facility=(value)
+          @children['facility'][:value] = value
+        end
+        
+        #<b>returns</b>: a HealthVault::WCData::Thing::Types::Organization
+        def facility
+          return @children['facility'][:value]
+        end
+       
   
       
         def initialize
@@ -110,21 +111,17 @@ module HealthVault
           self.tag_name = 'encounter'
         
           
-          @children['when'] = {:name => 'when', :class => HealthVault::WCData::Dates::Datetime, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 0 }
-            
-          @children['when'][:value] = HealthVault::WCData::Dates::Datetime.new
+          @children['when'] = {:name => 'when', :class => HealthVault::WCData::Dates::Datetime, :value => nil, :min => 0, :max => 1, :order => 1, :place => :element, :choice => 0 }
             
           
         
           
-          @children['type'] = {:name => 'type', :class => String, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 0 }
-            
-          @children['type'][:value] = String.new
+          @children['type'] = {:name => 'type', :class => HealthVault::WCData::Thing::Types::Codablevalue, :value => nil, :min => 0, :max => 1, :order => 2, :place => :element, :choice => 0 }
             
           
         
           
-          @children['id'] = {:name => 'id', :class => String, :value => nil, :min => 0, :max => 1, :order => 3, :place => :element, :choice => 0 }
+          @children['reason'] = {:name => 'reason', :class => String, :value => nil, :min => 0, :max => 1, :order => 3, :place => :element, :choice => 0 }
             
           
         
@@ -134,12 +131,12 @@ module HealthVault
           
         
           
-          @children['location'] = {:name => 'location', :class => HealthVault::WCData::Thing::Types::Address, :value => nil, :min => 0, :max => 1, :order => 5, :place => :element, :choice => 0 }
+          @children['consent-granted'] = {:name => 'consent-granted', :class => String, :value => nil, :min => 0, :max => 1, :order => 5, :place => :element, :choice => 0 }
             
           
         
           
-          @children['consent-granted'] = {:name => 'consent-granted', :class => String, :value => nil, :min => 0, :max => 1, :order => 6, :place => :element, :choice => 0 }
+          @children['facility'] = {:name => 'facility', :class => HealthVault::WCData::Thing::Types::Organization, :value => nil, :min => 0, :max => 1, :order => 6, :place => :element, :choice => 0 }
             
           
         

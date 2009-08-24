@@ -34,7 +34,7 @@ module HealthVault
           self.tag_name = 'authsessionsubcredential'
         
           
-          @children['simple-passport'] = {:name => 'simple-passport', :class => HealthVault::WCData::Auth::SimplePassportCredential, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 70587173 }
+          @children['simple-passport'] = {:name => 'simple-passport', :class => HealthVault::WCData::Auth::SimplePassportCredential, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 349763842 }
             
           
         

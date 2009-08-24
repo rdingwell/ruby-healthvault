@@ -63,11 +63,11 @@ module HealthVault
           self.tag_name = 'info'
         
           
-          @children['token'] = {:name => 'token', :class => HealthVault::WCData::Auth::Token, :value => Array.new, :min => 1, :max => 999999, :order => 1, :place => :element, :choice => 332363281 }
+          @children['token'] = {:name => 'token', :class => HealthVault::WCData::Auth::Token, :value => Array.new, :min => 1, :max => 999999, :order => 1, :place => :element, :choice => 10739577 }
           
         
           
-          @children['token-absence-reason'] = {:name => 'token-absence-reason', :class => HealthVault::WCData::Methods::Response::CreateAuthenticatedSessionToken::AppAuthTokenAbsenceReason, :value => Array.new, :min => 1, :max => 999999, :order => 2, :place => :element, :choice => 332363281 }
+          @children['token-absence-reason'] = {:name => 'token-absence-reason', :class => HealthVault::WCData::Methods::Response::CreateAuthenticatedSessionToken::AppAuthTokenAbsenceReason, :value => Array.new, :min => 1, :max => 999999, :order => 2, :place => :element, :choice => 10739577 }
           
         
         end

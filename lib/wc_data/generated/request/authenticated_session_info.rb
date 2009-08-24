@@ -74,12 +74,12 @@ module HealthVault
           
         
           
-          @children['user-auth-token'] = {:name => 'user-auth-token', :class => String, :value => nil, :min => 0, :max => 1, :order => 2, :place => :element, :choice => 56226499 }
+          @children['user-auth-token'] = {:name => 'user-auth-token', :class => String, :value => nil, :min => 0, :max => 1, :order => 2, :place => :element, :choice => 196043044 }
             
           
         
           
-          @children['offline-person-info'] = {:name => 'offline-person-info', :class => HealthVault::WCData::Request::OfflinePersonInfo, :value => nil, :min => 0, :max => 1, :order => 3, :place => :element, :choice => 56226499 }
+          @children['offline-person-info'] = {:name => 'offline-person-info', :class => HealthVault::WCData::Request::OfflinePersonInfo, :value => nil, :min => 0, :max => 1, :order => 3, :place => :element, :choice => 196043044 }
             
           
         

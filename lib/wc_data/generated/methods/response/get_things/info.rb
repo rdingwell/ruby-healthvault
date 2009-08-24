@@ -42,7 +42,7 @@ module HealthVault
           self.tag_name = 'info'
         
           
-          @children['group'] = {:name => 'group', :class => HealthVault::WCData::Methods::Response::GetThings::ThingResponseGroup, :value => Array.new, :min => 1, :max => 999999, :order => 1, :place => :element, :choice => 149278040 }
+          @children['group'] = {:name => 'group', :class => HealthVault::WCData::Methods::Response::GetThings::ThingResponseGroup, :value => Array.new, :min => 1, :max => 999999, :order => 1, :place => :element, :choice => 408844466 }
           
         
         end

@@ -86,13 +86,13 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M003294">add_token</a>&nbsp;&nbsp;
-      <a href="#M003297">add_token_absence_reason</a>&nbsp;&nbsp;
-      <a href="#M003300">new</a>&nbsp;&nbsp;
-      <a href="#M003295">remove_token</a>&nbsp;&nbsp;
-      <a href="#M003298">remove_token_absence_reason</a>&nbsp;&nbsp;
-      <a href="#M003296">token</a>&nbsp;&nbsp;
-      <a href="#M003299">token_absence_reason</a>&nbsp;&nbsp;
+      <a href="#M003369">add_token</a>&nbsp;&nbsp;
+      <a href="#M003372">add_token_absence_reason</a>&nbsp;&nbsp;
+      <a href="#M003375">new</a>&nbsp;&nbsp;
+      <a href="#M003370">remove_token</a>&nbsp;&nbsp;
+      <a href="#M003373">remove_token_absence_reason</a>&nbsp;&nbsp;
+      <a href="#M003371">token</a>&nbsp;&nbsp;
+      <a href="#M003374">token_absence_reason</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -114,19 +114,19 @@
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M003300" class="method-detail">
-        <a name="M003300"></a>
+      <div id="method-M003375" class="method-detail">
+        <a name="M003375"></a>
 
         <div class="method-heading">
-          <a href="#M003300" class="method-signature">
+          <a href="#M003375" class="method-signature">
           <span class="method-name">new</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003300-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003300-source">
+            onclick="toggleCode('M003375-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003375-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/create_authenticated_session_token/info.rb, line 61</span>
 61:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
@@ -134,11 +134,11 @@
 63:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'info'</span>
 64:         
 65:           
-66:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'token'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">Token</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">332363281</span> }
+66:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'token'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">Token</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10739577</span> }
 67:           
 68:         
 69:           
-70:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token-absence-reason'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'token-absence-reason'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span><span class="ruby-operator">::</span><span class="ruby-constant">CreateAuthenticatedSessionToken</span><span class="ruby-operator">::</span><span class="ruby-constant">AppAuthTokenAbsenceReason</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">332363281</span> }
+70:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token-absence-reason'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'token-absence-reason'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span><span class="ruby-operator">::</span><span class="ruby-constant">CreateAuthenticatedSessionToken</span><span class="ruby-operator">::</span><span class="ruby-constant">AppAuthTokenAbsenceReason</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10739577</span> }
 71:           
 72:         
 73:         <span class="ruby-keyword kw">end</span>
@@ -149,11 +149,11 @@
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M003294" class="method-detail">
-        <a name="M003294"></a>
+      <div id="method-M003369" class="method-detail">
+        <a name="M003369"></a>
 
         <div class="method-heading">
-          <a href="#M003294" class="method-signature">
+          <a href="#M003369" class="method-signature">
           <span class="method-name">add_token</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -164,8 +164,8 @@
 href="../../../Auth/Token.html">HealthVault::WCData::Auth::Token</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003294-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003294-source">
+            onclick="toggleCode('M003369-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003369-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/create_authenticated_session_token/info.rb, line 21</span>
 21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_token</span>(<span class="ruby-identifier">value</span>)
@@ -176,11 +176,11 @@ href="../../../Auth/Token.html">HealthVault::WCData::Auth::Token</a>
         </div>
       </div>
 
-      <div id="method-M003297" class="method-detail">
-        <a name="M003297"></a>
+      <div id="method-M003372" class="method-detail">
+        <a name="M003372"></a>
 
         <div class="method-heading">
-          <a href="#M003297" class="method-signature">
+          <a href="#M003372" class="method-signature">
           <span class="method-name">add_token_absence_reason</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -191,8 +191,8 @@ href="../../../Auth/Token.html">HealthVault::WCData::Auth::Token</a>
 href="AppAuthTokenAbsenceReason.html">HealthVault::WCData::Methods::Response::CreateAuthenticatedSessionToken::AppAuthTokenAbsenceReason</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003297-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003297-source">
+            onclick="toggleCode('M003372-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003372-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/create_authenticated_session_token/info.rb, line 42</span>
 42:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_token_absence_reason</span>(<span class="ruby-identifier">value</span>)
@@ -203,11 +203,11 @@ href="AppAuthTokenAbsenceReason.html">HealthVault::WCData::Methods::Response::Cr
         </div>
       </div>
 
-      <div id="method-M003295" class="method-detail">
-        <a name="M003295"></a>
+      <div id="method-M003370" class="method-detail">
+        <a name="M003370"></a>
 
         <div class="method-heading">
-          <a href="#M003295" class="method-signature">
+          <a href="#M003370" class="method-signature">
           <span class="method-name">remove_token</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -219,8 +219,8 @@ href="../../../../../HealthVault.html">HealthVault</a>::<a
 href="../../../Auth/Token.html">WCData::Auth::Token</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003295-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003295-source">
+            onclick="toggleCode('M003370-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003370-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/create_authenticated_session_token/info.rb, line 26</span>
 26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_token</span>(<span class="ruby-identifier">value</span>)
@@ -231,11 +231,11 @@ href="../../../Auth/Token.html">WCData::Auth::Token</a>
         </div>
       </div>
 
-      <div id="method-M003298" class="method-detail">
-        <a name="M003298"></a>
+      <div id="method-M003373" class="method-detail">
+        <a name="M003373"></a>
 
         <div class="method-heading">
-          <a href="#M003298" class="method-signature">
+          <a href="#M003373" class="method-signature">
           <span class="method-name">remove_token_absence_reason</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -247,8 +247,8 @@ href="../../../../../HealthVault.html">HealthVault</a>::<a
 href="AppAuthTokenAbsenceReason.html">WCData::Methods::Response::CreateAuthenticatedSessionToken::AppAuthTokenAbsenceReason</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003298-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003298-source">
+            onclick="toggleCode('M003373-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003373-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/create_authenticated_session_token/info.rb, line 47</span>
 47:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_token_absence_reason</span>(<span class="ruby-identifier">value</span>)
@@ -259,11 +259,11 @@ href="AppAuthTokenAbsenceReason.html">WCData::Methods::Response::CreateAuthentic
         </div>
       </div>
 
-      <div id="method-M003296" class="method-detail">
-        <a name="M003296"></a>
+      <div id="method-M003371" class="method-detail">
+        <a name="M003371"></a>
 
         <div class="method-heading">
-          <a href="#M003296" class="method-signature">
+          <a href="#M003371" class="method-signature">
           <span class="method-name">token</span><span class="method-args">()</span>
           </a>
         </div>
@@ -271,16 +271,16 @@ href="AppAuthTokenAbsenceReason.html">WCData::Methods::Response::CreateAuthentic
         <div class="method-description">
           <p>
 <b>REQUIRED</b> <b>summary</b>: The authenticated session <a
-href="Info.html#M003296">token</a>. <b>remarks</b>: The <a
-href="Info.html#M003296">token</a> has a limited time-to-live. When the <a
-href="Info.html#M003296">token</a> expires, requests will fail with access
-denied. If there is no <a href="Info.html#M003296">token</a>, then there
+href="Info.html#M003371">token</a>. <b>remarks</b>: The <a
+href="Info.html#M003371">token</a> has a limited time-to-live. When the <a
+href="Info.html#M003371">token</a> expires, requests will fail with access
+denied. If there is no <a href="Info.html#M003371">token</a>, then there
 must be an absence reason. <b>returns</b>: a <a
 href="../../../Auth/Token.html">HealthVault::WCData::Auth::Token</a> Array
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003296-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003296-source">
+            onclick="toggleCode('M003371-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003371-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/create_authenticated_session_token/info.rb, line 34</span>
 34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">token</span>
@@ -291,11 +291,11 @@ href="../../../Auth/Token.html">HealthVault::WCData::Auth::Token</a> Array
         </div>
       </div>
 
-      <div id="method-M003299" class="method-detail">
-        <a name="M003299"></a>
+      <div id="method-M003374" class="method-detail">
+        <a name="M003374"></a>
 
         <div class="method-heading">
-          <a href="#M003299" class="method-signature">
+          <a href="#M003374" class="method-signature">
           <span class="method-name">token_absence_reason</span><span class="method-args">()</span>
           </a>
         </div>
@@ -303,15 +303,15 @@ href="../../../Auth/Token.html">HealthVault::WCData::Auth::Token</a> Array
         <div class="method-description">
           <p>
 <b>REQUIRED</b> <b>summary</b>: The reason the <a
-href="Info.html#M003296">token</a> could not be created. <b>remarks</b>: If
-the <a href="Info.html#M003296">token</a> can be created, then there will
+href="Info.html#M003371">token</a> could not be created. <b>remarks</b>: If
+the <a href="Info.html#M003371">token</a> can be created, then there will
 be no absence reason. <b>returns</b>: a <a
 href="AppAuthTokenAbsenceReason.html">HealthVault::WCData::Methods::Response::CreateAuthenticatedSessionToken::AppAuthTokenAbsenceReason</a>
 Array
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003299-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003299-source">
+            onclick="toggleCode('M003374-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003374-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/create_authenticated_session_token/info.rb, line 55</span>
 55:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">token_absence_reason</span>

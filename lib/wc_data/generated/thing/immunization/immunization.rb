@@ -18,8 +18,7 @@ module HealthVault
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the immunization.
-#<b>remarks</b>: Codes for immunizations can be found in the Microsoft Health Lexicon vocabulary 'immunizations' by calling GetVocabulary.
-#<b>preferred-vocabulary</b>: immunizations
+#<b>preferred-vocabulary</b>: vaccines-cvx
 #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
         def name=(value)
           @children['name'][:value] = value
@@ -33,7 +32,7 @@ module HealthVault
      
         
        
-        #<b>REQUIRED</b>
+        
         #<b>summary</b>: The date and time the immunization.
 #<em>value</em> is a HealthVault::WCData::Dates::Approxdatetime
         def administration_date=(value)
@@ -49,7 +48,7 @@ module HealthVault
         
        
         
-        #<b>summary</b>: The name of the administrator of the immunizatoin.
+        #<b>summary</b>: The name of the administrator of the immunization.
 #<em>value</em> is a HealthVault::WCData::Thing::Types::Person
         def administrator=(value)
           @children['administrator'][:value] = value
@@ -65,12 +64,13 @@ module HealthVault
        
         
         #<b>summary</b>: The manufacturer of the immunization medication.
-#<em>value</em> is a String
+#<b>preferred-vocabulary</b>: vaccine-manufacturers-mvx
+#<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
         def manufacturer=(value)
           @children['manufacturer'][:value] = value
         end
         
-        #<b>returns</b>: a String
+        #<b>returns</b>: a HealthVault::WCData::Thing::Types::Codablevalue
         def manufacturer
           return @children['manufacturer'][:value]
         end
@@ -94,7 +94,7 @@ module HealthVault
         
        
         
-        #<b>summary</b>: Route of medication.
+        #<b>summary</b>: The route of medication.
 #<b>preferred-vocabulary</b>: medication-routes
 #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
         def route=(value)
@@ -125,7 +125,7 @@ module HealthVault
         
        
         
-        #<b>summary</b>: The sequence the immunization was administerred.
+        #<b>summary</b>: The sequence the immunization was administered.
 #<em>value</em> is a String
         def sequence=(value)
           @children['sequence'][:value] = value
@@ -140,7 +140,7 @@ module HealthVault
         
        
         
-        #<b>summary</b>: The anatomic surface to which immunization was administerred.
+        #<b>summary</b>: The anatomic surface to which immunization was administered.
 #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
         def anatomic_surface=(value)
           @children['anatomic-surface'][:value] = value
@@ -155,7 +155,7 @@ module HealthVault
         
        
         
-        #<b>summary</b>: A description of any adverse event to the immunization.
+        #<b>summary</b>: A description of any adverse event related to the immunization.
 #<em>value</em> is a String
         def adverse_event=(value)
           @children['adverse-event'][:value] = value
@@ -195,9 +195,7 @@ module HealthVault
           
         
           
-          @children['administration-date'] = {:name => 'administration-date', :class => HealthVault::WCData::Dates::Approxdatetime, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 0 }
-            
-          @children['administration-date'][:value] = HealthVault::WCData::Dates::Approxdatetime.new
+          @children['administration-date'] = {:name => 'administration-date', :class => HealthVault::WCData::Dates::Approxdatetime, :value => nil, :min => 0, :max => 1, :order => 2, :place => :element, :choice => 0 }
             
           
         
@@ -207,7 +205,7 @@ module HealthVault
           
         
           
-          @children['manufacturer'] = {:name => 'manufacturer', :class => String, :value => nil, :min => 0, :max => 1, :order => 4, :place => :element, :choice => 0 }
+          @children['manufacturer'] = {:name => 'manufacturer', :class => HealthVault::WCData::Thing::Types::Codablevalue, :value => nil, :min => 0, :max => 1, :order => 4, :place => :element, :choice => 0 }
             
           
         

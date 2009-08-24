@@ -68,17 +68,17 @@ module HealthVault
           self.tag_name = 'credential'
         
           
-          @children['cardspaceauthsession'] = {:name => 'cardspaceauthsession', :class => HealthVault::WCData::Types::CardSpaceCred, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 18266048 }
+          @children['cardspaceauthsession'] = {:name => 'cardspaceauthsession', :class => HealthVault::WCData::Types::CardSpaceCred, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 105859666 }
             
           
         
           
-          @children['appserver'] = {:name => 'appserver', :class => HealthVault::WCData::Types::AppServerCred, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 18266048 }
+          @children['appserver'] = {:name => 'appserver', :class => HealthVault::WCData::Types::AppServerCred, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 105859666 }
             
           
         
           
-          @children['userpassauthsession'] = {:name => 'userpassauthsession', :class => HealthVault::WCData::Auth::UserPassAuthSessionCred, :value => nil, :min => 1, :max => 1, :order => 3, :place => :element, :choice => 18266048 }
+          @children['userpassauthsession'] = {:name => 'userpassauthsession', :class => HealthVault::WCData::Auth::UserPassAuthSessionCred, :value => nil, :min => 1, :max => 1, :order => 3, :place => :element, :choice => 105859666 }
             
           
         

@@ -86,19 +86,19 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M003815">credential</a>&nbsp;&nbsp;
-      <a href="#M003814">credential=</a>&nbsp;&nbsp;
-      <a href="#M003823">credential_metadata</a>&nbsp;&nbsp;
-      <a href="#M003822">credential_metadata=</a>&nbsp;&nbsp;
-      <a href="#M003825">credential_name</a>&nbsp;&nbsp;
-      <a href="#M003824">credential_name=</a>&nbsp;&nbsp;
-      <a href="#M003826">new</a>&nbsp;&nbsp;
-      <a href="#M003821">simple_openid</a>&nbsp;&nbsp;
-      <a href="#M003820">simple_openid=</a>&nbsp;&nbsp;
-      <a href="#M003819">simple_passport</a>&nbsp;&nbsp;
-      <a href="#M003818">simple_passport=</a>&nbsp;&nbsp;
-      <a href="#M003817">simple_userpass</a>&nbsp;&nbsp;
-      <a href="#M003816">simple_userpass=</a>&nbsp;&nbsp;
+      <a href="#M003890">credential</a>&nbsp;&nbsp;
+      <a href="#M003889">credential=</a>&nbsp;&nbsp;
+      <a href="#M003898">credential_metadata</a>&nbsp;&nbsp;
+      <a href="#M003897">credential_metadata=</a>&nbsp;&nbsp;
+      <a href="#M003900">credential_name</a>&nbsp;&nbsp;
+      <a href="#M003899">credential_name=</a>&nbsp;&nbsp;
+      <a href="#M003901">new</a>&nbsp;&nbsp;
+      <a href="#M003896">simple_openid</a>&nbsp;&nbsp;
+      <a href="#M003895">simple_openid=</a>&nbsp;&nbsp;
+      <a href="#M003894">simple_passport</a>&nbsp;&nbsp;
+      <a href="#M003893">simple_passport=</a>&nbsp;&nbsp;
+      <a href="#M003892">simple_userpass</a>&nbsp;&nbsp;
+      <a href="#M003891">simple_userpass=</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -120,19 +120,19 @@
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M003826" class="method-detail">
-        <a name="M003826"></a>
+      <div id="method-M003901" class="method-detail">
+        <a name="M003901"></a>
 
         <div class="method-heading">
-          <a href="#M003826" class="method-signature">
+          <a href="#M003901" class="method-signature">
           <span class="method-name">new</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003826-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003826-source">
+            onclick="toggleCode('M003901-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003901-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 109</span>
 109:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
@@ -140,22 +140,22 @@
 111:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'associatedcredinfo'</span>
 112:         
 113:           
-114:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'credential'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleCardSpaceCredential</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">467640681</span> }
+114:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'credential'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleCardSpaceCredential</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5860397</span> }
 115:             
 116:           
 117:         
 118:           
-119:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'simple-userpass'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'simple-userpass'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">UserPassCred</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">467640681</span> }
+119:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'simple-userpass'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'simple-userpass'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">UserPassCred</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5860397</span> }
 120:             
 121:           
 122:         
 123:           
-124:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'simple-passport'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'simple-passport'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">SimplePassportCredential</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">467640681</span> }
+124:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'simple-passport'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'simple-passport'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">SimplePassportCredential</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5860397</span> }
 125:             
 126:           
 127:         
 128:           
-129:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'simple-openid'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'simple-openid'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleOpenIdCredential</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">467640681</span> }
+129:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'simple-openid'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'simple-openid'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Auth</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleOpenIdCredential</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5860397</span> }
 130:             
 131:           
 132:         
@@ -177,11 +177,11 @@
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M003815" class="method-detail">
-        <a name="M003815"></a>
+      <div id="method-M003890" class="method-detail">
+        <a name="M003890"></a>
 
         <div class="method-heading">
-          <a href="#M003815" class="method-signature">
+          <a href="#M003890" class="method-signature">
           <span class="method-name">credential</span><span class="method-args">()</span>
           </a>
         </div>
@@ -192,8 +192,8 @@
 href="SimpleCardSpaceCredential.html">HealthVault::WCData::Auth::SimpleCardSpaceCredential</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003815-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003815-source">
+            onclick="toggleCode('M003890-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003890-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 26</span>
 26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential</span>
@@ -204,11 +204,11 @@ href="SimpleCardSpaceCredential.html">HealthVault::WCData::Auth::SimpleCardSpace
         </div>
       </div>
 
-      <div id="method-M003814" class="method-detail">
-        <a name="M003814"></a>
+      <div id="method-M003889" class="method-detail">
+        <a name="M003889"></a>
 
         <div class="method-heading">
-          <a href="#M003814" class="method-signature">
+          <a href="#M003889" class="method-signature">
           <span class="method-name">credential=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -216,13 +216,13 @@ href="SimpleCardSpaceCredential.html">HealthVault::WCData::Auth::SimpleCardSpace
         <div class="method-description">
           <p>
 <b>REQUIRED</b> <b>summary</b>: The card space <a
-href="AssociatedCredInfo.html#M003815">credential</a>. <em>value</em> is a
+href="AssociatedCredInfo.html#M003890">credential</a>. <em>value</em> is a
 <a
 href="SimpleCardSpaceCredential.html">HealthVault::WCData::Auth::SimpleCardSpaceCredential</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003814-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003814-source">
+            onclick="toggleCode('M003889-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003889-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 21</span>
 21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential=</span>(<span class="ruby-identifier">value</span>)
@@ -233,11 +233,11 @@ href="SimpleCardSpaceCredential.html">HealthVault::WCData::Auth::SimpleCardSpace
         </div>
       </div>
 
-      <div id="method-M003823" class="method-detail">
-        <a name="M003823"></a>
+      <div id="method-M003898" class="method-detail">
+        <a name="M003898"></a>
 
         <div class="method-heading">
-          <a href="#M003823" class="method-signature">
+          <a href="#M003898" class="method-signature">
           <span class="method-name">credential_metadata</span><span class="method-args">()</span>
           </a>
         </div>
@@ -248,8 +248,8 @@ href="SimpleCardSpaceCredential.html">HealthVault::WCData::Auth::SimpleCardSpace
 href="../Types/Stringnz.html">HealthVault::WCData::Types::Stringnz</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003823-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003823-source">
+            onclick="toggleCode('M003898-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003898-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 88</span>
 88:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential_metadata</span>
@@ -260,11 +260,11 @@ href="../Types/Stringnz.html">HealthVault::WCData::Types::Stringnz</a>
         </div>
       </div>
 
-      <div id="method-M003822" class="method-detail">
-        <a name="M003822"></a>
+      <div id="method-M003897" class="method-detail">
+        <a name="M003897"></a>
 
         <div class="method-heading">
-          <a href="#M003822" class="method-signature">
+          <a href="#M003897" class="method-signature">
           <span class="method-name">credential_metadata=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -272,16 +272,16 @@ href="../Types/Stringnz.html">HealthVault::WCData::Types::Stringnz</a>
         <div class="method-description">
           <p>
 <b>summary</b>: Meta-data associated with the <a
-href="AssociatedCredInfo.html#M003815">credential</a> that is used by
+href="AssociatedCredInfo.html#M003890">credential</a> that is used by
 Microsoft <a href="../../../HealthVault.html">HealthVault</a>.
 <b>remarks</b>: An example of a meta datum is the description of the
-associated <a href="AssociatedCredInfo.html#M003815">credential</a>.
+associated <a href="AssociatedCredInfo.html#M003890">credential</a>.
 <em>value</em> is a <a
 href="../Types/Stringnz.html">HealthVault::WCData::Types::Stringnz</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003822-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003822-source">
+            onclick="toggleCode('M003897-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003897-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 83</span>
 83:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential_metadata=</span>(<span class="ruby-identifier">value</span>)
@@ -292,11 +292,11 @@ href="../Types/Stringnz.html">HealthVault::WCData::Types::Stringnz</a>
         </div>
       </div>
 
-      <div id="method-M003825" class="method-detail">
-        <a name="M003825"></a>
+      <div id="method-M003900" class="method-detail">
+        <a name="M003900"></a>
 
         <div class="method-heading">
-          <a href="#M003825" class="method-signature">
+          <a href="#M003900" class="method-signature">
           <span class="method-name">credential_name</span><span class="method-args">()</span>
           </a>
         </div>
@@ -307,8 +307,8 @@ href="../Types/Stringnz.html">HealthVault::WCData::Types::Stringnz</a>
 href="../Types/String64.html">HealthVault::WCData::Types::String64</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003825-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003825-source">
+            onclick="toggleCode('M003900-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003900-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 103</span>
 103:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential_name</span>
@@ -319,11 +319,11 @@ href="../Types/String64.html">HealthVault::WCData::Types::String64</a>
         </div>
       </div>
 
-      <div id="method-M003824" class="method-detail">
-        <a name="M003824"></a>
+      <div id="method-M003899" class="method-detail">
+        <a name="M003899"></a>
 
         <div class="method-heading">
-          <a href="#M003824" class="method-signature">
+          <a href="#M003899" class="method-signature">
           <span class="method-name">credential_name=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -331,14 +331,14 @@ href="../Types/String64.html">HealthVault::WCData::Types::String64</a>
         <div class="method-description">
           <p>
 <b>summary</b>: The <a
-href="AssociatedCredInfo.html#M003815">credential</a> name is used to
-identify the <a href="AssociatedCredInfo.html#M003815">credential</a> to
+href="AssociatedCredInfo.html#M003890">credential</a> name is used to
+identify the <a href="AssociatedCredInfo.html#M003890">credential</a> to
 the end user. <em>value</em> is a <a
 href="../Types/String64.html">HealthVault::WCData::Types::String64</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003824-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003824-source">
+            onclick="toggleCode('M003899-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003899-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 98</span>
  98:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential_name=</span>(<span class="ruby-identifier">value</span>)
@@ -349,11 +349,11 @@ href="../Types/String64.html">HealthVault::WCData::Types::String64</a>
         </div>
       </div>
 
-      <div id="method-M003821" class="method-detail">
-        <a name="M003821"></a>
+      <div id="method-M003896" class="method-detail">
+        <a name="M003896"></a>
 
         <div class="method-heading">
-          <a href="#M003821" class="method-signature">
+          <a href="#M003896" class="method-signature">
           <span class="method-name">simple_openid</span><span class="method-args">()</span>
           </a>
         </div>
@@ -364,8 +364,8 @@ href="../Types/String64.html">HealthVault::WCData::Types::String64</a>
 href="SimpleOpenIdCredential.html">HealthVault::WCData::Auth::SimpleOpenIdCredential</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003821-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003821-source">
+            onclick="toggleCode('M003896-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003896-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 72</span>
 72:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">simple_openid</span>
@@ -376,11 +376,11 @@ href="SimpleOpenIdCredential.html">HealthVault::WCData::Auth::SimpleOpenIdCreden
         </div>
       </div>
 
-      <div id="method-M003820" class="method-detail">
-        <a name="M003820"></a>
+      <div id="method-M003895" class="method-detail">
+        <a name="M003895"></a>
 
         <div class="method-heading">
-          <a href="#M003820" class="method-signature">
+          <a href="#M003895" class="method-signature">
           <span class="method-name">simple_openid=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -393,8 +393,8 @@ user who has been authenticated to an Open Id Provider. <em>value</em> is a
 href="SimpleOpenIdCredential.html">HealthVault::WCData::Auth::SimpleOpenIdCredential</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003820-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003820-source">
+            onclick="toggleCode('M003895-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003895-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 67</span>
 67:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">simple_openid=</span>(<span class="ruby-identifier">value</span>)
@@ -405,11 +405,11 @@ href="SimpleOpenIdCredential.html">HealthVault::WCData::Auth::SimpleOpenIdCreden
         </div>
       </div>
 
-      <div id="method-M003819" class="method-detail">
-        <a name="M003819"></a>
+      <div id="method-M003894" class="method-detail">
+        <a name="M003894"></a>
 
         <div class="method-heading">
-          <a href="#M003819" class="method-signature">
+          <a href="#M003894" class="method-signature">
           <span class="method-name">simple_passport</span><span class="method-args">()</span>
           </a>
         </div>
@@ -420,8 +420,8 @@ href="SimpleOpenIdCredential.html">HealthVault::WCData::Auth::SimpleOpenIdCreden
 href="SimplePassportCredential.html">HealthVault::WCData::Auth::SimplePassportCredential</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003819-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003819-source">
+            onclick="toggleCode('M003894-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003894-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 57</span>
 57:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">simple_passport</span>
@@ -432,11 +432,11 @@ href="SimplePassportCredential.html">HealthVault::WCData::Auth::SimplePassportCr
         </div>
       </div>
 
-      <div id="method-M003818" class="method-detail">
-        <a name="M003818"></a>
+      <div id="method-M003893" class="method-detail">
+        <a name="M003893"></a>
 
         <div class="method-heading">
-          <a href="#M003818" class="method-signature">
+          <a href="#M003893" class="method-signature">
           <span class="method-name">simple_passport=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -444,13 +444,13 @@ href="SimplePassportCredential.html">HealthVault::WCData::Auth::SimplePassportCr
         <div class="method-description">
           <p>
 <b>REQUIRED</b> <b>summary</b>: A <a
-href="AssociatedCredInfo.html#M003815">credential</a> for verifying
+href="AssociatedCredInfo.html#M003890">credential</a> for verifying
 identity with Microsoft Passport. <em>value</em> is a <a
 href="SimplePassportCredential.html">HealthVault::WCData::Auth::SimplePassportCredential</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003818-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003818-source">
+            onclick="toggleCode('M003893-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003893-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 52</span>
 52:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">simple_passport=</span>(<span class="ruby-identifier">value</span>)
@@ -461,11 +461,11 @@ href="SimplePassportCredential.html">HealthVault::WCData::Auth::SimplePassportCr
         </div>
       </div>
 
-      <div id="method-M003817" class="method-detail">
-        <a name="M003817"></a>
+      <div id="method-M003892" class="method-detail">
+        <a name="M003892"></a>
 
         <div class="method-heading">
-          <a href="#M003817" class="method-signature">
+          <a href="#M003892" class="method-signature">
           <span class="method-name">simple_userpass</span><span class="method-args">()</span>
           </a>
         </div>
@@ -476,8 +476,8 @@ href="SimplePassportCredential.html">HealthVault::WCData::Auth::SimplePassportCr
 href="UserPassCred.html">HealthVault::WCData::Auth::UserPassCred</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003817-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003817-source">
+            onclick="toggleCode('M003892-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003892-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 42</span>
 42:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">simple_userpass</span>
@@ -488,11 +488,11 @@ href="UserPassCred.html">HealthVault::WCData::Auth::UserPassCred</a>
         </div>
       </div>
 
-      <div id="method-M003816" class="method-detail">
-        <a name="M003816"></a>
+      <div id="method-M003891" class="method-detail">
+        <a name="M003891"></a>
 
         <div class="method-heading">
-          <a href="#M003816" class="method-signature">
+          <a href="#M003891" class="method-signature">
           <span class="method-name">simple_userpass=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -500,7 +500,7 @@ href="UserPassCred.html">HealthVault::WCData::Auth::UserPassCred</a>
         <div class="method-description">
           <p>
 <b>REQUIRED</b> <b>summary</b>: A simple user <a
-href="AssociatedCredInfo.html#M003815">credential</a> that authenticates a
+href="AssociatedCredInfo.html#M003890">credential</a> that authenticates a
 user in Microsoft <a href="../../../HealthVault.html">HealthVault</a>.
 <b>remarks</b>: Each user has a unique username and associated password
 that identifies and authenticates a Microsoft <a
@@ -508,8 +508,8 @@ href="../../../HealthVault.html">HealthVault</a> user. <em>value</em> is a
 <a href="UserPassCred.html">HealthVault::WCData::Auth::UserPassCred</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M003816-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M003816-source">
+            onclick="toggleCode('M003891-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M003891-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/auth/associated_cred_info.rb, line 37</span>
 37:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">simple_userpass=</span>(<span class="ruby-identifier">value</span>)

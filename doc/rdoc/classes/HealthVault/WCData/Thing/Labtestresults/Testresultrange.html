@@ -86,13 +86,13 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M001127">new</a>&nbsp;&nbsp;
-      <a href="#M001124">text</a>&nbsp;&nbsp;
-      <a href="#M001123">text=</a>&nbsp;&nbsp;
-      <a href="#M001122">type</a>&nbsp;&nbsp;
-      <a href="#M001121">type=</a>&nbsp;&nbsp;
-      <a href="#M001126">value</a>&nbsp;&nbsp;
-      <a href="#M001125">value=</a>&nbsp;&nbsp;
+      <a href="#M001125">new</a>&nbsp;&nbsp;
+      <a href="#M001122">text</a>&nbsp;&nbsp;
+      <a href="#M001121">text=</a>&nbsp;&nbsp;
+      <a href="#M001120">type</a>&nbsp;&nbsp;
+      <a href="#M001119">type=</a>&nbsp;&nbsp;
+      <a href="#M001124">value</a>&nbsp;&nbsp;
+      <a href="#M001123">value=</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -114,19 +114,19 @@
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M001127" class="method-detail">
-        <a name="M001127"></a>
+      <div id="method-M001125" class="method-detail">
+        <a name="M001125"></a>
 
         <div class="method-heading">
-          <a href="#M001127" class="method-signature">
+          <a href="#M001125" class="method-signature">
           <span class="method-name">new</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001127-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001127-source">
+            onclick="toggleCode('M001125-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001125-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 67</span>
 67:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
@@ -160,86 +160,12 @@
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M001124" class="method-detail">
-        <a name="M001124"></a>
-
-        <div class="method-heading">
-          <a href="#M001124" class="method-signature">
-          <span class="method-name">text</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>returns</b>: a <a
-href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001124-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001124-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 45</span>
-45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text</span>
-46:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'text'</span>][<span class="ruby-identifier">:value</span>]
-47:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M001123" class="method-detail">
-        <a name="M001123"></a>
-
-        <div class="method-heading">
-          <a href="#M001123" class="method-signature">
-          <span class="method-name">text=</span><span class="method-args">(value)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-<b>REQUIRED</b> <b>summary</b>: The range expressed as <a
-href="Testresultrange.html#M001124">text</a>. <b>remarks</b>: The <a
-href="Testresultrange.html#M001124">text</a> element is used in two
-different ways: When a numeric range is used, the <a
-href="Testresultrange.html#M001124">text</a> element should contain a
-textual version of the numeric range. When the range is non-numeric, the <a
-href="Testresultrange.html#M001124">text</a> element contains the range and
-the range <a href="Testresultrange.html#M001126">value</a> is omitted. The
-range may also be coded to a vocabulary. Examples: A color range (such as
-clear to yellow) would be coded using by setting the <a
-href="Testresultrange.html#M001124">text</a> element to &quot;clear to
-yellow&quot;, and by assigning a code from an appropriate vocabulary. A
-numeric range (such as 0.5 - 1.6) would be stored in the minimum and
-maximum elements of the <a href="Testresultrange.html#M001126">value</a>,
-and additionally would be coded by setting the <a
-href="Testresultrange.html#M001124">text</a> element to &quot;0.5 -
-1.6&quot;. <b>preferred-vocabulary</b>: <a
-href="../Contact.html">Contact</a> the <a
-href="../../../../HealthVault.html">HealthVault</a> team to help define
-this vocabulary. <em><a href="Testresultrange.html#M001126">value</a></em>
-is a <a
-href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001123-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001123-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 40</span>
-40:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text=</span>(<span class="ruby-identifier">value</span>)
-41:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'text'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-42:         <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
       <div id="method-M001122" class="method-detail">
         <a name="M001122"></a>
 
         <div class="method-heading">
           <a href="#M001122" class="method-signature">
-          <span class="method-name">type</span><span class="method-args">()</span>
+          <span class="method-name">text</span><span class="method-args">()</span>
           </a>
         </div>
       
@@ -252,10 +178,10 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
             onclick="toggleCode('M001122-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001122-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 28</span>
-28:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">type</span>
-29:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'type'</span>][<span class="ruby-identifier">:value</span>]
-30:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 45</span>
+45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text</span>
+46:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'text'</span>][<span class="ruby-identifier">:value</span>]
+47:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -266,6 +192,80 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
 
         <div class="method-heading">
           <a href="#M001121" class="method-signature">
+          <span class="method-name">text=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>REQUIRED</b> <b>summary</b>: The range expressed as <a
+href="Testresultrange.html#M001122">text</a>. <b>remarks</b>: The <a
+href="Testresultrange.html#M001122">text</a> element is used in two
+different ways: When a numeric range is used, the <a
+href="Testresultrange.html#M001122">text</a> element should contain a
+textual version of the numeric range. When the range is non-numeric, the <a
+href="Testresultrange.html#M001122">text</a> element contains the range and
+the range <a href="Testresultrange.html#M001124">value</a> is omitted. The
+range may also be coded to a vocabulary. Examples: A color range (such as
+clear to yellow) would be coded using by setting the <a
+href="Testresultrange.html#M001122">text</a> element to &quot;clear to
+yellow&quot;, and by assigning a code from an appropriate vocabulary. A
+numeric range (such as 0.5 - 1.6) would be stored in the minimum and
+maximum elements of the <a href="Testresultrange.html#M001124">value</a>,
+and additionally would be coded by setting the <a
+href="Testresultrange.html#M001122">text</a> element to &quot;0.5 -
+1.6&quot;. <b>preferred-vocabulary</b>: <a
+href="../Contact.html">Contact</a> the <a
+href="../../../../HealthVault.html">HealthVault</a> team to help define
+this vocabulary. <em><a href="Testresultrange.html#M001124">value</a></em>
+is a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001121-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001121-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 40</span>
+40:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text=</span>(<span class="ruby-identifier">value</span>)
+41:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'text'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+42:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001120" class="method-detail">
+        <a name="M001120"></a>
+
+        <div class="method-heading">
+          <a href="#M001120" class="method-signature">
+          <span class="method-name">type</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<b>returns</b>: a <a
+href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M001120-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001120-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 28</span>
+28:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">type</span>
+29:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'type'</span>][<span class="ruby-identifier">:value</span>]
+30:         <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M001119" class="method-detail">
+        <a name="M001119"></a>
+
+        <div class="method-heading">
+          <a href="#M001119" class="method-signature">
           <span class="method-name">type=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -273,16 +273,16 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
         <div class="method-description">
           <p>
 <b>REQUIRED</b> <b>summary</b>: The <a
-href="Testresultrange.html#M001122">type</a> of the range.
+href="Testresultrange.html#M001120">type</a> of the range.
 <b>preferred-vocabulary</b>: <a href="../Contact.html">Contact</a> the <a
 href="../../../../HealthVault.html">HealthVault</a> team to help define
-this vocabulary. <em><a href="Testresultrange.html#M001126">value</a></em>
+this vocabulary. <em><a href="Testresultrange.html#M001124">value</a></em>
 is a <a
 href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalue</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001121-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001121-source">
+            onclick="toggleCode('M001119-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001119-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 23</span>
 23:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">type=</span>(<span class="ruby-identifier">value</span>)
@@ -293,11 +293,11 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
         </div>
       </div>
 
-      <div id="method-M001126" class="method-detail">
-        <a name="M001126"></a>
+      <div id="method-M001124" class="method-detail">
+        <a name="M001124"></a>
 
         <div class="method-heading">
-          <a href="#M001126" class="method-signature">
+          <a href="#M001124" class="method-signature">
           <span class="method-name">value</span><span class="method-args">()</span>
           </a>
         </div>
@@ -308,8 +308,8 @@ href="../Types/Codablevalue.html">HealthVault::WCData::Thing::Types::Codablevalu
 href="Testresultrangevalue.html">HealthVault::WCData::Thing::Labtestresults::Testresultrangevalue</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001126-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001126-source">
+            onclick="toggleCode('M001124-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001124-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 61</span>
 61:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value</span>
@@ -320,11 +320,11 @@ href="Testresultrangevalue.html">HealthVault::WCData::Thing::Labtestresults::Tes
         </div>
       </div>
 
-      <div id="method-M001125" class="method-detail">
-        <a name="M001125"></a>
+      <div id="method-M001123" class="method-detail">
+        <a name="M001123"></a>
 
         <div class="method-heading">
-          <a href="#M001125" class="method-signature">
+          <a href="#M001123" class="method-signature">
           <span class="method-name">value=</span><span class="method-args">(value)</span>
           </a>
         </div>
@@ -332,15 +332,15 @@ href="Testresultrangevalue.html">HealthVault::WCData::Thing::Labtestresults::Tes
         <div class="method-description">
           <p>
 <b>summary</b>: The minimum and maximum of the range. <b>remarks</b>: The
-minimum or maximum <a href="Testresultrange.html#M001126">value</a> may be
+minimum or maximum <a href="Testresultrange.html#M001124">value</a> may be
 omitted to specify open-ended ranges. Example: The range &quot;greater than
 3.5&quot; would be coded by setting the minimum to 3.5 and omitting the
-maximum. <em><a href="Testresultrange.html#M001126">value</a></em> is a <a
+maximum. <em><a href="Testresultrange.html#M001124">value</a></em> is a <a
 href="Testresultrangevalue.html">HealthVault::WCData::Thing::Labtestresults::Testresultrangevalue</a>
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M001125-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M001125-source">
+            onclick="toggleCode('M001123-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M001123-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/lab_test_results/test_result_range.rb, line 56</span>
 56:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value=</span>(<span class="ruby-identifier">value</span>)
