@@ -124,7 +124,7 @@ def get_proxy
 end
 
 spec = Gem::Specification.new do |s|
-  s.name = 'rubyhealthvault'
+  s.name = 'ruby-healthvault'
   s.version = '0.0.2'
   s.has_rdoc = true
   s.extra_rdoc_files = ['README', 'LICENSE']
@@ -161,5 +161,24 @@ end
 
 Spec::Rake::SpecTask.new('testspec') do |t|
   t.spec_files = FileList['spec/**/*.rb']
+end
+
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "ruby-healthvault"
+    gemspec.summary = 'Connect your Ruby code to the Microsoft HealthVault'
+    gemspec.description = gemspec.summary
+    gemspec.email = "bobd@mitre.org"
+    gemspec.homepage = "http://github.com/rdingwell/ruby-healthvault"
+    gemspec.authors = ['Danny Coates','Rob Dingwell']
+    gemspec.executables = []
+    gemspec.has_rdoc = true
+    gemspec.require_path = "lib"
+    gemspec.bindir = "bin"
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
 
