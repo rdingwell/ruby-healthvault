@@ -10,10 +10,11 @@ require 'healthvault'
 
 KNOWN ISSUES:
 
+- First and foremost a lack of test code. This is something that drastically needs to be addressed
 - PFX certificates do not load properly on Windows, they must be a pem
 - TestServer doesn't open a browser on Windows when running with JRuby
 - Validation of SimpleTypes and ComplexTypes is not implemented
 - All XSD base types including numbers (like 'int') are represented as String
-- HealthVault 'versions' of Things and Methods are not supported
+- HealthVault 'versions' of Things are loosely supported , versions of methods are not support
 - When parsing a response that is defined to contain 'any' value, the parser
   will only try to guess if its a Thing, otherwise it will skip
