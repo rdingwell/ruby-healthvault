@@ -125,14 +125,14 @@ end
 
 spec = Gem::Specification.new do |s|
   s.name = 'rubyhealthvault'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.has_rdoc = true
   s.extra_rdoc_files = ['README', 'LICENSE']
   s.summary = 'Connect your Ruby code to the Microsoft HealthVault'
   s.description = s.summary
   s.homepage = 'http://rubyhealthvault.rubyforge.org/'
   s.rubyforge_project = 'rubyhealthvault'
-  s.author = 'Danny Coates'
+  s.authors = ['Danny Coates','Rob Dingwell']
   s.email = 'dcoates@podfitness.com'
   # s.executables = ['your_executable_here']
   s.files = %w(LICENSE README Rakefile) + Dir.glob("{bin,lib,spec}/**/*")
