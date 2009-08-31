@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time when the insulin-injection was used.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The amount of insulin injected.
@@ -62,6 +65,7 @@ module HealthVault
         end
        
      
+        
         
        
         

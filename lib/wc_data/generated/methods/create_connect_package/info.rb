@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<em>value</em> is a String
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A challenge question posed to the user once the identity code has been successfully entered.
@@ -61,6 +64,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: An identifier supplied by the external application for the connect package.
@@ -76,6 +80,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

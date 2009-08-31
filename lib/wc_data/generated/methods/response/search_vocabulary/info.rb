@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Vocab::VocabularyKeyInfo
         def add_vocabulary_key(value)
@@ -36,6 +37,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -58,11 +60,11 @@ module HealthVault
           self.tag_name = 'info'
         
           
-          @children['vocabulary-key'] = {:name => 'vocabulary-key', :class => HealthVault::WCData::Vocab::VocabularyKeyInfo, :value => Array.new, :min => 0, :max => 999999, :order => 1, :place => :element, :choice => 50067809 }
+          @children['vocabulary-key'] = {:name => 'vocabulary-key', :class => HealthVault::WCData::Vocab::VocabularyKeyInfo, :value => Array.new, :min => 0, :max => 999999, :order => 1, :place => :element, :choice => 299834065 }
           
         
           
-          @children['code-set-result'] = {:name => 'code-set-result', :class => HealthVault::WCData::Vocab::VocabularyCodeSet, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 50067809 }
+          @children['code-set-result'] = {:name => 'code-set-result', :class => HealthVault::WCData::Vocab::VocabularyCodeSet, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 299834065 }
             
           
         

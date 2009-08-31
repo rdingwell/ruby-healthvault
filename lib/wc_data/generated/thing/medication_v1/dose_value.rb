@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: Free form text describing the dose that should be taken.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The minimum dosage that should be taken.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         

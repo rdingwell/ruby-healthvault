@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The vocabulary search string to use.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: A person's description of the email address.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: States if the email address is the primary address for contacting the person.
@@ -46,6 +48,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

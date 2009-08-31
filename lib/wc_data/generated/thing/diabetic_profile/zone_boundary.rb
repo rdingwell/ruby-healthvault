@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A zone boundary defined by an absolute glucose value.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -52,12 +54,12 @@ module HealthVault
           self.tag_name = 'zoneboundary'
         
           
-          @children['absolute-glucose'] = {:name => 'absolute-glucose', :class => HealthVault::WCData::Thing::Types::Bloodglucosevalue, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 262476853 }
+          @children['absolute-glucose'] = {:name => 'absolute-glucose', :class => HealthVault::WCData::Thing::Types::Bloodglucosevalue, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 231001805 }
             
           
         
           
-          @children['percent-max-glucose'] = {:name => 'percent-max-glucose', :class => HealthVault::WCData::Thing::Types::Percentage, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 262476853 }
+          @children['percent-max-glucose'] = {:name => 'percent-max-glucose', :class => HealthVault::WCData::Thing::Types::Percentage, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 231001805 }
             
           
         

@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the group.
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

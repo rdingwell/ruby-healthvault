@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: A description of the address.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: States if the addresses is the primary address for contacting the person.
@@ -46,6 +48,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a String
@@ -68,6 +71,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The city portion of the address.
@@ -82,6 +86,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -98,6 +103,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The postal code portion of the address.
@@ -113,6 +119,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

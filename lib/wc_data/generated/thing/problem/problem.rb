@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of the medical problem.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
@@ -51,6 +53,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Durationvalue
         def add_duration(value)
@@ -70,6 +73,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -128,29 +128,29 @@
             onclick="toggleCode('M003422-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003422-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 64</span>
-64:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-65:           <span class="ruby-keyword kw">super</span>
-66:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'thingtypepermission'</span>
-67:         
-68:           
-69:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'thing-type-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-70:             
-71:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>.<span class="ruby-identifier">new</span>
-72:             
-73:           
-74:         
-75:           
-76:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'online-access-permissions'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'online-access-permissions'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span><span class="ruby-operator">::</span><span class="ruby-constant">QueryPermissions</span><span class="ruby-operator">::</span><span class="ruby-constant">Permissions</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-77:             
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 67</span>
+67:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+68:           <span class="ruby-keyword kw">super</span>
+69:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'thingtypepermission'</span>
+70:         
+71:           
+72:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'thing-type-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+73:             
+74:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>.<span class="ruby-identifier">new</span>
+75:             
+76:           
+77:         
 78:           
-79:         
-80:           
-81:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'offline-access-permissions'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'offline-access-permissions'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span><span class="ruby-operator">::</span><span class="ruby-constant">QueryPermissions</span><span class="ruby-operator">::</span><span class="ruby-constant">Permissions</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-82:             
+79:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'online-access-permissions'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'online-access-permissions'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span><span class="ruby-operator">::</span><span class="ruby-constant">QueryPermissions</span><span class="ruby-operator">::</span><span class="ruby-constant">Permissions</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+80:             
+81:           
+82:         
 83:           
-84:         
-85:         <span class="ruby-keyword kw">end</span>
+84:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'offline-access-permissions'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'offline-access-permissions'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span><span class="ruby-operator">::</span><span class="ruby-constant">QueryPermissions</span><span class="ruby-operator">::</span><span class="ruby-constant">Permissions</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+85:             
+86:           
+87:         
+88:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -176,10 +176,10 @@ href="Permissions.html">HealthVault::WCData::Methods::Response::QueryPermissions
             onclick="toggleCode('M003421-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003421-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 58</span>
-58:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">offline_access_permissions</span>
-59:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'offline-access-permissions'</span>][<span class="ruby-identifier">:value</span>]
-60:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 61</span>
+61:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">offline_access_permissions</span>
+62:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'offline-access-permissions'</span>][<span class="ruby-identifier">:value</span>]
+63:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -205,10 +205,10 @@ href="Permissions.html">HealthVault::WCData::Methods::Response::QueryPermissions
             onclick="toggleCode('M003420-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003420-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 53</span>
-53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">offline_access_permissions=</span>(<span class="ruby-identifier">value</span>)
-54:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'offline-access-permissions'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-55:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 56</span>
+56:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">offline_access_permissions=</span>(<span class="ruby-identifier">value</span>)
+57:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'offline-access-permissions'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+58:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -232,10 +232,10 @@ href="Permissions.html">HealthVault::WCData::Methods::Response::QueryPermissions
             onclick="toggleCode('M003419-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003419-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 43</span>
-43:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">online_access_permissions</span>
-44:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'online-access-permissions'</span>][<span class="ruby-identifier">:value</span>]
-45:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 45</span>
+45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">online_access_permissions</span>
+46:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'online-access-permissions'</span>][<span class="ruby-identifier">:value</span>]
+47:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -261,10 +261,10 @@ href="Permissions.html">HealthVault::WCData::Methods::Response::QueryPermissions
             onclick="toggleCode('M003418-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003418-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 38</span>
-38:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">online_access_permissions=</span>(<span class="ruby-identifier">value</span>)
-39:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'online-access-permissions'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-40:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 40</span>
+40:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">online_access_permissions=</span>(<span class="ruby-identifier">value</span>)
+41:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'online-access-permissions'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+42:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -288,10 +288,10 @@ href="../../../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003417-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003417-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 28</span>
-28:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id</span>
-29:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>]
-30:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 29</span>
+29:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id</span>
+30:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>]
+31:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -316,10 +316,10 @@ href="../../../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003416-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003416-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 23</span>
-23:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id=</span>(<span class="ruby-identifier">value</span>)
-24:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-25:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/query_permissions/thing_type_permission.rb, line 24</span>
+24:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id=</span>(<span class="ruby-identifier">value</span>)
+25:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+26:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

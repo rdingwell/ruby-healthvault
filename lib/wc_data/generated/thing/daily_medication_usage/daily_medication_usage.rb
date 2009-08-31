@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Date on which the medication was taken.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Number of units of the medication taken.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -79,6 +83,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Number of units called for by prescription or intent for the drug.
@@ -94,6 +99,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -112,6 +118,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Form in which the drug is administered.
@@ -129,6 +136,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Means through which the drug was determined to be needed.
@@ -145,6 +153,7 @@ module HealthVault
         end
        
      
+        
         
        
         

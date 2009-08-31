@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Primary authentication token.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A user authentication token used by an application server to specify a user.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -74,12 +77,12 @@ module HealthVault
           
         
           
-          @children['user-auth-token'] = {:name => 'user-auth-token', :class => String, :value => nil, :min => 0, :max => 1, :order => 2, :place => :element, :choice => 196043044 }
+          @children['user-auth-token'] = {:name => 'user-auth-token', :class => String, :value => nil, :min => 0, :max => 1, :order => 2, :place => :element, :choice => 311526231 }
             
           
         
           
-          @children['offline-person-info'] = {:name => 'offline-person-info', :class => HealthVault::WCData::Request::OfflinePersonInfo, :value => nil, :min => 0, :max => 1, :order => 3, :place => :element, :choice => 196043044 }
+          @children['offline-person-info'] = {:name => 'offline-person-info', :class => HealthVault::WCData::Request::OfflinePersonInfo, :value => nil, :min => 0, :max => 1, :order => 3, :place => :element, :choice => 311526231 }
             
           
         

@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Thing::Thing
         def add_thing(value)
@@ -36,6 +37,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetThings::UnprocessedThingKeyInfo
@@ -58,6 +60,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Indicates whether some of the things were filtered.
@@ -73,6 +76,7 @@ module HealthVault
         end
        
      
+        
         
        
         

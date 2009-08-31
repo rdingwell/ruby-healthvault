@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: Specifies the UTC datetime from which all found authorized connect requests are to be returned.

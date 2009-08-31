@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::DateRange
         def add_date_range(value)
@@ -32,6 +33,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::Guid

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Thing::Aerobicprofile::HeartrateZone
         def add_heartrate_zone(value)
@@ -35,6 +36,7 @@ module HealthVault
         end
        
      
+        
         
        
         

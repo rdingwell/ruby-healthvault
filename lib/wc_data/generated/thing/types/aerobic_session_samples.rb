@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: Heart rate sample set for aerobic session.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Position sample set for aerobic session.
@@ -62,6 +65,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -79,6 +83,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Pace sample set for aerobic session.
@@ -94,6 +99,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -111,6 +117,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Torque sample set for aerobic session.
@@ -126,6 +133,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -143,6 +151,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Temperature sample set for aerobic session.
@@ -158,6 +167,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -175,6 +185,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Air pressure sample set for aerobic session.
@@ -190,6 +201,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -207,6 +219,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Total steps taken in the aerobic activity range.
@@ -223,6 +236,7 @@ module HealthVault
         end
        
      
+        
         
        
         

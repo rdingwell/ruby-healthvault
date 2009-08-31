@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::Permission
         def add_permission(value)
@@ -32,6 +33,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::Guid
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -42,6 +44,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a String
@@ -55,6 +58,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -70,6 +74,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::String255
@@ -83,6 +88,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -98,6 +104,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Auth::AuthXml
@@ -111,6 +118,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -126,6 +134,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a String
@@ -139,6 +148,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -154,6 +164,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::String255
@@ -167,6 +178,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -182,6 +194,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::String255
@@ -195,6 +208,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -210,6 +224,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Types::String1024
@@ -223,6 +238,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The substance that is contraindicated.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The source of the contraindication.
@@ -62,6 +65,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The person who documented this issue (physician, pharmacist, etc.)
@@ -76,6 +80,7 @@ module HealthVault
         end
        
      
+        
         
        
         

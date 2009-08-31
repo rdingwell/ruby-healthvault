@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::Guid
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -42,6 +44,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -56,6 +59,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Auth::AuthXml
@@ -69,6 +73,7 @@ module HealthVault
         end
        
      
+        
         
        
         

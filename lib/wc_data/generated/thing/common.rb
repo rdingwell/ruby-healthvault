@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         
         #<em>value</em> is a String
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -42,6 +44,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Types::String512
@@ -55,6 +58,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Extension
@@ -74,6 +78,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::RelatedThing
@@ -95,6 +100,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -126,24 +126,24 @@
             onclick="toggleCode('M002943-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002943-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 45</span>
-45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-46:           <span class="ruby-keyword kw">super</span>
-47:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'apppersistenttokens'</span>
-48:         
-49:           
-50:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'enabled'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'enabled'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-51:             
-52:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'enabled'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 47</span>
+47:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+48:           <span class="ruby-keyword kw">super</span>
+49:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'apppersistenttokens'</span>
+50:         
+51:           
+52:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'enabled'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'enabled'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 53:             
-54:           
-55:         
+54:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'enabled'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+55:             
 56:           
-57:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token-ttl-seconds'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'token-ttl-seconds'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-58:             
-59:           
-60:         
-61:         <span class="ruby-keyword kw">end</span>
+57:         
+58:           
+59:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token-ttl-seconds'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'token-ttl-seconds'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+60:             
+61:           
+62:         
+63:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -168,10 +168,10 @@
             onclick="toggleCode('M002940-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002940-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 25</span>
-25:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enabled</span>
-26:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'enabled'</span>][<span class="ruby-identifier">:value</span>]
-27:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 26</span>
+26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enabled</span>
+27:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'enabled'</span>][<span class="ruby-identifier">:value</span>]
+28:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -194,10 +194,10 @@
             onclick="toggleCode('M002939-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002939-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 20</span>
-20:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enabled=</span>(<span class="ruby-identifier">value</span>)
-21:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'enabled'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-22:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 21</span>
+21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enabled=</span>(<span class="ruby-identifier">value</span>)
+22:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'enabled'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+23:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -220,10 +220,10 @@
             onclick="toggleCode('M002942-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002942-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 39</span>
-39:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">token_ttl_seconds</span>
-40:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token-ttl-seconds'</span>][<span class="ruby-identifier">:value</span>]
-41:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 41</span>
+41:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">token_ttl_seconds</span>
+42:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token-ttl-seconds'</span>][<span class="ruby-identifier">:value</span>]
+43:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -246,10 +246,10 @@
             onclick="toggleCode('M002941-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002941-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 34</span>
-34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">token_ttl_seconds=</span>(<span class="ruby-identifier">value</span>)
-35:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token-ttl-seconds'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-36:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/application/app_persistent_tokens.rb, line 36</span>
+36:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">token_ttl_seconds=</span>(<span class="ruby-identifier">value</span>)
+37:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'token-ttl-seconds'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+38:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The title of the document reference.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The index for the document reference.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

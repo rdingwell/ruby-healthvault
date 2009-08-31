@@ -127,23 +127,23 @@
             onclick="toggleCode('M003513-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003513-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 55</span>
-55:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-56:           <span class="ruby-keyword kw">super</span>
-57:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'versions'</span>
-58:         
-59:           
-60:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'version-info'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span><span class="ruby-operator">::</span><span class="ruby-constant">GetThingType</span><span class="ruby-operator">::</span><span class="ruby-constant">VersionInfo</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 57</span>
+57:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+58:           <span class="ruby-keyword kw">super</span>
+59:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'versions'</span>
+60:         
 61:           
-62:         
+62:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'version-info'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span><span class="ruby-operator">::</span><span class="ruby-constant">GetThingType</span><span class="ruby-operator">::</span><span class="ruby-constant">VersionInfo</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 63:           
-64:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'thing-type-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:attribute</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-65:             
-66:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>.<span class="ruby-identifier">new</span>
+64:         
+65:           
+66:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'thing-type-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:attribute</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 67:             
-68:           
-69:         
-70:         <span class="ruby-keyword kw">end</span>
+68:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>.<span class="ruby-identifier">new</span>
+69:             
+70:           
+71:         
+72:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -169,10 +169,10 @@ href="VersionInfo.html">HealthVault::WCData::Methods::Response::GetThingType::Ve
             onclick="toggleCode('M003508-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003508-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 21</span>
-21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_version_info</span>(<span class="ruby-identifier">value</span>)
-22:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
-23:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 22</span>
+22:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_version_info</span>(<span class="ruby-identifier">value</span>)
+23:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+24:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -197,10 +197,10 @@ href="VersionInfo.html">WCData::Methods::Response::GetThingType::VersionInfo</a>
             onclick="toggleCode('M003509-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003509-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 26</span>
-26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_version_info</span>(<span class="ruby-identifier">value</span>)
-27:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
-28:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 27</span>
+27:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_version_info</span>(<span class="ruby-identifier">value</span>)
+28:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+29:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -224,10 +224,10 @@ href="../../../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003512-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003512-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 49</span>
-49:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id</span>
-50:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>]
-51:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 51</span>
+51:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id</span>
+52:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>]
+53:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -255,10 +255,10 @@ href="../../../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003511-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003511-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 44</span>
-44:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id=</span>(<span class="ruby-identifier">value</span>)
-45:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-46:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 46</span>
+46:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">thing_type_id=</span>(<span class="ruby-identifier">value</span>)
+47:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'thing-type-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+48:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -284,10 +284,10 @@ Array
             onclick="toggleCode('M003510-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003510-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 33</span>
-33:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version_info</span>
-34:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>][<span class="ruby-identifier">:value</span>]
-35:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/response/get_thing_type/versions.rb, line 34</span>
+34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version_info</span>
+35:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version-info'</span>][<span class="ruby-identifier">:value</span>]
+36:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

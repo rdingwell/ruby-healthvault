@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Name and clinical code for the medication.
@@ -33,6 +34,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Date the prescription was filled.
@@ -47,6 +49,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -63,6 +66,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date on which a prescription can be refilled.
@@ -77,6 +81,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -93,6 +98,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Pharmacy.
@@ -108,6 +114,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form prescription number.
@@ -122,6 +129,7 @@ module HealthVault
         end
        
      
+        
         
        
         

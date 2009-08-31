@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The date and time the procedure.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Anatomic location of the medical procedure.
@@ -60,6 +63,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Primary provider for a medical procedure.
@@ -74,6 +78,7 @@ module HealthVault
         end
        
      
+        
         
        
         

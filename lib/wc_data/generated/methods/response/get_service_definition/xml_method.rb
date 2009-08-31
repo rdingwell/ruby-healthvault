@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the Microsoft HealthVault method.
@@ -31,6 +32,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetServiceDefinition::XmlMethodVersion

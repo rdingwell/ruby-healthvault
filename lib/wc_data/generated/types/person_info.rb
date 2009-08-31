@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The unique identifier for a person.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The application specific settings for the person.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -78,6 +82,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Tells the caller whether more records exist for the user that weren't returned.
@@ -93,6 +98,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::Record
@@ -115,6 +121,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The set of groups the person is a member of.
@@ -131,6 +138,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The user's preferred culture for use with comparisons, collation, currency, dates, etc.
@@ -146,6 +154,7 @@ module HealthVault
         end
        
      
+        
         
        
         

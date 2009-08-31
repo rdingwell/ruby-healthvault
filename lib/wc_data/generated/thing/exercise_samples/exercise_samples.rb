@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The starting date and time when the samples were created.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The unit of measure for the samples.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

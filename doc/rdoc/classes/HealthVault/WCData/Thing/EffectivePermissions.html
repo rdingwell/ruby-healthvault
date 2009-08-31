@@ -127,21 +127,21 @@
             onclick="toggleCode('M002757-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002757-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 50</span>
-50:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-51:           <span class="ruby-keyword kw">super</span>
-52:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'effectivepermissions'</span>
-53:         
-54:           
-55:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'permission'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'permission'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Permission</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 52</span>
+52:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+53:           <span class="ruby-keyword kw">super</span>
+54:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'effectivepermissions'</span>
+55:         
 56:           
-57:         
+57:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'permission'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'permission'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Permission</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 58:           
-59:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'immutable'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'immutable'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:attribute</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-60:             
-61:           
-62:         
-63:         <span class="ruby-keyword kw">end</span>
+59:         
+60:           
+61:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'immutable'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'immutable'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:attribute</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+62:             
+63:           
+64:         
+65:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -167,10 +167,10 @@ href="../Types/Permission.html">HealthVault::WCData::Types::Permission</a>
             onclick="toggleCode('M002752-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002752-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 19</span>
-19:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_permission</span>(<span class="ruby-identifier">value</span>)
-20:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'permission'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
-21:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 20</span>
+20:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_permission</span>(<span class="ruby-identifier">value</span>)
+21:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'permission'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+22:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -193,10 +193,10 @@ href="../Types/Permission.html">HealthVault::WCData::Types::Permission</a>
             onclick="toggleCode('M002756-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002756-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 44</span>
-44:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">immutable</span>
-45:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'immutable'</span>][<span class="ruby-identifier">:value</span>]
-46:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 46</span>
+46:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">immutable</span>
+47:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'immutable'</span>][<span class="ruby-identifier">:value</span>]
+48:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -219,10 +219,10 @@ href="../Types/Permission.html">HealthVault::WCData::Types::Permission</a>
             onclick="toggleCode('M002755-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002755-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 39</span>
-39:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">immutable=</span>(<span class="ruby-identifier">value</span>)
-40:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'immutable'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-41:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 41</span>
+41:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">immutable=</span>(<span class="ruby-identifier">value</span>)
+42:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'immutable'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+43:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -247,10 +247,10 @@ Array
             onclick="toggleCode('M002754-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002754-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 30</span>
-30:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">permission</span>
-31:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'permission'</span>][<span class="ruby-identifier">:value</span>]
-32:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 31</span>
+31:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">permission</span>
+32:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'permission'</span>][<span class="ruby-identifier">:value</span>]
+33:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -274,10 +274,10 @@ href="../Types/Permission.html">WCData::Types::Permission</a>
             onclick="toggleCode('M002753-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M002753-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 24</span>
-24:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_permission</span>(<span class="ruby-identifier">value</span>)
-25:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'permission'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
-26:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/effective_permissions.rb, line 25</span>
+25:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_permission</span>(<span class="ruby-identifier">value</span>)
+26:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'permission'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+27:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

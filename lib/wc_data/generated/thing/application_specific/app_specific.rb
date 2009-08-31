@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The unique application identifier issued to the application that "owns" this format by Microsoft HealthVault.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date and time of the thing.
@@ -63,6 +66,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A descriptive display text for this thing.
@@ -77,6 +81,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::ComplexType

@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::Stringnz
         def add_app_attribute(value)

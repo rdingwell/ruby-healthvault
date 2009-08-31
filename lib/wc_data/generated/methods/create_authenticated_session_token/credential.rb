@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A CardSpace SAML token.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Web application server credential.
@@ -46,6 +48,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -68,17 +71,17 @@ module HealthVault
           self.tag_name = 'credential'
         
           
-          @children['cardspaceauthsession'] = {:name => 'cardspaceauthsession', :class => HealthVault::WCData::Types::CardSpaceCred, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 105859666 }
+          @children['cardspaceauthsession'] = {:name => 'cardspaceauthsession', :class => HealthVault::WCData::Types::CardSpaceCred, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 253451219 }
             
           
         
           
-          @children['appserver'] = {:name => 'appserver', :class => HealthVault::WCData::Types::AppServerCred, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 105859666 }
+          @children['appserver'] = {:name => 'appserver', :class => HealthVault::WCData::Types::AppServerCred, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 253451219 }
             
           
         
           
-          @children['userpassauthsession'] = {:name => 'userpassauthsession', :class => HealthVault::WCData::Auth::UserPassAuthSessionCred, :value => nil, :min => 1, :max => 1, :order => 3, :place => :element, :choice => 105859666 }
+          @children['userpassauthsession'] = {:name => 'userpassauthsession', :class => HealthVault::WCData::Auth::UserPassAuthSessionCred, :value => nil, :min => 1, :max => 1, :order => 3, :place => :element, :choice => 253451219 }
             
           
         

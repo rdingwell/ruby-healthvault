@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The altitude measurement in meters.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         

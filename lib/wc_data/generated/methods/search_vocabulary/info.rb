@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The unique key used to identify the vocabulary to search.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The type of activity for the session.
@@ -32,6 +33,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The distance covered in the session.
@@ -48,6 +50,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The duration of the session in minutes.
@@ -62,6 +65,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -79,6 +83,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The highest heart rate reached during the session.
@@ -95,6 +100,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The average heart rate reached during the session.
@@ -109,6 +115,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -126,6 +133,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The food energy expended during the session.
@@ -141,6 +149,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -158,6 +167,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The maximum speed achieved during the session.
@@ -173,6 +183,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -190,6 +201,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The minimum speed achieved during the session.
@@ -205,6 +217,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -222,6 +235,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The average pace achieved during the session.
@@ -237,6 +251,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -254,6 +269,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The maximum power achieved during the session.
@@ -269,6 +285,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -286,6 +303,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The minimum power achieved during the session.
@@ -301,6 +319,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -318,6 +337,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The average torque achieved during the session.
@@ -333,6 +353,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -350,6 +371,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The power output balance between left and right strokes.
@@ -365,6 +387,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -382,6 +405,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The average cadence achieved during the session.
@@ -397,6 +421,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -414,6 +439,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The maximum temperature achieved during the session.
@@ -429,6 +455,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -446,6 +473,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The minimum temperature achieved during the session.
@@ -461,6 +489,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -478,6 +507,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The average altitude achieved during the session.
@@ -493,6 +523,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -510,6 +541,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The gain in elevation achieved during the session.
@@ -525,6 +557,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -542,6 +575,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Number of steps taken in this session.
@@ -556,6 +590,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -572,6 +607,7 @@ module HealthVault
         end
        
      
+        
         
        
         

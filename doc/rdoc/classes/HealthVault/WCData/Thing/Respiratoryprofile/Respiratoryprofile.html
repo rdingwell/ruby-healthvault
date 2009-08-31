@@ -130,34 +130,34 @@
             onclick="toggleCode('M001736-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001736-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 81</span>
- 81:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
- 82:           <span class="ruby-keyword kw">super</span>
- 83:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'respiratory-profile'</span>
- 84:         
- 85:           
- 86:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'when'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
- 87:             
- 88:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>.<span class="ruby-identifier">new</span>
- 89:             
- 90:           
- 91:         
- 92:           
- 93:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-red-zone-upper-boundary'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'expiratory-flow-red-zone-upper-boundary'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Flowvalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
- 94:             
- 95:           
- 96:         
- 97:           
- 98:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-orange-zone-upper-boundary'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'expiratory-flow-orange-zone-upper-boundary'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Flowvalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
- 99:             
-100:           
-101:         
-102:           
-103:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-yellow-zone-upper-boundary'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'expiratory-flow-yellow-zone-upper-boundary'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Flowvalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-104:             
-105:           
-106:         
-107:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 85</span>
+ 85:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+ 86:           <span class="ruby-keyword kw">super</span>
+ 87:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'respiratory-profile'</span>
+ 88:         
+ 89:           
+ 90:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'when'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+ 91:             
+ 92:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>.<span class="ruby-identifier">new</span>
+ 93:             
+ 94:           
+ 95:         
+ 96:           
+ 97:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-red-zone-upper-boundary'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'expiratory-flow-red-zone-upper-boundary'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Flowvalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+ 98:             
+ 99:           
+100:         
+101:           
+102:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-orange-zone-upper-boundary'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'expiratory-flow-orange-zone-upper-boundary'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Flowvalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+103:             
+104:           
+105:         
+106:           
+107:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-yellow-zone-upper-boundary'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'expiratory-flow-yellow-zone-upper-boundary'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Thing</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Flowvalue</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+108:             
+109:           
+110:         
+111:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -183,10 +183,10 @@ href="../Types/Flowvalue.html">HealthVault::WCData::Thing::Types::Flowvalue</a>
             onclick="toggleCode('M001733-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001733-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 59</span>
-59:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_orange_zone_upper_boundary</span>
-60:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-orange-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>]
-61:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 62</span>
+62:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_orange_zone_upper_boundary</span>
+63:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-orange-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>]
+64:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -212,10 +212,10 @@ href="../Types/Flowvalue.html">HealthVault::WCData::Thing::Types::Flowvalue</a>
             onclick="toggleCode('M001732-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001732-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 54</span>
-54:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_orange_zone_upper_boundary=</span>(<span class="ruby-identifier">value</span>)
-55:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-orange-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-56:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 57</span>
+57:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_orange_zone_upper_boundary=</span>(<span class="ruby-identifier">value</span>)
+58:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-orange-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+59:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -239,10 +239,10 @@ href="../Types/Flowvalue.html">HealthVault::WCData::Thing::Types::Flowvalue</a>
             onclick="toggleCode('M001731-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001731-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 43</span>
-43:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_red_zone_upper_boundary</span>
-44:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-red-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>]
-45:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 45</span>
+45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_red_zone_upper_boundary</span>
+46:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-red-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>]
+47:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -268,10 +268,10 @@ href="../Types/Flowvalue.html">HealthVault::WCData::Thing::Types::Flowvalue</a>
             onclick="toggleCode('M001730-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001730-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 38</span>
-38:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_red_zone_upper_boundary=</span>(<span class="ruby-identifier">value</span>)
-39:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-red-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-40:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 40</span>
+40:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_red_zone_upper_boundary=</span>(<span class="ruby-identifier">value</span>)
+41:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-red-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+42:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -295,10 +295,10 @@ href="../Types/Flowvalue.html">HealthVault::WCData::Thing::Types::Flowvalue</a>
             onclick="toggleCode('M001735-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001735-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 75</span>
-75:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_yellow_zone_upper_boundary</span>
-76:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-yellow-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>]
-77:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 79</span>
+79:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_yellow_zone_upper_boundary</span>
+80:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-yellow-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>]
+81:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -324,10 +324,10 @@ href="../Types/Flowvalue.html">HealthVault::WCData::Thing::Types::Flowvalue</a>
             onclick="toggleCode('M001734-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001734-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 70</span>
-70:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_yellow_zone_upper_boundary=</span>(<span class="ruby-identifier">value</span>)
-71:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-yellow-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-72:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 74</span>
+74:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expiratory_flow_yellow_zone_upper_boundary=</span>(<span class="ruby-identifier">value</span>)
+75:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'expiratory-flow-yellow-zone-upper-boundary'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+76:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -351,10 +351,10 @@ href="../../Dates/Datetime.html">HealthVault::WCData::Dates::Datetime</a>
             onclick="toggleCode('M001729-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001729-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 27</span>
-27:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>
-28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>]
-29:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 28</span>
+28:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>
+29:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>]
+30:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -380,10 +380,10 @@ href="../../Dates/Datetime.html">HealthVault::WCData::Dates::Datetime</a>
             onclick="toggleCode('M001728-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001728-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 22</span>
-22:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>=(<span class="ruby-identifier">value</span>)
-23:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-24:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/respiratory_profile/respiratory_profile.rb, line 23</span>
+23:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>=(<span class="ruby-identifier">value</span>)
+24:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+25:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

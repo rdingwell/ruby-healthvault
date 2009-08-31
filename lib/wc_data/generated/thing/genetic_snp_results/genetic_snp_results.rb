@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of the test.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The chromosome on which the SNPs are located.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -78,6 +82,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The person or organization that ordered the test.
@@ -92,6 +97,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -109,6 +115,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The name of the laboratory that performed the test.
@@ -123,6 +130,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -139,6 +147,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The build version of dbSNP used to map the probe set ID on the genome locus.
@@ -154,6 +163,7 @@ module HealthVault
         end
        
      
+        
         
        
         

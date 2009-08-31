@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the referenced vocabulary.
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -44,6 +46,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The version of the referenced vocabulary.
@@ -58,6 +61,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Vocab::VocabularyCodeItem
@@ -80,6 +84,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Indicates if list of vocabulary items in the vocabulary has been truncated.
@@ -95,6 +100,7 @@ module HealthVault
         end
        
      
+        
         
        
         

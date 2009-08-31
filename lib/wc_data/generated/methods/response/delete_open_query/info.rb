@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: An identifier of the query that has been deleted with this call.

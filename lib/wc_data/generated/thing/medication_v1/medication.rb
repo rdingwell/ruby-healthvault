@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: Name of medication.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a String
@@ -50,6 +52,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Date medication was discontinued.
@@ -64,6 +67,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -80,6 +84,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Date medication was prescribed.
@@ -94,6 +99,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -110,6 +116,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form indication for medication.
@@ -124,6 +131,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -140,6 +148,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Doses of medication.
@@ -154,6 +163,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -171,6 +181,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Strength of medication.
@@ -185,6 +196,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -202,6 +214,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form frequency of medication.
@@ -216,6 +229,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -233,6 +247,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form duration of medication.
@@ -247,6 +262,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -263,6 +279,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Number of medication refills.
@@ -277,6 +294,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -293,6 +311,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Number of days supply of medication.
@@ -307,6 +326,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -323,6 +343,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form medication instructions.
@@ -337,6 +358,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -353,6 +375,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Pharmacy.
@@ -367,6 +390,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -148,87 +148,87 @@
             onclick="toggleCode('M003818-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003818-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 205</span>
-205:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-206:           <span class="ruby-keyword kw">super</span>
-207:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'header'</span>
-208:         
-209:           
-210:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'method'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-211:             
-212:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
-213:             
-214:           
-215:         
-216:           
-217:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method-version'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'method-version'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-218:             
-219:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method-version'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
-220:             
-221:           
-222:         
-223:           
-224:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'target-person-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'target-person-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-225:             
-226:           
-227:         
-228:           
-229:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'record-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-230:             
-231:           
-232:         
-233:           
-234:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'app-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">221496581</span> }
-235:             
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 218</span>
+218:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+219:           <span class="ruby-keyword kw">super</span>
+220:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'header'</span>
+221:         
+222:           
+223:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'method'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+224:             
+225:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+226:             
+227:           
+228:         
+229:           
+230:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method-version'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'method-version'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+231:             
+232:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method-version'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+233:             
+234:           
+235:         
 236:           
-237:         
-238:           
-239:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'auth-session'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'auth-session'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Request</span><span class="ruby-operator">::</span><span class="ruby-constant">AuthenticatedSessionInfo</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">221496581</span> }
-240:             
+237:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'target-person-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'target-person-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+238:             
+239:           
+240:         
 241:           
-242:         
-243:           
-244:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'language'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'language'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Iso6391</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-245:             
+242:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'record-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+243:             
+244:           
+245:         
 246:           
-247:         
-248:           
-249:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'country'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Iso3166</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">8</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-250:             
+247:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'app-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Guid</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">499807358</span> }
+248:             
+249:           
+250:         
 251:           
-252:         
-253:           
-254:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'final-xsl'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'final-xsl'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Request</span><span class="ruby-operator">::</span><span class="ruby-constant">Xsl</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">9</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-255:             
+252:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'auth-session'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'auth-session'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Request</span><span class="ruby-operator">::</span><span class="ruby-constant">AuthenticatedSessionInfo</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">499807358</span> }
+253:             
+254:           
+255:         
 256:           
-257:         
-258:           
-259:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-time'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'msg-time'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-260:             
-261:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-time'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
-262:             
-263:           
-264:         
-265:           
-266:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-ttl'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'msg-ttl'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">11</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-267:             
-268:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-ttl'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
-269:             
-270:           
-271:         
-272:           
-273:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'version'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Version</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">12</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-274:             
-275:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Version</span>.<span class="ruby-identifier">new</span>
-276:             
-277:           
-278:         
-279:           
-280:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'info-hash'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'info-hash'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">HashFinalized</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">13</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-281:             
-282:           
-283:         
-284:         <span class="ruby-keyword kw">end</span>
+257:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'language'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'language'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Iso6391</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+258:             
+259:           
+260:         
+261:           
+262:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'country'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Iso3166</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">8</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+263:             
+264:           
+265:         
+266:           
+267:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'final-xsl'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'final-xsl'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Request</span><span class="ruby-operator">::</span><span class="ruby-constant">Xsl</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">9</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+268:             
+269:           
+270:         
+271:           
+272:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-time'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'msg-time'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+273:             
+274:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-time'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+275:             
+276:           
+277:         
+278:           
+279:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-ttl'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'msg-ttl'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">11</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+280:             
+281:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-ttl'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+282:             
+283:           
+284:         
+285:           
+286:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'version'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Version</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">12</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+287:             
+288:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">Version</span>.<span class="ruby-identifier">new</span>
+289:             
+290:           
+291:         
+292:           
+293:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'info-hash'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'info-hash'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">HashFinalized</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">13</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+294:             
+295:           
+296:         
+297:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -254,10 +254,10 @@ href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003801-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003801-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 81</span>
-81:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">app_id</span>
-82:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>]
-83:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 86</span>
+86:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">app_id</span>
+87:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>]
+88:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -281,10 +281,10 @@ href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003800-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003800-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 76</span>
-76:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">app_id=</span>(<span class="ruby-identifier">value</span>)
-77:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-78:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 81</span>
+81:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">app_id=</span>(<span class="ruby-identifier">value</span>)
+82:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+83:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -308,10 +308,10 @@ href="AuthenticatedSessionInfo.html">HealthVault::WCData::Request::Authenticated
             onclick="toggleCode('M003803-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003803-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 97</span>
-97:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">auth_session</span>
-98:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'auth-session'</span>][<span class="ruby-identifier">:value</span>]
-99:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 103</span>
+103:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">auth_session</span>
+104:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'auth-session'</span>][<span class="ruby-identifier">:value</span>]
+105:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -337,10 +337,10 @@ href="AuthenticatedSessionInfo.html">HealthVault::WCData::Request::Authenticated
             onclick="toggleCode('M003802-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003802-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 92</span>
-92:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">auth_session=</span>(<span class="ruby-identifier">value</span>)
-93:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'auth-session'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-94:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 98</span>
+ 98:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">auth_session=</span>(<span class="ruby-identifier">value</span>)
+ 99:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'auth-session'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+100:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -364,10 +364,10 @@ href="../Types/Iso3166.html">HealthVault::WCData::Types::Iso3166</a>
             onclick="toggleCode('M003807-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003807-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 125</span>
-125:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">country</span>
-126:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>]
-127:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 133</span>
+133:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">country</span>
+134:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>]
+135:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -391,10 +391,10 @@ href="../Types/Iso3166.html">HealthVault::WCData::Types::Iso3166</a>
             onclick="toggleCode('M003806-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003806-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 120</span>
-120:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">country=</span>(<span class="ruby-identifier">value</span>)
-121:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-122:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 128</span>
+128:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">country=</span>(<span class="ruby-identifier">value</span>)
+129:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+130:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -417,10 +417,10 @@ href="../Types/Iso3166.html">HealthVault::WCData::Types::Iso3166</a>
             onclick="toggleCode('M003809-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003809-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 141</span>
-141:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">final_xsl</span>
-142:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'final-xsl'</span>][<span class="ruby-identifier">:value</span>]
-143:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 150</span>
+150:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">final_xsl</span>
+151:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'final-xsl'</span>][<span class="ruby-identifier">:value</span>]
+152:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -450,10 +450,10 @@ a <a href="Xsl.html">HealthVault::WCData::Request::Xsl</a>
             onclick="toggleCode('M003808-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003808-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 136</span>
-136:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">final_xsl=</span>(<span class="ruby-identifier">value</span>)
-137:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'final-xsl'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-138:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 145</span>
+145:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">final_xsl=</span>(<span class="ruby-identifier">value</span>)
+146:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'final-xsl'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+147:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -477,10 +477,10 @@ href="../Types/HashFinalized.html">HealthVault::WCData::Types::HashFinalized</a>
             onclick="toggleCode('M003817-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003817-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 199</span>
-199:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">info_hash</span>
-200:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'info-hash'</span>][<span class="ruby-identifier">:value</span>]
-201:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 212</span>
+212:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">info_hash</span>
+213:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'info-hash'</span>][<span class="ruby-identifier">:value</span>]
+214:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -512,10 +512,10 @@ href="../Types/HashFinalized.html">HealthVault::WCData::Types::HashFinalized</a>
             onclick="toggleCode('M003816-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003816-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 194</span>
-194:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">info_hash=</span>(<span class="ruby-identifier">value</span>)
-195:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'info-hash'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-196:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 207</span>
+207:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">info_hash=</span>(<span class="ruby-identifier">value</span>)
+208:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'info-hash'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+209:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -539,10 +539,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003805-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003805-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 111</span>
-111:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">language</span>
-112:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'language'</span>][<span class="ruby-identifier">:value</span>]
-113:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 118</span>
+118:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">language</span>
+119:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'language'</span>][<span class="ruby-identifier">:value</span>]
+120:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -566,10 +566,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003804-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003804-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 106</span>
-106:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">language=</span>(<span class="ruby-identifier">value</span>)
-107:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'language'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-108:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 113</span>
+113:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">language=</span>(<span class="ruby-identifier">value</span>)
+114:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'language'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+115:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -592,10 +592,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003793-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003793-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 25</span>
-25:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method</span>
-26:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method'</span>][<span class="ruby-identifier">:value</span>]
-27:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 26</span>
+26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method</span>
+27:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method'</span>][<span class="ruby-identifier">:value</span>]
+28:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -618,10 +618,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003792-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003792-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 20</span>
-20:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method=</span>(<span class="ruby-identifier">value</span>)
-21:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-22:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 21</span>
+21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method=</span>(<span class="ruby-identifier">value</span>)
+22:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+23:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -644,10 +644,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003795-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003795-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 39</span>
-39:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_version</span>
-40:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method-version'</span>][<span class="ruby-identifier">:value</span>]
-41:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 41</span>
+41:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_version</span>
+42:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method-version'</span>][<span class="ruby-identifier">:value</span>]
+43:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -670,10 +670,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003794-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003794-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 34</span>
-34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_version=</span>(<span class="ruby-identifier">value</span>)
-35:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method-version'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-36:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 36</span>
+36:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_version=</span>(<span class="ruby-identifier">value</span>)
+37:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'method-version'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+38:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -696,10 +696,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003811-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003811-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 155</span>
-155:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">msg_time</span>
-156:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-time'</span>][<span class="ruby-identifier">:value</span>]
-157:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 165</span>
+165:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">msg_time</span>
+166:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-time'</span>][<span class="ruby-identifier">:value</span>]
+167:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -722,10 +722,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003810-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003810-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 150</span>
-150:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">msg_time=</span>(<span class="ruby-identifier">value</span>)
-151:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-time'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-152:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 160</span>
+160:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">msg_time=</span>(<span class="ruby-identifier">value</span>)
+161:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-time'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+162:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -748,10 +748,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003813-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003813-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 169</span>
-169:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">msg_ttl</span>
-170:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-ttl'</span>][<span class="ruby-identifier">:value</span>]
-171:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 180</span>
+180:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">msg_ttl</span>
+181:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-ttl'</span>][<span class="ruby-identifier">:value</span>]
+182:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -774,10 +774,10 @@ href="../Types/Iso6391.html">HealthVault::WCData::Types::Iso6391</a>
             onclick="toggleCode('M003812-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003812-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 164</span>
-164:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">msg_ttl=</span>(<span class="ruby-identifier">value</span>)
-165:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-ttl'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-166:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 175</span>
+175:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">msg_ttl=</span>(<span class="ruby-identifier">value</span>)
+176:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'msg-ttl'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+177:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -801,10 +801,10 @@ href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003799-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003799-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 67</span>
-67:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record_id</span>
-68:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>][<span class="ruby-identifier">:value</span>]
-69:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 71</span>
+71:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record_id</span>
+72:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>][<span class="ruby-identifier">:value</span>]
+73:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -828,10 +828,10 @@ href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003798-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003798-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 62</span>
-62:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record_id=</span>(<span class="ruby-identifier">value</span>)
-63:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-64:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 66</span>
+66:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record_id=</span>(<span class="ruby-identifier">value</span>)
+67:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'record-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+68:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -855,10 +855,10 @@ href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003797-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003797-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 53</span>
-53:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">target_person_id</span>
-54:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'target-person-id'</span>][<span class="ruby-identifier">:value</span>]
-55:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 56</span>
+56:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">target_person_id</span>
+57:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'target-person-id'</span>][<span class="ruby-identifier">:value</span>]
+58:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -882,10 +882,10 @@ href="../Types/Guid.html">HealthVault::WCData::Types::Guid</a>
             onclick="toggleCode('M003796-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003796-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 48</span>
-48:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">target_person_id=</span>(<span class="ruby-identifier">value</span>)
-49:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'target-person-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-50:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 51</span>
+51:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">target_person_id=</span>(<span class="ruby-identifier">value</span>)
+52:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'target-person-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+53:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -909,10 +909,10 @@ href="../Types/Version.html">HealthVault::WCData::Types::Version</a>
             onclick="toggleCode('M003815-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003815-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 183</span>
-183:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version</span>
-184:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version'</span>][<span class="ruby-identifier">:value</span>]
-185:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 195</span>
+195:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version</span>
+196:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version'</span>][<span class="ruby-identifier">:value</span>]
+197:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -936,10 +936,10 @@ href="../Types/Version.html">HealthVault::WCData::Types::Version</a>
             onclick="toggleCode('M003814-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003814-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 178</span>
-178:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version=</span>(<span class="ruby-identifier">value</span>)
-179:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-180:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/request/header.rb, line 190</span>
+190:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version=</span>(<span class="ruby-identifier">value</span>)
+191:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'version'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+192:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

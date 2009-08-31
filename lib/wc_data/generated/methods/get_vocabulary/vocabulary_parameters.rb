@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Vocab::VocabularyKey
         def add_vocabulary_key(value)
@@ -35,6 +36,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

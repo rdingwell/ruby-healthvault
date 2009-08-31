@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: A body composition measurement stored as a mass.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the vocabulary being referenced.
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The version of the vocabulary being referenced.
@@ -61,6 +64,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>remarks</b>: If the code-value is specified, all vocabulary code items starting with the one which has the specified code value are returned.
@@ -75,6 +79,7 @@ module HealthVault
         end
        
      
+        
         
        
         

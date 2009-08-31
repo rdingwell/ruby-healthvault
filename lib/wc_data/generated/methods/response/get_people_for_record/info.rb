@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Record::ActivePersonAuthorizationNoIds
         def add_active_person_authorization(value)
@@ -35,6 +36,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Record::NonActiveAuthorizationNoIds

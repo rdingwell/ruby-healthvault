@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The app specified name of the mailbox from which the message is being sent.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The speed measurement in meters per second (m/s).
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         

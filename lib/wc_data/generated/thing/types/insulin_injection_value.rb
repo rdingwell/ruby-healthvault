@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The insulin injeciton amount in IE units (1/100ml).
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         

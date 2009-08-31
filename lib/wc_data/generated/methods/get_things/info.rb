@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Methods::GetThings::ThingRequestGroup
         def add_group(value)

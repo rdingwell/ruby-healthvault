@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The lower boundary of the heart rate zone.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The upper boundary of the heart rate zone.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         

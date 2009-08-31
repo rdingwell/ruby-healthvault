@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The name of the baby.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The birth weight of the baby.
@@ -60,6 +63,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -76,6 +80,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The circumference of the baby's head.
@@ -90,6 +95,7 @@ module HealthVault
         end
        
      
+        
         
        
         

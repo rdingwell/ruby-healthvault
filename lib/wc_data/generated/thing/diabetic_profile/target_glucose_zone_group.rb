@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Thing::Diabeticprofile::TargetGlucoseZone
         def add_target_glucose_zone(value)
@@ -35,6 +36,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::Guid
         def add_thing_type_id(value)

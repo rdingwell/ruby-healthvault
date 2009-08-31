@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The original name of the file, with extension if available.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The size of the file in bytes.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         

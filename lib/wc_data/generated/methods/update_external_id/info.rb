@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::Stringnz
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -43,6 +45,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -64,12 +67,12 @@ module HealthVault
           self.tag_name = 'info'
         
           
-          @children['identity-code'] = {:name => 'identity-code', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 428789875 }
+          @children['identity-code'] = {:name => 'identity-code', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 187554706 }
             
           
         
           
-          @children['old-external-id'] = {:name => 'old-external-id', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 428789875 }
+          @children['old-external-id'] = {:name => 'old-external-id', :class => HealthVault::WCData::Types::Stringnz, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 187554706 }
             
           
         

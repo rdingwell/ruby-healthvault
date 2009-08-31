@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The amount of oxygen utilized per minute of exercise.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         

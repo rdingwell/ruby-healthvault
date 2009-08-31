@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The version type id for the thing type.
@@ -32,6 +33,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The version name for the thing type.
@@ -46,6 +48,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

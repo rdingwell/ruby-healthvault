@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A string token used to redirect to specific parts within the Shell, accessing specific functions.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A localized text description of the Shell functionality accessible by using the token.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

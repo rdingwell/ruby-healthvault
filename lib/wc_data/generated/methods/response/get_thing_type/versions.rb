@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetThingType::VersionInfo
         def add_version_info(value)
@@ -35,6 +36,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

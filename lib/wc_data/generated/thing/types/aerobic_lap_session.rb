@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: Optional description for this lap, such as "lap 1".
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         

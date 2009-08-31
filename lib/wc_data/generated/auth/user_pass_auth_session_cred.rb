@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The username of the person being authenticated.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The user's password.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

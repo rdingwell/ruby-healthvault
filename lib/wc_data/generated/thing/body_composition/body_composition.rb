@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Date and time of the measurement.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The value of the measurement.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -78,6 +82,7 @@ module HealthVault
         end
        
      
+        
         
        
         

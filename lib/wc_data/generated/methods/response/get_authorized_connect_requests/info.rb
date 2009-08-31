@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: Not implemented.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetAuthorizedConnectRequests::ConnectRequest

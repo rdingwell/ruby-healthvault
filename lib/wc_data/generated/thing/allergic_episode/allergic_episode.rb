@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time the episode occurred.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The description of the symptoms of this allergic reaction.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         

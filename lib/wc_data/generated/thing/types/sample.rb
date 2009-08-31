@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Offset is seconds from sample set base time.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Description of sample.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: This is the value associated with the item which uniquely identifies it within a vocabulary.
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -44,6 +46,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: This is the abbreviation text of an item.
@@ -58,6 +61,7 @@ module HealthVault
         end
        
      
+        
         
        
         

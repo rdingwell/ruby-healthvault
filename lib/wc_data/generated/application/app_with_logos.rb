@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::Guid
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::CultureSpecificString255
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a String
@@ -60,6 +63,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -75,6 +79,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -88,6 +93,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::CultureSpecificString
@@ -108,6 +114,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::CultureSpecificString
         def add_auth_reason(value)
@@ -127,6 +134,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>remarks</b>: This parameter specifies the application's domain name. E-mail sent from the application, will have its From address originating from this domain. If the domain were myapp.com, then the From address will be "mailbox@myapp.com", where mailbox is specified in the send message request from the app.
@@ -141,6 +149,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -158,6 +167,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Application::AppLargeLogoInfo
@@ -171,6 +181,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -186,6 +197,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Application::AppPersistentTokens
@@ -199,6 +211,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -214,6 +227,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Auth::AuthXml
@@ -227,6 +241,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -243,6 +258,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The application's terms of use statement as a base64 encoded string and its corresponding content type.
@@ -257,6 +273,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -274,6 +291,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The application attributes.
@@ -288,6 +306,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -305,6 +324,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The application id of the master app.
@@ -320,6 +340,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -337,6 +358,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date the application was created.
@@ -352,6 +374,7 @@ module HealthVault
         end
        
      
+        
         
        
         

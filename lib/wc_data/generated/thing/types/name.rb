@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The person's full name.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The person's given name.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -77,6 +81,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The person's family/sur name.
@@ -91,6 +96,7 @@ module HealthVault
         end
        
      
+        
         
        
         

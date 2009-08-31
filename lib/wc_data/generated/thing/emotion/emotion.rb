@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time when the emotional state occurred.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A subjective ranking of the person's stress level.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         

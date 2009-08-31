@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of the annotation.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The author of this medical annotation.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -75,6 +79,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A document index for this medical annotation.
@@ -89,6 +94,7 @@ module HealthVault
         end
        
      
+        
         
        
         

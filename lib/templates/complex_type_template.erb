@@ -13,9 +13,14 @@ module HealthVault
       class <%= class_name %> < ComplexType
         
   <% children.each do |child| %>   
-        <% if child[:name].nil? || child[:name].empty?
+        
+        <% 
+       
+        if child[:name].nil? || child[:name].empty?
            child[:name] = "_text_value"
          end
+         
+          child[:name] =  child[:name].strip
          %>
        <% if child[:max] == '1' %>
         <% if child[:min].to_i > 0 %>#<b>REQUIRED</b><% end %>

@@ -126,26 +126,26 @@
             onclick="toggleCode('M003209-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003209-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 50</span>
-50:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-51:           <span class="ruby-keyword kw">super</span>
-52:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'authtokeninfo'</span>
-53:         
-54:           
-55:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'app-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">AppInfo</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-56:             
-57:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">AppInfo</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 52</span>
+52:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+53:           <span class="ruby-keyword kw">super</span>
+54:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'authtokeninfo'</span>
+55:         
+56:           
+57:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'app-id'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">AppInfo</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 58:             
-59:           
-60:         
+59:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">AppInfo</span>.<span class="ruby-identifier">new</span>
+60:             
 61:           
-62:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'credential'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">CreateAuthenticatedSessionToken</span><span class="ruby-operator">::</span><span class="ruby-constant">Credential</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-63:             
-64:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">CreateAuthenticatedSessionToken</span><span class="ruby-operator">::</span><span class="ruby-constant">Credential</span>.<span class="ruby-identifier">new</span>
+62:         
+63:           
+64:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'credential'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">CreateAuthenticatedSessionToken</span><span class="ruby-operator">::</span><span class="ruby-constant">Credential</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 65:             
-66:           
-67:         
-68:         <span class="ruby-keyword kw">end</span>
+66:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span><span class="ruby-operator">::</span><span class="ruby-constant">CreateAuthenticatedSessionToken</span><span class="ruby-operator">::</span><span class="ruby-constant">Credential</span>.<span class="ruby-identifier">new</span>
+67:             
+68:           
+69:         
+70:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -171,10 +171,10 @@ href="../../Types/AppInfo.html">HealthVault::WCData::Types::AppInfo</a>
             onclick="toggleCode('M003206-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003206-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 28</span>
-28:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">app_id</span>
-29:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>]
-30:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 29</span>
+29:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">app_id</span>
+30:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>]
+31:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -203,10 +203,10 @@ href="../../Types/AppInfo.html">HealthVault::WCData::Types::AppInfo</a>
             onclick="toggleCode('M003205-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003205-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 23</span>
-23:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">app_id=</span>(<span class="ruby-identifier">value</span>)
-24:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-25:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 24</span>
+24:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">app_id=</span>(<span class="ruby-identifier">value</span>)
+25:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'app-id'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+26:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -230,10 +230,10 @@ href="Credential.html">HealthVault::WCData::Methods::CreateAuthenticatedSessionT
             onclick="toggleCode('M003208-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003208-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 44</span>
-44:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential</span>
-45:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>][<span class="ruby-identifier">:value</span>]
-46:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 46</span>
+46:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential</span>
+47:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>][<span class="ruby-identifier">:value</span>]
+48:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -262,10 +262,10 @@ href="Credential.html">HealthVault::WCData::Methods::CreateAuthenticatedSessionT
             onclick="toggleCode('M003207-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003207-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 39</span>
-39:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential=</span>(<span class="ruby-identifier">value</span>)
-40:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-41:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/create_authenticated_session_token/auth_token_info.rb, line 41</span>
+41:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">credential=</span>(<span class="ruby-identifier">value</span>)
+42:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'credential'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+43:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

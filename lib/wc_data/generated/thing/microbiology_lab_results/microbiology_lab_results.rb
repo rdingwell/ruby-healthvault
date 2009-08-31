@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of the report.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Labtesttype
@@ -50,6 +52,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form description of agent for a sensitivity type.
@@ -64,6 +67,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -80,6 +84,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form description of interpretation for a sensitivity type.
@@ -94,6 +99,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -110,6 +116,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form description of organism name for a microbiology lab test.
@@ -124,6 +131,7 @@ module HealthVault
         end
        
      
+        
         
        
         

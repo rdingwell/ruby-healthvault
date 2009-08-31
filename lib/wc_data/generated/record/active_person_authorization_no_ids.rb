@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a String
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -42,6 +44,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a String
@@ -55,6 +58,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -70,6 +74,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -83,6 +88,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -98,6 +104,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -111,6 +118,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -126,6 +134,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -139,6 +148,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -154,6 +164,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -167,6 +178,7 @@ module HealthVault
         end
        
      
+        
         
        
         

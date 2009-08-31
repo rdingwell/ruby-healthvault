@@ -140,59 +140,59 @@
             onclick="toggleCode('M001956-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001956-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 161</span>
-161:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-162:           <span class="ruby-keyword kw">super</span>
-163:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'cardiac-profile'</span>
-164:         
-165:           
-166:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'when'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-167:             
-168:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>.<span class="ruby-identifier">new</span>
-169:             
-170:           
-171:         
-172:           
-173:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-diet'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'on-hypertension-diet'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-174:             
-175:           
-176:         
-177:           
-178:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-medication'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'on-hypertension-medication'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-179:             
-180:           
-181:         
-182:           
-183:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'renal-failure-diagnosed'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'renal-failure-diagnosed'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-184:             
-185:           
-186:         
-187:           
-188:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'diabetes-diagnosed'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'diabetes-diagnosed'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-189:             
-190:           
-191:         
-192:           
-193:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-heart-disease-history'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'has-family-heart-disease-history'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-194:             
-195:           
-196:         
-197:           
-198:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-stroke-history'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'has-family-stroke-history'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-199:             
-200:           
-201:         
-202:           
-203:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-personal-heart-disease-history'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'has-personal-heart-disease-history'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">8</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-204:             
-205:           
-206:         
-207:           
-208:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-person-stroke-history'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'has-person-stroke-history'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">9</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-209:             
-210:           
-211:         
-212:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 170</span>
+170:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+171:           <span class="ruby-keyword kw">super</span>
+172:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'cardiac-profile'</span>
+173:         
+174:           
+175:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'when'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+176:             
+177:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Dates</span><span class="ruby-operator">::</span><span class="ruby-constant">Datetime</span>.<span class="ruby-identifier">new</span>
+178:             
+179:           
+180:         
+181:           
+182:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-diet'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'on-hypertension-diet'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+183:             
+184:           
+185:         
+186:           
+187:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-medication'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'on-hypertension-medication'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+188:             
+189:           
+190:         
+191:           
+192:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'renal-failure-diagnosed'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'renal-failure-diagnosed'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+193:             
+194:           
+195:         
+196:           
+197:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'diabetes-diagnosed'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'diabetes-diagnosed'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+198:             
+199:           
+200:         
+201:           
+202:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-heart-disease-history'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'has-family-heart-disease-history'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+203:             
+204:           
+205:         
+206:           
+207:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-stroke-history'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'has-family-stroke-history'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+208:             
+209:           
+210:         
+211:           
+212:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-personal-heart-disease-history'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'has-personal-heart-disease-history'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">8</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+213:             
+214:           
+215:         
+216:           
+217:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-person-stroke-history'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'has-person-stroke-history'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">9</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+218:             
+219:           
+220:         
+221:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -217,10 +217,10 @@
             onclick="toggleCode('M001947-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001947-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 91</span>
-91:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">diabetes_diagnosed</span>
-92:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'diabetes-diagnosed'</span>][<span class="ruby-identifier">:value</span>]
-93:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 96</span>
+96:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">diabetes_diagnosed</span>
+97:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'diabetes-diagnosed'</span>][<span class="ruby-identifier">:value</span>]
+98:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -247,10 +247,10 @@ determine a person&#8216;s blood pressure zones. <em>value</em> is a String
             onclick="toggleCode('M001946-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001946-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 86</span>
-86:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">diabetes_diagnosed=</span>(<span class="ruby-identifier">value</span>)
-87:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'diabetes-diagnosed'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-88:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 91</span>
+91:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">diabetes_diagnosed=</span>(<span class="ruby-identifier">value</span>)
+92:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'diabetes-diagnosed'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+93:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -273,10 +273,10 @@ determine a person&#8216;s blood pressure zones. <em>value</em> is a String
             onclick="toggleCode('M001949-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001949-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 107</span>
-107:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_family_heart_disease_history</span>
-108:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-heart-disease-history'</span>][<span class="ruby-identifier">:value</span>]
-109:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 113</span>
+113:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_family_heart_disease_history</span>
+114:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-heart-disease-history'</span>][<span class="ruby-identifier">:value</span>]
+115:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -301,10 +301,10 @@ a family member, or false otherwise. <em>value</em> is a String
             onclick="toggleCode('M001948-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001948-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 102</span>
-102:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_family_heart_disease_history=</span>(<span class="ruby-identifier">value</span>)
-103:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-heart-disease-history'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-104:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 108</span>
+108:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_family_heart_disease_history=</span>(<span class="ruby-identifier">value</span>)
+109:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-heart-disease-history'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+110:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -327,10 +327,10 @@ a family member, or false otherwise. <em>value</em> is a String
             onclick="toggleCode('M001951-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001951-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 123</span>
-123:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_family_stroke_history</span>
-124:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-stroke-history'</span>][<span class="ruby-identifier">:value</span>]
-125:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 130</span>
+130:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_family_stroke_history</span>
+131:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-stroke-history'</span>][<span class="ruby-identifier">:value</span>]
+132:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -355,10 +355,10 @@ member, or false otherwise. <em>value</em> is a String
             onclick="toggleCode('M001950-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001950-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 118</span>
-118:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_family_stroke_history=</span>(<span class="ruby-identifier">value</span>)
-119:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-stroke-history'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-120:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 125</span>
+125:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_family_stroke_history=</span>(<span class="ruby-identifier">value</span>)
+126:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-family-stroke-history'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+127:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -381,10 +381,10 @@ member, or false otherwise. <em>value</em> is a String
             onclick="toggleCode('M001955-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001955-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 155</span>
-155:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_person_stroke_history</span>
-156:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-person-stroke-history'</span>][<span class="ruby-identifier">:value</span>]
-157:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 164</span>
+164:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_person_stroke_history</span>
+165:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-person-stroke-history'</span>][<span class="ruby-identifier">:value</span>]
+166:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -409,10 +409,10 @@ member, or false otherwise. <em>value</em> is a String
             onclick="toggleCode('M001954-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001954-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 150</span>
-150:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_person_stroke_history=</span>(<span class="ruby-identifier">value</span>)
-151:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-person-stroke-history'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-152:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 159</span>
+159:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_person_stroke_history=</span>(<span class="ruby-identifier">value</span>)
+160:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-person-stroke-history'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+161:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -435,10 +435,10 @@ member, or false otherwise. <em>value</em> is a String
             onclick="toggleCode('M001953-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001953-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 139</span>
-139:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_personal_heart_disease_history</span>
-140:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-personal-heart-disease-history'</span>][<span class="ruby-identifier">:value</span>]
-141:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 147</span>
+147:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_personal_heart_disease_history</span>
+148:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-personal-heart-disease-history'</span>][<span class="ruby-identifier">:value</span>]
+149:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -463,10 +463,10 @@ or false otherwise. <em>value</em> is a String
             onclick="toggleCode('M001952-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001952-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 134</span>
-134:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_personal_heart_disease_history=</span>(<span class="ruby-identifier">value</span>)
-135:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-personal-heart-disease-history'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-136:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 142</span>
+142:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_personal_heart_disease_history=</span>(<span class="ruby-identifier">value</span>)
+143:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'has-personal-heart-disease-history'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+144:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -489,10 +489,10 @@ or false otherwise. <em>value</em> is a String
             onclick="toggleCode('M001941-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001941-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 43</span>
-43:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_hypertension_diet</span>
-44:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-diet'</span>][<span class="ruby-identifier">:value</span>]
-45:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 45</span>
+45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_hypertension_diet</span>
+46:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-diet'</span>][<span class="ruby-identifier">:value</span>]
+47:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -519,10 +519,10 @@ person&#8216;s blood pressure zones. <em>value</em> is a String
             onclick="toggleCode('M001940-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001940-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 38</span>
-38:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_hypertension_diet=</span>(<span class="ruby-identifier">value</span>)
-39:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-diet'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-40:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 40</span>
+40:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_hypertension_diet=</span>(<span class="ruby-identifier">value</span>)
+41:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-diet'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+42:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -545,10 +545,10 @@ person&#8216;s blood pressure zones. <em>value</em> is a String
             onclick="toggleCode('M001943-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001943-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 59</span>
-59:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_hypertension_medication</span>
-60:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-medication'</span>][<span class="ruby-identifier">:value</span>]
-61:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 62</span>
+62:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_hypertension_medication</span>
+63:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-medication'</span>][<span class="ruby-identifier">:value</span>]
+64:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -576,10 +576,10 @@ is a String
             onclick="toggleCode('M001942-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001942-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 54</span>
-54:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_hypertension_medication=</span>(<span class="ruby-identifier">value</span>)
-55:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-medication'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-56:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 57</span>
+57:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_hypertension_medication=</span>(<span class="ruby-identifier">value</span>)
+58:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'on-hypertension-medication'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+59:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -602,10 +602,10 @@ is a String
             onclick="toggleCode('M001945-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001945-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 75</span>
-75:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">renal_failure_diagnosed</span>
-76:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'renal-failure-diagnosed'</span>][<span class="ruby-identifier">:value</span>]
-77:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 79</span>
+79:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">renal_failure_diagnosed</span>
+80:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'renal-failure-diagnosed'</span>][<span class="ruby-identifier">:value</span>]
+81:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -632,10 +632,10 @@ a person&#8216;s blood pressure zones. <em>value</em> is a String
             onclick="toggleCode('M001944-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001944-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 70</span>
-70:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">renal_failure_diagnosed=</span>(<span class="ruby-identifier">value</span>)
-71:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'renal-failure-diagnosed'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-72:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 74</span>
+74:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">renal_failure_diagnosed=</span>(<span class="ruby-identifier">value</span>)
+75:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'renal-failure-diagnosed'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+76:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -659,10 +659,10 @@ href="../../Dates/Datetime.html">HealthVault::WCData::Dates::Datetime</a>
             onclick="toggleCode('M001939-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001939-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 27</span>
-27:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>
-28:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>]
-29:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 28</span>
+28:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>
+29:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>]
+30:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -688,10 +688,10 @@ href="../../Dates/Datetime.html">HealthVault::WCData::Dates::Datetime</a>
             onclick="toggleCode('M001938-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001938-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 22</span>
-22:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>=(<span class="ruby-identifier">value</span>)
-23:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-24:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/cardiac_profile/cardiac_profile.rb, line 23</span>
+23:         <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">when</span>=(<span class="ruby-identifier">value</span>)
+24:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'when'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+25:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

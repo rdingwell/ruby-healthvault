@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time the medical encounter.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The identify for the medical encounter.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -75,6 +79,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The location of the medical encounter .
@@ -89,6 +94,7 @@ module HealthVault
         end
        
      
+        
         
        
         

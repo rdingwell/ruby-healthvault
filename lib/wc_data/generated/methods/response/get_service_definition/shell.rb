@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The URL used to access the Microsoft HealthVault Shell.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The URL used to redirect to specific functions within the Microsoft HealthVault Shell.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetServiceDefinition::ShellRedirectToken

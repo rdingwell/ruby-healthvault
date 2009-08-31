@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name or description of the condition.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date of onset or the first diagnosis.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -62,6 +65,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date the condition resolved (or for multiple acute episodes, the last date the condition resolved).
@@ -76,6 +80,7 @@ module HealthVault
         end
        
      
+        
         
        
         

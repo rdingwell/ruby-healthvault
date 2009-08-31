@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name for this set of lab test results.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Name of the laboratory that performed the tests.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -62,6 +65,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Labtestresults::Labtestresultsgrouptype
@@ -83,6 +87,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Labtestresults::Labtestresulttype

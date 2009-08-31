@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Unique thing type identifier
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Specifies whether the thing type can be created or not
@@ -60,6 +63,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -76,6 +80,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Specifies whether the thing type is a singleton
@@ -90,6 +95,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -106,6 +112,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Display columns defined for the thing type
@@ -121,6 +128,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Transforms defined for this thing type
@@ -135,6 +143,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetThingType::TransformSource
@@ -156,6 +165,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetThingType::Image
         def add_image(value)
@@ -176,6 +186,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The collection of all versions for a thing type.
@@ -190,6 +201,7 @@ module HealthVault
         end
        
      
+        
         
        
         

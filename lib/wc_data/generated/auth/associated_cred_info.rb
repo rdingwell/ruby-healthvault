@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The card space credential.
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A credential for verifying identity with Microsoft Passport.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -75,6 +79,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Meta-data associated with the credential that is used by Microsoft HealthVault.
@@ -90,6 +95,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -111,22 +117,22 @@ module HealthVault
           self.tag_name = 'associatedcredinfo'
         
           
-          @children['credential'] = {:name => 'credential', :class => HealthVault::WCData::Auth::SimpleCardSpaceCredential, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 5860397 }
+          @children['credential'] = {:name => 'credential', :class => HealthVault::WCData::Auth::SimpleCardSpaceCredential, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 76748054 }
             
           
         
           
-          @children['simple-userpass'] = {:name => 'simple-userpass', :class => HealthVault::WCData::Auth::UserPassCred, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 5860397 }
+          @children['simple-userpass'] = {:name => 'simple-userpass', :class => HealthVault::WCData::Auth::UserPassCred, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 76748054 }
             
           
         
           
-          @children['simple-passport'] = {:name => 'simple-passport', :class => HealthVault::WCData::Auth::SimplePassportCredential, :value => nil, :min => 1, :max => 1, :order => 3, :place => :element, :choice => 5860397 }
+          @children['simple-passport'] = {:name => 'simple-passport', :class => HealthVault::WCData::Auth::SimplePassportCredential, :value => nil, :min => 1, :max => 1, :order => 3, :place => :element, :choice => 76748054 }
             
           
         
           
-          @children['simple-openid'] = {:name => 'simple-openid', :class => HealthVault::WCData::Auth::SimpleOpenIdCredential, :value => nil, :min => 1, :max => 1, :order => 4, :place => :element, :choice => 5860397 }
+          @children['simple-openid'] = {:name => 'simple-openid', :class => HealthVault::WCData::Auth::SimpleOpenIdCredential, :value => nil, :min => 1, :max => 1, :order => 4, :place => :element, :choice => 76748054 }
             
           
         

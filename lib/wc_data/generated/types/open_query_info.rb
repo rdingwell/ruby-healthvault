@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Identifier of the saved query.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the application that created the open query.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -60,6 +63,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Expiration date of the open query.
@@ -75,6 +79,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Specifies whether a PIN is required.
@@ -89,6 +94,7 @@ module HealthVault
         end
        
      
+        
         
        
         

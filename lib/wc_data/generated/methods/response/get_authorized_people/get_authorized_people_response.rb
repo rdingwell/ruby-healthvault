@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::PersonInfo
         def add_person_info(value)
@@ -36,6 +37,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

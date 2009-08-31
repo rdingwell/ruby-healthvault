@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The date upon which the person wants to complete the goal.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date on which the goal was completed.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         

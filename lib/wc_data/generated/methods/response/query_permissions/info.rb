@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::QueryPermissions::ThingTypePermission
         def add_thing_type_permission(value)

@@ -137,52 +137,52 @@
             onclick="toggleCode('M001617-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001617-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 133</span>
-133:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-134:           <span class="ruby-keyword kw">super</span>
-135:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'address'</span>
-136:         
-137:           
-138:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'description'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'description'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-139:             
-140:           
-141:         
-142:           
-143:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'is-primary'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'is-primary'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-144:             
-145:           
-146:         
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 140</span>
+140:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+141:           <span class="ruby-keyword kw">super</span>
+142:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'address'</span>
+143:         
+144:           
+145:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'description'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'description'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+146:             
 147:           
-148:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'street'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'street'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+148:         
 149:           
-150:         
-151:           
-152:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'city'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'city'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-153:             
-154:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'city'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
-155:             
+150:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'is-primary'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'is-primary'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+151:             
+152:           
+153:         
+154:           
+155:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'street'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'street'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 156:           
 157:         
 158:           
-159:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'state'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'state'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+159:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'city'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'city'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 160:             
-161:           
-162:         
+161:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'city'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+162:             
 163:           
-164:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'postcode'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'postcode'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-165:             
-166:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'postcode'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+164:         
+165:           
+166:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'state'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'state'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 167:             
 168:           
 169:         
 170:           
-171:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'country'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+171:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'postcode'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'postcode'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">6</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 172:             
-173:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+173:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'postcode'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
 174:             
 175:           
 176:         
-177:         <span class="ruby-keyword kw">end</span>
+177:           
+178:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'country'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">7</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+179:             
+180:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+181:             
+182:           
+183:         
+184:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -207,10 +207,10 @@
             onclick="toggleCode('M001606-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001606-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 52</span>
-52:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_street</span>(<span class="ruby-identifier">value</span>)
-53:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'street'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
-54:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 55</span>
+55:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_street</span>(<span class="ruby-identifier">value</span>)
+56:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'street'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+57:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -233,10 +233,10 @@
             onclick="toggleCode('M001610-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001610-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 80</span>
-80:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">city</span>
-81:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'city'</span>][<span class="ruby-identifier">:value</span>]
-82:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 84</span>
+84:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">city</span>
+85:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'city'</span>][<span class="ruby-identifier">:value</span>]
+86:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -260,10 +260,10 @@ portion of the address. <em>value</em> is a String
             onclick="toggleCode('M001609-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001609-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 75</span>
-75:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">city=</span>(<span class="ruby-identifier">value</span>)
-76:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'city'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-77:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 79</span>
+79:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">city=</span>(<span class="ruby-identifier">value</span>)
+80:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'city'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+81:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -286,10 +286,10 @@ portion of the address. <em>value</em> is a String
             onclick="toggleCode('M001616-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001616-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 127</span>
-127:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">country</span>
-128:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>]
-129:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 134</span>
+134:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">country</span>
+135:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>]
+136:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -319,10 +319,10 @@ States of America&quot;. <em>value</em> is a String
             onclick="toggleCode('M001615-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001615-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 122</span>
-122:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">country=</span>(<span class="ruby-identifier">value</span>)
-123:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-124:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 129</span>
+129:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">country=</span>(<span class="ruby-identifier">value</span>)
+130:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'country'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+131:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -345,10 +345,10 @@ States of America&quot;. <em>value</em> is a String
             onclick="toggleCode('M001603-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001603-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 28</span>
-28:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">description</span>
-29:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'description'</span>][<span class="ruby-identifier">:value</span>]
-30:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 29</span>
+29:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">description</span>
+30:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'description'</span>][<span class="ruby-identifier">:value</span>]
+31:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -374,10 +374,10 @@ address. <b>remarks</b>: For example, a person may label the address as
             onclick="toggleCode('M001602-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001602-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 23</span>
-23:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">description=</span>(<span class="ruby-identifier">value</span>)
-24:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'description'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-25:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 24</span>
+24:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">description=</span>(<span class="ruby-identifier">value</span>)
+25:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'description'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+26:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -400,10 +400,10 @@ address. <b>remarks</b>: For example, a person may label the address as
             onclick="toggleCode('M001605-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001605-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 44</span>
-44:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_primary</span>
-45:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'is-primary'</span>][<span class="ruby-identifier">:value</span>]
-46:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 46</span>
+46:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_primary</span>
+47:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'is-primary'</span>][<span class="ruby-identifier">:value</span>]
+48:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -428,10 +428,10 @@ preferred address for contacting the person. <em>value</em> is a String
             onclick="toggleCode('M001604-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001604-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 39</span>
-39:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_primary=</span>(<span class="ruby-identifier">value</span>)
-40:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'is-primary'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-41:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 41</span>
+41:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_primary=</span>(<span class="ruby-identifier">value</span>)
+42:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'is-primary'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+43:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -454,10 +454,10 @@ preferred address for contacting the person. <em>value</em> is a String
             onclick="toggleCode('M001614-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001614-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 111</span>
-111:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">postcode</span>
-112:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'postcode'</span>][<span class="ruby-identifier">:value</span>]
-113:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 117</span>
+117:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">postcode</span>
+118:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'postcode'</span>][<span class="ruby-identifier">:value</span>]
+119:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -482,10 +482,10 @@ locale in which the address resides. <em>value</em> is a String
             onclick="toggleCode('M001613-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001613-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 106</span>
-106:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">postcode=</span>(<span class="ruby-identifier">value</span>)
-107:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'postcode'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-108:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 112</span>
+112:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">postcode=</span>(<span class="ruby-identifier">value</span>)
+113:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'postcode'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+114:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -508,10 +508,10 @@ locale in which the address resides. <em>value</em> is a String
             onclick="toggleCode('M001607-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001607-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 57</span>
-57:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_street</span>(<span class="ruby-identifier">value</span>)
-58:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'street'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
-59:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 60</span>
+60:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_street</span>(<span class="ruby-identifier">value</span>)
+61:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'street'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+62:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -534,10 +534,10 @@ locale in which the address resides. <em>value</em> is a String
             onclick="toggleCode('M001612-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001612-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 95</span>
-95:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">state</span>
-96:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'state'</span>][<span class="ruby-identifier">:value</span>]
-97:         <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 100</span>
+100:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">state</span>
+101:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'state'</span>][<span class="ruby-identifier">:value</span>]
+102:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -561,10 +561,10 @@ portion of the address. <em>value</em> is a String
             onclick="toggleCode('M001611-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001611-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 90</span>
-90:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">state=</span>(<span class="ruby-identifier">value</span>)
-91:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'state'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-92:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 95</span>
+95:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">state=</span>(<span class="ruby-identifier">value</span>)
+96:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'state'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+97:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -591,10 +591,10 @@ locale in which the address resides. <b>returns</b>: a String Array
             onclick="toggleCode('M001608-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M001608-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 65</span>
-65:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">street</span>
-66:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'street'</span>][<span class="ruby-identifier">:value</span>]
-67:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/thing/types/address.rb, line 68</span>
+68:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">street</span>
+69:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'street'</span>][<span class="ruby-identifier">:value</span>]
+70:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

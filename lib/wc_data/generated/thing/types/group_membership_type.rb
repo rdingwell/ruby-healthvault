@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the group type.
@@ -31,6 +32,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

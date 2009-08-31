@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The minimum value for the range.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         

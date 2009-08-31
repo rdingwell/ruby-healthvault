@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<em>value</em> is a String
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -43,6 +45,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -56,6 +59,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -72,6 +76,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The city of residence.
@@ -86,6 +91,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -102,6 +108,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -115,6 +122,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Language

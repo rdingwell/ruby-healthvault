@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Thing::ThingKey
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -42,6 +44,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Thing::ThingState
@@ -55,6 +58,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -72,6 +76,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -85,6 +90,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -102,6 +108,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Represents an audit information about the update to this health record item.
@@ -117,6 +124,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::DataXml
@@ -137,6 +145,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Thing::DataOther
@@ -151,6 +160,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Thing::EffectivePermissions
@@ -164,6 +174,7 @@ module HealthVault
         end
        
      
+        
         
        
         

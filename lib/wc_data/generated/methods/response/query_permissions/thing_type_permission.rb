@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A unique identifier identifying the thing type for which the permissions are available.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The permissions for online access that the authenticated person has for this thing type in the specified record in the context of the current application.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         

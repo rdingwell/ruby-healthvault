@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The URL to use to access the Microsoft HealthVault web service methods.
@@ -32,6 +33,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The Microsoft HealthVault version number.
@@ -47,6 +49,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetServiceDefinition::ConfigurationEntry

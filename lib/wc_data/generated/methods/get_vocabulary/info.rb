@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: Optional parameter containing the information necessary to request for a specific vocabulary.

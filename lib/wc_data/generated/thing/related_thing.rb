@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: A string representing client id of the thing instance that this thing is related to.
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -50,7 +52,7 @@ module HealthVault
           self.tag_name = 'relatedthing'
         
           
-          @children['client-thing-id'] = {:name => 'client-thing-id', :class => HealthVault::WCData::Types::String255, :value => nil, :min => 0, :max => 1, :order => 1, :place => :element, :choice => 452557422 }
+          @children['client-thing-id'] = {:name => 'client-thing-id', :class => HealthVault::WCData::Types::String255, :value => nil, :min => 0, :max => 1, :order => 1, :place => :element, :choice => 305011800 }
             
           
         

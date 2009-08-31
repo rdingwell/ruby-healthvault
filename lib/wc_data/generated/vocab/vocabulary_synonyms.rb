@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Vocab::Vocabularysynonym
         def add_vocabulary_synonym(value)

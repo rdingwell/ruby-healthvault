@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The date of the laboratory test.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The name of the laboratory test.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -61,6 +64,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The collection method for the laboratory test.
@@ -76,6 +80,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -93,6 +98,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A clinical value within a laboratory result.
@@ -108,6 +114,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -125,6 +132,7 @@ module HealthVault
         end
        
      
+        
         
        
         

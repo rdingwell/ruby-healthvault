@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Dates::Approxdate
@@ -28,6 +29,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Dates::Time
@@ -41,6 +43,7 @@ module HealthVault
         end
        
      
+        
         
        
         

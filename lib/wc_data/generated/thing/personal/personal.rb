@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: A more complete representation of the person's name.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date and time of the person's birth, or as close as possible.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -62,6 +65,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The person's ethnicity.
@@ -79,6 +83,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The United States Social Security Number if available.
@@ -93,6 +98,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -111,6 +117,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A free-form representation of the person's employment status.
@@ -125,6 +132,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -141,6 +149,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A date and time of death, if deceased.
@@ -155,6 +164,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -173,6 +183,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: True if person is veteran.
@@ -187,6 +198,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -205,6 +217,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: True if person has a disability.
@@ -219,6 +232,7 @@ module HealthVault
         end
        
      
+        
         
        
         

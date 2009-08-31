@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date when the samples that led to this test result were taken.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: High density lipoprotein cholesterol.
@@ -62,6 +65,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Total cholesterol.
@@ -77,6 +81,7 @@ module HealthVault
         end
        
      
+        
         
        
         

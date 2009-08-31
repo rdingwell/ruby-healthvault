@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The condition for the family history entry.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The age of onset for the family history entry.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -77,6 +81,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The age of resolution for the family history entry.
@@ -91,6 +96,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -107,6 +113,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The severity for the family history entry.
@@ -122,6 +129,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: True if condition is recurring.
@@ -136,6 +144,7 @@ module HealthVault
         end
        
      
+        
         
        
         

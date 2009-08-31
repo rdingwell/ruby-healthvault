@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::CultureSpecificString1024
         def add_reason(value)
@@ -35,6 +36,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Flags directing the display of optional rules.
@@ -49,6 +51,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::Permission
@@ -69,6 +72,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Auth::Set
         def add_target_set(value)
@@ -87,6 +91,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Auth::Set
@@ -107,6 +112,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -121,6 +127,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a String
@@ -134,6 +141,7 @@ module HealthVault
         end
        
      
+        
         
        
         

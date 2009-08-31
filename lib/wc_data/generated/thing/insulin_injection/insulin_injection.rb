@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The type of the insulin used.
@@ -32,6 +33,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The amount of insulin injected.
@@ -47,6 +49,7 @@ module HealthVault
         end
        
      
+        
         
        
         

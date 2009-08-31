@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The person who prescribed this medication.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Amount of medication prescribed
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -77,6 +81,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Number of medication refills.
@@ -91,6 +96,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -107,6 +113,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Date the prescription expires.
@@ -121,6 +128,7 @@ module HealthVault
         end
        
      
+        
         
        
         

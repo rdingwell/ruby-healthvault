@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The id of the application to update.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::CultureSpecificString255
@@ -50,6 +52,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The X509 certificate to be used in conjunction with the application id to uniquely identify the application to HealthVault.
@@ -65,6 +68,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -82,6 +86,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The list of data types (with corresponding permissions) that the application can access at any time.
@@ -97,6 +102,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -114,6 +120,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A single url used by HealthVault with different query string parameters to make specific requests to an online application.
@@ -129,6 +136,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::CultureSpecificStringnz
@@ -150,6 +158,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::CultureSpecificStringnz
         def add_auth_reason(value)
@@ -170,6 +179,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The domain name from which emails sent on behalf of the application will originate from.
@@ -185,6 +195,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -202,6 +213,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The application's logo as a base64 encoded string and its corresponding content type.
@@ -217,6 +229,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -234,6 +247,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The category used to classify the application.
@@ -250,6 +264,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The application's privacy statement as a base64 encoded string and its corresponding content type.
@@ -265,6 +280,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The application's terms of use statement as a base64 encoded string and its corresponding content type.
@@ -279,6 +295,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -296,6 +313,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Currently not supported.
@@ -312,6 +330,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The message to display to the use when direct to clinial authorization completes successfully.
@@ -327,6 +346,7 @@ module HealthVault
         end
        
      
+        
         
        
         

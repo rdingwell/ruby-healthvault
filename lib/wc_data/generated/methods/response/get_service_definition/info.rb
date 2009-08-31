@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Information about Microsoft HealthVault.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Information about the Microsoft HealthVault Shell.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetServiceDefinition::SDKAssembly
@@ -66,6 +69,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetServiceDefinition::XmlMethod
         def add_xml_method(value)
@@ -85,6 +89,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a String

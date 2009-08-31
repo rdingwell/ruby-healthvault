@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of the appointment.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The type of service provided by the medical appointment.
@@ -60,6 +63,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The clinic information for the medical appointment.
@@ -74,6 +78,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -91,6 +96,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The status of the medical appointment.
@@ -106,6 +112,7 @@ module HealthVault
         end
        
      
+        
         
        
         

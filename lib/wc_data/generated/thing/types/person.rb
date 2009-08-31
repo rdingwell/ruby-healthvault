@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the contact person.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The person's professional training.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -75,6 +79,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Information on how to contact the person.
@@ -89,6 +94,7 @@ module HealthVault
         end
        
      
+        
         
        
         

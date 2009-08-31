@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Vocab::Vocabularymappingitem
         def add_vocabulary_mapping_item(value)

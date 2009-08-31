@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A friendly name that will be presented to the user after the user successfully answers the challenge question.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The answer that the patient is expected to provide when posed with the challenge question.
@@ -63,6 +66,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: An identifier supplied by the external application for the connect request.
@@ -78,6 +82,7 @@ module HealthVault
         end
        
      
+        
         
        
         

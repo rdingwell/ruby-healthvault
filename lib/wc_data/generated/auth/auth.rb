@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Auth::Rules

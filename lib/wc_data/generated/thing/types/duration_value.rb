@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The approximate start date and time for the duration range.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         

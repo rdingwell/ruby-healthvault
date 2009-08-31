@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Dates::StructuredApproxDate
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -47,12 +49,12 @@ module HealthVault
           self.tag_name = 'approx-date-time'
         
           
-          @children['structured'] = {:name => 'structured', :class => HealthVault::WCData::Dates::StructuredApproxDate, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 107287597 }
+          @children['structured'] = {:name => 'structured', :class => HealthVault::WCData::Dates::StructuredApproxDate, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 434528961 }
             
           
         
           
-          @children['descriptive'] = {:name => 'descriptive', :class => String, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 107287597 }
+          @children['descriptive'] = {:name => 'descriptive', :class => String, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 434528961 }
             
           
         

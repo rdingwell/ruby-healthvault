@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the immunization.
@@ -32,6 +33,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time the immunization.
@@ -46,6 +48,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -62,6 +65,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The manufacturer of the immunization medication.
@@ -77,6 +81,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The manufacturing lot of the immunization medication.
@@ -91,6 +96,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -108,6 +114,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The expiration date of the immunization medication.
@@ -122,6 +129,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -138,6 +146,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The anatomic surface to which immunization was administerred.
@@ -153,6 +162,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A description of any adverse event to the immunization.
@@ -167,6 +177,7 @@ module HealthVault
         end
        
      
+        
         
        
         

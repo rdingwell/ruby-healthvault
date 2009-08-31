@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time for the vital signs.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Vitalsigns::Vitalsignresulttype
@@ -50,6 +52,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Site for vital sign.
@@ -64,6 +67,7 @@ module HealthVault
         end
        
      
+        
         
        
         

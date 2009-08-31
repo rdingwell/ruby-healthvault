@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The URL of the Microsoft HealthVault .NET assembly for download.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The version number for the Microsoft HealthVault .NET assembly.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

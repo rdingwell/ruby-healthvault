@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The power measurement in watts.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The time stamp of the audit.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The unique identifier and the name of the application used to perform the operation.
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The unique identifier and the name of the person who performed the operation.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -76,6 +80,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The access avenue used to perform the operation.
@@ -90,6 +95,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

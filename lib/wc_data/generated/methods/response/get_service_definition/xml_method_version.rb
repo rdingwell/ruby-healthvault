@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The URL of the method request schema.
@@ -32,6 +33,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The URL of the method response schema.
@@ -47,6 +49,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

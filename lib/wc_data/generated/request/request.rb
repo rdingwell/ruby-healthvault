@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: HMAC computed over header element using the authenticated session shared secret.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Request::Header
@@ -43,6 +45,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

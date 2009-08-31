@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the drug in the canister.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The purpose for the inhaler.
@@ -62,6 +65,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The approximate date of when the inhaler started being used.
@@ -76,6 +80,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -93,6 +98,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date the canister is clinically expired.
@@ -107,6 +113,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -124,6 +131,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The number of doses in the unit at the time the thing instance was created.
@@ -139,6 +147,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -156,6 +165,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The maximum number of doses that should be taken per day.
@@ -172,6 +182,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: States whether the inhaler can show alerts.
@@ -186,6 +197,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Inhaler::Alert

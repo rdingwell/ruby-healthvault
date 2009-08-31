@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The date and time of the medical encounter.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The type of medical encounter.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -61,6 +64,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The duration of the medical encounter.
@@ -76,6 +80,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Did the person grant consent for this encounter?
@@ -90,6 +95,7 @@ module HealthVault
         end
        
      
+        
         
        
         

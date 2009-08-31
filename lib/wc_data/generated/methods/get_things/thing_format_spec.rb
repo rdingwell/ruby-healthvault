@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Methods::GetThings::ThingSectionSpec
         def add_section(value)
@@ -34,6 +35,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a String
@@ -55,6 +57,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::Guid

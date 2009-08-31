@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The value of the laboratory result.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The reference range for the laboratory result.
@@ -60,6 +63,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -76,6 +80,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form text for laboratory results.
@@ -90,6 +95,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue

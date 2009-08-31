@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date/time when the cardiac profile answers and measurements were taken.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Whether the person is on a hypertension correcting medication or not.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -78,6 +82,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Whether the person has been diagnosed with diabetes.
@@ -93,6 +98,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -110,6 +116,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Whether the person's family has a history of stroke.
@@ -126,6 +133,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Whether the person has been diagnosed with heart disease.
@@ -141,6 +149,7 @@ module HealthVault
         end
        
      
+        
         
        
         

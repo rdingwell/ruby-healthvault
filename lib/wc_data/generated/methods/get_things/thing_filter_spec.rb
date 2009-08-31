@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::Guid
         def add_type_id(value)
@@ -35,6 +36,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::ThingState
@@ -57,6 +59,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The minimum date the thing pertains to.
@@ -72,6 +75,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -89,6 +93,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The application that created this thing.
@@ -104,6 +109,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -121,6 +127,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The application that last updated this thing.
@@ -136,6 +143,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -153,6 +161,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The minimum date the thing was created on.
@@ -168,6 +177,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -185,6 +195,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The minimum date the thing was last updated on.
@@ -201,6 +212,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The maximum date the thing was last updated on.
@@ -216,6 +228,7 @@ module HealthVault
         end
        
      
+        
         
        
         

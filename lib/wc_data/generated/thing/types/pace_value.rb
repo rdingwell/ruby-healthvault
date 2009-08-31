@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The pace measurement in seconds per 100 meters.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         

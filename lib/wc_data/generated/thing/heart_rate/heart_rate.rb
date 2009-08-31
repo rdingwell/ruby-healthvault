@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of this measurement.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The heart rate in beats per minute (BPM).
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -61,6 +64,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The conditions under which the heart rate was measured.
@@ -77,6 +81,7 @@ module HealthVault
         end
        
      
+        
         
        
         

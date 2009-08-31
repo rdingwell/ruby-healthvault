@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The place where the delivery occurred.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The duration of the labor in minutes.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
@@ -81,6 +85,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
         def add_anesthesia(value)
@@ -102,6 +107,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The method of the delivery.
@@ -117,6 +123,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -134,6 +141,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Details about the baby.
@@ -148,6 +156,7 @@ module HealthVault
         end
        
      
+        
         
        
         

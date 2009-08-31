@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::String512
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -44,6 +46,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: This is the method used to generate the signature.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

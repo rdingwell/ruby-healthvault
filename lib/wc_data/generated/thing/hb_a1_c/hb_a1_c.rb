@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time the reading was taken.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The HbA1C measurement as a percentage.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         

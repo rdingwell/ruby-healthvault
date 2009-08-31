@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time that the journal entry refers to.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Dates::Time
@@ -50,6 +52,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Dates::Time
         def add_alcohol(value)
@@ -69,6 +72,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Sjpm::Activity
@@ -90,6 +94,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Thing::Sjpm::Activity
         def add_exercise(value)
@@ -110,6 +115,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

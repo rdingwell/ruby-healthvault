@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The application specific settings for the person.
@@ -31,6 +32,7 @@ module HealthVault
         end
        
      
+        
         
        
         

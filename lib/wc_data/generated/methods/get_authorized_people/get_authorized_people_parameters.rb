@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The person id cursor used to page through the results of this method.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date that is used to filter authorized people from the returned list according to the date that the person was authorized for the application.
@@ -46,6 +48,7 @@ module HealthVault
         end
        
      
+        
         
        
         

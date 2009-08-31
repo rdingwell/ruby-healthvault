@@ -176,26 +176,28 @@
 38:           <span class="ruby-identifier">guid</span> = <span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">root</span>, <span class="ruby-value str">&quot;//type-id&quot;</span>).<span class="ruby-identifier">text</span>.<span class="ruby-identifier">to_s</span><span class="ruby-comment cmt">#@xml.root.get_elements('annotation/documentation/type-id')[0].text.to_s</span>
 39:           <span class="ruby-identifier">el</span> = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">get_elements</span>(<span class="ruby-value str">'element'</span>)[<span class="ruby-value">0</span>]
 40:           <span class="ruby-identifier">wrapper_class</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-ivar">@xml</span>,<span class="ruby-value str">&quot;//wrapper-class-name&quot;</span>)
-41:           <span class="ruby-identifier">cname</span> =   <span class="ruby-identifier">el</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value str">'name'</span>).<span class="ruby-identifier">to_s</span>
-42:           
-43:           <span class="ruby-identifier">type</span> = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value str">'type'</span>).<span class="ruby-identifier">to_s</span>
-44:           <span class="ruby-identifier">class_path</span> = <span class="ruby-value str">&quot;HealthVault::WCData::&quot;</span>
-45:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">empty?</span>
-46:             <span class="ruby-identifier">class_path</span> <span class="ruby-operator">+=</span> (<span class="ruby-identifier">mods</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">classify</span>(<span class="ruby-identifier">s</span>)}).<span class="ruby-identifier">join</span>(<span class="ruby-value str">'::'</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;::&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">classify</span>(<span class="ruby-identifier">cname</span>)
-47:           <span class="ruby-keyword kw">else</span>
-48:            
-49:             <span class="ruby-identifier">namespaces</span> = <span class="ruby-identifier">get_namespaces</span>
-50:             <span class="ruby-identifier">class_path</span> = <span class="ruby-identifier">get_class_path</span>(<span class="ruby-identifier">wrapper_class</span> <span class="ruby-value">? </span><span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">type</span>)
-51:             
-52:               
-53:           <span class="ruby-keyword kw">end</span>
-54:           <span class="ruby-ivar">@thing_hash</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
-55:           <span class="ruby-ivar">@thing_hash</span>[<span class="ruby-identifier">guid</span>] = <span class="ruby-identifier">class_path</span>
-56:         <span class="ruby-keyword kw">rescue</span>
-57:           <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;Not a HealthVault targetNamespace, can't parse #{@filename}&quot;</span>
-58:           <span class="ruby-keyword kw">return</span>
-59:         <span class="ruby-keyword kw">end</span>
-60:       <span class="ruby-keyword kw">end</span>
+41:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">wrapper_class</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">mods</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;thing&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span>) <span class="ruby-operator">!=</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-identifier">mods</span>[<span class="ruby-value">1</span>])
+42:              <span class="ruby-identifier">mods</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span>
+43:            <span class="ruby-keyword kw">end</span>
+44:           <span class="ruby-identifier">cname</span> =   <span class="ruby-identifier">el</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value str">'name'</span>).<span class="ruby-identifier">to_s</span>
+45:           <span class="ruby-identifier">type</span> = <span class="ruby-identifier">el</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value str">'type'</span>).<span class="ruby-identifier">to_s</span>
+46:           <span class="ruby-identifier">class_path</span> = <span class="ruby-value str">&quot;HealthVault::WCData::&quot;</span>
+47:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">empty?</span>
+48:             <span class="ruby-identifier">class_path</span> <span class="ruby-operator">+=</span> (<span class="ruby-identifier">mods</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">classify</span>(<span class="ruby-identifier">s</span>)}).<span class="ruby-identifier">join</span>(<span class="ruby-value str">'::'</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;::&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">classify</span>(<span class="ruby-identifier">cname</span>)
+49:           <span class="ruby-keyword kw">else</span>
+50:            
+51:             <span class="ruby-identifier">namespaces</span> = <span class="ruby-identifier">get_namespaces</span>
+52:             <span class="ruby-identifier">class_path</span> = <span class="ruby-identifier">get_class_path</span>(<span class="ruby-identifier">wrapper_class</span> <span class="ruby-value">? </span><span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">type</span>)
+53:             
+54:               
+55:           <span class="ruby-keyword kw">end</span>
+56:           <span class="ruby-ivar">@thing_hash</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+57:           <span class="ruby-ivar">@thing_hash</span>[<span class="ruby-identifier">guid</span>] = <span class="ruby-identifier">class_path</span>
+58:         <span class="ruby-keyword kw">rescue</span>
+59:           <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;Not a HealthVault targetNamespace, can't parse #{@filename}&quot;</span>
+60:           <span class="ruby-keyword kw">return</span>
+61:         <span class="ruby-keyword kw">end</span>
+62:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -215,16 +217,16 @@
             onclick="toggleCode('M004027-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M004027-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/code_generation/xsd_parser.rb, line 62</span>
-62:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_things</span>
-63:         <span class="ruby-identifier">class_hash</span> = <span class="ruby-ivar">@thing_hash</span>
-64:         <span class="ruby-identifier">result</span> = <span class="ruby-value str">&quot;&quot;</span>
-65:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword kw">__FILE__</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;/../wc_data/thing.rb&quot;</span>, <span class="ruby-value str">'w'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
-66:           <span class="ruby-identifier">e</span> = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-ivar">@thing_ex_template</span>), <span class="ruby-value">0</span>, <span class="ruby-value str">'&lt;&gt;'</span>, <span class="ruby-value str">'result'</span>)
-67:           <span class="ruby-identifier">e</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
-68:           <span class="ruby-identifier">f</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">result</span>
-69:         <span class="ruby-keyword kw">end</span>
-70:       <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/code_generation/xsd_parser.rb, line 64</span>
+64:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_things</span>
+65:         <span class="ruby-identifier">class_hash</span> = <span class="ruby-ivar">@thing_hash</span>
+66:         <span class="ruby-identifier">result</span> = <span class="ruby-value str">&quot;&quot;</span>
+67:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword kw">__FILE__</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;/../wc_data/thing.rb&quot;</span>, <span class="ruby-value str">'w'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+68:           <span class="ruby-identifier">e</span> = <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-ivar">@thing_ex_template</span>), <span class="ruby-value">0</span>, <span class="ruby-value str">'&lt;&gt;'</span>, <span class="ruby-value str">'result'</span>)
+69:           <span class="ruby-identifier">e</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
+70:           <span class="ruby-identifier">f</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">result</span>
+71:         <span class="ruby-keyword kw">end</span>
+72:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -247,56 +249,56 @@ creates ruby class files for the types defined in the xsd
             onclick="toggleCode('M004028-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M004028-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/code_generation/xsd_parser.rb, line 73</span>
- 73:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">test</span> = <span class="ruby-identifier">:no</span>)
- 74:         <span class="ruby-ivar">@test</span> = <span class="ruby-identifier">test</span>
- 75:         <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@filename</span>)
- 76:         <span class="ruby-ivar">@xml</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">file</span>)
- 77:         <span class="ruby-ivar">@namespaces</span> = <span class="ruby-identifier">get_namespaces</span>
- 78:         <span class="ruby-ivar">@namespace</span> = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value str">'targetNamespace'</span>).<span class="ruby-identifier">to_s</span>
- 79:         <span class="ruby-keyword kw">begin</span>
- 80:           <span class="ruby-ivar">@modules</span> = (<span class="ruby-ivar">@namespace</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp re">/urn\:com\.microsoft\.wc\.(.*)/</span>)[<span class="ruby-value">1</span>]).<span class="ruby-identifier">split</span>(<span class="ruby-value str">'.'</span>)
- 81:           
- 82:            <span class="ruby-identifier">wrapper_class</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-ivar">@xml</span>,<span class="ruby-value str">&quot;//wrapper-class-name&quot;</span>)
- 83:            <span class="ruby-identifier">puts</span> <span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">wrapper_class</span>
- 84:            <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@modules</span>.<span class="ruby-identifier">inspect</span>
- 85:            <span class="ruby-identifier">puts</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span>) <span class="ruby-operator">!=</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-ivar">@modules</span>[<span class="ruby-value">1</span>]) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">wrapper_class</span>
- 86:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">wrapper_class</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@modules</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;thing&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span>) <span class="ruby-operator">!=</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-ivar">@modules</span>[<span class="ruby-value">1</span>])
- 87:                <span class="ruby-ivar">@modules</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span>
- 88:              <span class="ruby-keyword kw">end</span>
- 89:         <span class="ruby-keyword kw">rescue</span>
- 90:           <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;Not a HealthVault targetNamespace, can't parse #{@filename}&quot;</span>
- 91:           <span class="ruby-keyword kw">return</span>
- 92:         <span class="ruby-keyword kw">end</span>
- 93:         <span class="ruby-identifier">create_directories</span>
- 94:         <span class="ruby-identifier">root</span> = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">root</span>
- 95:         <span class="ruby-identifier">root</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
- 96:           <span class="ruby-ivar">@element_order</span> = <span class="ruby-value">0</span>
- 97:           <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">name</span>
- 98:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'simpleType'</span>
- 99:             <span class="ruby-identifier">create_simple_type</span>(<span class="ruby-identifier">e</span>)
-100:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'complexType'</span>
-101:             <span class="ruby-identifier">create_complex_type</span>(<span class="ruby-identifier">e</span>)
-102:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'element'</span>
-103:             <span class="ruby-comment cmt">#root elements</span>
-104:             <span class="ruby-identifier">parse_element</span>(<span class="ruby-identifier">e</span>)
-105:             <span class="ruby-comment cmt">#            type = e.attribute('type').to_s</span>
-106:             <span class="ruby-comment cmt">#            #if the element has a type we can skip it</span>
-107:             <span class="ruby-comment cmt">#            #since we are only looking for new types</span>
-108:             <span class="ruby-comment cmt">#            next unless type.empty?</span>
-109:             <span class="ruby-comment cmt">#            #this element defines an anonymous type</span>
-110:             <span class="ruby-comment cmt">#            cname = e.attribute('name').to_s</span>
-111:             <span class="ruby-comment cmt">#            e.elements.each do |child|</span>
-112:             <span class="ruby-comment cmt">#              case child.name</span>
-113:             <span class="ruby-comment cmt">#              when 'simpleType'</span>
-114:             <span class="ruby-comment cmt">#                create_simple_type(child, cname)</span>
-115:             <span class="ruby-comment cmt">#              when 'complexType'</span>
-116:             <span class="ruby-comment cmt">#                create_complex_type(child, cname)</span>
-117:             <span class="ruby-comment cmt">#              end</span>
-118:             <span class="ruby-comment cmt">#            end</span>
-119:           <span class="ruby-keyword kw">end</span>
-120:         <span class="ruby-keyword kw">end</span>
-121:       <span class="ruby-keyword kw">end</span>
+     <span class="ruby-comment cmt"># File lib/code_generation/xsd_parser.rb, line 75</span>
+ 75:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">test</span> = <span class="ruby-identifier">:no</span>)
+ 76:         <span class="ruby-ivar">@test</span> = <span class="ruby-identifier">test</span>
+ 77:         <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@filename</span>)
+ 78:         <span class="ruby-ivar">@xml</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">file</span>)
+ 79:         <span class="ruby-ivar">@namespaces</span> = <span class="ruby-identifier">get_namespaces</span>
+ 80:         <span class="ruby-ivar">@namespace</span> = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value str">'targetNamespace'</span>).<span class="ruby-identifier">to_s</span>
+ 81:         <span class="ruby-keyword kw">begin</span>
+ 82:           <span class="ruby-ivar">@modules</span> = (<span class="ruby-ivar">@namespace</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp re">/urn\:com\.microsoft\.wc\.(.*)/</span>)[<span class="ruby-value">1</span>]).<span class="ruby-identifier">split</span>(<span class="ruby-value str">'.'</span>)
+ 83:           
+ 84:            <span class="ruby-identifier">wrapper_class</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-ivar">@xml</span>,<span class="ruby-value str">&quot;//wrapper-class-name&quot;</span>)
+ 85:            <span class="ruby-identifier">puts</span> <span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">wrapper_class</span>
+ 86:            <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@modules</span>.<span class="ruby-identifier">inspect</span>
+ 87:            <span class="ruby-identifier">puts</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span>) <span class="ruby-operator">!=</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-ivar">@modules</span>[<span class="ruby-value">1</span>]) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">wrapper_class</span>
+ 88:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">wrapper_class</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@modules</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;thing&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span>) <span class="ruby-operator">!=</span> <span class="ruby-identifier">underscore</span>(<span class="ruby-ivar">@modules</span>[<span class="ruby-value">1</span>])
+ 89:                <span class="ruby-ivar">@modules</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">wrapper_class</span>.<span class="ruby-identifier">text</span>
+ 90:              <span class="ruby-keyword kw">end</span>
+ 91:         <span class="ruby-keyword kw">rescue</span>
+ 92:           <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;Not a HealthVault targetNamespace, can't parse #{@filename}&quot;</span>
+ 93:           <span class="ruby-keyword kw">return</span>
+ 94:         <span class="ruby-keyword kw">end</span>
+ 95:         <span class="ruby-identifier">create_directories</span>
+ 96:         <span class="ruby-identifier">root</span> = <span class="ruby-ivar">@xml</span>.<span class="ruby-identifier">root</span>
+ 97:         <span class="ruby-identifier">root</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+ 98:           <span class="ruby-ivar">@element_order</span> = <span class="ruby-value">0</span>
+ 99:           <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">name</span>
+100:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'simpleType'</span>
+101:             <span class="ruby-identifier">create_simple_type</span>(<span class="ruby-identifier">e</span>)
+102:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'complexType'</span>
+103:             <span class="ruby-identifier">create_complex_type</span>(<span class="ruby-identifier">e</span>)
+104:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'element'</span>
+105:             <span class="ruby-comment cmt">#root elements</span>
+106:             <span class="ruby-identifier">parse_element</span>(<span class="ruby-identifier">e</span>)
+107:             <span class="ruby-comment cmt">#            type = e.attribute('type').to_s</span>
+108:             <span class="ruby-comment cmt">#            #if the element has a type we can skip it</span>
+109:             <span class="ruby-comment cmt">#            #since we are only looking for new types</span>
+110:             <span class="ruby-comment cmt">#            next unless type.empty?</span>
+111:             <span class="ruby-comment cmt">#            #this element defines an anonymous type</span>
+112:             <span class="ruby-comment cmt">#            cname = e.attribute('name').to_s</span>
+113:             <span class="ruby-comment cmt">#            e.elements.each do |child|</span>
+114:             <span class="ruby-comment cmt">#              case child.name</span>
+115:             <span class="ruby-comment cmt">#              when 'simpleType'</span>
+116:             <span class="ruby-comment cmt">#                create_simple_type(child, cname)</span>
+117:             <span class="ruby-comment cmt">#              when 'complexType'</span>
+118:             <span class="ruby-comment cmt">#                create_complex_type(child, cname)</span>
+119:             <span class="ruby-comment cmt">#              end</span>
+120:             <span class="ruby-comment cmt">#            end</span>
+121:           <span class="ruby-keyword kw">end</span>
+122:         <span class="ruby-keyword kw">end</span>
+123:       <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

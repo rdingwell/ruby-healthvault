@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time when the inhaler was used.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The textual description of the drug strength.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -78,6 +82,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The unique id or serial number for the canister.
@@ -93,6 +98,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: Optional. Time in minutes from open query creation until this open query expires. Expired open queries no longer exists in the system, and don't need an explicit call to DeleteOpenQuery to remove them.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Optional note attached to this open query.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -76,6 +80,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The version of the method the open query will call.
@@ -90,6 +95,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -106,6 +112,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The language that will be used for any localizable strings or data when the open query is run.
@@ -120,6 +127,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -136,6 +144,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The XSL used for transforming the results.
@@ -151,6 +160,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

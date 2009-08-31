@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Consumer-friendly name.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The url that renders the application, suitable for IFrame embedding.
@@ -60,6 +63,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -77,6 +81,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Identifier to pass to open query.
@@ -92,6 +97,7 @@ module HealthVault
         end
        
      
+        
         
        
         

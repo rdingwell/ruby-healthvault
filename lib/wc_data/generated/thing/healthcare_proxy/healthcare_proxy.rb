@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of the proxy.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Alternative contact for healthcare proxy.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -75,6 +79,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Secondary witness of healthcare proxy.
@@ -89,6 +94,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a String
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -42,6 +44,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Types::Guid
@@ -55,6 +58,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -70,6 +74,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::Guid
@@ -83,6 +88,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -100,6 +106,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Types::Iso6391
@@ -114,6 +121,7 @@ module HealthVault
        
      
         
+        
        
         
         #<em>value</em> is a HealthVault::WCData::Types::Iso3166
@@ -127,6 +135,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -144,6 +153,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a String
@@ -157,6 +167,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -172,6 +183,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::Version
@@ -185,6 +197,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -231,12 +244,12 @@ module HealthVault
           
         
           
-          @children['app-id'] = {:name => 'app-id', :class => HealthVault::WCData::Types::Guid, :value => nil, :min => 1, :max => 1, :order => 5, :place => :element, :choice => 221496581 }
+          @children['app-id'] = {:name => 'app-id', :class => HealthVault::WCData::Types::Guid, :value => nil, :min => 1, :max => 1, :order => 5, :place => :element, :choice => 499807358 }
             
           
         
           
-          @children['auth-session'] = {:name => 'auth-session', :class => HealthVault::WCData::Request::AuthenticatedSessionInfo, :value => nil, :min => 1, :max => 1, :order => 6, :place => :element, :choice => 221496581 }
+          @children['auth-session'] = {:name => 'auth-session', :class => HealthVault::WCData::Request::AuthenticatedSessionInfo, :value => nil, :min => 1, :max => 1, :order => 6, :place => :element, :choice => 499807358 }
             
           
         

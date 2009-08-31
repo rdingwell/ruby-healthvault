@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time the reading was taken.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The value of the blood glucose measurement.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -61,6 +64,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Indicates whether the reading is outside the operating temperature range of the device that made the reading.
@@ -76,6 +80,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -93,6 +98,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A that indicates how the reading compares to normal blood glucose concentrations (usually the same as the measurement range of the device that made the reading).
@@ -108,6 +114,7 @@ module HealthVault
         end
        
      
+        
         
        
         

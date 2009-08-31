@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time that the journal entry refers to.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The time the person woke up for a period of activity.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -75,6 +79,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The number of minutes it took to fall asleep.
@@ -89,6 +94,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Sjam::Awakening
@@ -110,6 +116,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A description of the medications taken before going to bed.
@@ -124,6 +131,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

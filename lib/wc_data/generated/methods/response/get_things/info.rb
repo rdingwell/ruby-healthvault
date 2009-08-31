@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetThings::ThingResponseGroup
         def add_group(value)
@@ -42,7 +43,7 @@ module HealthVault
           self.tag_name = 'info'
         
           
-          @children['group'] = {:name => 'group', :class => HealthVault::WCData::Methods::Response::GetThings::ThingResponseGroup, :value => Array.new, :min => 1, :max => 999999, :order => 1, :place => :element, :choice => 408844466 }
+          @children['group'] = {:name => 'group', :class => HealthVault::WCData::Methods::Response::GetThings::ThingResponseGroup, :value => Array.new, :min => 1, :max => 999999, :order => 1, :place => :element, :choice => 241708491 }
           
         
         end

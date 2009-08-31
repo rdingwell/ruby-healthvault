@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::RcptAddress
         def add_rcpt_address(value)
@@ -34,6 +35,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::RcptPerson
@@ -55,6 +57,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The health record custodians to send the message to.
@@ -69,6 +72,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -86,6 +90,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A textual representation of the message.
@@ -101,6 +106,7 @@ module HealthVault
         end
        
      
+        
         
        
         

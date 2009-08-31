@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The mailbox name is an application specified string which identifies the sender within the application.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Types::RcptAddress
@@ -51,6 +53,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::RcptPerson
         def add_rcpt_person(value)
@@ -71,6 +74,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Specifies that custodians of the health record identifier in the request envelope, should be sent the message.
@@ -86,6 +90,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -103,6 +108,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A textual representation of the message.
@@ -118,6 +124,7 @@ module HealthVault
         end
        
      
+        
         
        
         

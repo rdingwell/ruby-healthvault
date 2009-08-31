@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time when the spirometer reading was taken.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The peak expirator flow.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a String
@@ -83,6 +87,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a String
         def add_problem(value)
@@ -104,6 +109,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The ratio of FEV 1 to FVC at the time of the reading.
@@ -119,6 +125,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -136,6 +143,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The forced expiratory flow 25-50% at the time of the reading.
@@ -151,6 +159,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -168,6 +177,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The forced inspiratory flow 25-50% at the time of the reading.
@@ -183,6 +193,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -200,6 +211,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The slow vital capacity (SVC) at the time of the reading measured in liters (L).
@@ -216,6 +228,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The tidal volume at the time of the reading, measured in liters (L).
@@ -231,6 +244,7 @@ module HealthVault
         end
        
      
+        
         
        
         

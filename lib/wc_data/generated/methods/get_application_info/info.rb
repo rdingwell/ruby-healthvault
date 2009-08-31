@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The all-languages parameter determines how many of instances of culture specific values are returned.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         

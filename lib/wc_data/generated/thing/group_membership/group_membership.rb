@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Groupmembershiptype
         def add_membership(value)
@@ -34,6 +35,7 @@ module HealthVault
         end
        
      
+        
         
        
         

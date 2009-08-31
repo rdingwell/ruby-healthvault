@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The blood glucose measurement in millimoles per liter.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         

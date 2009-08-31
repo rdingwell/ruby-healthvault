@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::Guid
         def add_id(value)
@@ -34,6 +35,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Methods::GetThingType::ThingTypeSectionSpec
@@ -55,6 +57,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a String
         def add_image_type(value)
@@ -75,6 +78,7 @@ module HealthVault
         end
        
      
+        
         
        
         

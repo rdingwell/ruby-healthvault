@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The display name for the plan.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -48,6 +50,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The carrier identifier.
@@ -64,6 +67,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The group number in the plan.
@@ -78,6 +82,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -95,6 +100,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The identifier for the insurance subscriber.
@@ -109,6 +115,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -126,6 +133,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The name of the subscriber.
@@ -141,6 +149,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The subscriber's date of birth.
@@ -155,6 +164,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -172,6 +182,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date the coverage expires.
@@ -186,6 +197,7 @@ module HealthVault
         end
        
      
+        
         
        
         

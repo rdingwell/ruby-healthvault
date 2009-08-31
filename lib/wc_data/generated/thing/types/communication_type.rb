@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Defines medium of communication used.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -47,6 +49,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Defines class of communication used.
@@ -62,6 +65,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

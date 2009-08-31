@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::String255
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -42,6 +44,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -59,6 +62,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The relationship the authorized person has to the owner of the record.
@@ -73,6 +77,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -90,6 +95,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date the authenticated person's authorization to the record expires.
@@ -106,6 +112,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: States whether authorization has already expired.
@@ -120,6 +127,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -137,6 +145,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The state of the person's authorization to the record.
@@ -153,6 +162,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date the health record was created.
@@ -167,6 +177,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -183,6 +194,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The total size in bytes that all the things in the record currently occupy together.
@@ -197,6 +209,7 @@ module HealthVault
         end
        
      
+        
         
        
         

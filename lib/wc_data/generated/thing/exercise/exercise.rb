@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time when the exercise occurred.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -48,6 +50,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A descriptive title for the exercise.
@@ -63,6 +66,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -80,6 +84,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The duration of the exercise in minutes.
@@ -94,6 +99,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Exercise::StructuredNameValue
@@ -115,6 +121,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Exercise::ExerciseSegment

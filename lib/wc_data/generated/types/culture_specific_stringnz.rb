@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<em>value</em> is a HealthVault::WCData::Types::Stringnz
@@ -27,6 +28,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: A zone boundary defined by an absolute heart rate.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -52,12 +54,12 @@ module HealthVault
           self.tag_name = 'zoneboundary'
         
           
-          @children['absolute-heartrate'] = {:name => 'absolute-heartrate', :class => String, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 137663260 }
+          @children['absolute-heartrate'] = {:name => 'absolute-heartrate', :class => String, :value => nil, :min => 1, :max => 1, :order => 1, :place => :element, :choice => 297935511 }
             
           
         
           
-          @children['percent-max-heartrate'] = {:name => 'percent-max-heartrate', :class => HealthVault::WCData::Thing::Types::Percentage, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 137663260 }
+          @children['percent-max-heartrate'] = {:name => 'percent-max-heartrate', :class => HealthVault::WCData::Thing::Types::Percentage, :value => nil, :min => 1, :max => 1, :order => 2, :place => :element, :choice => 297935511 }
             
           
         

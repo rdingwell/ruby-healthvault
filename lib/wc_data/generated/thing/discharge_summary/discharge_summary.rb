@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time the report.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The clinical category for discharge summary.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -76,6 +80,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The medical specialty for discharge summary.
@@ -92,6 +97,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The discharge summary textual content.
@@ -106,6 +112,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -122,6 +129,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The primary provider endorsement for discharge summary.
@@ -136,6 +144,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -152,6 +161,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The secondary provider endorsement for discharge summary.
@@ -167,6 +177,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date and time of discharge.
@@ -181,6 +192,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -198,6 +210,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The principal diagnonsis for discharge summary.
@@ -213,6 +226,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
@@ -235,6 +249,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The primary procedure physician for discharge summary.
@@ -250,6 +265,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The principal procedure for discharge summary.
@@ -264,6 +280,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue

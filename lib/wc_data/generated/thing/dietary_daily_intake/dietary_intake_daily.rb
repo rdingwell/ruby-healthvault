@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date of consumption.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The total amount of fat consumed in the day.
@@ -61,6 +64,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -78,6 +82,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The total amount of trans fat consumed in the day.
@@ -93,6 +98,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -110,6 +116,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The amount of carbohydrates consumed in the day.
@@ -125,6 +132,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -142,6 +150,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The amount of sugars consumed in the day.
@@ -158,6 +167,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The amount of sodiam consumed in the day.
@@ -173,6 +183,7 @@ module HealthVault
         end
        
      
+        
         
        
         

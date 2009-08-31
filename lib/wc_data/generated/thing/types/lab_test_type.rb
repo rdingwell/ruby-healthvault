@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date of the laboratory test.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The name of the laboratory test.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -61,6 +64,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The collection method for the laboratory test.
@@ -77,6 +81,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The abbreviation for the laboratory test.
@@ -92,6 +97,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form description of the laboratory test.
@@ -106,6 +112,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
@@ -128,6 +135,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: A clinical value within a laboratory result.
@@ -143,6 +151,7 @@ module HealthVault
         end
        
      
+        
         
        
         

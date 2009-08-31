@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::Guid
         def add_id(value)
@@ -34,6 +35,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::ThingKey
@@ -55,6 +57,7 @@ module HealthVault
        
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Types::String255
         def add_client_thing_id(value)
@@ -74,6 +77,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Methods::GetThings::ThingFilterSpec
@@ -95,6 +99,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Specifies a view for the results.
@@ -109,6 +114,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -126,6 +132,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Name of this request group.
@@ -142,6 +149,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The maximum number of items to be returned for this group.
@@ -156,6 +164,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -178,15 +187,15 @@ module HealthVault
           self.tag_name = 'thingrequestgroup'
         
           
-          @children['id'] = {:name => 'id', :class => HealthVault::WCData::Types::Guid, :value => Array.new, :min => 0, :max => 999999, :order => 1, :place => :element, :choice => 458359143 }
+          @children['id'] = {:name => 'id', :class => HealthVault::WCData::Types::Guid, :value => Array.new, :min => 0, :max => 999999, :order => 1, :place => :element, :choice => 533673036 }
           
         
           
-          @children['key'] = {:name => 'key', :class => HealthVault::WCData::Thing::ThingKey, :value => Array.new, :min => 0, :max => 999999, :order => 2, :place => :element, :choice => 458359143 }
+          @children['key'] = {:name => 'key', :class => HealthVault::WCData::Thing::ThingKey, :value => Array.new, :min => 0, :max => 999999, :order => 2, :place => :element, :choice => 533673036 }
           
         
           
-          @children['client-thing-id'] = {:name => 'client-thing-id', :class => HealthVault::WCData::Types::String255, :value => Array.new, :min => 0, :max => 999999, :order => 3, :place => :element, :choice => 458359143 }
+          @children['client-thing-id'] = {:name => 'client-thing-id', :class => HealthVault::WCData::Types::String255, :value => Array.new, :min => 0, :max => 999999, :order => 3, :place => :element, :choice => 533673036 }
           
         
           

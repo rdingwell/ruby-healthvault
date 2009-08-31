@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Methods::Response::GetThingType::ThingTypeInfo
         def add_thing_type(value)

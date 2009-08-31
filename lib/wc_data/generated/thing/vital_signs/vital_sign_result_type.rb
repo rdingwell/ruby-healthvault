@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Clinical name for vital sign.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Result value.
@@ -45,6 +47,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -62,6 +65,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Reference minimum value.
@@ -76,6 +80,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -92,6 +97,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form textual content of result.
@@ -106,6 +112,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The name of the allergy.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The approximate date and time when the allergy was first observed.
@@ -60,6 +63,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -78,6 +82,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The clinical allergen code.
@@ -94,6 +99,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Information about the treatment provider for this allergy.
@@ -109,6 +115,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The possible treatment description for this allergy.
@@ -123,6 +130,7 @@ module HealthVault
         end
        
      
+        
         
        
         

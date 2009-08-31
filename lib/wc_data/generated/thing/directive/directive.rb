@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of the directive started.
@@ -30,6 +31,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of the directive stops.
@@ -44,6 +46,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -61,6 +64,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The full resuscitation directive value.
@@ -76,6 +80,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue
@@ -97,6 +102,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Additional directive instructions.
@@ -113,6 +119,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The attending physician details.
@@ -127,6 +134,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -143,6 +151,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The attending nurse details.
@@ -157,6 +166,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -173,6 +183,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The date and time of patient expired.
@@ -187,6 +198,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -203,6 +215,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The attending physician details.
@@ -217,6 +230,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -233,6 +247,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The attending nurse details.
@@ -247,6 +262,7 @@ module HealthVault
         end
        
      
+        
         
        
         

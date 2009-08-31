@@ -16,6 +16,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The unique identifier for the person.
@@ -30,6 +31,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The unique identifier for the authorized application (the same application that called CreateConnectRequest).
@@ -60,6 +63,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

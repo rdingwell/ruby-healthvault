@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Name and clinical code for the medication.
@@ -32,6 +33,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -51,6 +53,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Dose of the medication
@@ -66,6 +69,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -83,6 +87,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: How often the medication is taken.
@@ -98,6 +103,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -115,6 +121,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Indication for medication.
@@ -129,6 +136,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -145,6 +153,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Date medication was discontinued.
@@ -159,6 +168,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -176,6 +186,7 @@ module HealthVault
         end
        
      
+        
         
        
         

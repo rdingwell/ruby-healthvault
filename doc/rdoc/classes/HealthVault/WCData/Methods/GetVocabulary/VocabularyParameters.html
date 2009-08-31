@@ -127,23 +127,23 @@
             onclick="toggleCode('M003671-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003671-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 54</span>
-54:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-55:           <span class="ruby-keyword kw">super</span>
-56:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'vocabularyparameters'</span>
-57:         
-58:           
-59:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'vocabulary-key'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'vocabulary-key'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">VocabularyKey</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 56</span>
+56:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+57:           <span class="ruby-keyword kw">super</span>
+58:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">tag_name</span> = <span class="ruby-value str">'vocabularyparameters'</span>
+59:         
 60:           
-61:         
+61:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'vocabulary-key'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'vocabulary-key'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">HealthVault</span><span class="ruby-operator">::</span><span class="ruby-constant">WCData</span><span class="ruby-operator">::</span><span class="ruby-constant">Vocab</span><span class="ruby-operator">::</span><span class="ruby-constant">VocabularyKey</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999999</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 62:           
-63:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'fixed-culture'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'fixed-culture'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
-64:             
-65:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'fixed-culture'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+63:         
+64:           
+65:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'fixed-culture'</span>] = {<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'fixed-culture'</span>, <span class="ruby-identifier">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">String</span>, <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">:min</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:max</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>, <span class="ruby-identifier">:place</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:element</span>, <span class="ruby-identifier">:choice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
 66:             
-67:           
-68:         
-69:         <span class="ruby-keyword kw">end</span>
+67:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'fixed-culture'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>
+68:             
+69:           
+70:         
+71:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -169,10 +169,10 @@ href="../../Vocab/VocabularyKey.html">HealthVault::WCData::Vocab::VocabularyKey<
             onclick="toggleCode('M003666-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003666-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 20</span>
-20:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_vocabulary_key</span>(<span class="ruby-identifier">value</span>)
-21:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'vocabulary-key'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
-22:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 21</span>
+21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_vocabulary_key</span>(<span class="ruby-identifier">value</span>)
+22:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'vocabulary-key'</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+23:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -195,10 +195,10 @@ href="../../Vocab/VocabularyKey.html">HealthVault::WCData::Vocab::VocabularyKey<
             onclick="toggleCode('M003670-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003670-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 48</span>
-48:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fixed_culture</span>
-49:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'fixed-culture'</span>][<span class="ruby-identifier">:value</span>]
-50:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 50</span>
+50:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fixed_culture</span>
+51:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'fixed-culture'</span>][<span class="ruby-identifier">:value</span>]
+52:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -227,10 +227,10 @@ String
             onclick="toggleCode('M003669-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003669-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 43</span>
-43:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fixed_culture=</span>(<span class="ruby-identifier">value</span>)
-44:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'fixed-culture'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
-45:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 45</span>
+45:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fixed_culture=</span>(<span class="ruby-identifier">value</span>)
+46:           <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'fixed-culture'</span>][<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">value</span>
+47:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -255,10 +255,10 @@ href="../../Vocab/VocabularyKey.html">WCData::Vocab::VocabularyKey</a>
             onclick="toggleCode('M003667-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003667-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 25</span>
-25:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_vocabulary_key</span>(<span class="ruby-identifier">value</span>)
-26:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'vocabulary-key'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
-27:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 26</span>
+26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_vocabulary_key</span>(<span class="ruby-identifier">value</span>)
+27:             <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'vocabulary-key'</span>][<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">value</span>)
+28:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -288,10 +288,10 @@ Array
             onclick="toggleCode('M003668-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M003668-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 33</span>
-33:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">vocabulary_key</span>
-34:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'vocabulary-key'</span>][<span class="ruby-identifier">:value</span>]
-35:         <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/wc_data/generated/methods/get_vocabulary/vocabulary_parameters.rb, line 34</span>
+34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">vocabulary_key</span>
+35:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@children</span>[<span class="ruby-value str">'vocabulary-key'</span>][<span class="ruby-identifier">:value</span>]
+36:         <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

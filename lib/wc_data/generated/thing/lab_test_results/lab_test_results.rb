@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The date and time of the results.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Labtestresults::Labtestresultsgrouptype
@@ -49,6 +51,7 @@ module HealthVault
         end
        
      
+        
         
        
         

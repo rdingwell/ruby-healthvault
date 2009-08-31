@@ -38,8 +38,10 @@ module HealthVault
           guid = XPath.first(@xml.root, "//type-id").text.to_s#@xml.root.get_elements('annotation/documentation/type-id')[0].text.to_s
           el = @xml.root.get_elements('element')[0]
           wrapper_class = REXML::XPath.first(@xml,"//wrapper-class-name")
+          if wrapper_class && wrapper_class.text && mods[0] == "thing" && underscore(wrapper_class.text) != underscore(mods[1])
+             mods[1] = wrapper_class.text
+           end
           cname =   el.attribute('name').to_s
-          
           type = el.attribute('type').to_s
           class_path = "HealthVault::WCData::"
           if type.empty?

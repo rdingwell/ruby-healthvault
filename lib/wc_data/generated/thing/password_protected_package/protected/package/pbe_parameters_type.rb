@@ -17,6 +17,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: Salt used when hashing the value.
@@ -33,6 +34,7 @@ module HealthVault
        
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The number of iterations used when hashing the data.
@@ -47,6 +49,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

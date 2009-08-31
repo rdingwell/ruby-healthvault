@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time the report.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The vendor of the medical equipment.
@@ -59,6 +62,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -75,6 +79,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: Free form serial number of the medical equipment.
@@ -90,6 +95,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The location on the body where the device takes readings.
@@ -104,6 +110,7 @@ module HealthVault
         end
        
      
+        
         
        
         

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The torque measurement in newton meters.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         

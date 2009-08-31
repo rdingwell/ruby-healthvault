@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         #<em>value</em> is a HealthVault::WCData::Application::CultureSpecificStatement
         def add_statement(value)
@@ -32,6 +33,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<b>REQUIRED</b>

@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         #<b>REQUIRED</b>
         #<b>summary</b>: The date and time of the measurement.
@@ -29,6 +30,7 @@ module HealthVault
         end
        
      
+        
         
        
         
@@ -45,6 +47,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The forced expiratory volume in one second, measured in liters.
@@ -60,6 +63,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The forced expiratory volume in six seconds, measured in liters.
@@ -74,6 +78,7 @@ module HealthVault
         end
        
      
+        
         
        
         #<em>value</em> is a HealthVault::WCData::Thing::Types::Codablevalue

@@ -14,6 +14,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The language of the culture.
@@ -28,6 +29,7 @@ module HealthVault
         end
        
      
+        
         
        
         

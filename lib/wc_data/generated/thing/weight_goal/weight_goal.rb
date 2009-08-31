@@ -15,6 +15,7 @@ module HealthVault
         
      
         
+        
        
         
         #<b>summary</b>: The person's starting weight when starting work toward the goal.
@@ -31,6 +32,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The lowest desired weight.
@@ -46,6 +48,7 @@ module HealthVault
        
      
         
+        
        
         
         #<b>summary</b>: The highest desired weight.
@@ -60,6 +63,7 @@ module HealthVault
         end
        
      
+        
         
        
         
