@@ -144,13 +144,13 @@ module HealthVault
         #<b>summary</b>: The build version of dbSNP used to map the probe set ID on the genome locus.
 #<b>remarks</b>: For example: dbSNP build 113.
 #<em>value</em> is a String
-        def db_snp_build =(value)
-          @children['dbSNP-build '][:value] = value
+        def db_snp_build=(value)
+          @children['dbSNP-build'][:value] = value
         end
         
         #<b>returns</b>: a String
-        def db_snp_build 
-          return @children['dbSNP-build '][:value]
+        def db_snp_build
+          return @children['dbSNP-build'][:value]
         end
        
      
@@ -223,7 +223,7 @@ module HealthVault
           
         
           
-          @children['dbSNP-build '] = {:name => 'dbSNP-build ', :class => String, :value => nil, :min => 0, :max => 1, :order => 9, :place => :element, :choice => 0 }
+          @children['dbSNP-build'] = {:name => 'dbSNP-build', :class => String, :value => nil, :min => 0, :max => 1, :order => 9, :place => :element, :choice => 0 }
             
           
         
